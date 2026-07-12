@@ -244,6 +244,16 @@ function assertSiteIdentitySchema(html, file) {
   assert(website.description === 'Free local PDF editor and Adobe Acrobat alternative that runs in the browser.', `${file} WebSite description is wrong`)
   assert(website.publisher?.['@id'] === `${site}/#organization`, `${file} WebSite publisher is wrong`)
   assert(website.inLanguage === 'en', `${file} WebSite language is wrong`)
+  const expectedHasPart = urls.map((url) => {
+    const metadata = pageMetadata.get(url)
+    return {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: metadata?.title,
+    }
+  })
+  assert(JSON.stringify(website.hasPart) === JSON.stringify(expectedHasPart), `${file} WebSite hasPart entries must match sitemap pages`)
 
   assert(app, `${file} is missing WebApplication JSON-LD`)
   assert(app['@id'] === `${site}/#app`, `${file} WebApplication @id is wrong`)
@@ -348,8 +358,8 @@ assertWebPageSchema({
   ...rootMetadata,
 })
 assertRichEntitySchema({ html: rootHtml, file: 'index.html', url: `${site}/` })
-assertSiteIdentitySchema(rootHtml, 'index.html')
 pageMetadata.set(`${site}/`, rootMetadata)
+assertSiteIdentitySchema(rootHtml, 'index.html')
 
 const indexNow = JSON.parse(await readPublic('indexnow.json'))
 assert(indexNow.host === 'slaypdf.com', 'IndexNow host is wrong')

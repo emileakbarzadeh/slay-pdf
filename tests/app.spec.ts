@@ -192,6 +192,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     url?: string
     publisher?: { '@id'?: string }
     inLanguage?: string
+    hasPart?: { '@type'?: string; '@id'?: string; url?: string; name?: string }[]
   } | undefined
   expect(organization?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(organization?.name).toBe('Slay PDF')
@@ -248,6 +249,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod))).toBe(true)
   expect(sitemapEntries.every((entry) => ['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq))).toBe(true)
   expect(sitemapEntries.every((entry) => entry.priority >= 0 && entry.priority <= 1)).toBe(true)
+  expect(webSite?.hasPart).toHaveLength(sitemapEntries.length)
+  expect(webSite?.hasPart?.[0]).toMatchObject({
+    '@type': 'WebPage',
+    '@id': 'https://slaypdf.com/#webpage',
+    url: 'https://slaypdf.com/',
+    name: 'Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative',
+  })
   const htmlPaths = [...sitemap.matchAll(/<loc>https:\/\/slaypdf\.com\/([^<]+\.html)<\/loc>/g)].map((match) => match[1])
   expect(htmlPaths).toEqual(expect.arrayContaining([
     'free-pdf-editor.html',
@@ -311,6 +319,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     const response = await page.request.get(`/${path}`)
     expect(response.ok()).toBe(true)
     const html = await response.text()
+    const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
+    expect(webSite?.hasPart).toContainEqual({
+      '@type': 'WebPage',
+      '@id': `https://slaypdf.com/${path}#webpage`,
+      url: `https://slaypdf.com/${path}`,
+      name: title,
+    })
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
     for (const [type, title, href] of discoveryLinks) {
       expect(html).toContain(`rel="alternate" type="${type}" title="${title}" href="${href}"`)

@@ -79,6 +79,7 @@
     "seo:schema": "node scripts/sync-static-webpage-schema.mjs",
     "seo:howto": "node scripts/sync-static-howto-schema.mjs",
     "seo:entities": "node scripts/sync-static-entity-schema.mjs",
+    "seo:sitegraph": "node scripts/sync-site-identity-schema.mjs",
     "seo:check": "node scripts/verify-seo.mjs",
     "seo:check:live": "node scripts/verify-seo.mjs --live",
     "pwa:check": "node scripts/verify-pwa.mjs",
