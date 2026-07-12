@@ -423,6 +423,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'adobe-extract-pages-pdf-alternative.html',
     'adobe-pdf-to-jpg-alternative.html',
     'adobe-add-page-numbers-alternative.html',
+    'smallpdf-alternative.html',
+    'ilovepdf-alternative.html',
+    'sejda-alternative.html',
+    'pdf24-alternative.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -685,7 +689,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(63)
+  expect(toolAppPageCount).toBe(67)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -757,6 +761,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/adobe-extract-pages-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-pdf-to-jpg-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-add-page-numbers-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/smallpdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/ilovepdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/sejda-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdf24-alternative.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -873,6 +881,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/adobe-extract-pages-pdf-alternative.html')
   expect(tools).toContain('/adobe-pdf-to-jpg-alternative.html')
   expect(tools).toContain('/adobe-add-page-numbers-alternative.html')
+  expect(tools).toContain('/smallpdf-alternative.html')
+  expect(tools).toContain('/ilovepdf-alternative.html')
+  expect(tools).toContain('/sejda-alternative.html')
+  expect(tools).toContain('/pdf24-alternative.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

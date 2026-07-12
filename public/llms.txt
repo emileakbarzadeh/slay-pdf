@@ -188,6 +188,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Adobe Add Page Numbers Alternative - Slay PDF: https://slaypdf.com/adobe-add-page-numbers-alternative.html
   Summary: Use Slay PDF as an Adobe add page numbers alternative. Number PDF pages, organize the document and export locally from your browser.
   Last modified: 2026-07-13
+- Smallpdf Alternative - Slay PDF: https://slaypdf.com/smallpdf-alternative.html
+  Summary: Use Slay PDF as a Smallpdf alternative for local PDF edits. Merge, split, sign, compress, OCR and export PDFs in your browser without signup.
+  Last modified: 2026-07-13
+- iLovePDF Alternative - Slay PDF: https://slaypdf.com/ilovepdf-alternative.html
+  Summary: Use Slay PDF as an iLovePDF alternative for local PDF merging, splitting, signing, OCR, image export, compression and page organization.
+  Last modified: 2026-07-13
+- Sejda Alternative - Slay PDF: https://slaypdf.com/sejda-alternative.html
+  Summary: Use Slay PDF as a Sejda alternative for local browser PDF editing: sign, annotate, redact, merge, split, resize, crop and export PDFs.
+  Last modified: 2026-07-13
+- PDF24 Alternative - Slay PDF: https://slaypdf.com/pdf24-alternative.html
+  Summary: Use Slay PDF as a PDF24 alternative for local PDF tools in the browser: merge, split, compress, OCR, protect, convert images and edit pages.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

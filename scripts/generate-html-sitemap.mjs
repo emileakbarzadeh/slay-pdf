@@ -44,6 +44,11 @@ const sections = [
     paths: ['/adobe-acrobat-alternative.html', '/free-adobe-pdf-editor-alternative.html', '/acrobat-online-alternative.html', '/adobe-pdf-merge-alternative.html', '/adobe-compress-pdf-alternative.html', '/adobe-fill-and-sign-alternative.html', '/adobe-pdf-organizer-alternative.html', '/adobe-split-pdf-alternative.html', '/adobe-sign-pdf-alternative.html', '/adobe-redact-pdf-alternative.html', '/adobe-ocr-pdf-alternative.html', '/adobe-protect-pdf-alternative.html', '/adobe-rotate-pdf-alternative.html', '/adobe-crop-pdf-alternative.html', '/adobe-delete-pages-pdf-alternative.html', '/adobe-extract-pages-pdf-alternative.html', '/adobe-pdf-to-jpg-alternative.html', '/adobe-add-page-numbers-alternative.html'],
   },
   {
+    title: 'PDF editor alternatives',
+    description: 'Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.',
+    paths: ['/smallpdf-alternative.html', '/ilovepdf-alternative.html', '/sejda-alternative.html', '/pdf24-alternative.html'],
+  },
+  {
     title: 'No-account and platform pages',
     description: 'Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.',
     paths: ['/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html', '/pdf-editor-for-linux.html', '/pdf-editor-for-iphone-ipad.html', '/android-pdf-editor.html'],
