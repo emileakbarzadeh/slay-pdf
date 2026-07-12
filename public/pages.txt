@@ -122,6 +122,10 @@ https://slaypdf.com/compress-pdf-no-watermark.html
 https://slaypdf.com/rotate-pdf-no-watermark.html
 https://slaypdf.com/crop-pdf-no-watermark.html
 https://slaypdf.com/ocr-pdf-no-watermark.html
+https://slaypdf.com/delete-pdf-pages-no-watermark.html
+https://slaypdf.com/resize-pdf-no-watermark.html
+https://slaypdf.com/annotate-pdf-no-watermark.html
+https://slaypdf.com/add-page-numbers-no-watermark.html
 https://slaypdf.com/open-source-pdf-editor.html
 https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 https://slaypdf.com/offline-pdf-editor.html

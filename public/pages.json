@@ -1490,6 +1490,54 @@
       "breadcrumbId": "https://slaypdf.com/ocr-pdf-no-watermark.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/delete-pdf-pages-no-watermark.html",
+      "path": "/delete-pdf-pages-no-watermark.html",
+      "title": "Delete PDF Pages No Watermark - Slay PDF",
+      "description": "Delete PDF pages with no watermark. Remove unwanted pages locally in your browser and export a clean PDF with Slay PDF.",
+      "h1": "Delete PDF pages with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/delete-pdf-pages-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/delete-pdf-pages-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/resize-pdf-no-watermark.html",
+      "path": "/resize-pdf-no-watermark.html",
+      "title": "Resize PDF No Watermark - Slay PDF",
+      "description": "Resize PDF pages with no watermark. Change page size locally in your browser and export a clean PDF with Slay PDF.",
+      "h1": "Resize PDF with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/resize-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/resize-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/annotate-pdf-no-watermark.html",
+      "path": "/annotate-pdf-no-watermark.html",
+      "title": "Annotate PDF No Watermark - Slay PDF",
+      "description": "Annotate PDF with no watermark. Add text, marks and signatures locally in your browser and export a clean PDF with Slay PDF.",
+      "h1": "Annotate PDF with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/annotate-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/annotate-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/add-page-numbers-no-watermark.html",
+      "path": "/add-page-numbers-no-watermark.html",
+      "title": "Add Page Numbers No Watermark - Slay PDF",
+      "description": "Add page numbers to a PDF with no watermark. Number pages locally in your browser and export a clean PDF with Slay PDF.",
+      "h1": "Add page numbers with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/add-page-numbers-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/add-page-numbers-no-watermark.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "path": "/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",

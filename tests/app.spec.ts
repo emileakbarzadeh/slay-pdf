@@ -487,6 +487,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'rotate-pdf-no-watermark.html',
     'crop-pdf-no-watermark.html',
     'ocr-pdf-no-watermark.html',
+    'delete-pdf-pages-no-watermark.html',
+    'resize-pdf-no-watermark.html',
+    'annotate-pdf-no-watermark.html',
+    'add-page-numbers-no-watermark.html',
     'open-source-pdf-editor.html',
     'open-source-adobe-acrobat-alternative.html',
     'offline-pdf-editor.html',
@@ -789,7 +793,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(167)
+  expect(toolAppPageCount).toBe(171)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -925,6 +929,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/rotate-pdf-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/crop-pdf-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/ocr-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/delete-pdf-pages-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/resize-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/annotate-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/add-page-numbers-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/open-source-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/open-source-adobe-acrobat-alternative.html')
   expect(llms).toContain('https://slaypdf.com/offline-pdf-editor.html')
@@ -1145,6 +1153,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/rotate-pdf-no-watermark.html')
   expect(tools).toContain('/crop-pdf-no-watermark.html')
   expect(tools).toContain('/ocr-pdf-no-watermark.html')
+  expect(tools).toContain('/delete-pdf-pages-no-watermark.html')
+  expect(tools).toContain('/resize-pdf-no-watermark.html')
+  expect(tools).toContain('/annotate-pdf-no-watermark.html')
+  expect(tools).toContain('/add-page-numbers-no-watermark.html')
   expect(tools).toContain('/open-source-pdf-editor.html')
   expect(tools).toContain('/open-source-adobe-acrobat-alternative.html')
   expect(tools).toContain('/offline-pdf-editor.html')
