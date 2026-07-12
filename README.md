@@ -77,20 +77,21 @@ Run SEO file consistency checks only:
 nix develop --command npm run seo:check
 ```
 
-Regenerate the plain and structured page indexes from the sitemap and page schema:
+Regenerate every managed SEO artifact in dependency order:
 
 ```sh
-nix develop --command npm run seo:index
-nix develop --command npm run seo:feed
-nix develop --command npm run seo:feed:json
-nix develop --command npm run seo:llms
+nix develop --command npm run seo:generate
 ```
 
-Regenerate managed social metadata and WebPage JSON-LD:
+Or run the individual generators:
 
 ```sh
 nix develop --command npm run seo:social
 nix develop --command npm run seo:schema
+nix develop --command npm run seo:index
+nix develop --command npm run seo:feed
+nix develop --command npm run seo:feed:json
+nix develop --command npm run seo:llms
 ```
 
 Check the deployed canonical URLs after a release:
