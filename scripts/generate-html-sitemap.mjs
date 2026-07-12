@@ -60,8 +60,8 @@ const sections = [
   },
   {
     title: 'Secure PDF task pages',
-    description: 'Secure PDF merger, splitter, signer and redactor pages for local browser workflows on private documents.',
-    paths: ['/secure-pdf-merger.html', '/secure-pdf-splitter.html', '/secure-pdf-signer.html', '/secure-pdf-redactor.html'],
+    description: 'Secure PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages for local browser workflows on private documents.',
+    paths: ['/secure-pdf-merger.html', '/secure-pdf-splitter.html', '/secure-pdf-signer.html', '/secure-pdf-redactor.html', '/secure-pdf-compressor.html', '/secure-pdf-rotator.html', '/secure-pdf-cropper.html', '/secure-pdf-ocr.html', '/secure-pdf-page-remover.html', '/secure-pdf-resizer.html', '/secure-pdf-annotator.html', '/secure-pdf-page-numbering.html'],
   },
   {
     title: 'Private PDF task pages',

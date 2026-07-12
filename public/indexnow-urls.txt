@@ -126,6 +126,14 @@ https://slaypdf.com/secure-pdf-merger.html
 https://slaypdf.com/secure-pdf-splitter.html
 https://slaypdf.com/secure-pdf-signer.html
 https://slaypdf.com/secure-pdf-redactor.html
+https://slaypdf.com/secure-pdf-compressor.html
+https://slaypdf.com/secure-pdf-rotator.html
+https://slaypdf.com/secure-pdf-cropper.html
+https://slaypdf.com/secure-pdf-ocr.html
+https://slaypdf.com/secure-pdf-page-remover.html
+https://slaypdf.com/secure-pdf-resizer.html
+https://slaypdf.com/secure-pdf-annotator.html
+https://slaypdf.com/secure-pdf-page-numbering.html
 https://slaypdf.com/private-pdf-merger.html
 https://slaypdf.com/private-pdf-splitter.html
 https://slaypdf.com/private-pdf-signer.html

@@ -491,6 +491,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'secure-pdf-splitter.html',
     'secure-pdf-signer.html',
     'secure-pdf-redactor.html',
+    'secure-pdf-compressor.html',
+    'secure-pdf-rotator.html',
+    'secure-pdf-cropper.html',
+    'secure-pdf-ocr.html',
+    'secure-pdf-page-remover.html',
+    'secure-pdf-resizer.html',
+    'secure-pdf-annotator.html',
+    'secure-pdf-page-numbering.html',
     'private-pdf-merger.html',
     'private-pdf-splitter.html',
     'private-pdf-signer.html',
@@ -809,7 +817,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(187)
+  expect(toolAppPageCount).toBe(195)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -949,6 +957,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/secure-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-signer.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-redactor.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-compressor.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-rotator.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-cropper.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-ocr.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-page-remover.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-resizer.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-annotator.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-page-numbering.html')
   expect(llms).toContain('https://slaypdf.com/private-pdf-merger.html')
   expect(llms).toContain('https://slaypdf.com/private-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/private-pdf-signer.html')
@@ -1189,6 +1205,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/secure-pdf-splitter.html')
   expect(tools).toContain('/secure-pdf-signer.html')
   expect(tools).toContain('/secure-pdf-redactor.html')
+  expect(tools).toContain('/secure-pdf-compressor.html')
+  expect(tools).toContain('/secure-pdf-rotator.html')
+  expect(tools).toContain('/secure-pdf-cropper.html')
+  expect(tools).toContain('/secure-pdf-ocr.html')
+  expect(tools).toContain('/secure-pdf-page-remover.html')
+  expect(tools).toContain('/secure-pdf-resizer.html')
+  expect(tools).toContain('/secure-pdf-annotator.html')
+  expect(tools).toContain('/secure-pdf-page-numbering.html')
   expect(tools).toContain('/private-pdf-merger.html')
   expect(tools).toContain('/private-pdf-splitter.html')
   expect(tools).toContain('/private-pdf-signer.html')
