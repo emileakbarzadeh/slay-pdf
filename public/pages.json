@@ -98,6 +98,18 @@
       "breadcrumbId": "https://slaypdf.com/link-to-slay-pdf.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/pdf-privacy-security.html",
+      "path": "/pdf-privacy-security.html",
+      "title": "PDF Privacy & Security Model - Slay PDF",
+      "description": "Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.",
+      "h1": "What local PDF editing actually protects.",
+      "lastmod": "2026-07-13",
+      "changefreq": "monthly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/pdf-privacy-security.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-privacy-security.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/online-pdf-editor.html",
       "path": "/online-pdf-editor.html",
       "title": "Online PDF Editor - Slay PDF",

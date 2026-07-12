@@ -1,0 +1,5 @@
+Contact: https://github.com/emileakbarzadeh/slay-pdf/issues/new
+Canonical: https://slaypdf.com/.well-known/security.txt
+Preferred-Languages: en
+Policy: https://github.com/emileakbarzadeh/slay-pdf/security
+Expires: 2027-07-13T00:00:00Z

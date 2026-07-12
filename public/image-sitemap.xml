@@ -65,6 +65,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf-privacy-security.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Privacy &amp; Security Model - Slay PDF</image:title>
+      <image:caption>Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/online-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

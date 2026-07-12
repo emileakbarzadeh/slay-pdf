@@ -64,6 +64,13 @@
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>PDF Privacy &amp; Security Model - Slay PDF</title>
+      <link>https://slaypdf.com/pdf-privacy-security.html</link>
+      <guid isPermaLink="true">https://slaypdf.com/pdf-privacy-security.html</guid>
+      <description>Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Online PDF Editor - Slay PDF</title>
       <link>https://slaypdf.com/online-pdf-editor.html</link>
       <guid isPermaLink="true">https://slaypdf.com/online-pdf-editor.html</guid>

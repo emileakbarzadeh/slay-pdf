@@ -71,6 +71,14 @@
       "date_modified": "2026-07-13T00:00:00.000Z"
     },
     {
+      "id": "https://slaypdf.com/pdf-privacy-security.html",
+      "url": "https://slaypdf.com/pdf-privacy-security.html",
+      "title": "PDF Privacy & Security Model - Slay PDF",
+      "summary": "Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.",
+      "content_text": "Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
       "id": "https://slaypdf.com/online-pdf-editor.html",
       "url": "https://slaypdf.com/online-pdf-editor.html",
       "title": "Online PDF Editor - Slay PDF",

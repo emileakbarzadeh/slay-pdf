@@ -434,6 +434,7 @@ const prominentSitePaths = [
   '/search.html',
   '/sitemap.html',
   '/privacy.html',
+  '/pdf-privacy-security.html',
   '/online-pdf-editor.html',
   '/adobe-acrobat-alternative.html',
   '/edit-pdf-without-uploading.html',
@@ -763,6 +764,13 @@ assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is mi
 assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
 assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
 
+const securityTxt = await readPublic('.well-known/security.txt')
+assert(securityTxt.includes('Contact: https://github.com/emileakbarzadeh/slay-pdf/issues/new'), 'security.txt contact is wrong')
+assert(securityTxt.includes(`Canonical: ${site}/.well-known/security.txt`), 'security.txt canonical is wrong')
+assert(securityTxt.includes('Policy: https://github.com/emileakbarzadeh/slay-pdf/security'), 'security.txt policy is wrong')
+assert(securityTxt.includes('Preferred-Languages: en'), 'security.txt preferred language is wrong')
+assert(/Expires: \d{4}-\d{2}-\d{2}T00:00:00Z/.test(securityTxt), 'security.txt expires value is wrong')
+
 for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
@@ -791,6 +799,9 @@ if (live) {
   assert(sitemapIndexResponse.ok, `live sitemap index failed ${sitemapIndexResponse.status}`)
   const liveSitemapIndex = await sitemapIndexResponse.text()
   assert(liveSitemapIndex.includes(`${site}/sitemap.xml`) && liveSitemapIndex.includes(`${site}/image-sitemap.xml`), 'live sitemap index content mismatch')
+  const securityTxtResponse = await fetch(`${site}/.well-known/security.txt`)
+  assert(securityTxtResponse.ok, `live security.txt failed ${securityTxtResponse.status}`)
+  assert((await securityTxtResponse.text()).includes(`Canonical: ${site}/.well-known/security.txt`), 'live security.txt content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

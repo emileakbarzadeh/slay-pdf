@@ -422,6 +422,7 @@ Related links:
 - Link to Slay PDF - Press Kit & Backlink Assets: https://slaypdf.com/link-to-slay-pdf.html
 - Slay PDF FAQ - Local PDF Editor: https://slaypdf.com/faq.html
 - Privacy: https://slaypdf.com/privacy.html
+- PDF Privacy & Security Model: https://slaypdf.com/pdf-privacy-security.html
 - Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
 - Edit PDF Without Uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize PDF Pages: https://slaypdf.com/organize-pdf-pages.html
@@ -653,6 +654,47 @@ Related links:
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Privacy model: https://slaypdf.com/privacy.html
+
+## PDF Privacy & Security Model - Slay PDF
+URL: https://slaypdf.com/pdf-privacy-security.html
+Last modified: 2026-07-13
+Summary: Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.
+H1: What local PDF editing actually protects.
+
+Content:
+- Security model
+- What local PDF editing actually protects.
+- Slay PDF is built for no-upload PDF work. This page explains what stays in the browser, what is stored locally, and which risks still belong to the browser, device and user.
+- No app-server PDF upload
+- Imported files, page previews, edits and exports are handled in the browser instead of being sent to a Slay PDF document processing server.
+- Local browser storage
+- The active workspace can be saved in browser storage so recent work can reopen after refresh. Clearing the workspace removes that app state.
+- Honest limits
+- Browser extensions, malware, device backups, downloaded files, shared profiles and network-level hosting infrastructure are outside Slay PDF's control.
+- What Slay PDF keeps local
+- PDF imports, image imports, page organization, annotations, signatures, form edits, redaction overlays, OCR work and PDF exports run in the browser. The app is deployed as static files rather than a hosted PDF conversion service.
+- This local model is useful for contracts, invoices, receipts, school documents, client files and one-off forms where uploading a PDF to an unknown remote processor is the wrong tradeoff.
+- What Slay PDF stores
+- The active workspace can be stored in browser storage so recent work can continue after refresh. Browser storage is local to the browser profile, not a Slay PDF account. Use New PDF or clear recent work to remove the saved workspace from the app.
+- Passwords and encrypted exports
+- Passwords used for encrypted PDF exports are not saved by Slay PDF. They are used for the export being generated and should still be handled like any sensitive secret on the user's own device.
+- Redaction expectations
+- Slay PDF can rasterize pages that contain redaction overlays so covered text and image content is not left selectable behind a rectangle. Always review the exported PDF before sharing sensitive redactions.
+- Threats outside the app boundary
+- A browser-based local editor cannot protect against a compromised operating system, malicious extensions, screen recording, shared browser profiles, cloud-synced downloads, corporate device monitoring or someone with access to the downloaded PDF.
+- Security FAQ
+- No. Slay PDF is a static client-side web app, and PDF processing runs in the browser instead of on a Slay PDF app server.
+- Potentially, depending on the extension and browser permissions. Use a trusted browser profile and device for sensitive documents.
+- No. Export passwords are used for the current export and are never saved by Slay PDF.
+- No. It removes app-server document uploads from the workflow, but the browser, operating system, downloads folder, backups and user environment still matter.
+
+Related links:
+- Privacy details: https://slaypdf.com/privacy.html
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+- Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 
 ## Online PDF Editor - Slay PDF
 URL: https://slaypdf.com/online-pdf-editor.html

@@ -9,6 +9,8 @@ Live app: https://slaypdf.com/
 
 Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 
+Privacy and security model: https://slaypdf.com/pdf-privacy-security.html
+
 ## What It Does
 
 - Import PDFs plus PNG, JPEG, and WebP images.
@@ -24,6 +26,8 @@ Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 Slay PDF is designed to run as a static site. PDF contents are processed in the browser and are not uploaded to an application server.
 
 The practical limits are still the user's browser, memory, CPU, and storage quota. Imports are capped at 200 MB per file, and OCR currently bundles English language data only.
+
+Security model details: https://slaypdf.com/pdf-privacy-security.html
 
 ## Link To Slay PDF
 
