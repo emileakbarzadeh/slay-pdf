@@ -552,6 +552,9 @@ for (const page of pagesJson.pages) {
   assert(llms.includes(`  Summary: ${page.description}`), `llms.txt is missing page summary for ${page.url}`)
   assert(llms.includes(`  Last modified: ${page.lastmod}`), `llms.txt is missing page lastmod for ${page.url}`)
 }
+assert(llms.includes(`${site}/sitemap-index.xml`), 'llms.txt is missing sitemap-index.xml')
+assert(llms.includes(`${site}/sitemap.xml`), 'llms.txt is missing sitemap.xml')
+assert(llms.includes(`${site}/image-sitemap.xml`), 'llms.txt is missing image-sitemap.xml')
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
@@ -561,6 +564,9 @@ assert(llms.includes(`${site}/llms-full.txt`), 'llms.txt is missing llms-full.tx
 const llmsFull = await readPublic('llms-full.txt')
 assert(llmsFull.startsWith('# Slay PDF full text index'), 'llms-full.txt is missing title')
 assert(llmsFull.includes(`Site: ${site}/`), 'llms-full.txt is missing site URL')
+assert(llmsFull.includes(`Sitemap index: ${site}/sitemap-index.xml`), 'llms-full.txt is missing sitemap-index.xml reference')
+assert(llmsFull.includes(`Canonical sitemap: ${site}/sitemap.xml`), 'llms-full.txt is missing sitemap.xml reference')
+assert(llmsFull.includes(`Image sitemap: ${site}/image-sitemap.xml`), 'llms-full.txt is missing image-sitemap.xml reference')
 assert(llmsFull.includes(`Source index: ${site}/pages.json`), 'llms-full.txt is missing pages.json reference')
 assert(llmsFull.includes(`Compact index: ${site}/llms.txt`), 'llms-full.txt is missing llms.txt reference')
 for (const page of pagesJson.pages) {

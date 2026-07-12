@@ -173,7 +173,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 
 ## Discovery Files
 
+- Sitemap index: https://slaypdf.com/sitemap-index.xml
 - Sitemap: https://slaypdf.com/sitemap.xml
+- Image sitemap: https://slaypdf.com/image-sitemap.xml
 - IndexNow payload: https://slaypdf.com/indexnow.json
 - IndexNow URL list: https://slaypdf.com/indexnow-urls.txt
 - Plain page index: https://slaypdf.com/pages.txt
