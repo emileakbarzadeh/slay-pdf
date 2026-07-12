@@ -152,6 +152,15 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Adobe PDF Organizer Alternative - Slay PDF: https://slaypdf.com/adobe-pdf-organizer-alternative.html
   Summary: Use Slay PDF as an Adobe PDF organizer alternative. Reorder, delete, rotate, split, merge and export PDF pages locally.
   Last modified: 2026-07-13
+- Adobe Split PDF Alternative - Slay PDF: https://slaypdf.com/adobe-split-pdf-alternative.html
+  Summary: Use Slay PDF as an Adobe split PDF alternative. Add split markers, separate pages and export multiple local PDFs from your browser.
+  Last modified: 2026-07-13
+- Adobe Sign PDF Alternative - Slay PDF: https://slaypdf.com/adobe-sign-pdf-alternative.html
+  Summary: Use Slay PDF as an Adobe sign PDF alternative for local visual signatures, initials, text notes and quick browser PDF exports.
+  Last modified: 2026-07-13
+- Adobe Redact PDF Alternative - Slay PDF: https://slaypdf.com/adobe-redact-pdf-alternative.html
+  Summary: Use Slay PDF as an Adobe redact PDF alternative for local visual redaction, page cleanup and private browser PDF exports.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

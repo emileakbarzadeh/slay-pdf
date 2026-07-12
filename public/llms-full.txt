@@ -116,6 +116,9 @@ Related links:
 - Adobe compress PDF alternative: https://slaypdf.com/adobe-compress-pdf-alternative.html
 - Adobe Fill and Sign alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
 - Adobe PDF organizer alternative: https://slaypdf.com/adobe-pdf-organizer-alternative.html
+- Adobe split PDF alternative: https://slaypdf.com/adobe-split-pdf-alternative.html
+- Adobe sign PDF alternative: https://slaypdf.com/adobe-sign-pdf-alternative.html
+- Adobe redact PDF alternative: https://slaypdf.com/adobe-redact-pdf-alternative.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -259,6 +262,9 @@ Related links:
 - Adobe Compress PDF Alternative: https://slaypdf.com/adobe-compress-pdf-alternative.html
 - Adobe Fill and Sign Alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
 - Adobe PDF Organizer Alternative: https://slaypdf.com/adobe-pdf-organizer-alternative.html
+- Adobe Split PDF Alternative: https://slaypdf.com/adobe-split-pdf-alternative.html
+- Adobe Sign PDF Alternative: https://slaypdf.com/adobe-sign-pdf-alternative.html
+- Adobe Redact PDF Alternative: https://slaypdf.com/adobe-redact-pdf-alternative.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -1337,6 +1343,84 @@ Related links:
 - Remove pages: https://slaypdf.com/remove-pages-from-pdf.html
 - Rotate PDF: https://slaypdf.com/rotate-pdf.html
 - Split PDF: https://slaypdf.com/split-pdf.html
+
+## Adobe Split PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-split-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe split PDF alternative. Add split markers, separate pages and export multiple local PDFs from your browser.
+H1: Split PDFs locally without Acrobat.
+
+Content:
+- Split alternative
+- Split PDFs locally without Acrobat.
+- Add split markers, separate page ranges, export selected pages and download the new PDFs without uploading the original file.
+- Split markers
+- Place split markers between pages to turn one workspace into multiple PDF downloads.
+- Selected exports
+- Select the pages you need and export only those pages as a new local PDF.
+- Page cleanup
+- Delete, rotate and reorder pages before separating the final documents.
+- For separating files quickly.
+- Use Slay PDF when a large PDF needs to become smaller files for invoices, chapters, forms, client packs or scanned document batches. The split workflow runs in your browser.
+- Because the work is local, it is a practical alternative for private documents that should not go through a random upload tool.
+
+Related links:
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Extract pages: https://slaypdf.com/extract-pages-from-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+
+## Adobe Sign PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-sign-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe sign PDF alternative for local visual signatures, initials, text notes and quick browser PDF exports.
+H1: Sign PDFs locally without Acrobat.
+
+Content:
+- Sign alternative
+- Sign PDFs locally without Acrobat.
+- Add visual signatures, initials, text and marks to PDF pages in your browser, then download the finished copy.
+- Visual signatures
+- Place signature-style text, initials or approval marks directly on PDF pages.
+- Editor controls
+- Move, resize and adjust page edits before exporting the finished document.
+- Local download
+- Export the signed copy from the browser without storing signatures or sending the PDF away.
+- For lightweight signing jobs.
+- Slay PDF is useful for adding a visual signature, initials, approval text or simple annotations to a PDF. It is not a certificate-based e-signature platform.
+- For everyday local signing and markup, the workflow stays in the browser and avoids account walls.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Add signature: https://slaypdf.com/add-signature-to-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Fill and sign alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
+
+## Adobe Redact PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-redact-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe redact PDF alternative for local visual redaction, page cleanup and private browser PDF exports.
+H1: Redact PDFs locally without Acrobat.
+
+Content:
+- Redaction alternative
+- Redact PDFs locally without Acrobat.
+- Cover sensitive content with visual redaction blocks, clean up pages and export a private browser-processed copy.
+- Visual blocks
+- Place black redaction-style boxes over sensitive regions before export.
+- Page cleanup
+- Remove unrelated pages, crop margins and reorder the document before downloading.
+- Browser processing
+- Keep the file in this browser session instead of uploading it to an online redaction site.
+- For private visual redaction.
+- Slay PDF helps with visual redaction workflows where you need to obscure visible content and export a clean copy locally. Always inspect the exported PDF before sharing sensitive documents.
+- For legally sensitive or metadata-heavy files, use the strict review process required by your organization.
+
+Related links:
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- PDF redaction tool: https://slaypdf.com/pdf-redaction-tool.html
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html

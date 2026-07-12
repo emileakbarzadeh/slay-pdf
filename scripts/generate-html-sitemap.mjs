@@ -41,7 +41,7 @@ const sections = [
   {
     title: 'Adobe alternatives',
     description: 'Acrobat-style workflows for people who want merge, compress, fill, sign and organize jobs handled locally.',
-    paths: ['/adobe-acrobat-alternative.html', '/free-adobe-pdf-editor-alternative.html', '/acrobat-online-alternative.html', '/adobe-pdf-merge-alternative.html', '/adobe-compress-pdf-alternative.html', '/adobe-fill-and-sign-alternative.html', '/adobe-pdf-organizer-alternative.html'],
+    paths: ['/adobe-acrobat-alternative.html', '/free-adobe-pdf-editor-alternative.html', '/acrobat-online-alternative.html', '/adobe-pdf-merge-alternative.html', '/adobe-compress-pdf-alternative.html', '/adobe-fill-and-sign-alternative.html', '/adobe-pdf-organizer-alternative.html', '/adobe-split-pdf-alternative.html', '/adobe-sign-pdf-alternative.html', '/adobe-redact-pdf-alternative.html'],
   },
   {
     title: 'No-account and platform pages',

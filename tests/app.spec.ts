@@ -382,6 +382,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'adobe-compress-pdf-alternative.html',
     'adobe-fill-and-sign-alternative.html',
     'adobe-pdf-organizer-alternative.html',
+    'adobe-split-pdf-alternative.html',
+    'adobe-sign-pdf-alternative.html',
+    'adobe-redact-pdf-alternative.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -633,8 +636,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
-  expect(workflowPageCount).toBe(21)
-  expect(toolAppPageCount).toBe(52)
+  expect(workflowPageCount).toBe(24)
+  expect(toolAppPageCount).toBe(55)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -695,6 +698,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/adobe-compress-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-fill-and-sign-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-pdf-organizer-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-split-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-sign-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-redact-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -800,6 +806,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/adobe-compress-pdf-alternative.html')
   expect(tools).toContain('/adobe-fill-and-sign-alternative.html')
   expect(tools).toContain('/adobe-pdf-organizer-alternative.html')
+  expect(tools).toContain('/adobe-split-pdf-alternative.html')
+  expect(tools).toContain('/adobe-sign-pdf-alternative.html')
+  expect(tools).toContain('/adobe-redact-pdf-alternative.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')
