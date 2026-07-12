@@ -625,6 +625,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(htmlSitemap).toContain('href="/"')
   for (const path of htmlPaths) expect(htmlSitemap).toContain(`href="/${path}"`)
   expect(tools).toContain('/password-protect-pdf.html')
+  expect(tools).toContain('/sitemap.html')
   expect(tools).toContain('/faq.html')
   expect(tools).toContain('/privacy.html')
   expect(tools).toContain('/online-pdf-editor.html')

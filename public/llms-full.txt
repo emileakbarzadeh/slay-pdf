@@ -93,6 +93,7 @@ Related links:
 - Private PDF editor: Keep PDFs in the browser instead of uploading them.: https://slaypdf.com/private-pdf-editor.html
 - FAQ: https://slaypdf.com/faq.html
 - Privacy: https://slaypdf.com/privacy.html
+- Sitemap: https://slaypdf.com/sitemap.html
 - Online PDF editor: https://slaypdf.com/online-pdf-editor.html
 - Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize pages: https://slaypdf.com/organize-pdf-pages.html
