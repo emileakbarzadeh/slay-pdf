@@ -167,6 +167,10 @@ Related links:
 - Extract PDF pages without Adobe: https://slaypdf.com/extract-pdf-pages-without-adobe.html
 - Crop PDF without Adobe: https://slaypdf.com/crop-pdf-without-adobe.html
 - Add page numbers without Adobe: https://slaypdf.com/add-page-numbers-without-adobe.html
+- Delete PDF pages without Acrobat: https://slaypdf.com/delete-pdf-pages-without-acrobat.html
+- Extract PDF pages without Acrobat: https://slaypdf.com/extract-pdf-pages-without-acrobat.html
+- Crop PDF without Acrobat: https://slaypdf.com/crop-pdf-without-acrobat.html
+- Add page numbers without Acrobat: https://slaypdf.com/add-page-numbers-without-acrobat.html
 - Redact PDF without Acrobat: https://slaypdf.com/redact-pdf-without-acrobat.html
 - Password protect PDF without Acrobat: https://slaypdf.com/password-protect-pdf-without-acrobat.html
 - Fill PDF forms without Acrobat: https://slaypdf.com/fill-pdf-forms-without-acrobat.html
@@ -454,6 +458,10 @@ Related links:
 - Extract PDF Pages Without Adobe: https://slaypdf.com/extract-pdf-pages-without-adobe.html
 - Crop PDF Without Adobe: https://slaypdf.com/crop-pdf-without-adobe.html
 - Add Page Numbers Without Adobe: https://slaypdf.com/add-page-numbers-without-adobe.html
+- Delete PDF Pages Without Acrobat: https://slaypdf.com/delete-pdf-pages-without-acrobat.html
+- Extract PDF Pages Without Acrobat: https://slaypdf.com/extract-pdf-pages-without-acrobat.html
+- Crop PDF Without Acrobat: https://slaypdf.com/crop-pdf-without-acrobat.html
+- Add Page Numbers Without Acrobat: https://slaypdf.com/add-page-numbers-without-acrobat.html
 - Redact PDF Without Acrobat: https://slaypdf.com/redact-pdf-without-acrobat.html
 - Password Protect PDF Without Acrobat: https://slaypdf.com/password-protect-pdf-without-acrobat.html
 - Fill PDF Forms Without Acrobat: https://slaypdf.com/fill-pdf-forms-without-acrobat.html
@@ -2530,6 +2538,122 @@ Related links:
 - Adobe add page numbers alternative: https://slaypdf.com/adobe-add-page-numbers-alternative.html
 - Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
 - Merge PDF: https://slaypdf.com/merge-pdf.html
+
+## Delete PDF Pages Without Acrobat - Slay PDF
+URL: https://slaypdf.com/delete-pdf-pages-without-acrobat.html
+Last modified: 2026-07-13
+Summary: Delete PDF pages without Acrobat. Remove unwanted pages, reorder the rest and export a clean PDF locally from your browser.
+H1: Delete PDF pages without Acrobat.
+
+Content:
+- Without Acrobat
+- Delete PDF pages without Acrobat.
+- Remove blank pages, duplicate scans or accidental inserts, then download a cleaned PDF from your browser.
+- Open locally
+- Import the PDF into Slay PDF and review page thumbnails in the browser workspace.
+- Remove pages
+- Select unwanted pages, delete them and reorder the pages that should remain.
+- Export cleanly
+- Download the cleaned PDF without uploading the source document to a Slay PDF app server.
+- For fast cleanup without a full PDF suite.
+- Acrobat is useful for enterprise workflows, but many PDF cleanup jobs only need page deletion, reordering and a clean export.
+- Slay PDF keeps those tasks local in the browser, alongside split, merge, rotate, crop and selected-page export.
+- Delete PDF pages without Acrobat FAQ
+- Yes. Select unwanted pages in Slay PDF, delete them and export the cleaned PDF locally.
+- Yes. The workflow runs in your browser and does not upload the source PDF to Slay PDF servers.
+
+Related links:
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Delete pages without Adobe: https://slaypdf.com/delete-pdf-pages-without-adobe.html
+- Adobe delete pages alternative: https://slaypdf.com/adobe-delete-pages-pdf-alternative.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+
+## Extract PDF Pages Without Acrobat - Slay PDF
+URL: https://slaypdf.com/extract-pdf-pages-without-acrobat.html
+Last modified: 2026-07-13
+Summary: Extract PDF pages without Acrobat. Select pages, create a smaller PDF and download the result locally from your browser.
+H1: Extract PDF pages without Acrobat.
+
+Content:
+- Without Acrobat
+- Extract PDF pages without Acrobat.
+- Pull selected pages out of a larger PDF and download a focused file without a subscription workflow.
+- Select pages
+- Choose the pages that belong in the new file, such as one section, invoice or form.
+- Separate output
+- Export selected pages or place split markers to make one or more smaller PDFs.
+- Download locally
+- Save the extracted PDF from the browser without sending the original to Slay PDF.
+- For turning one large PDF into what you actually need.
+- Use Slay PDF when a long packet contains a few pages that need to be shared, filed or printed separately.
+- The extraction workflow works alongside page deletion, reordering and merging so the final output can be cleaned before download.
+- Extract PDF pages without Acrobat FAQ
+- Yes. Select pages in Slay PDF and export them as a new PDF from your browser.
+- Yes. Add split markers in the workspace to separate the original document into multiple PDF downloads.
+
+Related links:
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+- Extract pages without Adobe: https://slaypdf.com/extract-pdf-pages-without-adobe.html
+- Adobe extract pages alternative: https://slaypdf.com/adobe-extract-pages-pdf-alternative.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+
+## Crop PDF Without Acrobat - Slay PDF
+URL: https://slaypdf.com/crop-pdf-without-acrobat.html
+Last modified: 2026-07-13
+Summary: Crop PDF without Acrobat. Trim margins, clean scanned pages and export cropped PDFs locally from your browser.
+H1: Crop PDF without Acrobat.
+
+Content:
+- Without Acrobat
+- Crop PDF without Acrobat.
+- Trim uneven margins, scan borders and extra white space in a local browser PDF editor.
+- Inspect pages
+- Open the PDF and check which pages need margins or scan edges cleaned up.
+- Crop selected pages
+- Apply crop settings to the pages that need adjustment while leaving other pages alone.
+- Export locally
+- Download the cropped PDF from your browser without uploading the original document.
+- For rough scans and exported pages.
+- Scans, screenshots and exported documents often have unnecessary borders that make the final PDF look unfinished.
+- Slay PDF gives you a focused crop workflow next to resize, rotate and page organization tools for quick cleanup.
+- Crop PDF without Acrobat FAQ
+- Yes. Crop selected pages in Slay PDF and export the cleaned PDF locally.
+- Yes. Select the pages that need cropping and leave the rest of the document unchanged.
+
+Related links:
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Crop without Adobe: https://slaypdf.com/crop-pdf-without-adobe.html
+- Adobe crop PDF alternative: https://slaypdf.com/adobe-crop-pdf-alternative.html
+- Crop without uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+
+## Add Page Numbers Without Acrobat - Slay PDF
+URL: https://slaypdf.com/add-page-numbers-without-acrobat.html
+Last modified: 2026-07-13
+Summary: Add page numbers without Acrobat. Number PDF pages and export a clean local PDF from your browser with Slay PDF.
+H1: Add page numbers without Acrobat.
+
+Content:
+- Without Acrobat
+- Add page numbers without Acrobat.
+- Number a PDF before sharing, printing or filing it, with the edit happening locally in your browser.
+- Open the file
+- Import the PDF and select the pages that should receive visible page numbers.
+- Add numbering
+- Place page numbers on the PDF while keeping existing document content intact.
+- Download locally
+- Export the numbered PDF from the browser without uploading the source file to Slay PDF.
+- For packets that need page references.
+- Contracts, coursework, forms and review packets are easier to discuss when every page has a clear number.
+- Slay PDF keeps page numbering close to merge, split, signing and page organization tools for practical PDF prep without Acrobat.
+- Add page numbers without Acrobat FAQ
+- Yes. Add page numbers in Slay PDF and export the numbered PDF locally from your browser.
+- Yes. Select the pages you want to update and leave unrelated pages unchanged before export.
+
+Related links:
+- Add page numbers to PDF: https://slaypdf.com/add-page-numbers-to-pdf.html
+- Add page numbers without Adobe: https://slaypdf.com/add-page-numbers-without-adobe.html
+- Adobe add page numbers alternative: https://slaypdf.com/adobe-add-page-numbers-alternative.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
 
 ## Redact PDF Without Acrobat - Slay PDF
 URL: https://slaypdf.com/redact-pdf-without-acrobat.html

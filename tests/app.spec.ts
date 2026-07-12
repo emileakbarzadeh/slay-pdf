@@ -443,6 +443,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'extract-pdf-pages-without-adobe.html',
     'crop-pdf-without-adobe.html',
     'add-page-numbers-without-adobe.html',
+    'delete-pdf-pages-without-acrobat.html',
+    'extract-pdf-pages-without-acrobat.html',
+    'crop-pdf-without-acrobat.html',
+    'add-page-numbers-without-acrobat.html',
     'redact-pdf-without-acrobat.html',
     'password-protect-pdf-without-acrobat.html',
     'fill-pdf-forms-without-acrobat.html',
@@ -776,8 +780,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
-  expect(workflowPageCount).toBe(36)
-  expect(toolAppPageCount).toBe(155)
+  expect(workflowPageCount).toBe(40)
+  expect(toolAppPageCount).toBe(159)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -869,6 +873,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/extract-pdf-pages-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/crop-pdf-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/add-page-numbers-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/delete-pdf-pages-without-acrobat.html')
+  expect(llms).toContain('https://slaypdf.com/extract-pdf-pages-without-acrobat.html')
+  expect(llms).toContain('https://slaypdf.com/crop-pdf-without-acrobat.html')
+  expect(llms).toContain('https://slaypdf.com/add-page-numbers-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-acrobat.html')
@@ -1077,6 +1085,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/extract-pdf-pages-without-adobe.html')
   expect(tools).toContain('/crop-pdf-without-adobe.html')
   expect(tools).toContain('/add-page-numbers-without-adobe.html')
+  expect(tools).toContain('/delete-pdf-pages-without-acrobat.html')
+  expect(tools).toContain('/extract-pdf-pages-without-acrobat.html')
+  expect(tools).toContain('/crop-pdf-without-acrobat.html')
+  expect(tools).toContain('/add-page-numbers-without-acrobat.html')
   expect(tools).toContain('/redact-pdf-without-acrobat.html')
   expect(tools).toContain('/password-protect-pdf-without-acrobat.html')
   expect(tools).toContain('/fill-pdf-forms-without-acrobat.html')

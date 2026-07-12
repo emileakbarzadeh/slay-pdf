@@ -248,6 +248,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Add Page Numbers Without Adobe - Slay PDF: https://slaypdf.com/add-page-numbers-without-adobe.html
   Summary: Add page numbers to a PDF without Adobe Acrobat. Number selected pages and export a clean local PDF from your browser.
   Last modified: 2026-07-13
+- Delete PDF Pages Without Acrobat - Slay PDF: https://slaypdf.com/delete-pdf-pages-without-acrobat.html
+  Summary: Delete PDF pages without Acrobat. Remove unwanted pages, reorder the rest and export a clean PDF locally from your browser.
+  Last modified: 2026-07-13
+- Extract PDF Pages Without Acrobat - Slay PDF: https://slaypdf.com/extract-pdf-pages-without-acrobat.html
+  Summary: Extract PDF pages without Acrobat. Select pages, create a smaller PDF and download the result locally from your browser.
+  Last modified: 2026-07-13
+- Crop PDF Without Acrobat - Slay PDF: https://slaypdf.com/crop-pdf-without-acrobat.html
+  Summary: Crop PDF without Acrobat. Trim margins, clean scanned pages and export cropped PDFs locally from your browser.
+  Last modified: 2026-07-13
+- Add Page Numbers Without Acrobat - Slay PDF: https://slaypdf.com/add-page-numbers-without-acrobat.html
+  Summary: Add page numbers without Acrobat. Number PDF pages and export a clean local PDF from your browser with Slay PDF.
+  Last modified: 2026-07-13
 - Redact PDF Without Acrobat - Slay PDF: https://slaypdf.com/redact-pdf-without-acrobat.html
   Summary: Redact PDF files without Acrobat. Cover visible details, flatten redacted pages and export locally in your browser with Slay PDF.
   Last modified: 2026-07-13
