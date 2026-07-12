@@ -1202,6 +1202,54 @@
       "breadcrumbId": "https://slaypdf.com/private-pdf-redactor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/merge-pdf-no-watermark.html",
+      "path": "/merge-pdf-no-watermark.html",
+      "title": "Merge PDF No Watermark - Slay PDF",
+      "description": "Merge PDF files with no watermark in Slay PDF. Combine pages locally in your browser and download a clean merged PDF.",
+      "h1": "Merge PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/merge-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/merge-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/split-pdf-no-watermark.html",
+      "path": "/split-pdf-no-watermark.html",
+      "title": "Split PDF No Watermark - Slay PDF",
+      "description": "Split PDF files with no watermark in Slay PDF. Extract pages locally in your browser and download clean PDF outputs.",
+      "h1": "Split PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/split-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/split-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/sign-pdf-no-watermark.html",
+      "path": "/sign-pdf-no-watermark.html",
+      "title": "Sign PDF No Watermark - Slay PDF",
+      "description": "Sign PDF files with no watermark in Slay PDF. Add signatures locally in your browser and download a clean signed PDF.",
+      "h1": "Sign PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/sign-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/sign-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/redact-pdf-no-watermark.html",
+      "path": "/redact-pdf-no-watermark.html",
+      "title": "Redact PDF No Watermark - Slay PDF",
+      "description": "Redact PDF files with no watermark in Slay PDF. Cover sensitive details locally and export a clean flattened PDF.",
+      "h1": "Redact PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/redact-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/redact-pdf-no-watermark.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "path": "/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",

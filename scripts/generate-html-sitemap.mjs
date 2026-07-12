@@ -69,6 +69,11 @@ const sections = [
     paths: ['/private-pdf-merger.html', '/private-pdf-splitter.html', '/private-pdf-signer.html', '/private-pdf-redactor.html'],
   },
   {
+    title: 'No-watermark PDF task pages',
+    description: 'No-watermark PDF merger, splitter, signer and redactor pages for clean local exports.',
+    paths: ['/merge-pdf-no-watermark.html', '/split-pdf-no-watermark.html', '/sign-pdf-no-watermark.html', '/redact-pdf-no-watermark.html'],
+  },
+  {
     title: 'Open source and local app pages',
     description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
     paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],

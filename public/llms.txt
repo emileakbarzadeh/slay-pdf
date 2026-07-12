@@ -308,6 +308,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Private PDF Redactor - Slay PDF: https://slaypdf.com/private-pdf-redactor.html
   Summary: Use a private PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.
   Last modified: 2026-07-13
+- Merge PDF No Watermark - Slay PDF: https://slaypdf.com/merge-pdf-no-watermark.html
+  Summary: Merge PDF files with no watermark in Slay PDF. Combine pages locally in your browser and download a clean merged PDF.
+  Last modified: 2026-07-13
+- Split PDF No Watermark - Slay PDF: https://slaypdf.com/split-pdf-no-watermark.html
+  Summary: Split PDF files with no watermark in Slay PDF. Extract pages locally in your browser and download clean PDF outputs.
+  Last modified: 2026-07-13
+- Sign PDF No Watermark - Slay PDF: https://slaypdf.com/sign-pdf-no-watermark.html
+  Summary: Sign PDF files with no watermark in Slay PDF. Add signatures locally in your browser and download a clean signed PDF.
+  Last modified: 2026-07-13
+- Redact PDF No Watermark - Slay PDF: https://slaypdf.com/redact-pdf-no-watermark.html
+  Summary: Redact PDF files with no watermark in Slay PDF. Cover sensitive details locally and export a clean flattened PDF.
+  Last modified: 2026-07-13
 - Open Source PDF Editor - Slay PDF: https://slaypdf.com/open-source-pdf-editor.html
   Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
   Last modified: 2026-07-13
