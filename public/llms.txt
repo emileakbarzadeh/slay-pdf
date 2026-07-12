@@ -260,6 +260,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Redact PDF Without Uploading - Slay PDF: https://slaypdf.com/redact-pdf-without-uploading.html
   Summary: Redact PDF files without uploading them to a Slay PDF app server. Cover visible details and export flattened redacted pages locally.
   Last modified: 2026-07-13
+- Compress PDF Without Uploading - Slay PDF: https://slaypdf.com/compress-pdf-without-uploading.html
+  Summary: Compress PDF files without uploading them to a Slay PDF app server. Reduce file size, review pages and export smaller PDFs locally in the browser.
+  Last modified: 2026-07-13
+- Rotate PDF Without Uploading - Slay PDF: https://slaypdf.com/rotate-pdf-without-uploading.html
+  Summary: Rotate PDF pages without uploading them to a Slay PDF app server. Fix sideways scans, rotate selected pages and export locally in the browser.
+  Last modified: 2026-07-13
+- Crop PDF Without Uploading - Slay PDF: https://slaypdf.com/crop-pdf-without-uploading.html
+  Summary: Crop PDF pages without uploading them to a Slay PDF app server. Trim margins, clean scanned pages and export cropped PDFs locally.
+  Last modified: 2026-07-13
+- Password Protect PDF Without Uploading - Slay PDF: https://slaypdf.com/password-protect-pdf-without-uploading.html
+  Summary: Password protect PDF files without uploading them to a Slay PDF app server. Encrypt exported PDFs locally in the browser, and passwords are never saved.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

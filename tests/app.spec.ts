@@ -447,6 +447,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'split-pdf-without-uploading.html',
     'sign-pdf-without-uploading.html',
     'redact-pdf-without-uploading.html',
+    'compress-pdf-without-uploading.html',
+    'rotate-pdf-without-uploading.html',
+    'crop-pdf-without-uploading.html',
+    'password-protect-pdf-without-uploading.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -709,7 +713,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(87)
+  expect(toolAppPageCount).toBe(91)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -805,6 +809,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/split-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/sign-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/compress-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/rotate-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/crop-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -945,6 +953,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/split-pdf-without-uploading.html')
   expect(tools).toContain('/sign-pdf-without-uploading.html')
   expect(tools).toContain('/redact-pdf-without-uploading.html')
+  expect(tools).toContain('/compress-pdf-without-uploading.html')
+  expect(tools).toContain('/rotate-pdf-without-uploading.html')
+  expect(tools).toContain('/crop-pdf-without-uploading.html')
+  expect(tools).toContain('/password-protect-pdf-without-uploading.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

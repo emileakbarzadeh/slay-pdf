@@ -161,6 +161,10 @@ Related links:
 - Split PDF without uploading: https://slaypdf.com/split-pdf-without-uploading.html
 - Sign PDF without uploading: https://slaypdf.com/sign-pdf-without-uploading.html
 - Redact PDF without uploading: https://slaypdf.com/redact-pdf-without-uploading.html
+- Compress PDF without uploading: https://slaypdf.com/compress-pdf-without-uploading.html
+- Rotate PDF without uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
+- Crop PDF without uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Password protect PDF without uploading: https://slaypdf.com/password-protect-pdf-without-uploading.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -370,6 +374,10 @@ Related links:
 - Split PDF Without Uploading: https://slaypdf.com/split-pdf-without-uploading.html
 - Sign PDF Without Uploading: https://slaypdf.com/sign-pdf-without-uploading.html
 - Redact PDF Without Uploading: https://slaypdf.com/redact-pdf-without-uploading.html
+- Compress PDF Without Uploading: https://slaypdf.com/compress-pdf-without-uploading.html
+- Rotate PDF Without Uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
+- Crop PDF Without Uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Password Protect PDF Without Uploading: https://slaypdf.com/password-protect-pdf-without-uploading.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -2489,6 +2497,122 @@ Related links:
 - Redact PDF: https://slaypdf.com/redact-pdf.html
 - PDF redaction tool: https://slaypdf.com/pdf-redaction-tool.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Compress PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/compress-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Compress PDF files without uploading them to a Slay PDF app server. Reduce file size, review pages and export smaller PDFs locally in the browser.
+H1: Compress PDF without uploading.
+
+Content:
+- No-upload PDF compression
+- Compress PDF without uploading.
+- Reduce PDF file size locally, review pages and export a smaller PDF from your browser.
+- Local compression export
+- Use export compression options without sending the document to a Slay PDF app server.
+- Page cleanup first
+- Remove blank pages, rotate scans or export only selected pages before making the PDF smaller.
+- Private file handling
+- Keep the working file in the browser and share only the compressed PDF you choose to export.
+- For oversized PDFs.
+- Large scanned PDFs and document packets can be awkward to email or upload into portals.
+- Slay PDF gives you a local compression workflow for practical size reduction without a Slay PDF app-server upload.
+- Compress PDF without uploading FAQ
+- Yes. Import the PDF, choose export settings and save a compressed PDF from the browser.
+- Yes. Remove pages or export selected pages first so the final compressed PDF only contains what you need.
+
+Related links:
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- Delete pages: https://slaypdf.com/delete-pdf-pages.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Rotate PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/rotate-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Rotate PDF pages without uploading them to a Slay PDF app server. Fix sideways scans, rotate selected pages and export locally in the browser.
+H1: Rotate PDF without uploading.
+
+Content:
+- No-upload PDF rotation
+- Rotate PDF without uploading.
+- Fix sideways scanned pages locally, rotate selected pages and export the corrected PDF from your browser.
+- Selected-page rotation
+- Rotate one page, a range of pages or the full document before export.
+- Scan cleanup
+- Fix mixed-orientation scanned packets and remove pages that do not belong.
+- Local corrected export
+- Export the corrected PDF from the browser without a Slay PDF app-server upload.
+- For sideways scans.
+- Scanned PDFs often contain a few sideways pages, mixed orientations or pages that need to be removed before sharing.
+- Slay PDF lets you make those page edits locally and export a corrected file.
+- Rotate PDF without uploading FAQ
+- Yes. Import the PDF, rotate the selected pages and export the corrected file from your browser.
+- Yes. Select the page you want to fix, rotate it and leave the other pages unchanged.
+
+Related links:
+- Rotate PDF: https://slaypdf.com/rotate-pdf.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Crop PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/crop-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Crop PDF pages without uploading them to a Slay PDF app server. Trim margins, clean scanned pages and export cropped PDFs locally.
+H1: Crop PDF without uploading.
+
+Content:
+- No-upload PDF crop
+- Crop PDF without uploading.
+- Trim margins, clean scanned pages and export cropped PDFs locally from your browser.
+- Margin cleanup
+- Crop excess margins from scanned pages or exported documents before sharing.
+- Selected-page edits
+- Crop the pages that need cleanup while leaving other pages alone.
+- Local cropped export
+- Export a cropped PDF from the browser without uploading the original to a Slay PDF app server.
+- For messy scans and margins.
+- PDFs created from scanners, screenshots and image exports often carry extra borders or uneven page framing.
+- Slay PDF gives you a local crop workflow so you can clean pages and export the version you actually want.
+- Crop PDF without uploading FAQ
+- Yes. Import the PDF, crop pages locally and export the cleaned PDF from your browser.
+- Yes. Select the pages you need to adjust and leave the rest of the PDF unchanged.
+
+Related links:
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Password Protect PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/password-protect-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Password protect PDF files without uploading them to a Slay PDF app server. Encrypt exported PDFs locally in the browser, and passwords are never saved.
+H1: Password protect PDF without uploading.
+
+Content:
+- No-upload PDF protection
+- Password protect PDF without uploading.
+- Add password protection to exported PDFs locally in the browser. Passwords are never saved.
+- Local encryption export
+- Apply password protection during export without sending the PDF to a Slay PDF app server.
+- Passwords never saved
+- Slay PDF uses the password for the export workflow and does not save it in browser storage.
+- Clean before protecting
+- Remove pages, merge files, redact visible details or compress the PDF before exporting a protected copy.
+- For guarded PDF exports.
+- Password protection is useful when you need to send a PDF copy with an extra access barrier.
+- Slay PDF keeps the export workflow local and does not save document passwords.
+- Password protect PDF without uploading FAQ
+- Yes. Import the PDF, choose password protection during export and save the protected PDF locally.
+- No. Passwords are never saved by Slay PDF.
+
+Related links:
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Redact without uploading: https://slaypdf.com/redact-pdf-without-uploading.html
 - Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 
 ## Free PDF Editor No Signup - Slay PDF

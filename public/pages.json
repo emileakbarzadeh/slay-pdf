@@ -1010,6 +1010,54 @@
       "breadcrumbId": "https://slaypdf.com/redact-pdf-without-uploading.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/compress-pdf-without-uploading.html",
+      "path": "/compress-pdf-without-uploading.html",
+      "title": "Compress PDF Without Uploading - Slay PDF",
+      "description": "Compress PDF files without uploading them to a Slay PDF app server. Reduce file size, review pages and export smaller PDFs locally in the browser.",
+      "h1": "Compress PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/compress-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/compress-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/rotate-pdf-without-uploading.html",
+      "path": "/rotate-pdf-without-uploading.html",
+      "title": "Rotate PDF Without Uploading - Slay PDF",
+      "description": "Rotate PDF pages without uploading them to a Slay PDF app server. Fix sideways scans, rotate selected pages and export locally in the browser.",
+      "h1": "Rotate PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/rotate-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/rotate-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/crop-pdf-without-uploading.html",
+      "path": "/crop-pdf-without-uploading.html",
+      "title": "Crop PDF Without Uploading - Slay PDF",
+      "description": "Crop PDF pages without uploading them to a Slay PDF app server. Trim margins, clean scanned pages and export cropped PDFs locally.",
+      "h1": "Crop PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/crop-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/crop-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/password-protect-pdf-without-uploading.html",
+      "path": "/password-protect-pdf-without-uploading.html",
+      "title": "Password Protect PDF Without Uploading - Slay PDF",
+      "description": "Password protect PDF files without uploading them to a Slay PDF app server. Encrypt exported PDFs locally in the browser, and passwords are never saved.",
+      "h1": "Password protect PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/password-protect-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/password-protect-pdf-without-uploading.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "path": "/free-pdf-editor-no-signup.html",
       "title": "Free PDF Editor No Signup - Slay PDF",
