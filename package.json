@@ -69,6 +69,7 @@
     "test:e2e": "playwright test",
     "seo:index": "node scripts/generate-page-index.mjs",
     "seo:feed": "node scripts/generate-discovery-feed.mjs",
+    "seo:feed:json": "node scripts/generate-json-feed.mjs",
     "seo:llms": "node scripts/generate-llms.mjs",
     "seo:social": "node scripts/sync-static-social-meta.mjs",
     "seo:schema": "node scripts/sync-static-webpage-schema.mjs",

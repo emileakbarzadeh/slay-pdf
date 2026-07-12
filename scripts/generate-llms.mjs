@@ -41,6 +41,7 @@ lines.push(
   `- Plain page index: ${site}/pages.txt`,
   `- Structured page index: ${site}/pages.json`,
   `- RSS discovery feed: ${site}/feed.xml`,
+  `- JSON discovery feed: ${site}/feed.json`,
   `- Source code: ${source}`,
   '',
   '## Use Cases',

@@ -17,6 +17,10 @@ function pubDate(lastmod) {
   return new Date(`${lastmod}T00:00:00.000Z`).toUTCString()
 }
 
+function isoDate(lastmod) {
+  return new Date(`${lastmod}T00:00:00.000Z`).toISOString()
+}
+
 function decodeXml(value) {
   return value
     .replaceAll('&apos;', "'")
@@ -131,6 +135,7 @@ for (const url of htmlUrls) {
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 assert(rootHtml.includes('rel="alternate" type="application/rss+xml" title="Slay PDF discovery feed" href="https://slaypdf.com/feed.xml"'), 'homepage is missing RSS alternate link')
+assert(rootHtml.includes('rel="alternate" type="application/feed+json" title="Slay PDF JSON discovery feed" href="https://slaypdf.com/feed.json"'), 'homepage is missing JSON feed alternate link')
 const rootMetadata = {
   title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),
   description: rootHtml.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim(),
@@ -205,6 +210,25 @@ for (const [index, item] of feedItems.entries()) {
   assert(item.pubDate === pubDate(page.lastmod), `feed.xml pubDate mismatch at ${index}`)
 }
 
+const jsonFeed = JSON.parse(await readPublic('feed.json'))
+assert(jsonFeed.version === 'https://jsonfeed.org/version/1.1', 'feed.json version is wrong')
+assert(jsonFeed.title === 'Slay PDF pages', 'feed.json title is wrong')
+assert(jsonFeed.home_page_url === `${site}/`, 'feed.json home_page_url is wrong')
+assert(jsonFeed.feed_url === `${site}/feed.json`, 'feed.json feed_url is wrong')
+assert(jsonFeed.description === 'Canonical Slay PDF app, tool and guide pages for local PDF editing.', 'feed.json description is wrong')
+assert(jsonFeed.language === 'en', 'feed.json language is wrong')
+assert(Array.isArray(jsonFeed.items), 'feed.json items must be an array')
+assert(jsonFeed.items.length === pagesJson.pages.length, 'feed.json item count differs from pages.json')
+for (const [index, item] of jsonFeed.items.entries()) {
+  const page = pagesJson.pages[index]
+  assert(item.id === page.url, `feed.json id mismatch at ${index}`)
+  assert(item.url === page.url, `feed.json url mismatch at ${index}`)
+  assert(item.title === page.title, `feed.json title mismatch at ${index}`)
+  assert(item.summary === page.description, `feed.json summary mismatch at ${index}`)
+  assert(item.content_text === page.description, `feed.json content_text mismatch at ${index}`)
+  assert(item.date_modified === isoDate(page.lastmod), `feed.json date_modified mismatch at ${index}`)
+}
+
 const toolsHtml = await readPublic('tools.html')
 const toolsStructuredData = structuredDataBlocks(toolsHtml, 'tools.html')
 const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
@@ -229,11 +253,13 @@ for (const page of pagesJson.pages) {
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
+assert(llms.includes(`${site}/feed.json`), 'llms.txt is missing feed.json')
 
 const robots = await readPublic('robots.txt')
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
+assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is missing feed.json')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml']) {
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml', 'feed.json']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -248,6 +274,9 @@ if (live) {
   const feedResponse = await fetch(`${site}/feed.xml`)
   assert(feedResponse.ok, `live feed failed ${feedResponse.status}`)
   assert((await feedResponse.text()).includes('<title>Slay PDF pages</title>'), 'live feed content mismatch')
+  const jsonFeedResponse = await fetch(`${site}/feed.json`)
+  assert(jsonFeedResponse.ok, `live JSON feed failed ${jsonFeedResponse.status}`)
+  assert((await jsonFeedResponse.json()).title === 'Slay PDF pages', 'live JSON feed content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

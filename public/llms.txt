@@ -179,6 +179,7 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Plain page index: https://slaypdf.com/pages.txt
 - Structured page index: https://slaypdf.com/pages.json
 - RSS discovery feed: https://slaypdf.com/feed.xml
+- JSON discovery feed: https://slaypdf.com/feed.json
 - Source code: https://github.com/emileakbarzadeh/slay-pdf
 
 ## Use Cases

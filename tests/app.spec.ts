@@ -72,6 +72,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow, max-image-preview:large')
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slaypdf.com/')
   await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute('href', 'https://slaypdf.com/feed.xml')
+  await expect(page.locator('link[rel="alternate"][type="application/feed+json"]')).toHaveAttribute('href', 'https://slaypdf.com/feed.json')
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Slay PDF - Free Local PDF Editor')
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://slaypdf.com/og-image.png')
   await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute('content', '1200')
@@ -102,6 +103,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(robots).toContain('Allow: /')
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap.xml')
   expect(robots).toContain('https://slaypdf.com/feed.xml')
+  expect(robots).toContain('https://slaypdf.com/feed.json')
 
   const sitemap = await (await page.request.get('/sitemap.xml')).text()
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
@@ -371,6 +373,29 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(feedItems[0]).toContain('<guid isPermaLink="true">https://slaypdf.com/</guid>')
   expect(feedItems[0]).toContain(`<pubDate>${new Date(`${sitemapByUrl.get('https://slaypdf.com/')?.lastmod}T00:00:00.000Z`).toUTCString()}</pubDate>`)
   expect(feedItems.some((item) => item.includes('<link>https://slaypdf.com/adobe-acrobat-alternative.html</link>'))).toBe(true)
+  const jsonFeed = await (await page.request.get('/feed.json')).json() as {
+    version: string
+    title: string
+    home_page_url: string
+    feed_url: string
+    language: string
+    items: { id: string; url: string; title: string; summary: string; content_text: string; date_modified: string }[]
+  }
+  expect(jsonFeed.version).toBe('https://jsonfeed.org/version/1.1')
+  expect(jsonFeed.title).toBe('Slay PDF pages')
+  expect(jsonFeed.home_page_url).toBe('https://slaypdf.com/')
+  expect(jsonFeed.feed_url).toBe('https://slaypdf.com/feed.json')
+  expect(jsonFeed.language).toBe('en')
+  expect(jsonFeed.items).toHaveLength(pagesJson.pages.length)
+  for (const [index, item] of jsonFeed.items.entries()) {
+    const entry = pagesJson.pages[index]
+    expect(item.id).toBe(entry.url)
+    expect(item.url).toBe(entry.url)
+    expect(item.title).toBe(entry.title)
+    expect(item.summary).toBe(entry.description)
+    expect(item.content_text).toBe(entry.description)
+    expect(item.date_modified).toBe(new Date(`${entry.lastmod}T00:00:00.000Z`).toISOString())
+  }
   expect(llms).toContain('## Canonical Pages')
   expect(llms).toContain('## Discovery Files')
   expect(llms).toContain('## Use Cases')
@@ -382,6 +407,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/pages.txt')
   expect(llms).toContain('https://slaypdf.com/pages.json')
   expect(llms).toContain('https://slaypdf.com/feed.xml')
+  expect(llms).toContain('https://slaypdf.com/feed.json')
 })
 
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {
