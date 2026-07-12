@@ -55,6 +55,13 @@ Important URLs:
 - Adobe compress PDF alternative: https://slaypdf.com/adobe-compress-pdf-alternative.html
 - Adobe Fill and Sign alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
 - Adobe PDF organizer alternative: https://slaypdf.com/adobe-pdf-organizer-alternative.html
+- Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
+- PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- PDF editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
+- PDF editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
+- PDF editor for Chromebook: https://slaypdf.com/pdf-editor-for-chromebook.html
 - IndexNow URL list: https://slaypdf.com/indexnow-urls.txt
 - Plain page index: https://slaypdf.com/pages.txt
 - Structured page index: https://slaypdf.com/pages.json

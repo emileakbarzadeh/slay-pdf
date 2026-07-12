@@ -141,7 +141,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'adobe-pdf-merge-alternative.html',
     'adobe-compress-pdf-alternative.html',
     'adobe-fill-and-sign-alternative.html',
-    'adobe-pdf-organizer-alternative.html'
+    'adobe-pdf-organizer-alternative.html',
+    'free-pdf-editor-no-signup.html',
+    'pdf-editor-no-watermark.html',
+    'secure-pdf-editor.html',
+    'browser-pdf-editor.html',
+    'pdf-editor-for-mac.html',
+    'pdf-editor-for-windows.html',
+    'pdf-editor-for-chromebook.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
   for (const path of htmlPaths) {
@@ -196,6 +203,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/adobe-compress-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-fill-and-sign-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-pdf-organizer-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/browser-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-mac.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-windows.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-chromebook.html')
 
   const tools = await (await page.request.get('/tools.html')).text()
   expect(tools).toContain('"@type": "ItemList"')
@@ -234,6 +248,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/adobe-compress-pdf-alternative.html')
   expect(tools).toContain('/adobe-fill-and-sign-alternative.html')
   expect(tools).toContain('/adobe-pdf-organizer-alternative.html')
+  expect(tools).toContain('/free-pdf-editor-no-signup.html')
+  expect(tools).toContain('/pdf-editor-no-watermark.html')
+  expect(tools).toContain('/secure-pdf-editor.html')
+  expect(tools).toContain('/browser-pdf-editor.html')
+  expect(tools).toContain('/pdf-editor-for-mac.html')
+  expect(tools).toContain('/pdf-editor-for-windows.html')
+  expect(tools).toContain('/pdf-editor-for-chromebook.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')

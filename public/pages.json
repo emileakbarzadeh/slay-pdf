@@ -330,6 +330,55 @@
       "title": "Adobe PDF Organizer Alternative - Slay PDF",
       "description": "Use Slay PDF as an Adobe PDF organizer alternative. Reorder, delete, rotate, split, merge and export PDF pages locally.",
       "h1": "Organize PDF pages locally without Acrobat."
+    },
+    {
+      "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
+      "path": "/free-pdf-editor-no-signup.html",
+      "title": "Free PDF Editor No Signup - Slay PDF",
+      "description": "Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.",
+      "h1": "Edit PDFs without creating an account."
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-no-watermark.html",
+      "path": "/pdf-editor-no-watermark.html",
+      "title": "PDF Editor No Watermark - Slay PDF",
+      "description": "Use Slay PDF as a PDF editor with no watermark added by the app. Edit, organize, sign and export PDFs locally in your browser.",
+      "h1": "Edit PDFs without an app-added watermark."
+    },
+    {
+      "url": "https://slaypdf.com/secure-pdf-editor.html",
+      "path": "/secure-pdf-editor.html",
+      "title": "Secure Local PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a secure local PDF editor for private documents. PDFs and edits stay in your browser, and passwords are never saved.",
+      "h1": "Edit private PDFs in your browser."
+    },
+    {
+      "url": "https://slaypdf.com/browser-pdf-editor.html",
+      "path": "/browser-pdf-editor.html",
+      "title": "Browser PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a browser PDF editor for local merge, split, sign, annotate, OCR, resize and export workflows.",
+      "h1": "Edit PDFs directly in your browser."
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-mac.html",
+      "path": "/pdf-editor-for-mac.html",
+      "title": "PDF Editor for Mac - Slay PDF",
+      "description": "Use Slay PDF as a local PDF editor for Mac in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
+      "h1": "Edit PDFs on Mac in the browser."
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-windows.html",
+      "path": "/pdf-editor-for-windows.html",
+      "title": "PDF Editor for Windows - Slay PDF",
+      "description": "Use Slay PDF as a local PDF editor for Windows in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
+      "h1": "Edit PDFs on Windows in the browser."
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-chromebook.html",
+      "path": "/pdf-editor-for-chromebook.html",
+      "title": "PDF Editor for Chromebook - Slay PDF",
+      "description": "Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.",
+      "h1": "Edit PDFs on Chromebook in Chrome."
     }
   ]
 }

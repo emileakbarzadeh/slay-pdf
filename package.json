@@ -51,7 +51,13 @@
     "adobe-pdf-merge-alternative",
     "adobe-compress-pdf-alternative",
     "adobe-fill-and-sign-alternative",
-    "adobe-pdf-organizer-alternative"
+    "adobe-pdf-organizer-alternative",
+    "free-pdf-editor-no-signup",
+    "pdf-editor-no-watermark",
+    "secure-pdf-editor",
+    "pdf-editor-for-mac",
+    "pdf-editor-for-windows",
+    "pdf-editor-for-chromebook"
   ],
   "type": "module",
   "license": "AGPL-3.0-only",
