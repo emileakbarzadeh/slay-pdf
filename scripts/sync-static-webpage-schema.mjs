@@ -4,7 +4,7 @@ const site = 'https://slaypdf.com/'
 const rootDir = new URL('../', import.meta.url)
 const publicDir = new URL('../public/', import.meta.url)
 const sitemap = await readFile(new URL('sitemap.xml', publicDir), 'utf8')
-const lastmodByUrl = new Map([...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>/g)].map((match) => [match[1], match[2]]))
+const lastmodByUrl = new Map([...sitemap.matchAll(/<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S]*?<lastmod>(.*?)<\/lastmod>/g)].map((match) => [match[1], match[2]]))
 const aboutTopicsByFile = new Map([
   ['adobe-acrobat-vs-slay-pdf.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
   ['free-adobe-pdf-editor-alternative.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],

@@ -1,331 +1,441 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://slaypdf.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/free-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/free-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/free-pdf-editor.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/tools.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/tools.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/faq.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/privacy.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/sitemap.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/sitemap.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/sitemap.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/online-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/online-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/online-pdf-editor.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/edit-pdf-without-uploading.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/edit-pdf-without-uploading.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/edit-pdf-without-uploading.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/organize-pdf-pages.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/organize-pdf-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/organize-pdf-pages.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/combine-pdf-files.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/combine-pdf-files.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/combine-pdf-files.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/remove-pages-from-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/remove-pages-from-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/remove-pages-from-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/extract-pages-from-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/extract-pages-from-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/extract-pages-from-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/make-pdf-searchable.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/make-pdf-searchable.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/make-pdf-searchable.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/add-signature-to-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/add-signature-to-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/add-signature-to-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-redaction-tool.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-redaction-tool.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-redaction-tool.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/images-to-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/images-to-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/images-to-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/jpg-to-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/jpg-to-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/jpg-to-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/png-to-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/png-to-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/png-to-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/edit-scanned-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/edit-scanned-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/edit-scanned-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/flatten-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/flatten-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/flatten-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/printable-poster-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/printable-poster-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/printable-poster-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-acrobat-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-acrobat-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-acrobat-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/merge-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/merge-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/merge-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/split-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/split-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/split-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/sign-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/sign-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/sign-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/posterise-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/posterise-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/posterise-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/private-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/private-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/private-pdf-editor.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/delete-pdf-pages.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/delete-pdf-pages.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/delete-pdf-pages.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/resize-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/resize-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/resize-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/crop-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/crop-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/crop-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/redact-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/redact-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/redact-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/compress-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/compress-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/compress-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/ocr-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/ocr-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/ocr-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-to-images.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-to-images.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-to-images.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/extract-pdf-text.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/extract-pdf-text.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/extract-pdf-text.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/rotate-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/rotate-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/rotate-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/annotate-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/annotate-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/annotate-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/watermark-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/watermark-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/watermark-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/add-page-numbers-to-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/add-page-numbers-to-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/add-page-numbers-to-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/fill-pdf-forms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/fill-pdf-forms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/fill-pdf-forms.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/password-protect-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/password-protect-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/password-protect-pdf.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/free-adobe-pdf-editor-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/free-adobe-pdf-editor-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/free-adobe-pdf-editor-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/acrobat-online-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/acrobat-online-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/acrobat-online-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-pdf-merge-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-pdf-merge-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-pdf-merge-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-compress-pdf-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-compress-pdf-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-compress-pdf-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-fill-and-sign-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-fill-and-sign-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-fill-and-sign-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/adobe-pdf-organizer-alternative.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/adobe-pdf-organizer-alternative.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/adobe-pdf-organizer-alternative.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/free-pdf-editor-no-signup.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/free-pdf-editor-no-signup.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-editor-no-watermark.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-editor-no-watermark.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-editor-no-watermark.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/secure-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/secure-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/secure-pdf-editor.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/browser-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/browser-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/browser-pdf-editor.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-editor-for-mac.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-editor-for-mac.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-editor-for-mac.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-editor-for-windows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-editor-for-windows.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-editor-for-windows.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://slaypdf.com/pdf-editor-for-chromebook.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-editor-for-chromebook.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-editor-for-chromebook.html" />
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>

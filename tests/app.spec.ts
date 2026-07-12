@@ -289,7 +289,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const sitemap = await (await page.request.get('/sitemap.xml')).text()
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
-  const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<changefreq>(.*?)<\/changefreq>\s*<priority>(.*?)<\/priority>\s*<\/url>/g)]
+  expect(sitemap).toContain('xmlns:xhtml="http://www.w3.org/1999/xhtml"')
+  const sitemapEntries = [...sitemap.matchAll(/<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S]*?<lastmod>(.*?)<\/lastmod>[\s\S]*?<changefreq>(.*?)<\/changefreq>[\s\S]*?<priority>(.*?)<\/priority>[\s\S]*?<\/url>/g)]
     .map((match) => ({ url: match[1], lastmod: match[2], changefreq: match[3], priority: Number(match[4]) }))
   const sitemapByUrl = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
   expect(sitemapByUrl.get('https://slaypdf.com/')?.lastmod).toMatch(/^\d{4}-\d{2}-\d{2}$/)
@@ -297,6 +298,11 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod))).toBe(true)
   expect(sitemapEntries.every((entry) => ['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq))).toBe(true)
   expect(sitemapEntries.every((entry) => entry.priority >= 0 && entry.priority <= 1)).toBe(true)
+  for (const entry of sitemapEntries) {
+    const block = sitemap.match(new RegExp(`<url>[\\s\\S]*?<loc>${entry.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}<\\/loc>[\\s\\S]*?<\\/url>`))?.[0] ?? ''
+    expect(block).toContain(`<xhtml:link rel="alternate" hreflang="en" href="${entry.url}" />`)
+    expect(block).toContain(`<xhtml:link rel="alternate" hreflang="x-default" href="${entry.url}" />`)
+  }
   expect(webSite?.hasPart).toHaveLength(sitemapEntries.length)
   expect(webSite?.hasPart?.[0]).toMatchObject({
     '@type': 'WebPage',

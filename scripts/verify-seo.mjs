@@ -376,7 +376,7 @@ function assertSiteIdentitySchema(html, file) {
 
 const sitemap = await readPublic('sitemap.xml')
 const sitemapLocs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
-const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<changefreq>(.*?)<\/changefreq>\s*<priority>(.*?)<\/priority>\s*<\/url>/g)]
+const sitemapEntries = [...sitemap.matchAll(/<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S]*?<lastmod>(.*?)<\/lastmod>[\s\S]*?<changefreq>(.*?)<\/changefreq>[\s\S]*?<priority>(.*?)<\/priority>[\s\S]*?<\/url>/g)]
   .map((match) => ({
     url: match[1],
     lastmod: match[2],
@@ -386,9 +386,13 @@ const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmo
 const urls = sitemapEntries.map((entry) => entry.url)
 const sitemapMetadata = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
+assert(sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'), 'sitemap is missing xhtml namespace for hreflang alternates')
 assert(new Set(urls).size === urls.length, 'sitemap contains duplicate URLs')
 assert(sitemapEntries.length === sitemapLocs.length, 'every sitemap URL must include lastmod, changefreq and priority')
 for (const entry of sitemapEntries) {
+  const urlBlock = sitemap.match(new RegExp(`<url>[\\s\\S]*?<loc>${entry.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}<\\/loc>[\\s\\S]*?<\\/url>`))?.[0] ?? ''
+  assert(urlBlock.includes(`<xhtml:link rel="alternate" hreflang="en" href="${entry.url}" />`), `${entry.url} sitemap is missing en hreflang alternate`)
+  assert(urlBlock.includes(`<xhtml:link rel="alternate" hreflang="x-default" href="${entry.url}" />`), `${entry.url} sitemap is missing x-default hreflang alternate`)
   assert(/^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod), `${entry.url} sitemap lastmod must be YYYY-MM-DD`)
   assert(['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq), `${entry.url} sitemap changefreq is invalid`)
   assert(Number.isFinite(entry.priority) && entry.priority >= 0 && entry.priority <= 1, `${entry.url} sitemap priority must be 0-1`)
