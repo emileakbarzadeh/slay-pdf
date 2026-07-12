@@ -439,6 +439,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'password-protect-pdf-without-adobe.html',
     'fill-pdf-forms-without-adobe.html',
     'rotate-pdf-without-adobe.html',
+    'delete-pdf-pages-without-adobe.html',
+    'extract-pdf-pages-without-adobe.html',
+    'crop-pdf-without-adobe.html',
+    'add-page-numbers-without-adobe.html',
     'redact-pdf-without-acrobat.html',
     'password-protect-pdf-without-acrobat.html',
     'fill-pdf-forms-without-acrobat.html',
@@ -772,8 +776,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
-  expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(151)
+  expect(workflowPageCount).toBe(36)
+  expect(toolAppPageCount).toBe(155)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -861,6 +865,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/rotate-pdf-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/delete-pdf-pages-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/extract-pdf-pages-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/crop-pdf-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/add-page-numbers-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-acrobat.html')
@@ -1065,6 +1073,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/password-protect-pdf-without-adobe.html')
   expect(tools).toContain('/fill-pdf-forms-without-adobe.html')
   expect(tools).toContain('/rotate-pdf-without-adobe.html')
+  expect(tools).toContain('/delete-pdf-pages-without-adobe.html')
+  expect(tools).toContain('/extract-pdf-pages-without-adobe.html')
+  expect(tools).toContain('/crop-pdf-without-adobe.html')
+  expect(tools).toContain('/add-page-numbers-without-adobe.html')
   expect(tools).toContain('/redact-pdf-without-acrobat.html')
   expect(tools).toContain('/password-protect-pdf-without-acrobat.html')
   expect(tools).toContain('/fill-pdf-forms-without-acrobat.html')

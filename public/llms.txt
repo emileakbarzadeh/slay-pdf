@@ -236,6 +236,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Rotate PDF Without Adobe - Slay PDF: https://slaypdf.com/rotate-pdf-without-adobe.html
   Summary: Rotate PDF pages without Adobe. Fix sideways scans, rotate selected pages and export corrected PDFs locally in your browser with Slay PDF.
   Last modified: 2026-07-13
+- Delete PDF Pages Without Adobe - Slay PDF: https://slaypdf.com/delete-pdf-pages-without-adobe.html
+  Summary: Delete PDF pages without Adobe Acrobat. Remove unwanted pages, reorder the remaining PDF and export locally from your browser.
+  Last modified: 2026-07-13
+- Extract PDF Pages Without Adobe - Slay PDF: https://slaypdf.com/extract-pdf-pages-without-adobe.html
+  Summary: Extract PDF pages without Adobe Acrobat. Select pages, split them into a new PDF and download locally from your browser.
+  Last modified: 2026-07-13
+- Crop PDF Without Adobe - Slay PDF: https://slaypdf.com/crop-pdf-without-adobe.html
+  Summary: Crop PDF without Adobe Acrobat. Trim margins, clean scans and export cropped pages locally from your browser.
+  Last modified: 2026-07-13
+- Add Page Numbers Without Adobe - Slay PDF: https://slaypdf.com/add-page-numbers-without-adobe.html
+  Summary: Add page numbers to a PDF without Adobe Acrobat. Number selected pages and export a clean local PDF from your browser.
+  Last modified: 2026-07-13
 - Redact PDF Without Acrobat - Slay PDF: https://slaypdf.com/redact-pdf-without-acrobat.html
   Summary: Redact PDF files without Acrobat. Cover visible details, flatten redacted pages and export locally in your browser with Slay PDF.
   Last modified: 2026-07-13
