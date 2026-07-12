@@ -298,6 +298,7 @@ const requiredDiscoveryLinks = [
 ]
 const requiredSocialTags = [
   ['property', 'og:type', 'website'],
+  ['property', 'og:locale', 'en_US'],
   ['property', 'og:site_name', 'Slay PDF'],
   ['property', 'og:image:type', 'image/png'],
   ['property', 'og:image:width', '1200'],
@@ -305,6 +306,7 @@ const requiredSocialTags = [
   ['property', 'og:image:alt', 'Slay PDF local PDF editor preview'],
   ['name', 'twitter:card', 'summary_large_image'],
   ['name', 'twitter:image', 'https://slaypdf.com/og-image.png'],
+  ['name', 'twitter:image:alt', 'Slay PDF local PDF editor preview'],
 ]
 for (const url of htmlUrls) {
   const file = basename(new URL(url).pathname)
@@ -316,6 +318,8 @@ for (const url of htmlUrls) {
   assert(description && description.length >= 80 && description.length <= 180, `${file} description should be 80-180 characters`)
   assert(h1, `${file} is missing a visible h1`)
   assert(html.includes(`rel="canonical" href="${url}"`), `${file} canonical does not match sitemap URL`)
+  assert(html.includes(`rel="alternate" hreflang="en" href="${url}"`), `${file} is missing English hreflang alternate`)
+  assert(html.includes(`rel="alternate" hreflang="x-default" href="${url}"`), `${file} is missing x-default hreflang alternate`)
   for (const [type, title, href] of requiredDiscoveryLinks) {
     assert(html.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `${file} is missing ${title} discovery link`)
   }
@@ -345,6 +349,11 @@ for (const url of htmlUrls) {
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 for (const [type, title, href] of requiredDiscoveryLinks) {
   assert(rootHtml.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
+}
+assert(rootHtml.includes(`rel="alternate" hreflang="en" href="${site}/"`), 'homepage is missing English hreflang alternate')
+assert(rootHtml.includes(`rel="alternate" hreflang="x-default" href="${site}/"`), 'homepage is missing x-default hreflang alternate')
+for (const [attribute, name, content] of requiredSocialTags) {
+  assert(rootHtml.includes(`${attribute}="${name}" content="${content}"`), `homepage is missing ${name} metadata`)
 }
 const rootMetadata = {
   title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),

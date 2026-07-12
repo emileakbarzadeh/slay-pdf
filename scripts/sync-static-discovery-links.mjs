@@ -41,13 +41,22 @@ function linkFor(link) {
   return `    <link rel="${link.rel}" type="${link.type}" title="${link.title}" href="${link.href}" />`
 }
 
+function languageLinksFor(canonical) {
+  return [
+    `    <link rel="alternate" hreflang="en" href="${canonical}" />`,
+    `    <link rel="alternate" hreflang="x-default" href="${canonical}" />`,
+  ].join('\n')
+}
+
 function stripDiscoveryLinks(html) {
   const hrefs = discoveryLinks.map((link) => link.href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
   const expression = new RegExp(
     `^\\s*<link rel="alternate" type="[^"]+" title="[^"]+" href="(?:${hrefs.join('|')})"\\s*/>\\n`,
     'gm',
   )
-  return html.replace(expression, '')
+  return html
+    .replace(expression, '')
+    .replace(/^\s*<link rel="alternate" hreflang="(?:en|x-default)" href="[^"]+"\s*\/>\n/gm, '')
 }
 
 const files = [
@@ -64,10 +73,11 @@ const block = discoveryLinks.map(linkFor).join('\n')
 for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
   const withoutLinks = stripDiscoveryLinks(html)
-  if (!withoutLinks.includes('<link rel="canonical" href="')) throw new Error(`${file} is missing canonical link`)
+  const canonical = withoutLinks.match(/<link rel="canonical" href="([^"]+)"\s*\/>/)?.[1]
+  if (!canonical) throw new Error(`${file} is missing canonical link`)
   const updated = withoutLinks.replace(
     /(\s*<link rel="canonical" href="[^"]+"\s*\/>)/,
-    `$1\n${block}`,
+    `$1\n${languageLinksFor(canonical)}\n${block}`,
   )
   if (updated !== html) {
     await writeFile(url, updated)

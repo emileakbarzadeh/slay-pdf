@@ -1,5 +1,6 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 
+const rootDir = new URL('../', import.meta.url)
 const publicDir = new URL('../public/', import.meta.url)
 const socialImage = 'https://slaypdf.com/og-image.png'
 const socialImageAlt = 'Slay PDF local PDF editor preview'
@@ -23,6 +24,7 @@ function metaTag(attribute, value, content) {
 function stripManagedSocialMeta(html) {
   const managed = [
     'og:type',
+    'og:locale',
     'og:site_name',
     'og:title',
     'og:description',
@@ -36,6 +38,7 @@ function stripManagedSocialMeta(html) {
     'twitter:title',
     'twitter:description',
     'twitter:image',
+    'twitter:image:alt',
   ]
   const expression = new RegExp(
     `^\\s*<meta (?:property|name)="(?:${managed.join('|')})" content="[^"]+"\\s*/>\\n`,
@@ -55,6 +58,7 @@ function socialBlockFor(html, file) {
 
   return [
     metaTag('property', 'og:type', 'website'),
+    metaTag('property', 'og:locale', 'en_US'),
     metaTag('property', 'og:site_name', 'Slay PDF'),
     metaTag('property', 'og:title', title),
     metaTag('property', 'og:description', description),
@@ -68,14 +72,20 @@ function socialBlockFor(html, file) {
     metaTag('name', 'twitter:title', title),
     metaTag('name', 'twitter:description', description),
     metaTag('name', 'twitter:image', socialImage),
+    metaTag('name', 'twitter:image:alt', socialImageAlt),
   ].join('\n')
 }
 
-const files = (await readdir(publicDir)).filter((file) => file.endsWith('.html')).sort()
+const files = [
+  { file: 'index.html', url: new URL('index.html', rootDir) },
+  ...(await readdir(publicDir))
+    .filter((file) => file.endsWith('.html'))
+    .sort()
+    .map((file) => ({ file, url: new URL(file, publicDir) })),
+]
 let changed = 0
 
-for (const file of files) {
-  const url = new URL(file, publicDir)
+for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
   const withoutSocialMeta = stripManagedSocialMeta(html)
   const updated = withoutSocialMeta.replace(
@@ -88,4 +98,4 @@ for (const file of files) {
   }
 }
 
-console.log(`Synced social metadata for ${files.length} static pages${changed ? ` (${changed} changed)` : ''}.`)
+console.log(`Synced social metadata for ${files.length} HTML pages${changed ? ` (${changed} changed)` : ''}.`)

@@ -148,6 +148,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Adobe Acrobat alternative/i)
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow, max-image-preview:large')
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slaypdf.com/')
+  await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveAttribute('href', 'https://slaypdf.com/')
+  await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveAttribute('href', 'https://slaypdf.com/')
   const discoveryLinks = [
     ['application/rss+xml', 'Slay PDF discovery feed', 'https://slaypdf.com/feed.xml'],
     ['application/feed+json', 'Slay PDF JSON discovery feed', 'https://slaypdf.com/feed.json'],
@@ -159,10 +161,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     await expect(page.locator(`link[rel="alternate"][type="${type}"][title="${title}"]`)).toHaveAttribute('href', href)
   }
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Slay PDF - Free Local PDF Editor')
+  await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'en_US')
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://slaypdf.com/og-image.png')
   await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute('content', '1200')
   await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute('content', '630')
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image')
+  await expect(page.locator('meta[name="twitter:image:alt"]')).toHaveAttribute('content', 'Slay PDF local PDF editor preview')
 
   const structuredGraphs = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) => scripts.map((script) => JSON.parse(script.textContent ?? '{}')))
   const rootWebPage = structuredGraphs.find((block) => block['@type'] === 'WebPage') as {
@@ -327,11 +331,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       name: title,
     })
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
+    expect(html).toContain(`rel="alternate" hreflang="en" href="https://slaypdf.com/${path}"`)
+    expect(html).toContain(`rel="alternate" hreflang="x-default" href="https://slaypdf.com/${path}"`)
     for (const [type, title, href] of discoveryLinks) {
       expect(html).toContain(`rel="alternate" type="${type}" title="${title}" href="${href}"`)
     }
     expect(html).toContain(`property="og:url" content="https://slaypdf.com/${path}"`)
     expect(html).toContain('meta property="og:type" content="website"')
+    expect(html).toContain('meta property="og:locale" content="en_US"')
     expect(html).toContain('meta property="og:site_name" content="Slay PDF"')
     expect(html).toContain('meta property="og:title"')
     expect(html).toContain('meta property="og:description"')
@@ -344,6 +351,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('meta name="twitter:title"')
     expect(html).toContain('meta name="twitter:description"')
     expect(html).toContain('meta name="twitter:image" content="https://slaypdf.com/og-image.png"')
+    expect(html).toContain('meta name="twitter:image:alt" content="Slay PDF local PDF editor preview"')
     expect(html).toContain('type="application/ld+json" data-managed="webpage"')
     const structuredData = [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
       .map((match) => JSON.parse(match[1]))
