@@ -27,7 +27,16 @@ function entityIdFor(url, type) {
   return undefined
 }
 
+function isSiteNavigationItemList(entity) {
+  return entity['@type'] === 'ItemList' && (
+    entity['@id']?.endsWith('#site-navigation') ||
+    entity.name === 'Slay PDF site navigation' ||
+    entity.itemListElement?.some((item) => item.item?.['@type'] === 'SiteNavigationElement')
+  )
+}
+
 function withEntityMetadata(entity, url) {
+  if (isSiteNavigationItemList(entity)) return entity
   const id = entityIdFor(url, entity['@type'])
   if (!id) return entity
   return {
@@ -39,14 +48,14 @@ function withEntityMetadata(entity, url) {
 }
 
 function syncEntityMetadata(data, url) {
-  if (data['@type'] === 'FAQPage' || data['@type'] === 'ItemList') {
+  if (data['@type'] === 'FAQPage' || (data['@type'] === 'ItemList' && !isSiteNavigationItemList(data))) {
     return withEntityMetadata(data, url)
   }
   if (Array.isArray(data['@graph'])) {
     return {
       ...data,
       '@graph': data['@graph'].map((node) => (
-        node['@type'] === 'FAQPage' || node['@type'] === 'ItemList'
+        node['@type'] === 'FAQPage' || (node['@type'] === 'ItemList' && !isSiteNavigationItemList(node))
           ? withEntityMetadata(node, url)
           : node
       )),

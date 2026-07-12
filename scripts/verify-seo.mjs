@@ -4,6 +4,13 @@ import { basename } from 'node:path'
 const site = 'https://slaypdf.com'
 const publicDir = new URL('../public/', import.meta.url)
 const live = process.argv.includes('--live')
+const appKeywords = [
+  'local PDF editor',
+  'free PDF editor',
+  'Adobe Acrobat alternative',
+  'browser PDF editor',
+  'private PDF editor',
+]
 
 async function readPublic(path) {
   return readFile(new URL(path, publicDir), 'utf8')
@@ -233,6 +240,15 @@ function assertToolAppSchema({ html, file, url, title, description, h1 }) {
   assert(toolApp.browserRequirements === 'Requires a modern browser with WebAssembly and IndexedDB support.', `${file} tool WebApplication browser requirements are wrong`)
   assert(toolApp.isAccessibleForFree === true, `${file} tool WebApplication free access flag is wrong`)
   assert(toolApp.inLanguage === 'en', `${file} tool WebApplication language is wrong`)
+  assert(toolApp.image === `${site}/og-image.png`, `${file} tool WebApplication image is wrong`)
+  assert(toolApp.screenshot?.url === `${site}/og-image.png`, `${file} tool WebApplication screenshot URL is wrong`)
+  assert(toolApp.screenshot?.width === 1200, `${file} tool WebApplication screenshot width is wrong`)
+  assert(toolApp.screenshot?.height === 630, `${file} tool WebApplication screenshot height is wrong`)
+  assert(toolApp.softwareHelp === 'https://github.com/emileakbarzadeh/slay-pdf#readme', `${file} tool WebApplication softwareHelp is wrong`)
+  assert(toolApp.codeRepository === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} tool WebApplication repository is wrong`)
+  assert(toolApp.license === 'https://www.gnu.org/licenses/agpl-3.0.en.html', `${file} tool WebApplication license is wrong`)
+  assert(toolApp.privacyPolicy === `${site}/privacy.html`, `${file} tool WebApplication privacyPolicy is wrong`)
+  assert(JSON.stringify(toolApp.keywords) === JSON.stringify(appKeywords), `${file} tool WebApplication keywords are wrong`)
   assert(toolApp.isPartOf?.['@id'] === `${site}/#app`, `${file} tool WebApplication app reference is wrong`)
   assert(toolApp.publisher?.['@id'] === `${site}/#organization`, `${file} tool WebApplication publisher is wrong`)
   assert(toolApp.offers?.price === '0', `${file} tool WebApplication price is wrong`)
@@ -328,6 +344,12 @@ function assertSiteIdentitySchema(html, file) {
   assert(app.isPartOf?.['@id'] === `${site}/#website`, `${file} WebApplication isPartOf is wrong`)
   assert(app.publisher?.['@id'] === `${site}/#organization`, `${file} WebApplication publisher is wrong`)
   assert(app.offers?.price === '0', `${file} WebApplication price is wrong`)
+  assert(app.image === `${site}/og-image.png`, `${file} WebApplication image is wrong`)
+  assert(app.screenshot?.url === `${site}/og-image.png`, `${file} WebApplication screenshot URL is wrong`)
+  assert(app.screenshot?.width === 1200, `${file} WebApplication screenshot width is wrong`)
+  assert(app.screenshot?.height === 630, `${file} WebApplication screenshot height is wrong`)
+  assert(app.privacyPolicy === `${site}/privacy.html`, `${file} WebApplication privacyPolicy is wrong`)
+  assert(JSON.stringify(app.keywords) === JSON.stringify(appKeywords), `${file} WebApplication keywords are wrong`)
   assert(app.codeRepository === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} WebApplication repository is wrong`)
 }
 

@@ -247,6 +247,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     featureList?: string[]
     isPartOf?: { '@id'?: string }
     publisher?: { '@id'?: string }
+    image?: string
+    screenshot?: { url?: string; width?: number; height?: number }
+    softwareHelp?: string
+    codeRepository?: string
+    license?: string
+    privacyPolicy?: string
+    keywords?: string[]
   } | undefined
   expect(app?.['@id']).toBe('https://slaypdf.com/#app')
   expect(app?.['@type']).toBe('WebApplication')
@@ -254,6 +261,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(app?.isPartOf?.['@id']).toBe('https://slaypdf.com/#website')
   expect(app?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(app?.offers?.price).toBe('0')
+  expect(app?.image).toBe('https://slaypdf.com/og-image.png')
+  expect(app?.screenshot).toMatchObject({ url: 'https://slaypdf.com/og-image.png', width: 1200, height: 630 })
+  expect(app?.softwareHelp).toBe('https://github.com/emileakbarzadeh/slay-pdf#readme')
+  expect(app?.codeRepository).toBe('https://github.com/emileakbarzadeh/slay-pdf')
+  expect(app?.license).toBe('https://www.gnu.org/licenses/agpl-3.0.en.html')
+  expect(app?.privacyPolicy).toBe('https://slaypdf.com/privacy.html')
+  expect(app?.keywords).toEqual(['local PDF editor', 'free PDF editor', 'Adobe Acrobat alternative', 'browser PDF editor', 'private PDF editor'])
   expect(app?.featureList).toContain('Merge PDF files')
   expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
   expect(JSON.stringify(structuredGraphs)).toContain('Adobe Acrobat alternative')
@@ -460,6 +474,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       browserRequirements?: string
       isAccessibleForFree?: boolean
       inLanguage?: string
+      image?: string
+      screenshot?: { url?: string; width?: number; height?: number }
+      softwareHelp?: string
+      codeRepository?: string
+      license?: string
+      privacyPolicy?: string
+      keywords?: string[]
       isPartOf?: { '@id'?: string }
       publisher?: { '@id'?: string }
       offers?: { price?: string; priceCurrency?: string }
@@ -500,6 +521,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
         browserRequirements: 'Requires a modern browser with WebAssembly and IndexedDB support.',
         isAccessibleForFree: true,
         inLanguage: 'en',
+        image: 'https://slaypdf.com/og-image.png',
+        screenshot: { url: 'https://slaypdf.com/og-image.png', width: 1200, height: 630 },
+        softwareHelp: 'https://github.com/emileakbarzadeh/slay-pdf#readme',
+        codeRepository: 'https://github.com/emileakbarzadeh/slay-pdf',
+        license: 'https://www.gnu.org/licenses/agpl-3.0.en.html',
+        privacyPolicy: 'https://slaypdf.com/privacy.html',
+        keywords: ['local PDF editor', 'free PDF editor', 'Adobe Acrobat alternative', 'browser PDF editor', 'private PDF editor'],
         isPartOf: { '@id': 'https://slaypdf.com/#app' },
         publisher: { '@id': 'https://slaypdf.com/#organization' },
         offers: { price: '0', priceCurrency: 'USD' },

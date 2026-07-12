@@ -59,6 +59,14 @@ const siteNavigation = {
     })),
 }
 
+function isSiteNavigationList(node) {
+  return node['@type'] === 'ItemList' && (
+    node['@id'] === siteNavigation['@id'] ||
+    node.name === siteNavigation.name ||
+    node.itemListElement?.some((item) => item.item?.['@type'] === 'SiteNavigationElement')
+  )
+}
+
 const url = new URL('index.html', rootDir)
 const html = await readFile(url, 'utf8')
 let updated = html
@@ -74,7 +82,7 @@ for (const { fullMatch, attributes, data } of structuredDataScripts(html, 'index
     ...data,
     '@graph': [
       ...data['@graph']
-        .filter((node) => node['@id'] !== siteNavigation['@id'])
+        .filter((node) => !isSiteNavigationList(node))
         .map((node) => (
           node['@type'] === 'WebSite'
             ? {

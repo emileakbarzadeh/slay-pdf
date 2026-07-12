@@ -2,6 +2,18 @@ import { readdir, readFile, writeFile } from 'node:fs/promises'
 
 const site = 'https://slaypdf.com/'
 const publicDir = new URL('../public/', import.meta.url)
+const appImage = `${site}og-image.png`
+const sourceCode = 'https://github.com/emileakbarzadeh/slay-pdf'
+const license = 'https://www.gnu.org/licenses/agpl-3.0.en.html'
+const privacyPolicy = `${site}privacy.html`
+const softwareHelp = `${sourceCode}#readme`
+const keywords = [
+  'local PDF editor',
+  'free PDF editor',
+  'Adobe Acrobat alternative',
+  'browser PDF editor',
+  'private PDF editor',
+]
 
 function titleFor(html) {
   return html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
@@ -84,6 +96,18 @@ function toolAppFor(html, file) {
     browserRequirements: 'Requires a modern browser with WebAssembly and IndexedDB support.',
     isAccessibleForFree: true,
     inLanguage: 'en',
+    image: appImage,
+    screenshot: {
+      '@type': 'ImageObject',
+      url: appImage,
+      width: 1200,
+      height: 630,
+    },
+    softwareHelp,
+    codeRepository: sourceCode,
+    license,
+    privacyPolicy,
+    keywords,
     isPartOf: {
       '@id': `${site}#app`,
     },

@@ -71,6 +71,18 @@ function hasStructuredDataType(html, file, type) {
   })
 }
 
+function hasPageItemListEntity(html, file, id) {
+  return structuredDataScripts(html, file).some(({ data }) => {
+    const entities = Array.isArray(data['@graph']) ? data['@graph'] : [data]
+    return entities.some((entity) => (
+      entity['@type'] === 'ItemList' &&
+      entity['@id'] === id &&
+      entity.name !== 'Slay PDF site navigation' &&
+      !entity.itemListElement?.some((item) => item.item?.['@type'] === 'SiteNavigationElement')
+    ))
+  })
+}
+
 function hasWorkflowGrid(html) {
   const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
   if (!section) return false
@@ -89,7 +101,7 @@ function mainEntityRefsFor(html, file, url) {
   if (hasManagedToolAppSchema(html)) refs.push({ '@id': `${url}#tool` })
   if (hasWorkflowGrid(html) || hasStructuredDataType(html, file, 'HowTo')) refs.push({ '@id': `${url}#howto` })
   if (hasStructuredDataType(html, file, 'FAQPage')) refs.push({ '@id': `${url}#faq` })
-  if (hasStructuredDataType(html, file, 'ItemList')) refs.push({ '@id': `${url}#itemlist` })
+  if (hasPageItemListEntity(html, file, `${url}#itemlist`)) refs.push({ '@id': `${url}#itemlist` })
 
   if (refs.length === 0) return undefined
   return refs.length === 1 ? refs[0] : refs
