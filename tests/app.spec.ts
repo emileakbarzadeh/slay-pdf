@@ -96,18 +96,38 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
   for (const path of [
     'free-pdf-editor.html',
+    'tools.html',
+    'faq.html',
+    'privacy.html',
     'adobe-acrobat-alternative.html',
     'merge-pdf.html',
     'split-pdf.html',
     'sign-pdf.html',
     'posterise-pdf.html',
-    'private-pdf-editor.html'
+    'private-pdf-editor.html',
+    'delete-pdf-pages.html',
+    'resize-pdf.html',
+    'crop-pdf.html',
+    'redact-pdf.html',
+    'compress-pdf.html',
+    'ocr-pdf.html',
+    'pdf-to-images.html',
+    'extract-pdf-text.html',
+    'rotate-pdf.html',
+    'annotate-pdf.html',
+    'watermark-pdf.html',
+    'add-page-numbers-to-pdf.html',
+    'fill-pdf-forms.html',
+    'password-protect-pdf.html'
   ]) {
     expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
     const response = await page.request.get(`/${path}`)
     expect(response.ok()).toBe(true)
     const html = await response.text()
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
+    expect(html).toContain('"@type": "BreadcrumbList"')
+    expect(html).toContain('aria-label="Breadcrumb"')
+    if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
 
@@ -117,7 +137,30 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const llms = await (await page.request.get('/llms.txt')).text()
   expect(llms).toContain('Free local PDF editor and Adobe Acrobat alternative')
+  expect(llms).toContain('https://slaypdf.com/tools.html')
+  expect(llms).toContain('https://slaypdf.com/faq.html')
+  expect(llms).toContain('https://slaypdf.com/privacy.html')
   expect(llms).toContain('https://slaypdf.com/merge-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/redact-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/extract-pdf-text.html')
+  expect(llms).toContain('https://slaypdf.com/password-protect-pdf.html')
+
+  const tools = await (await page.request.get('/tools.html')).text()
+  expect(tools).toContain('"@type": "ItemList"')
+  expect(tools).toContain('PDF Tools - Slay PDF')
+  expect(tools).toContain('/password-protect-pdf.html')
+  expect(tools).toContain('/faq.html')
+  expect(tools).toContain('/privacy.html')
+
+  const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
+  expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')
+  const indexNowPayload = await (await page.request.get('/indexnow.json')).json() as { host: string; key: string; keyLocation: string; urlList: string[] }
+  expect(indexNowPayload.host).toBe('slaypdf.com')
+  expect(indexNowPayload.keyLocation).toBe('https://slaypdf.com/b758a32ef4c84ce7bf2f4bd2468227f8.txt')
+  expect(indexNowPayload.urlList).toContain('https://slaypdf.com/tools.html')
+  const indexNowUrls = await (await page.request.get('/indexnow-urls.txt')).text()
+  expect(indexNowUrls).toContain('https://slaypdf.com/tools.html')
+  expect(indexNowPayload.urlList.every((url) => sitemap.includes(`<loc>${url}</loc>`))).toBe(true)
 })
 
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {

@@ -71,10 +71,28 @@ Run unit tests and the production build:
 nix develop --command npm run check
 ```
 
+Run SEO file consistency checks only:
+
+```sh
+nix develop --command npm run seo:check
+```
+
+Check the deployed canonical URLs after a release:
+
+```sh
+nix develop --command npm run seo:check:live
+```
+
 Run the Playwright regression suite:
 
 ```sh
 nix develop --command npm run test:e2e
+```
+
+Submit deployed URLs to IndexNow after the latest build is live:
+
+```sh
+nix develop --command npm run indexnow:submit
 ```
 
 Check the flake output shape and formatter:

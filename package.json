@@ -18,6 +18,20 @@
     "split-pdf",
     "sign-pdf",
     "posterise-pdf",
+    "delete-pdf-pages",
+    "resize-pdf",
+    "crop-pdf",
+    "redact-pdf",
+    "compress-pdf",
+    "ocr-pdf",
+    "pdf-to-images",
+    "extract-pdf-text",
+    "rotate-pdf",
+    "annotate-pdf",
+    "watermark-pdf",
+    "add-page-numbers-to-pdf",
+    "fill-pdf-forms",
+    "password-protect-pdf",
     "browser-pdf-editor"
   ],
   "type": "module",
@@ -28,7 +42,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "check": "npm run test && npm run build"
+    "seo:check": "node scripts/verify-seo.mjs",
+    "seo:check:live": "node scripts/verify-seo.mjs --live",
+    "check": "npm run seo:check && npm run test && npm run build",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
