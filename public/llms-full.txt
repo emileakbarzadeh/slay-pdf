@@ -65,7 +65,7 @@ Content:
 - Image, scan and print workflows
 - Convert images to PDF, clean scanned documents, flatten form fields and posterise one page into printable tiles.
 - Adobe replacement workflows
-- Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign, OCR, protect, rotate, crop and organize workflows.
+- Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize workflows.
 - No-account and platform workflows
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -123,6 +123,10 @@ Related links:
 - Adobe protect PDF alternative: https://slaypdf.com/adobe-protect-pdf-alternative.html
 - Adobe rotate PDF alternative: https://slaypdf.com/adobe-rotate-pdf-alternative.html
 - Adobe crop PDF alternative: https://slaypdf.com/adobe-crop-pdf-alternative.html
+- Adobe delete pages PDF alternative: https://slaypdf.com/adobe-delete-pages-pdf-alternative.html
+- Adobe extract pages PDF alternative: https://slaypdf.com/adobe-extract-pages-pdf-alternative.html
+- Adobe PDF to JPG alternative: https://slaypdf.com/adobe-pdf-to-jpg-alternative.html
+- Adobe add page numbers alternative: https://slaypdf.com/adobe-add-page-numbers-alternative.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -219,7 +223,7 @@ Content:
 - Tools
 - Direct links to each local PDF tool for editing, exporting, protecting and reorganizing documents in the browser.
 - Adobe alternatives
-- Acrobat-style workflows for people who want merge, compress, fill, sign, OCR, protect, rotate, crop and organize jobs handled locally.
+- Acrobat-style workflows for people who want merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize jobs handled locally.
 - No-account and platform pages
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -279,6 +283,10 @@ Related links:
 - Adobe Protect PDF Alternative: https://slaypdf.com/adobe-protect-pdf-alternative.html
 - Adobe Rotate PDF Alternative: https://slaypdf.com/adobe-rotate-pdf-alternative.html
 - Adobe Crop PDF Alternative: https://slaypdf.com/adobe-crop-pdf-alternative.html
+- Adobe Delete Pages PDF Alternative: https://slaypdf.com/adobe-delete-pages-pdf-alternative.html
+- Adobe Extract Pages PDF Alternative: https://slaypdf.com/adobe-extract-pages-pdf-alternative.html
+- Adobe PDF to JPG Alternative: https://slaypdf.com/adobe-pdf-to-jpg-alternative.html
+- Adobe Add Page Numbers Alternative: https://slaypdf.com/adobe-add-page-numbers-alternative.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -1587,6 +1595,122 @@ Related links:
 - Resize PDF: https://slaypdf.com/resize-pdf.html
 - Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
 - Rotate PDF: https://slaypdf.com/rotate-pdf.html
+
+## Adobe Delete Pages PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-delete-pages-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe delete pages PDF alternative. Remove unwanted PDF pages, reorder the rest and export locally from your browser.
+H1: Delete PDF pages locally without Acrobat.
+
+Content:
+- Delete pages alternative
+- Delete PDF pages locally without Acrobat.
+- Remove blank scans, duplicate pages or unwanted sections, then export a clean PDF from your browser workspace.
+- Select pages
+- Pick the pages you want to remove from the PDF workspace.
+- Clean the order
+- Reorder, rotate or crop remaining pages before exporting the finished file.
+- Export locally
+- Download the cleaned PDF without uploading the original document to Slay PDF.
+- For fast cleanup before sending a PDF.
+- Use Slay PDF when a scan or packet includes blank pages, cover sheets, duplicates or pages that should not be shared.
+- The delete workflow sits beside split, merge, rotate, crop and selected-page export, so cleanup can happen in one local workspace.
+- Adobe delete pages PDF alternative FAQ
+- Yes. Select unwanted pages, delete them and export the cleaned PDF locally.
+- Yes. The page deletion workflow runs in your browser instead of uploading the source PDF to Slay PDF servers.
+
+Related links:
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Remove pages: https://slaypdf.com/remove-pages-from-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+
+## Adobe Extract Pages PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-extract-pages-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe extract pages PDF alternative. Pull selected pages into a new PDF and export locally from your browser.
+H1: Extract PDF pages locally without Acrobat.
+
+Content:
+- Extract pages alternative
+- Extract PDF pages locally without Acrobat.
+- Select the pages you need, export them as a new PDF and keep the original document in your browser.
+- Choose pages
+- Select one page, multiple pages or sections from the source PDF.
+- Refine output
+- Rotate, crop, annotate or redact selected pages before export.
+- New local PDF
+- Download only the extracted pages as a new PDF from the browser workspace.
+- For forms, receipts, signed pages and report sections.
+- Extraction is useful when a large PDF contains only a few pages that need to be shared, archived or signed.
+- Slay PDF keeps page extraction local and also supports split markers when one source PDF needs to become multiple separate files.
+- Adobe extract pages PDF alternative FAQ
+- Yes. Select pages in the browser workspace and export those pages as a new local PDF.
+- Yes. You can rotate, crop, annotate, redact or resize selected pages before downloading the extracted PDF.
+
+Related links:
+- Extract pages: https://slaypdf.com/extract-pages-from-pdf.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+
+## Adobe PDF to JPG Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-pdf-to-jpg-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe PDF to JPG alternative. Export PDF pages as images locally from your browser without uploading the document.
+H1: Export PDF pages as images without Acrobat.
+
+Content:
+- PDF to image alternative
+- Export PDF pages as images without Acrobat.
+- Turn PDF pages into page images from your browser workspace and avoid sending the source document to an online converter.
+- Pick pages
+- Select all pages or only the pages that need to become images.
+- Clean first
+- Rotate, crop or delete pages before exporting page images.
+- Image export
+- Download page images locally from the browser workspace.
+- For previews, uploads and image-only workflows.
+- Use Slay PDF when a PDF page needs to become an image for a form upload, preview, archive or downstream image workflow.
+- For image-to-PDF work, Slay PDF also supports importing JPG, PNG and WebP images into a PDF workspace.
+- Adobe PDF to JPG alternative FAQ
+- Yes. Use page image export to download PDF pages as local image files from the browser workspace.
+- No. The export workflow runs in your browser instead of uploading the source PDF to Slay PDF servers.
+
+Related links:
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+- Images to PDF: https://slaypdf.com/images-to-pdf.html
+- JPG to PDF: https://slaypdf.com/jpg-to-pdf.html
+- PNG to PDF: https://slaypdf.com/png-to-pdf.html
+
+## Adobe Add Page Numbers Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-add-page-numbers-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe add page numbers alternative. Number PDF pages, organize the document and export locally from your browser.
+H1: Add page numbers to PDFs without Acrobat.
+
+Content:
+- Page numbers alternative
+- Add page numbers to PDFs without Acrobat.
+- Number PDF pages after organizing the document, then export the finished file locally from your browser.
+- Organize first
+- Merge, delete, rotate or reorder pages before adding page numbers.
+- Apply numbers
+- Add page numbering to the document before final export.
+- Local PDF
+- Download the numbered PDF without uploading the source document to Slay PDF.
+- For reports, packets and printable PDFs.
+- Page numbers are usually the last step after the document order is final. Slay PDF keeps that workflow local with merge, delete, split and export tools in the same workspace.
+- Use it for packets, handouts, reports and forms that need clear page order before sharing.
+- Adobe add page numbers alternative FAQ
+- Yes. Add page numbers to a PDF and export the numbered file locally from the browser.
+- Yes. Reorder, delete or merge pages first so the final page numbers match the finished document.
+
+Related links:
+- Add page numbers: https://slaypdf.com/add-page-numbers-to-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html

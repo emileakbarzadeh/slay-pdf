@@ -173,6 +173,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Adobe Crop PDF Alternative - Slay PDF: https://slaypdf.com/adobe-crop-pdf-alternative.html
   Summary: Use Slay PDF as an Adobe crop PDF alternative. Trim margins, clean scanned pages and export cropped PDFs locally from your browser.
   Last modified: 2026-07-13
+- Adobe Delete Pages PDF Alternative - Slay PDF: https://slaypdf.com/adobe-delete-pages-pdf-alternative.html
+  Summary: Use Slay PDF as an Adobe delete pages PDF alternative. Remove unwanted PDF pages, reorder the rest and export locally from your browser.
+  Last modified: 2026-07-13
+- Adobe Extract Pages PDF Alternative - Slay PDF: https://slaypdf.com/adobe-extract-pages-pdf-alternative.html
+  Summary: Use Slay PDF as an Adobe extract pages PDF alternative. Pull selected pages into a new PDF and export locally from your browser.
+  Last modified: 2026-07-13
+- Adobe PDF to JPG Alternative - Slay PDF: https://slaypdf.com/adobe-pdf-to-jpg-alternative.html
+  Summary: Use Slay PDF as an Adobe PDF to JPG alternative. Export PDF pages as images locally from your browser without uploading the document.
+  Last modified: 2026-07-13
+- Adobe Add Page Numbers Alternative - Slay PDF: https://slaypdf.com/adobe-add-page-numbers-alternative.html
+  Summary: Use Slay PDF as an Adobe add page numbers alternative. Number PDF pages, organize the document and export locally from your browser.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13
