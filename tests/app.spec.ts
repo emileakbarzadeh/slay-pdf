@@ -104,6 +104,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'edit-pdf-without-uploading.html',
     'organize-pdf-pages.html',
     'adobe-acrobat-vs-slay-pdf.html',
+    'combine-pdf-files.html',
+    'remove-pages-from-pdf.html',
+    'extract-pages-from-pdf.html',
+    'make-pdf-searchable.html',
+    'add-signature-to-pdf.html',
+    'pdf-redaction-tool.html',
     'adobe-acrobat-alternative.html',
     'merge-pdf.html',
     'split-pdf.html',
@@ -132,6 +138,11 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(response.ok()).toBe(true)
     const html = await response.text()
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
+    expect(html).toContain(`property="og:url" content="https://slaypdf.com/${path}"`)
+    expect(html).toContain('meta property="og:title"')
+    expect(html).toContain('meta property="og:description"')
+    expect(html).toContain('meta name="twitter:card" content="summary_large_image"')
+    expect(html).toContain('<h1>')
     expect(html).toContain('"@type": "BreadcrumbList"')
     expect(html).toContain('aria-label="Breadcrumb"')
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
@@ -151,6 +162,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/edit-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/organize-pdf-pages.html')
   expect(llms).toContain('https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/combine-pdf-files.html')
+  expect(llms).toContain('https://slaypdf.com/remove-pages-from-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/extract-pages-from-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/make-pdf-searchable.html')
+  expect(llms).toContain('https://slaypdf.com/add-signature-to-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-redaction-tool.html')
   expect(llms).toContain('https://slaypdf.com/merge-pdf.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf.html')
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text.html')
@@ -166,6 +183,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/edit-pdf-without-uploading.html')
   expect(tools).toContain('/organize-pdf-pages.html')
   expect(tools).toContain('/adobe-acrobat-vs-slay-pdf.html')
+  expect(tools).toContain('/combine-pdf-files.html')
+  expect(tools).toContain('/remove-pages-from-pdf.html')
+  expect(tools).toContain('/extract-pages-from-pdf.html')
+  expect(tools).toContain('/make-pdf-searchable.html')
+  expect(tools).toContain('/add-signature-to-pdf.html')
+  expect(tools).toContain('/pdf-redaction-tool.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')

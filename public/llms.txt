@@ -17,6 +17,12 @@ Important URLs:
 - Edit PDF without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
 - Adobe Acrobat vs Slay PDF: https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html
+- Combine PDF files: https://slaypdf.com/combine-pdf-files.html
+- Remove pages from PDF: https://slaypdf.com/remove-pages-from-pdf.html
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+- Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
+- Add signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
+- PDF redaction tool: https://slaypdf.com/pdf-redaction-tool.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Merge PDF: https://slaypdf.com/merge-pdf.html
 - Split PDF: https://slaypdf.com/split-pdf.html
