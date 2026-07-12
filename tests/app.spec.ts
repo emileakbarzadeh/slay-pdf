@@ -479,6 +479,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'free-online-pdf-splitter.html',
     'free-online-pdf-signer.html',
     'free-online-pdf-redactor.html',
+    'free-online-pdf-compressor.html',
+    'free-online-pdf-rotator.html',
+    'free-online-pdf-cropper.html',
+    'free-online-pdf-ocr.html',
+    'free-online-pdf-page-remover.html',
+    'free-online-pdf-resizer.html',
+    'free-online-pdf-annotator.html',
+    'free-online-pdf-page-numbering.html',
     'secure-pdf-merger.html',
     'secure-pdf-splitter.html',
     'secure-pdf-signer.html',
@@ -801,7 +809,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(179)
+  expect(toolAppPageCount).toBe(187)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -929,6 +937,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/free-online-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/free-online-pdf-signer.html')
   expect(llms).toContain('https://slaypdf.com/free-online-pdf-redactor.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-compressor.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-rotator.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-cropper.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-ocr.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-page-remover.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-resizer.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-annotator.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-page-numbering.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-merger.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-signer.html')
@@ -1161,6 +1177,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/free-online-pdf-splitter.html')
   expect(tools).toContain('/free-online-pdf-signer.html')
   expect(tools).toContain('/free-online-pdf-redactor.html')
+  expect(tools).toContain('/free-online-pdf-compressor.html')
+  expect(tools).toContain('/free-online-pdf-rotator.html')
+  expect(tools).toContain('/free-online-pdf-cropper.html')
+  expect(tools).toContain('/free-online-pdf-ocr.html')
+  expect(tools).toContain('/free-online-pdf-page-remover.html')
+  expect(tools).toContain('/free-online-pdf-resizer.html')
+  expect(tools).toContain('/free-online-pdf-annotator.html')
+  expect(tools).toContain('/free-online-pdf-page-numbering.html')
   expect(tools).toContain('/secure-pdf-merger.html')
   expect(tools).toContain('/secure-pdf-splitter.html')
   expect(tools).toContain('/secure-pdf-signer.html')

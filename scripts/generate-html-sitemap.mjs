@@ -55,8 +55,8 @@ const sections = [
   },
   {
     title: 'Free online PDF task pages',
-    description: 'Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.',
-    paths: ['/free-online-pdf-merger.html', '/free-online-pdf-splitter.html', '/free-online-pdf-signer.html', '/free-online-pdf-redactor.html'],
+    description: 'Free online PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages that explain the local browser workflow behind the web app.',
+    paths: ['/free-online-pdf-merger.html', '/free-online-pdf-splitter.html', '/free-online-pdf-signer.html', '/free-online-pdf-redactor.html', '/free-online-pdf-compressor.html', '/free-online-pdf-rotator.html', '/free-online-pdf-cropper.html', '/free-online-pdf-ocr.html', '/free-online-pdf-page-remover.html', '/free-online-pdf-resizer.html', '/free-online-pdf-annotator.html', '/free-online-pdf-page-numbering.html'],
   },
   {
     title: 'Secure PDF task pages',
