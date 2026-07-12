@@ -153,6 +153,11 @@ function mainEntityIds(value: unknown) {
     .filter(Boolean)
 }
 
+function isoDate(lastmod: string | undefined) {
+  expect(lastmod).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+  return new Date(`${lastmod}T00:00:00.000Z`).toISOString()
+}
+
 test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
@@ -295,6 +300,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const sitemapByUrl = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
   expect(sitemapByUrl.get('https://slaypdf.com/')?.lastmod).toMatch(/^\d{4}-\d{2}-\d{2}$/)
   expect(rootWebPage?.dateModified).toBe(sitemapByUrl.get('https://slaypdf.com/')?.lastmod)
+  await expect(page.locator('meta[property="og:updated_time"]')).toHaveAttribute('content', isoDate(sitemapByUrl.get('https://slaypdf.com/')?.lastmod))
   expect(sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod))).toBe(true)
   expect(sitemapEntries.every((entry) => ['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq))).toBe(true)
   expect(sitemapEntries.every((entry) => entry.priority >= 0 && entry.priority <= 1)).toBe(true)
@@ -432,6 +438,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('<meta name="apple-mobile-web-app-capable" content="yes" />')
     expect(html).toContain('<link rel="manifest" href="/manifest.webmanifest" />')
     expect(html).toContain(`property="og:url" content="https://slaypdf.com/${path}"`)
+    expect(html).toContain(`property="og:updated_time" content="${isoDate(sitemapByUrl.get(`https://slaypdf.com/${path}`)?.lastmod)}"`)
     expect(html).toContain('meta property="og:type" content="website"')
     expect(html).toContain('meta property="og:locale" content="en_US"')
     expect(html).toContain('meta property="og:site_name" content="Slay PDF"')

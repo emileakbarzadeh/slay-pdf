@@ -13,6 +13,10 @@ function hrefFor(html, selector) {
   return html.match(new RegExp(`<link ${selector} href="([^"]+)"\\s*/>`))?.[1]
 }
 
+function isoDate(lastmod) {
+  return new Date(`${lastmod}T00:00:00.000Z`).toISOString()
+}
+
 function titleFor(html) {
   return html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
 }
@@ -29,6 +33,7 @@ function stripManagedSocialMeta(html) {
     'og:title',
     'og:description',
     'og:url',
+    'og:updated_time',
     'og:image',
     'og:image:type',
     'og:image:width',
@@ -55,6 +60,8 @@ function socialBlockFor(html, file) {
   if (!title) throw new Error(`${file} is missing an Open Graph title or title tag`)
   if (!description) throw new Error(`${file} is missing an Open Graph description or meta description`)
   if (!url) throw new Error(`${file} is missing an Open Graph URL`)
+  const lastmod = lastmodByUrl.get(url)
+  if (!lastmod) throw new Error(`${file} canonical URL is missing from sitemap lastmod data: ${url}`)
 
   return [
     metaTag('property', 'og:type', 'website'),
@@ -63,6 +70,7 @@ function socialBlockFor(html, file) {
     metaTag('property', 'og:title', title),
     metaTag('property', 'og:description', description),
     metaTag('property', 'og:url', url),
+    metaTag('property', 'og:updated_time', isoDate(lastmod)),
     metaTag('property', 'og:image', socialImage),
     metaTag('property', 'og:image:type', 'image/png'),
     metaTag('property', 'og:image:width', '1200'),
@@ -75,6 +83,9 @@ function socialBlockFor(html, file) {
     metaTag('name', 'twitter:image:alt', socialImageAlt),
   ].join('\n')
 }
+
+const sitemap = await readFile(new URL('sitemap.xml', publicDir), 'utf8')
+const lastmodByUrl = new Map([...sitemap.matchAll(/<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S]*?<lastmod>(.*?)<\/lastmod>/g)].map((match) => [match[1], match[2]]))
 
 const files = [
   { file: 'index.html', url: new URL('index.html', rootDir) },

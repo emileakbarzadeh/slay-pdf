@@ -456,6 +456,9 @@ for (const url of htmlUrls) {
   }
   assert(html.includes('name="robots" content="index, follow, max-image-preview:large"'), `${file} is missing indexable robots meta`)
   assert(html.includes(`property="og:url" content="${url}"`), `${file} Open Graph URL does not match sitemap URL`)
+  const sitemapLastmod = sitemapMetadata.get(url)?.lastmod
+  assert(sitemapLastmod, `${file} is missing sitemap lastmod data`)
+  assert(html.includes(`property="og:updated_time" content="${isoDate(sitemapLastmod)}"`), `${file} Open Graph updated time does not match sitemap lastmod`)
   assert(html.includes('property="og:title" content="'), `${file} is missing Open Graph title`)
   assert(html.includes('property="og:description" content="'), `${file} is missing Open Graph description`)
   assert(html.includes('property="og:image" content="https://slaypdf.com/og-image.png"'), `${file} is missing social preview image`)
