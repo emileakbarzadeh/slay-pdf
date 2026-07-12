@@ -260,6 +260,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF24 Alternative - Slay PDF: https://slaypdf.com/pdf24-alternative.html
   Summary: Use Slay PDF as a PDF24 alternative for local PDF tools in the browser: merge, split, compress, OCR, protect, convert images and edit pages.
   Last modified: 2026-07-13
+- Xodo Alternative - Slay PDF: https://slaypdf.com/xodo-alternative.html
+  Summary: Use Slay PDF as a Xodo alternative for local browser PDF editing. Merge, split, sign, annotate, compress and export PDFs without signup.
+  Last modified: 2026-07-13
+- PDFescape Alternative - Slay PDF: https://slaypdf.com/pdfescape-alternative.html
+  Summary: Use Slay PDF as a PDFescape alternative for local PDF editing. Fill, sign, annotate, organize and export PDFs in your browser without signup.
+  Last modified: 2026-07-13
+- DocHub Alternative - Slay PDF: https://slaypdf.com/dochub-alternative.html
+  Summary: Use Slay PDF as a DocHub alternative for local PDF signing, annotation and page organization without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Foxit PDF Editor Alternative - Slay PDF: https://slaypdf.com/foxit-pdf-editor-alternative.html
+  Summary: Use Slay PDF as a Foxit PDF Editor alternative for local browser PDF tasks. Merge, split, sign, annotate, compress, OCR and export PDFs without signup.
+  Last modified: 2026-07-13
 - Local PDF Merger - Slay PDF: https://slaypdf.com/local-pdf-merger.html
   Summary: Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.
   Last modified: 2026-07-13

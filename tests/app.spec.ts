@@ -447,6 +447,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'ilovepdf-alternative.html',
     'sejda-alternative.html',
     'pdf24-alternative.html',
+    'xodo-alternative.html',
+    'pdfescape-alternative.html',
+    'dochub-alternative.html',
+    'foxit-pdf-editor-alternative.html',
     'local-pdf-merger.html',
     'local-pdf-splitter.html',
     'local-pdf-signer.html',
@@ -765,7 +769,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(143)
+  expect(toolAppPageCount).toBe(147)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -861,6 +865,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/ilovepdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/sejda-alternative.html')
   expect(llms).toContain('https://slaypdf.com/pdf24-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/xodo-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdfescape-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/dochub-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/foxit-pdf-editor-alternative.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-merger.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-signer.html')
@@ -1057,6 +1065,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/ilovepdf-alternative.html')
   expect(tools).toContain('/sejda-alternative.html')
   expect(tools).toContain('/pdf24-alternative.html')
+  expect(tools).toContain('/xodo-alternative.html')
+  expect(tools).toContain('/pdfescape-alternative.html')
+  expect(tools).toContain('/dochub-alternative.html')
+  expect(tools).toContain('/foxit-pdf-editor-alternative.html')
   expect(tools).toContain('/local-pdf-merger.html')
   expect(tools).toContain('/local-pdf-splitter.html')
   expect(tools).toContain('/local-pdf-signer.html')
