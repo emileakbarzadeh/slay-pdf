@@ -82,6 +82,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     '@id'?: string
     url?: string
     name?: string
+    dateModified?: string
     isPartOf?: { '@id'?: string }
   } | undefined
   expect(rootWebPage?.['@id']).toBe('https://slaypdf.com/#webpage')
@@ -102,6 +103,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const sitemap = await (await page.request.get('/sitemap.xml')).text()
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
+  const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<changefreq>(.*?)<\/changefreq>\s*<priority>(.*?)<\/priority>\s*<\/url>/g)]
+    .map((match) => ({ url: match[1], lastmod: match[2], changefreq: match[3], priority: Number(match[4]) }))
+  const sitemapByUrl = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
+  expect(sitemapByUrl.get('https://slaypdf.com/')?.lastmod).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+  expect(rootWebPage?.dateModified).toBe(sitemapByUrl.get('https://slaypdf.com/')?.lastmod)
+  expect(sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod))).toBe(true)
+  expect(sitemapEntries.every((entry) => ['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq))).toBe(true)
+  expect(sitemapEntries.every((entry) => entry.priority >= 0 && entry.priority <= 1)).toBe(true)
   const htmlPaths = [...sitemap.matchAll(/<loc>https:\/\/slaypdf\.com\/([^<]+\.html)<\/loc>/g)].map((match) => match[1])
   expect(htmlPaths).toEqual(expect.arrayContaining([
     'free-pdf-editor.html',
@@ -187,6 +196,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       '@context': 'https://schema.org',
       '@id': `https://slaypdf.com/${path}#webpage`,
       url: `https://slaypdf.com/${path}`,
+      dateModified: sitemapByUrl.get(`https://slaypdf.com/${path}`)?.lastmod,
       isPartOf: {
         '@id': 'https://slaypdf.com/#website',
       },
@@ -199,7 +209,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
         height: 630,
       },
       inLanguage: 'en',
+      breadcrumb: {
+        '@id': `https://slaypdf.com/${path}#breadcrumb`,
+      },
     })
+    const breadcrumb = structuredData.find((block) => block['@type'] === 'BreadcrumbList')
+    expect(breadcrumb).toMatchObject({
+      '@id': `https://slaypdf.com/${path}#breadcrumb`,
+    })
+    expect(breadcrumb?.itemListElement.at(-1).item).toBe(`https://slaypdf.com/${path}`)
     expect(html).toContain('<h1>')
     expect(html).toContain('"@type": "BreadcrumbList"')
     expect(html).toContain('aria-label="Breadcrumb"')

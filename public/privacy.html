@@ -31,6 +31,7 @@
             "name": "Privacy - Slay PDF",
             "headline": "Your PDFs stay in this browser.",
             "description": "Slay PDF privacy details: PDFs and edits stay in the browser, active workspaces use local browser storage, and export passwords are never saved.",
+            "dateModified": "2026-07-13",
             "isPartOf": {
                   "@type": "WebSite",
                   "@id": "https://slaypdf.com/#website",
@@ -50,7 +51,10 @@
                   "width": 1200,
                   "height": 630
             },
-            "inLanguage": "en"
+            "inLanguage": "en",
+            "breadcrumb": {
+                  "@id": "https://slaypdf.com/privacy.html#breadcrumb"
+            }
       }
     </script>
     <script type="application/ld+json">
@@ -69,28 +73,29 @@
     </script>
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Slay PDF",
-            "item": "https://slaypdf.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "PDF tools",
-            "item": "https://slaypdf.com/tools.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Privacy",
-            "item": "https://slaypdf.com/privacy.html"
-          }
-        ]
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://slaypdf.com/privacy.html#breadcrumb",
+            "itemListElement": [
+                  {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Slay PDF",
+                        "item": "https://slaypdf.com/"
+                  },
+                  {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "PDF tools",
+                        "item": "https://slaypdf.com/tools.html"
+                  },
+                  {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Privacy",
+                        "item": "https://slaypdf.com/privacy.html"
+                  }
+            ]
       }
     </script>
     <title>Privacy - Slay PDF</title>

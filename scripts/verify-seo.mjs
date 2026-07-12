@@ -35,6 +35,7 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   assert(webpage.name === title, `${file} WebPage name does not match title`)
   assert(webpage.headline === h1, `${file} WebPage headline does not match h1`)
   assert(webpage.description === description, `${file} WebPage description does not match meta description`)
+  assert(webpage.dateModified === sitemapMetadata.get(url)?.lastmod, `${file} WebPage dateModified does not match sitemap lastmod`)
   assert(webpage.isPartOf?.['@type'] === 'WebSite', `${file} WebPage isPartOf should be WebSite`)
   assert(webpage.isPartOf?.['@id'] === `${site}/#website`, `${file} WebPage isPartOf @id is wrong`)
   assert(webpage.publisher?.['@type'] === 'Organization', `${file} WebPage publisher should be Organization`)
@@ -43,12 +44,33 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   assert(webpage.primaryImageOfPage?.width === 1200, `${file} WebPage image width is wrong`)
   assert(webpage.primaryImageOfPage?.height === 630, `${file} WebPage image height is wrong`)
   assert(webpage.inLanguage === 'en', `${file} WebPage language is wrong`)
+  const breadcrumb = blocks.find((block) => block['@type'] === 'BreadcrumbList')
+  if (breadcrumb) {
+    assert(webpage.breadcrumb?.['@id'] === `${url}#breadcrumb`, `${file} WebPage breadcrumb reference is wrong`)
+    assert(breadcrumb['@id'] === `${url}#breadcrumb`, `${file} BreadcrumbList @id is wrong`)
+    assert(breadcrumb.itemListElement?.at(-1)?.item === url, `${file} breadcrumb must end at canonical URL`)
+  }
 }
 
 const sitemap = await readPublic('sitemap.xml')
-const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
+const sitemapLocs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
+const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<changefreq>(.*?)<\/changefreq>\s*<priority>(.*?)<\/priority>\s*<\/url>/g)]
+  .map((match) => ({
+    url: match[1],
+    lastmod: match[2],
+    changefreq: match[3],
+    priority: Number(match[4]),
+  }))
+const urls = sitemapEntries.map((entry) => entry.url)
+const sitemapMetadata = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
 assert(new Set(urls).size === urls.length, 'sitemap contains duplicate URLs')
+assert(sitemapEntries.length === sitemapLocs.length, 'every sitemap URL must include lastmod, changefreq and priority')
+for (const entry of sitemapEntries) {
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod), `${entry.url} sitemap lastmod must be YYYY-MM-DD`)
+  assert(['daily', 'weekly', 'monthly', 'yearly'].includes(entry.changefreq), `${entry.url} sitemap changefreq is invalid`)
+  assert(Number.isFinite(entry.priority) && entry.priority >= 0 && entry.priority <= 1, `${entry.url} sitemap priority must be 0-1`)
+}
 
 const pageMetadata = new Map()
 const htmlUrls = urls.filter((url) => url.endsWith('.html'))

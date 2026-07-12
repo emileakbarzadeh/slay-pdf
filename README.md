@@ -83,6 +83,13 @@ Regenerate the plain and structured page indexes from the sitemap:
 nix develop --command npm run seo:index
 ```
 
+Regenerate managed social metadata and WebPage JSON-LD:
+
+```sh
+nix develop --command npm run seo:social
+nix develop --command npm run seo:schema
+```
+
 Check the deployed canonical URLs after a release:
 
 ```sh
