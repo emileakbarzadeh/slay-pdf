@@ -423,6 +423,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'adobe-extract-pages-pdf-alternative.html',
     'adobe-pdf-to-jpg-alternative.html',
     'adobe-add-page-numbers-alternative.html',
+    'adobe-acrobat-pro-alternative.html',
+    'adobe-pdf-editor-no-subscription.html',
+    'adobe-pdf-editor-without-login.html',
+    'adobe-local-pdf-editor-alternative.html',
     'smallpdf-alternative.html',
     'ilovepdf-alternative.html',
     'sejda-alternative.html',
@@ -689,7 +693,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(67)
+  expect(toolAppPageCount).toBe(71)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -761,6 +765,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/adobe-extract-pages-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-pdf-to-jpg-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-add-page-numbers-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-acrobat-pro-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-pdf-editor-no-subscription.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-pdf-editor-without-login.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-local-pdf-editor-alternative.html')
   expect(llms).toContain('https://slaypdf.com/smallpdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/ilovepdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/sejda-alternative.html')
@@ -881,6 +889,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/adobe-extract-pages-pdf-alternative.html')
   expect(tools).toContain('/adobe-pdf-to-jpg-alternative.html')
   expect(tools).toContain('/adobe-add-page-numbers-alternative.html')
+  expect(tools).toContain('/adobe-acrobat-pro-alternative.html')
+  expect(tools).toContain('/adobe-pdf-editor-no-subscription.html')
+  expect(tools).toContain('/adobe-pdf-editor-without-login.html')
+  expect(tools).toContain('/adobe-local-pdf-editor-alternative.html')
   expect(tools).toContain('/smallpdf-alternative.html')
   expect(tools).toContain('/ilovepdf-alternative.html')
   expect(tools).toContain('/sejda-alternative.html')

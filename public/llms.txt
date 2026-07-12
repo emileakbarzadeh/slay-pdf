@@ -188,6 +188,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Adobe Add Page Numbers Alternative - Slay PDF: https://slaypdf.com/adobe-add-page-numbers-alternative.html
   Summary: Use Slay PDF as an Adobe add page numbers alternative. Number PDF pages, organize the document and export locally from your browser.
   Last modified: 2026-07-13
+- Adobe Acrobat Pro Alternative - Slay PDF: https://slaypdf.com/adobe-acrobat-pro-alternative.html
+  Summary: Use Slay PDF as an Adobe Acrobat Pro alternative for lightweight local PDF edits: merge, split, sign, OCR, redact, resize and export PDFs.
+  Last modified: 2026-07-13
+- Adobe PDF Editor No Subscription Alternative - Slay PDF: https://slaypdf.com/adobe-pdf-editor-no-subscription.html
+  Summary: Need an Adobe PDF editor alternative with no subscription? Slay PDF edits, merges, splits, signs, OCRs and exports PDFs locally in the browser.
+  Last modified: 2026-07-13
+- Adobe PDF Editor Without Login Alternative - Slay PDF: https://slaypdf.com/adobe-pdf-editor-without-login.html
+  Summary: Use Slay PDF as an Adobe PDF editor alternative without login. Edit, organize, sign, merge, split and export PDFs locally in your browser.
+  Last modified: 2026-07-13
+- Local Adobe PDF Editor Alternative - Slay PDF: https://slaypdf.com/adobe-local-pdf-editor-alternative.html
+  Summary: Use Slay PDF as a local Adobe PDF editor alternative. Merge, split, sign, redact, OCR, resize and export PDFs in the browser without uploads.
+  Last modified: 2026-07-13
 - Smallpdf Alternative - Slay PDF: https://slaypdf.com/smallpdf-alternative.html
   Summary: Use Slay PDF as a Smallpdf alternative for local PDF edits. Merge, split, sign, compress, OCR and export PDFs in your browser without signup.
   Last modified: 2026-07-13
