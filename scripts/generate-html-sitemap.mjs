@@ -49,6 +49,11 @@ const sections = [
     paths: ['/smallpdf-alternative.html', '/ilovepdf-alternative.html', '/sejda-alternative.html', '/pdf24-alternative.html'],
   },
   {
+    title: 'Local PDF task pages',
+    description: 'High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.',
+    paths: ['/local-pdf-merger.html', '/local-pdf-splitter.html', '/local-pdf-signer.html', '/local-pdf-redactor.html'],
+  },
+  {
     title: 'Open source and local app pages',
     description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
     paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],

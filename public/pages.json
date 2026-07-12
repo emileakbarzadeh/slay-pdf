@@ -1010,6 +1010,54 @@
       "breadcrumbId": "https://slaypdf.com/pdf24-alternative.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/local-pdf-merger.html",
+      "path": "/local-pdf-merger.html",
+      "title": "Local PDF Merger - Slay PDF",
+      "description": "Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.",
+      "h1": "Merge PDF files locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/local-pdf-merger.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/local-pdf-merger.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/local-pdf-splitter.html",
+      "path": "/local-pdf-splitter.html",
+      "title": "Local PDF Splitter - Slay PDF",
+      "description": "Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.",
+      "h1": "Split PDF files locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/local-pdf-splitter.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/local-pdf-splitter.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/local-pdf-signer.html",
+      "path": "/local-pdf-signer.html",
+      "title": "Local PDF Signer - Slay PDF",
+      "description": "Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.",
+      "h1": "Sign PDF files locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/local-pdf-signer.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/local-pdf-signer.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/local-pdf-redactor.html",
+      "path": "/local-pdf-redactor.html",
+      "title": "Local PDF Redactor - Slay PDF",
+      "description": "Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.",
+      "h1": "Redact PDF files locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/local-pdf-redactor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/local-pdf-redactor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "path": "/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",

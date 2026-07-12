@@ -673,6 +673,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/local-pdf-merger.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Merger - Slay PDF</image:title>
+      <image:caption>Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-splitter.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Splitter - Slay PDF</image:title>
+      <image:caption>Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-signer.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Signer - Slay PDF</image:title>
+      <image:caption>Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-redactor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Redactor - Slay PDF</image:title>
+      <image:caption>Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/open-source-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

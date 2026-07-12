@@ -679,6 +679,38 @@
       "date_modified": "2026-07-13T00:00:00.000Z"
     },
     {
+      "id": "https://slaypdf.com/local-pdf-merger.html",
+      "url": "https://slaypdf.com/local-pdf-merger.html",
+      "title": "Local PDF Merger - Slay PDF",
+      "summary": "Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.",
+      "content_text": "Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/local-pdf-splitter.html",
+      "url": "https://slaypdf.com/local-pdf-splitter.html",
+      "title": "Local PDF Splitter - Slay PDF",
+      "summary": "Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.",
+      "content_text": "Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/local-pdf-signer.html",
+      "url": "https://slaypdf.com/local-pdf-signer.html",
+      "title": "Local PDF Signer - Slay PDF",
+      "summary": "Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.",
+      "content_text": "Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/local-pdf-redactor.html",
+      "url": "https://slaypdf.com/local-pdf-redactor.html",
+      "title": "Local PDF Redactor - Slay PDF",
+      "summary": "Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.",
+      "content_text": "Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
       "id": "https://slaypdf.com/open-source-pdf-editor.html",
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",

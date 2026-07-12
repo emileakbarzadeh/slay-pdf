@@ -260,6 +260,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF24 Alternative - Slay PDF: https://slaypdf.com/pdf24-alternative.html
   Summary: Use Slay PDF as a PDF24 alternative for local PDF tools in the browser: merge, split, compress, OCR, protect, convert images and edit pages.
   Last modified: 2026-07-13
+- Local PDF Merger - Slay PDF: https://slaypdf.com/local-pdf-merger.html
+  Summary: Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Local PDF Splitter - Slay PDF: https://slaypdf.com/local-pdf-splitter.html
+  Summary: Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.
+  Last modified: 2026-07-13
+- Local PDF Signer - Slay PDF: https://slaypdf.com/local-pdf-signer.html
+  Summary: Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.
+  Last modified: 2026-07-13
+- Local PDF Redactor - Slay PDF: https://slaypdf.com/local-pdf-redactor.html
+  Summary: Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.
+  Last modified: 2026-07-13
 - Open Source PDF Editor - Slay PDF: https://slaypdf.com/open-source-pdf-editor.html
   Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
   Last modified: 2026-07-13

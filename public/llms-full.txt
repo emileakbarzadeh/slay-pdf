@@ -68,6 +68,8 @@ Content:
 - Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize workflows.
 - PDF editor alternatives
 - Alternative pages for common PDF utility searches where a local browser workflow is enough for the job.
+- Local PDF task pages
+- High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -161,6 +163,10 @@ Related links:
 - iLovePDF alternative: https://slaypdf.com/ilovepdf-alternative.html
 - Sejda alternative: https://slaypdf.com/sejda-alternative.html
 - PDF24 alternative: https://slaypdf.com/pdf24-alternative.html
+- Local PDF merger: https://slaypdf.com/local-pdf-merger.html
+- Local PDF splitter: https://slaypdf.com/local-pdf-splitter.html
+- Local PDF signer: https://slaypdf.com/local-pdf-signer.html
+- Local PDF redactor: https://slaypdf.com/local-pdf-redactor.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open source Adobe Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
@@ -306,6 +312,8 @@ Content:
 - Acrobat-style workflows for people who want merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize jobs handled locally.
 - PDF editor alternatives
 - Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.
+- Local PDF task pages
+- High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -402,6 +410,10 @@ Related links:
 - iLovePDF Alternative: https://slaypdf.com/ilovepdf-alternative.html
 - Sejda Alternative: https://slaypdf.com/sejda-alternative.html
 - PDF24 Alternative: https://slaypdf.com/pdf24-alternative.html
+- Local PDF Merger: https://slaypdf.com/local-pdf-merger.html
+- Local PDF Splitter: https://slaypdf.com/local-pdf-splitter.html
+- Local PDF Signer: https://slaypdf.com/local-pdf-signer.html
+- Local PDF Redactor: https://slaypdf.com/local-pdf-redactor.html
 - Open Source PDF Editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
@@ -2554,6 +2566,102 @@ Related links:
 - Compress PDF: https://slaypdf.com/compress-pdf.html
 - Password protect PDF: https://slaypdf.com/password-protect-pdf.html
 - OCR PDF: https://slaypdf.com/ocr-pdf.html
+
+## Local PDF Merger - Slay PDF
+URL: https://slaypdf.com/local-pdf-merger.html
+Last modified: 2026-07-13
+Summary: Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.
+H1: Merge PDF files locally.
+
+Content:
+- Local PDF merger
+- Merge PDF files locally.
+- Combine contracts, scans, statements, forms and image PDFs in your browser without sending source files to a server.
+- Drag to reorder
+- Import PDFs, arrange pages visually and place split markers when one workspace needs multiple exports.
+- Export selected pages
+- Merge everything, export selected pages only or separate pages from the download menu.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- A local way to combine PDF pages.
+- Slay PDF works well when you need one finished PDF from several private files and do not want to upload the originals to a random merge site. Import each PDF, review the page order, delete anything unnecessary and export the combined result.
+- The app is especially useful for document bundles such as invoices, receipts, school forms, lease packets and scanned paperwork where page order matters.
+- Local PDF merger FAQ
+- Yes. Slay PDF merges and exports PDFs in the browser so source files are not uploaded to an application server.
+- Yes. Drag pages into the order you want before exporting the merged PDF.
+- Yes. Select the pages you want and use export selected pages, or place split markers for multiple output files.
+
+## Local PDF Splitter - Slay PDF
+URL: https://slaypdf.com/local-pdf-splitter.html
+Last modified: 2026-07-13
+Summary: Split PDF files locally in your browser with Slay PDF. Extract, delete or separate pages without uploading documents.
+H1: Split PDF files locally.
+
+Content:
+- Local PDF splitter
+- Split PDF files locally.
+- Break large PDFs into smaller files, extract only the pages you need or separate pages without uploading documents.
+- Split markers
+- Drop split markers between pages so one workspace can download separate PDFs.
+- Selected-page export
+- Select a range, individual pages or everything except unwanted pages before exporting.
+- Local workflow
+- Page previews, selections and exports run in your browser for private document cleanup.
+- Split a PDF without sending it away.
+- Use Slay PDF when a PDF contains more pages than you need or when a large scan should become several smaller files. The workspace shows every page so you can choose the exact split points before download.
+- For simple jobs, select the pages you need and export selected pages. For larger bundles, add split markers between sections and download the separated PDFs.
+- Local PDF splitter FAQ
+- Yes. Add split markers in the workspace and use the download menu to export separate PDFs.
+- Yes. Select the pages you want and export selected pages.
+- No. The split workflow runs locally in this browser.
+
+## Local PDF Signer - Slay PDF
+URL: https://slaypdf.com/local-pdf-signer.html
+Last modified: 2026-07-13
+Summary: Sign PDF files locally in your browser with Slay PDF. Add signatures and text without uploading the document.
+H1: Sign PDF files locally.
+
+Content:
+- Local PDF signer
+- Sign PDF files locally.
+- Add signatures, dates and supporting text to PDFs in your browser without uploading private agreements or forms.
+- Signature tools
+- Place drawn signatures or signature images where the page needs them.
+- Move and resize
+- Select edit items, drag them into position and scale them to match the document.
+- Export locally
+- Download the signed PDF from the browser after reviewing the final page layout.
+- Sign everyday PDFs without a document portal.
+- Slay PDF is useful for lightweight signing jobs that do not need a full e-signature workflow: permission slips, rental forms, invoice approvals, internal acknowledgements and scanned paperwork.
+- Open the page editor, place the signature or text, adjust it visually and export a flattened copy when the document is ready to share.
+- Local PDF signer FAQ
+- Yes. Slay PDF lets you place signatures in the browser and export the result locally.
+- Yes. Select the signature item in the editor, then move or resize it before exporting.
+- No. Slay PDF edits the PDF file locally. For workflows requiring identity verification, audit trails or legal signing compliance, use the required signing platform.
+
+## Local PDF Redactor - Slay PDF
+URL: https://slaypdf.com/local-pdf-redactor.html
+Last modified: 2026-07-13
+Summary: Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.
+H1: Redact PDF files locally.
+
+Content:
+- Local PDF redactor
+- Redact PDF files locally.
+- Cover account numbers, addresses, signatures and other sensitive details in the browser before exporting a flattened copy.
+- Visual redaction
+- Draw redaction blocks over the parts of the page that should not be visible.
+- High-resolution preview
+- Zoom into page details in the editor so redaction boxes are easier to place.
+- Flattened export
+- Export redacted pages as a flattened result rather than a removable overlay.
+- Redact private PDFs without a remote upload.
+- Slay PDF gives you a fast local workflow for covering sensitive information before sharing a PDF. It is designed for practical cleanup of statements, forms, applications, receipts and scanned paperwork.
+- Always review the exported PDF before sending it. For regulated records or legally required redaction, follow your organization's required review process.
+- Local PDF redactor FAQ
+- Yes. Slay PDF lets you add redaction blocks and export the result from the browser.
+- Use a flattened export and review the final PDF before sharing it so covered content is not left as an editable overlay.
+- Yes. The editor supports zoom controls for placing edits more precisely.
 
 ## Open Source PDF Editor - Slay PDF
 URL: https://slaypdf.com/open-source-pdf-editor.html
