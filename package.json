@@ -85,6 +85,7 @@
     "seo:social": "node scripts/sync-static-social-meta.mjs",
     "seo:tools-itemlist": "node scripts/sync-tools-itemlist-schema.mjs",
     "seo:toolapps": "node scripts/sync-static-tool-app-schema.mjs",
+    "seo:faq": "node scripts/sync-static-faq-schema.mjs",
     "seo:schema": "node scripts/sync-static-webpage-schema.mjs",
     "seo:howto": "node scripts/sync-static-howto-schema.mjs",
     "seo:entities": "node scripts/sync-static-entity-schema.mjs",

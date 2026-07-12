@@ -140,6 +140,18 @@ function visibleToolFeatures(html, file) {
   return features
 }
 
+function visibleFaqItems(html) {
+  const section = html.match(/<section class="faq" aria-label="Frequently asked questions">([\s\S]*?)<\/section>/i)
+  if (!section) return []
+
+  return [...section[1].matchAll(/<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/g)]
+    .map((match) => ({
+      question: textFromInlineHtml(match[1]),
+      answer: textFromInlineHtml(match[2]),
+    }))
+    .filter((item) => item.question && item.answer)
+}
+
 function mainEntityIds(value) {
   if (!value) return []
   return (Array.isArray(value) ? value : [value])
@@ -212,11 +224,22 @@ function assertRichEntitySchema({ html, file, url }) {
     assert(faq.url === url, `${file} FAQPage URL is wrong`)
     assert(faq.inLanguage === 'en', `${file} FAQPage language is wrong`)
     assert(Array.isArray(faq.mainEntity) && faq.mainEntity.length >= 1, `${file} FAQPage must include questions`)
+    if (file !== 'index.html') {
+      const visibleFaq = visibleFaqItems(html)
+      assert(visibleFaq.length > 0, `${file} FAQPage JSON-LD must be backed by a visible FAQ section`)
+      assert(html.includes('type="application/ld+json" data-managed="faq"'), `${file} FAQPage JSON-LD should be generated from visible FAQ content`)
+      assert(faq.mainEntity.length === visibleFaq.length, `${file} FAQPage question count must match visible FAQ`)
+    }
     for (const [index, question] of faq.mainEntity.entries()) {
       assert(question['@type'] === 'Question', `${file} FAQ question ${index + 1} type is wrong`)
       assert(question.name, `${file} FAQ question ${index + 1} is missing name`)
       assert(question.acceptedAnswer?.['@type'] === 'Answer', `${file} FAQ answer ${index + 1} type is wrong`)
       assert(question.acceptedAnswer?.text, `${file} FAQ answer ${index + 1} is missing text`)
+      if (file !== 'index.html') {
+        const visibleQuestion = visibleFaqItems(html)[index]
+        assert(question.name === visibleQuestion?.question, `${file} FAQ question ${index + 1} must match visible FAQ text`)
+        assert(question.acceptedAnswer.text === visibleQuestion?.answer, `${file} FAQ answer ${index + 1} must match visible FAQ text`)
+      }
     }
   }
 

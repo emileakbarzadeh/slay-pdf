@@ -103,6 +103,18 @@ function visibleToolFeatures(html: string) {
     }))
 }
 
+function visibleFaqItems(html: string) {
+  const section = html.match(/<section class="faq" aria-label="Frequently asked questions">([\s\S]*?)<\/section>/i)
+  if (!section) return []
+
+  return [...section[1].matchAll(/<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/g)]
+    .map((match) => ({
+      question: textFromInlineHtml(match[1]),
+      answer: textFromInlineHtml(match[2]),
+    }))
+    .filter((item) => item.question && item.answer)
+}
+
 function visibleRelatedLinks(html: string, url: string) {
   const links = new Set<string>()
   const relatedSections = [
@@ -558,7 +570,17 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       expect(faq.url).toBe(`https://slaypdf.com/${path}`)
       expect(faq.inLanguage).toBe('en')
       expect(faq.mainEntity?.length).toBeGreaterThan(0)
-      expect(faq.mainEntity?.every((question) => question['@type'] === 'Question' && question.name && question.acceptedAnswer?.['@type'] === 'Answer' && question.acceptedAnswer.text)).toBe(true)
+      expect(html).toContain('type="application/ld+json" data-managed="faq"')
+      const visibleFaq = visibleFaqItems(html)
+      expect(visibleFaq.length).toBeGreaterThan(0)
+      expect(faq.mainEntity).toEqual(visibleFaq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })))
     }
     if (itemListEntity) {
       expect(itemListEntity['@id']).toBe(`https://slaypdf.com/${path}#itemlist`)

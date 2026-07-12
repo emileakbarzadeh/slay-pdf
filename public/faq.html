@@ -109,10 +109,13 @@
             ]
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="faq">
       {
             "@context": "https://schema.org",
             "@type": "FAQPage",
+            "@id": "https://slaypdf.com/faq.html#faq",
+            "url": "https://slaypdf.com/faq.html",
+            "inLanguage": "en",
             "mainEntity": [
                   {
                         "@type": "Question",
@@ -154,10 +157,7 @@
                               "text": "No. Passwords are used for the current export and are never saved."
                         }
                   }
-            ],
-            "@id": "https://slaypdf.com/faq.html#faq",
-            "url": "https://slaypdf.com/faq.html",
-            "inLanguage": "en"
+            ]
       }
     </script>
     <title>Slay PDF FAQ - Local PDF Editor</title>
@@ -185,6 +185,16 @@
         <p>No. Passwords are used for the current encrypted export only. Passwords are never saved.</p>
         <h2>What are the limits?</h2>
         <p>Browser memory, CPU, storage quota and WebAssembly support set the real limits. Very large files, heavy OCR jobs and complex scans may still need a desktop PDF workflow.</p>
+      </section>
+      <section class="faq" aria-label="Frequently asked questions">
+        <h2>Slay PDF FAQ</h2>
+        <div class="faq-list">
+          <details><summary>What is Slay PDF?</summary><p>Slay PDF is a free local PDF editor for splitting, merging, posterising, signing, resizing and editing PDFs in the browser.</p></details>
+          <details><summary>Does Slay PDF upload PDF files?</summary><p>No. Slay PDF is a static client-side web app. Documents and edits stay in the browser instead of being uploaded to an application server.</p></details>
+          <details><summary>Is Slay PDF a free Adobe Acrobat alternative?</summary><p>Yes for everyday PDF jobs such as merge, split, delete pages, reorder pages, sign, annotate, crop, resize, posterise, OCR, export images and protect exported PDFs.</p></details>
+          <details><summary>Can Slay PDF redact PDFs?</summary><p>Slay PDF can add redaction overlays and rasterize redacted pages on export so covered page content is not left as selectable text behind the overlay.</p></details>
+          <details><summary>Does Slay PDF save passwords?</summary><p>No. Passwords are used for the current export and are never saved.</p></details>
+        </div>
       </section>
       <div class="links" aria-label="Related pages">
         <a href="/privacy.html">Privacy</a>

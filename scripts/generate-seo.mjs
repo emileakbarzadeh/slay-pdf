@@ -10,6 +10,7 @@ const steps = [
   'seo:social',
   'seo:tools-itemlist',
   'seo:toolapps',
+  'seo:faq',
   'seo:schema',
   'seo:howto',
   'seo:entities',
