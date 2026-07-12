@@ -214,6 +214,20 @@ function assertRichEntitySchema({ html, file, url }) {
     assert(itemList.url === url, `${file} ItemList URL is wrong`)
     assert(itemList.inLanguage === 'en', `${file} ItemList language is wrong`)
     assert(Array.isArray(itemList.itemListElement) && itemList.itemListElement.length >= 1, `${file} ItemList must include items`)
+    assert(itemList.itemListOrder === 'https://schema.org/ItemListOrderAscending', `${file} ItemList order is wrong`)
+    assert(itemList.numberOfItems === itemList.itemListElement.length, `${file} ItemList numberOfItems must match item count`)
+    for (const [index, item] of itemList.itemListElement.entries()) {
+      assert(item['@type'] === 'ListItem', `${file} ItemList item ${index + 1} type is wrong`)
+      assert(item.position === index + 1, `${file} ItemList item ${index + 1} position is wrong`)
+      assert(item.url, `${file} ItemList item ${index + 1} URL is missing`)
+      if (item.item) {
+        assert(item.item['@type'] === 'WebPage', `${file} ItemList item ${index + 1} nested item type is wrong`)
+        assert(item.item['@id'] === `${item.url}#webpage`, `${file} ItemList item ${index + 1} nested WebPage ID is wrong`)
+        assert(item.item.url === item.url, `${file} ItemList item ${index + 1} nested WebPage URL is wrong`)
+        assert(item.item.name, `${file} ItemList item ${index + 1} nested WebPage name is missing`)
+        assert(item.item.description, `${file} ItemList item ${index + 1} nested WebPage description is missing`)
+      }
+    }
   }
 }
 
@@ -584,10 +598,27 @@ const toolsStructuredData = structuredDataBlocks(toolsHtml, 'tools.html')
 const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
 assert(itemList, 'tools.html is missing ItemList JSON-LD')
 const itemListUrls = itemList.itemListElement?.map((item) => item.url) ?? []
-const toolsChildUrls = htmlUrls.filter((url) => ![`${site}/tools.html`, `${site}/sitemap.html`].includes(url))
+const toolsChildUrls = visibleRelatedLinks(toolsHtml, `${site}/tools.html`).filter((url) => url !== `${site}/sitemap.html`)
+assert(new Set(toolsChildUrls).size === toolsChildUrls.length, 'tools.html visible catalog links must be unique')
+for (const url of toolsChildUrls) assert(htmlUrls.includes(url), `tools.html visible catalog URL is missing from sitemap: ${url}`)
+assert(itemList['@id'] === `${site}/tools.html#itemlist`, 'tools.html ItemList @id is wrong')
+assert(itemList.url === `${site}/tools.html`, 'tools.html ItemList URL is wrong')
+assert(itemList.description === 'Crawlable catalog of Slay PDF local PDF editor tools, workflows, guides and Adobe Acrobat alternative pages.', 'tools.html ItemList description is wrong')
+assert(itemList.mainEntityOfPage?.['@id'] === `${site}/tools.html#webpage`, 'tools.html ItemList mainEntityOfPage is wrong')
+assert(itemList.numberOfItems === toolsChildUrls.length, 'tools.html ItemList numberOfItems is wrong')
 assert(itemListUrls.length === toolsChildUrls.length, 'tools.html ItemList count must match linked sitemap pages')
 for (const [index, url] of toolsChildUrls.entries()) {
+  const item = itemList.itemListElement[index]
+  const metadata = pageMetadata.get(url)
   assert(itemListUrls[index] === url, `tools.html ItemList URL mismatch at position ${index + 1}`)
+  assert(item.position === index + 1, `tools.html ItemList position mismatch for ${url}`)
+  assert(item.name === metadata?.title?.replace(/ - Slay PDF$/, ''), `tools.html ItemList name mismatch for ${url}`)
+  assert(item.description === metadata?.description, `tools.html ItemList description mismatch for ${url}`)
+  assert(item.item?.['@type'] === 'WebPage', `tools.html ItemList nested item type mismatch for ${url}`)
+  assert(item.item?.['@id'] === `${url}#webpage`, `tools.html ItemList nested WebPage ID mismatch for ${url}`)
+  assert(item.item?.url === url, `tools.html ItemList nested WebPage URL mismatch for ${url}`)
+  assert(item.item?.name === metadata?.title, `tools.html ItemList nested WebPage name mismatch for ${url}`)
+  assert(item.item?.description === metadata?.description, `tools.html ItemList nested WebPage description mismatch for ${url}`)
   assert(toolsHtml.includes(`href="${new URL(url).pathname}"`), `tools.html is missing visible link to ${url}`)
 }
 

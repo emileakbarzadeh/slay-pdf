@@ -665,14 +665,48 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const tools = await (await page.request.get('/tools.html')).text()
   expect(tools).toContain('"@type": "ItemList"')
   expect(tools).toContain('PDF Tools - Slay PDF')
-  const toolStructuredData = [...tools.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]))
-  const toolItemList = toolStructuredData.find((block) => block['@type'] === 'ItemList') as { itemListElement: { url: string }[] } | undefined
+  const visibleCatalogPaths = [...tools.matchAll(/<(?:section|div) class="(?:tool-list|links)"[^>]*>([\s\S]*?)<\/(?:section|div)>/g)]
+    .flatMap((section) => [...section[1].matchAll(/<a href="([^"]+)"/g)].map((match) => match[1].replace(/^\//, '')))
+    .filter((path, index, paths) => path !== 'sitemap.html' && path !== 'tools.html' && paths.indexOf(path) === index)
+  const toolStructuredData = [...tools.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]))
+  const toolItemList = toolStructuredData.find((block) => block['@type'] === 'ItemList') as {
+    '@id'?: string
+    url?: string
+    itemListOrder?: string
+    numberOfItems?: number
+    mainEntityOfPage?: { '@id'?: string }
+    itemListElement: {
+      '@type'?: string
+      position?: number
+      name?: string
+      description?: string
+      url: string
+      item?: { '@type'?: string; '@id'?: string; url?: string; name?: string; description?: string }
+    }[]
+  } | undefined
   expect(toolItemList).toBeTruthy()
   const toolItemUrls = toolItemList?.itemListElement.map((item) => item.url) ?? []
-  const expectedToolItemPaths = htmlPaths.filter((path) => !['tools.html', 'sitemap.html'].includes(path))
+  const expectedToolItemPaths = visibleCatalogPaths
+  for (const path of expectedToolItemPaths) expect(htmlPaths).toContain(path)
+  expect(toolItemList?.['@id']).toBe('https://slaypdf.com/tools.html#itemlist')
+  expect(toolItemList?.url).toBe('https://slaypdf.com/tools.html')
+  expect(toolItemList?.itemListOrder).toBe('https://schema.org/ItemListOrderAscending')
+  expect(toolItemList?.numberOfItems).toBe(expectedToolItemPaths.length)
+  expect(toolItemList?.mainEntityOfPage?.['@id']).toBe('https://slaypdf.com/tools.html#webpage')
   expect(toolItemUrls).toHaveLength(expectedToolItemPaths.length)
-  for (const path of expectedToolItemPaths) {
-    expect(toolItemUrls).toContain(`https://slaypdf.com/${path}`)
+  for (const [index, path] of expectedToolItemPaths.entries()) {
+    const url = `https://slaypdf.com/${path}`
+    const item = toolItemList?.itemListElement[index]
+    expect(item?.url).toBe(url)
+    expect(item?.position).toBe(index + 1)
+    expect(item?.description?.length).toBeGreaterThan(70)
+    expect(item?.item).toMatchObject({
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+    })
+    expect(item?.item?.name).toContain('Slay PDF')
+    expect(item?.item?.description).toBe(item?.description)
     expect(tools).toContain(`href="/${path}"`)
   }
   const htmlSitemap = await (await page.request.get('/sitemap.html')).text()
