@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { PDFDocument, rgb } from 'pdf-lib'
-import { buildPdf, exportText } from './export'
+import JSZip from 'jszip'
+import { buildPdf, ensurePdfFilename, exportSplit, exportText, pdfFilenameBase, splitPdfFilename, splitPdfGroups } from './export'
 import { defaultExportSettings, type SourceDocument, type WorkspacePage } from '../types'
 
 async function makeSource() {
@@ -69,5 +70,27 @@ describe('buildPdf', () => {
     }], [source], defaultExportSettings)
 
     await expect(textBlob.text()).resolves.toContain('Overlay text')
+  })
+
+  it('uses split markers as document boundaries', async () => {
+    const { source, page } = await makeSource()
+    const nextPage = { ...page, id: 'page-2' }
+    const groups = splitPdfGroups([page, { id: 'split-1', kind: 'split' }, nextPage])
+
+    expect(groups).toEqual([[page], [nextPage]])
+
+    const zipBlob = await exportSplit([page, { id: 'split-1', kind: 'split' }, nextPage], [source], defaultExportSettings)
+    const zip = await JSZip.loadAsync(await zipBlob.arrayBuffer())
+    const files = Object.keys(zip.files).sort()
+
+    expect(files).toEqual(['document-001.pdf', 'document-002.pdf'])
+    const first = await PDFDocument.load(await zip.files['document-001.pdf'].async('arraybuffer'))
+    const second = await PDFDocument.load(await zip.files['document-002.pdf'].async('arraybuffer'))
+    expect(first.getPageCount()).toBe(1)
+    expect(second.getPageCount()).toBe(1)
+    expect(splitPdfFilename('bundle.pdf', 1)).toBe('bundle-002.pdf')
+    expect(splitPdfFilename('bundle', 1)).toBe('bundle-002.pdf')
+    expect(pdfFilenameBase('sample.pdf')).toBe('sample')
+    expect(ensurePdfFilename('sample')).toBe('sample.pdf')
   })
 })

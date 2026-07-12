@@ -108,7 +108,7 @@ export async function importFile(file: File): Promise<ImportedDocument> {
   }
 }
 
-export async function renderPage(source: SourceDocument, pageIndex: number, scale = 0.35) {
+export async function renderPage(source: SourceDocument, pageIndex: number, scale = 0.35, quality = 0.82) {
   const bytes = new Uint8Array(await source.blob.arrayBuffer())
   const pdfDocument = await pdfjs.getDocument({ data: bytes }).promise
   const page = await pdfDocument.getPage(pageIndex + 1)
@@ -118,7 +118,7 @@ export async function renderPage(source: SourceDocument, pageIndex: number, scal
   canvas.height = Math.ceil(viewport.height)
   const context = canvas.getContext('2d', { alpha: false })!
   await page.render({ canvasContext: context, canvas, viewport }).promise
-  const dataUrl = canvas.toDataURL('image/jpeg', 0.82)
+  const dataUrl = canvas.toDataURL('image/jpeg', quality)
   page.cleanup()
   await pdfDocument.destroy()
   return dataUrl

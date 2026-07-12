@@ -28,6 +28,7 @@ export type FormField = {
 }
 
 export type WorkspacePage = {
+  kind?: 'page'
   id: string
   sourceId: string
   sourcePageIndex: number
@@ -36,6 +37,17 @@ export type WorkspacePage = {
   rotation: 0 | 90 | 180 | 270
   crop: CropBox
   overlays: PageOverlay[]
+}
+
+export type WorkspaceSplitMarker = {
+  id: string
+  kind: 'split'
+}
+
+export type WorkspaceItem = WorkspacePage | WorkspaceSplitMarker
+
+export function isWorkspacePage(item: WorkspaceItem): item is WorkspacePage {
+  return item.kind !== 'split'
 }
 
 export type DocumentMetadata = {
@@ -59,7 +71,7 @@ export type ExportSettings = {
 export type PersistedWorkspace = {
   id: 'active'
   sources: SourceDocument[]
-  pages: WorkspacePage[]
+  pages: WorkspaceItem[]
   settings: ExportSettings
   savedAt: number
 }

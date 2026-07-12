@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { GripVertical, MessageSquareText, RotateCw } from 'lucide-react'
+import { GripVertical, MessageSquareText, PencilLine, RotateCw } from 'lucide-react'
 import { renderPage } from '../lib/pdf'
 import type { SourceDocument, WorkspacePage } from '../types'
 
@@ -12,9 +12,10 @@ type Props = {
   selected: boolean
   onSelect: (additive: boolean) => void
   onOpen: () => void
+  onContextMenu: (event: MouseEvent) => void
 }
 
-export function PageThumbnail({ page, source, number, selected, onSelect, onOpen }: Props) {
+export function PageThumbnail({ page, source, number, selected, onSelect, onOpen, onContextMenu }: Props) {
   const [preview, setPreview] = useState<string>()
   const [visible, setVisible] = useState(false)
   const root = useRef<HTMLDivElement>(null)
@@ -42,6 +43,7 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
       style={style}
       className={`page-tile${selected ? ' selected' : ''}${sortable.isDragging ? ' dragging' : ''}`}
       data-testid="page-tile"
+      onContextMenu={onContextMenu}
       {...sortable.attributes}
       {...sortable.listeners}
     >
@@ -57,6 +59,19 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
         {preview ? <img src={preview} alt="" draggable={false} style={{ transform: `rotate(${page.rotation}deg)` }} /> : <span className="page-skeleton" />}
         {page.overlays.length > 0 && <span className="edit-badge" title="Page has edits"><MessageSquareText size={13} /> {page.overlays.length}</span>}
         {page.rotation !== 0 && <span className="rotation-badge"><RotateCw size={12} /> {page.rotation}°</span>}
+      </button>
+      <button
+        className="page-edit-button icon-button"
+        type="button"
+        title="Edit page"
+        aria-label={`Edit page ${number}`}
+        onPointerDown={(event) => event.stopPropagation()}
+        onClick={(event) => {
+          event.stopPropagation()
+          onOpen()
+        }}
+      >
+        <PencilLine size={15} />
       </button>
       <div className="page-caption">
         <button className="drag-handle icon-button" type="button" title="Drag to reorder" aria-label={`Reorder page ${number}`}>

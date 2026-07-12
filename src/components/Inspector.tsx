@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import { Crop, Download, FileArchive, FileImage, FileText, HardDrive, Info, ListChecks, LockKeyhole, ScanText, Settings2, SlidersHorizontal } from 'lucide-react'
-import { buildPdf, buildSearchablePdf, downloadBlob, exportImages, exportSplit, exportText } from '../lib/export'
+import { buildSearchablePdf, downloadBlob, ensurePdfFilename, exportImages, exportSplit, exportText } from '../lib/export'
 import { getStorageEstimate } from '../lib/database'
+import { downloadPdfExport } from '../lib/pdfDownloads'
 import { processPdf } from '../lib/processing'
 import { useWorkspace } from '../store'
-import type { CropBox } from '../types'
+import { isWorkspacePage, type CropBox } from '../types'
 
 type Tab = 'export' | 'document'
 
-export function Inspector() {
+type Props = {
+  mobileExpanded: boolean
+  onToggleMobile: () => void
+}
+
+export function Inspector({ mobileExpanded, onToggleMobile }: Props) {
   const [tab, setTab] = useState<Tab>('export')
   const [storage, setStorage] = useState<string>()
   const [protect, setProtect] = useState(false)
@@ -23,25 +29,34 @@ export function Inspector() {
   const setJob = useWorkspace((state) => state.setJob)
   const setError = useWorkspace((state) => state.setError)
 
-  const selectedPages = pages.filter((page) => selected.includes(page.id))
-  const targetPages = selected.length ? selectedPages : pages
-  const selectedPage = selected.length === 1 ? pages.find((page) => page.id === selected[0]) : undefined
+  const pageEntries = pages.filter(isWorkspacePage)
+  const selectedPages = pageEntries.filter((page) => selected.includes(page.id))
+  const targetPages = selected.length ? selectedPages : pageEntries
+  const targetItems = selected.length ? selectedPages : pages
+  const selectedPage = selected.length === 1 ? pageEntries.find((page) => page.id === selected[0]) : undefined
   const formSources = sources.filter((source) => source.formFields?.length)
+  const filenameInput = settings.filename.replace(/\.pdf$/i, '')
   const run = async (kind: 'pdf' | 'ocr' | 'split' | 'images' | 'text', scope: 'all' | 'selected' | 'auto' = 'auto') => {
-    const pagesForExport = scope === 'all' ? pages : scope === 'selected' ? selectedPages : targetPages
+    const pagesForExport = scope === 'all' ? pageEntries : scope === 'selected' ? selectedPages : targetPages
+    const itemsForSplit = scope === 'all' ? pages : scope === 'selected' ? selectedPages : targetItems
     setError(null)
     setJob({ label: kind === 'ocr' ? 'Preparing OCR' : kind === 'pdf' ? 'Building PDF' : 'Preparing export', progress: 0 })
     try {
       const progress = (value: number) => setJob({ label: 'Preparing export', progress: value })
       if (kind === 'pdf' || kind === 'ocr') {
         if (protect && password.length < 6) throw new Error('Use at least 6 characters for the PDF password.')
-        const composed = kind === 'ocr'
-          ? await buildSearchablePdf(pagesForExport, sources, settings, (value, label) => setJob({ label, progress: value }))
-          : await buildPdf(pagesForExport, sources, settings, progress)
-        const processed = await processPdf(composed, { compression: settings.compression, password: protect ? password : undefined }, (value, label) => setJob({ label, progress: value }))
-        downloadBlob(processed, settings.filename || 'local-pdf.pdf')
+        if (kind === 'pdf') {
+          await downloadPdfExport(scope === 'all' ? pages : pagesForExport, sources, settings, {
+            password: protect ? password : undefined,
+            onJob: (label, value) => setJob({ label, progress: value })
+          })
+        } else {
+          const composed = await buildSearchablePdf(pagesForExport, sources, settings, (value, label) => setJob({ label, progress: value }))
+          const processed = await processPdf(composed, { compression: settings.compression, password: protect ? password : undefined }, (value, label) => setJob({ label, progress: value }))
+          downloadBlob(processed, ensurePdfFilename(settings.filename))
+        }
       }
-      if (kind === 'split') downloadBlob(await exportSplit(pagesForExport, sources, settings, progress), 'local-pdf-pages.zip')
+      if (kind === 'split') downloadBlob(await exportSplit(itemsForSplit, sources, settings, progress), 'local-pdf-pages.zip')
       if (kind === 'images') downloadBlob(await exportImages(pagesForExport, sources, settings, progress), 'local-pdf-images.zip')
       if (kind === 'text') downloadBlob(await exportText(pagesForExport, sources, settings, progress), 'local-pdf-text.txt')
     } catch (error) {
@@ -68,7 +83,10 @@ export function Inspector() {
   }
 
   return (
-    <aside className="inspector">
+    <aside className={`inspector${mobileExpanded ? ' mobile-expanded' : ''}`}>
+      <button className="drawer-handle" type="button" onClick={onToggleMobile} aria-expanded={mobileExpanded} aria-label={mobileExpanded ? 'Collapse export drawer' : 'Expand export drawer'}>
+        <span />
+      </button>
       <div className="segmented" role="tablist">
         <button className={tab === 'export' ? 'active' : ''} onClick={() => setTab('export')} role="tab"><Download size={15} /> Export</button>
         <button className={tab === 'document' ? 'active' : ''} onClick={() => setTab('document')} role="tab"><Settings2 size={15} /> Document</button>
@@ -76,16 +94,19 @@ export function Inspector() {
 
       {tab === 'export' ? <>
         <div className="inspector-section">
-          <label>File name<input value={settings.filename} onChange={(event) => updateSettings({ filename: event.target.value })} /></label>
-          <p className="selection-note">{selected.length ? `${selected.length} selected pages` : `All ${pages.length} pages`}</p>
-          <button className="button primary wide" type="button" disabled={!pages.length} onClick={() => void run('pdf', 'all')}><Download size={17} /> Export all pages</button>
+          <label>File name<input value={filenameInput} onChange={(event) => updateSettings({ filename: event.target.value.replace(/\.pdf$/i, '') })} /></label>
+          <p className="selection-note">{selected.length ? `${selected.length} selected pages` : `All ${pageEntries.length} pages`}</p>
+          <button className="button primary wide" type="button" disabled={!pageEntries.length} onClick={() => void run('pdf', 'all')}><Download size={17} /> Export all pages</button>
           <button className="button secondary wide" type="button" disabled={!selected.length} onClick={() => void run('pdf', 'selected')}><Download size={17} /> Export selected pages</button>
-          <div className="export-grid">
-            <button type="button" onClick={() => void run('split')} disabled={!pages.length}><FileArchive size={18} /><span>Split PDFs</span></button>
-            <button type="button" onClick={() => void run('images')} disabled={!pages.length}><FileImage size={18} /><span>Page images</span></button>
-            <button type="button" onClick={() => void run('text')} disabled={!pages.length}><FileText size={18} /><span>Plain text</span></button>
+          <div className="download-section">
+            <h3>Other downloads</h3>
+            <div className="export-grid">
+              <button type="button" onClick={() => void run('split')} disabled={!pageEntries.length}><FileArchive size={18} /><span>Separate pages</span></button>
+              <button type="button" onClick={() => void run('images')} disabled={!pageEntries.length}><FileImage size={18} /><span>Page images</span></button>
+              <button type="button" onClick={() => void run('text')} disabled={!pageEntries.length}><FileText size={18} /><span>Plain text</span></button>
+            </div>
           </div>
-          <button className="button wide" type="button" disabled={!pages.length} onClick={() => void run('ocr')}><ScanText size={17} /> Searchable OCR PDF</button>
+          <button className="button wide" type="button" disabled={!pageEntries.length} onClick={() => void run('ocr')}><ScanText size={17} /> Searchable OCR PDF</button>
         </div>
         <div className="inspector-section advanced-tools">
           <h3>Advanced processing</h3>
@@ -97,7 +118,7 @@ export function Inspector() {
           </select></label>
           <label className="advanced-row toggle-row"><LockKeyhole size={17} /><span>Password protection</span><input type="checkbox" checked={protect} onChange={(event) => setProtect(event.target.checked)} /></label>
           {protect && <label className="password-field">Open password<input type="password" autoComplete="new-password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="At least 6 characters" /></label>}
-          <p className="engine-note"><ScanText size={14} /> Compression and AES-256 encryption run in Wasm. Passwords are never saved.</p>
+          <p className="engine-note"><ScanText size={14} /> Passwords are never saved.</p>
         </div>
       </> : <>
         <div className="inspector-section">

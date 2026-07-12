@@ -1,6 +1,7 @@
 import JSZip from 'jszip'
 import { degrees, PDFCheckBox, PDFDocument, PDFDropdown, PDFOptionList, PDFRadioGroup, PDFTextField, rgb, StandardFonts } from 'pdf-lib'
-import type { ExportSettings, PageOverlay, SourceDocument, WorkspacePage } from '../types'
+import type { ExportSettings, PageOverlay, SourceDocument, WorkspaceItem, WorkspacePage } from '../types'
+import { isWorkspacePage } from '../types'
 import type { OcrPage } from './ocr'
 import { recognizePages } from './ocr'
 import { extractTextFromBlob, renderPageBlob, renderPdfPageBlob } from './pdf'
@@ -15,6 +16,15 @@ export function downloadBlob(blob: Blob, filename: string) {
   anchor.click()
   anchor.remove()
   window.setTimeout(() => URL.revokeObjectURL(url), 1500)
+}
+
+export function pdfFilenameBase(filename: string) {
+  const fallback = filename.trim() || 'local-pdf.pdf'
+  return fallback.replace(/\.pdf$/i, '') || 'local-pdf'
+}
+
+export function ensurePdfFilename(filename: string) {
+  return `${pdfFilenameBase(filename)}.pdf`
 }
 
 function parseHex(value: string) {
@@ -194,12 +204,42 @@ export async function buildSearchablePdf(
   return addOcrTextLayer(composed, ocr)
 }
 
-export async function exportSplit(pages: WorkspacePage[], sources: SourceDocument[], settings: ExportSettings, onProgress?: (progress: number) => void) {
+export function splitPdfGroups(items: WorkspaceItem[]) {
+  const hasMarkers = hasSplitMarkers(items)
+  const pages = items.filter(isWorkspacePage)
+  if (!hasMarkers) return pages.map((page) => [page])
+
+  const groups: WorkspacePage[][] = []
+  let current: WorkspacePage[] = []
+  for (const item of items) {
+    if (isWorkspacePage(item)) {
+      current.push(item)
+    } else if (current.length) {
+      groups.push(current)
+      current = []
+    }
+  }
+  if (current.length) groups.push(current)
+  return groups
+}
+
+export function hasSplitMarkers(items: WorkspaceItem[]) {
+  return items.some((item) => !isWorkspacePage(item))
+}
+
+export function splitPdfFilename(filename: string, index: number) {
+  return `${pdfFilenameBase(filename)}-${String(index + 1).padStart(3, '0')}.pdf`
+}
+
+export async function exportSplit(items: WorkspaceItem[], sources: SourceDocument[], settings: ExportSettings, onProgress?: (progress: number) => void) {
   const zip = new JSZip()
-  for (let index = 0; index < pages.length; index += 1) {
-    const blob = await buildPdf([pages[index]], sources, { ...settings, pageNumbers: false }, undefined)
-    zip.file(`page-${String(index + 1).padStart(3, '0')}.pdf`, blob)
-    onProgress?.((index + 1) / pages.length)
+  const groups = splitPdfGroups(items)
+  const hasMarkers = hasSplitMarkers(items)
+  const prefix = hasMarkers ? 'document' : 'page'
+  for (let index = 0; index < groups.length; index += 1) {
+    const blob = await buildPdf(groups[index], sources, { ...settings, pageNumbers: false }, undefined)
+    zip.file(`${prefix}-${String(index + 1).padStart(3, '0')}.pdf`, await blob.arrayBuffer())
+    onProgress?.((index + 1) / groups.length)
   }
   return zip.generateAsync({ type: 'blob', compression: 'DEFLATE' })
 }

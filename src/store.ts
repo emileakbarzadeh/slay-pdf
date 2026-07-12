@@ -1,15 +1,15 @@
 import { create } from 'zustand'
 import { clearWorkspace, loadWorkspace, saveWorkspace } from './lib/database'
 import { importFile, uid } from './lib/pdf'
-import type { ExportSettings, JobState, PageOverlay, SourceDocument, WorkspacePage } from './types'
-import { defaultExportSettings } from './types'
+import type { ExportSettings, JobState, PageOverlay, SourceDocument, WorkspaceItem, WorkspacePage } from './types'
+import { defaultExportSettings, isWorkspacePage } from './types'
 
-type PageSnapshot = WorkspacePage[]
+type PageSnapshot = WorkspaceItem[]
 
 type WorkspaceState = {
   hydrated: boolean
   sources: SourceDocument[]
-  pages: WorkspacePage[]
+  pages: WorkspaceItem[]
   selected: string[]
   settings: ExportSettings
   history: PageSnapshot[]
@@ -25,9 +25,12 @@ type WorkspaceState = {
   rotate: (degrees: 90 | -90) => void
   remove: () => void
   duplicate: () => void
+  addSplitMarker: () => void
+  removeSplitMarker: (id: string) => void
   updatePage: (id: string, changes: Partial<WorkspacePage>) => void
   updateFormField: (sourceId: string, name: string, value: string) => void
   addOverlay: (pageId: string, overlay: PageOverlay) => void
+  updateOverlay: (pageId: string, overlayId: string, changes: PageOverlay) => void
   removeOverlay: (pageId: string, overlayId: string) => void
   updateSettings: (changes: Partial<ExportSettings>) => void
   undo: () => void
@@ -37,10 +40,14 @@ type WorkspaceState = {
   setError: (error: string | null) => void
 }
 
-const clonePages = (pages: WorkspacePage[]) => structuredClone(pages)
+const clonePages = (pages: WorkspaceItem[]) => structuredClone(pages)
 
-function withHistory(state: WorkspaceState, pages: WorkspacePage[]) {
+function withHistory(state: WorkspaceState, pages: WorkspaceItem[]) {
   return { pages, history: [...state.history.slice(-39), clonePages(state.pages)], future: [] }
+}
+
+function titleFromFilename(name: string) {
+  return name.replace(/\.[^.]+$/, '')
 }
 
 let saveTimer: number | undefined
@@ -86,10 +93,23 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
       }
       const state = get()
       const pages = imported.flatMap((item) => item.pages)
+      const firstSource = imported[0]?.source
+      const shouldUseFirstSourceDefaults = firstSource && !state.sources.length && !state.pages.length
+      const settings = shouldUseFirstSourceDefaults
+        ? {
+            ...state.settings,
+            filename: state.settings.filename === defaultExportSettings.filename ? firstSource.name : state.settings.filename,
+            metadata: {
+              ...state.settings.metadata,
+              title: state.settings.metadata.title || titleFromFilename(firstSource.name)
+            }
+          }
+        : state.settings
       set({
         ...withHistory(state, [...state.pages, ...pages]),
         sources: [...state.sources, ...imported.map((item) => item.source)],
         selected: pages.map((page) => page.id),
+        settings,
         job: null
       })
       scheduleSave()
@@ -102,7 +122,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
     if (!additive) return { selected: [id] }
     return { selected: state.selected.includes(id) ? state.selected.filter((value) => value !== id) : [...state.selected, id] }
   }),
-  selectAll: () => set((state) => ({ selected: state.pages.map((page) => page.id) })),
+  selectAll: () => set((state) => ({ selected: state.pages.filter(isWorkspacePage).map((page) => page.id) })),
   selectNone: () => set({ selected: [] }),
 
   reorder: (activeId, overId) => {
@@ -120,7 +140,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
   rotate: (degrees) => {
     const state = get()
     const selected = new Set(state.selected)
-    const pages = state.pages.map((page) => selected.has(page.id)
+    const pages = state.pages.map((page) => isWorkspacePage(page) && selected.has(page.id)
       ? { ...page, rotation: ((page.rotation + degrees + 360) % 360) as WorkspacePage['rotation'] }
       : page)
     set(withHistory(state, pages))
@@ -130,21 +150,40 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
   remove: () => {
     const state = get()
     const selected = new Set(state.selected)
-    set({ ...withHistory(state, state.pages.filter((page) => !selected.has(page.id))), selected: [] })
+    set({ ...withHistory(state, state.pages.filter((page) => !isWorkspacePage(page) || !selected.has(page.id))), selected: [] })
     scheduleSave()
   },
 
   duplicate: () => {
     const state = get()
     const selected = new Set(state.selected)
-    const pages = state.pages.flatMap((page) => selected.has(page.id) ? [page, { ...structuredClone(page), id: uid('page') }] : [page])
+    const pages = state.pages.flatMap((page) => isWorkspacePage(page) && selected.has(page.id) ? [page, { ...structuredClone(page), id: uid('page') }] : [page])
     set(withHistory(state, pages))
+    scheduleSave()
+  },
+
+  addSplitMarker: () => {
+    const state = get()
+    const selected = new Set(state.selected)
+    const selectedIndexes = state.pages.flatMap((item, index) => isWorkspacePage(item) && selected.has(item.id) ? [index] : [])
+    const pageIndexes = state.pages.flatMap((item, index) => isWorkspacePage(item) ? [index] : [])
+    const anchorIndex = selectedIndexes.length === 1 ? selectedIndexes[0] : pageIndexes[0]
+    const insertAt = anchorIndex === undefined ? state.pages.length : anchorIndex + 1
+    const pages = [...state.pages]
+    pages.splice(insertAt, 0, { id: uid('split'), kind: 'split' })
+    set(withHistory(state, pages))
+    scheduleSave()
+  },
+
+  removeSplitMarker: (id) => {
+    const state = get()
+    set(withHistory(state, state.pages.filter((page) => page.id !== id)))
     scheduleSave()
   },
 
   updatePage: (id, changes) => {
     const state = get()
-    set(withHistory(state, state.pages.map((page) => page.id === id ? { ...page, ...changes } : page)))
+    set(withHistory(state, state.pages.map((page) => isWorkspacePage(page) && page.id === id ? { ...page, ...changes } : page)))
     scheduleSave()
   },
 
@@ -159,13 +198,19 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
 
   addOverlay: (pageId, overlay) => {
     const state = get()
-    set(withHistory(state, state.pages.map((page) => page.id === pageId ? { ...page, overlays: [...page.overlays, overlay] } : page)))
+    set(withHistory(state, state.pages.map((page) => isWorkspacePage(page) && page.id === pageId ? { ...page, overlays: [...page.overlays, overlay] } : page)))
+    scheduleSave()
+  },
+
+  updateOverlay: (pageId, overlayId, changes) => {
+    const state = get()
+    set(withHistory(state, state.pages.map((page) => isWorkspacePage(page) && page.id === pageId ? { ...page, overlays: page.overlays.map((item) => item.id === overlayId ? changes : item) } : page)))
     scheduleSave()
   },
 
   removeOverlay: (pageId, overlayId) => {
     const state = get()
-    set(withHistory(state, state.pages.map((page) => page.id === pageId ? { ...page, overlays: page.overlays.filter((item) => item.id !== overlayId) } : page)))
+    set(withHistory(state, state.pages.map((page) => isWorkspacePage(page) && page.id === pageId ? { ...page, overlays: page.overlays.filter((item) => item.id !== overlayId) } : page)))
     scheduleSave()
   },
 
