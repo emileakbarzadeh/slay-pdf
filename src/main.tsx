@@ -5,7 +5,7 @@ import App from './App'
 
 registerSW({
   onNeedRefresh() {
-    if (window.confirm('An update is ready. Reload Local PDF now?')) window.location.reload()
+    if (window.confirm('An update is ready. Reload Slay PDF now?')) window.location.reload()
   }
 })
 

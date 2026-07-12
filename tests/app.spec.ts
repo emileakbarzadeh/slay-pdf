@@ -13,7 +13,7 @@ async function samplePdf(pageCount = 2) {
       page.drawRectangle({ x: 0, y: 0, width: 210, height: 297, color: rgb(0.16, 0.62, 0.38) })
       page.drawRectangle({ x: 210, y: 0, width: 210, height: 297, color: rgb(0.97, 0.78, 0.2) })
     }
-    page.drawText('Local PDF test document', { x: 48, y: 520, size: 20, color: rgb(0, 0, 0) })
+    page.drawText('Slay PDF test document', { x: 48, y: 520, size: 20, color: rgb(0, 0, 0) })
     page.drawText(`Page ${index + 1}`, { x: 48, y: 486, size: 14, color: rgb(0.1, 0.1, 0.1) })
   }
   const bytes = await document.save()
@@ -43,7 +43,7 @@ async function hideInspector(page: Page) {
 
 async function waitForSavedPageCount(page: Page, count: number) {
   await expect.poll(async () => page.evaluate(async () => new Promise<number>((resolve) => {
-    const open = indexedDB.open('local-pdf')
+    const open = indexedDB.open('slay-pdf')
     open.onerror = () => resolve(0)
     open.onsuccess = () => {
       const database = open.result
@@ -66,17 +66,17 @@ async function waitForSavedPageCount(page: Page, count: number) {
 
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('button', { name: 'About Local PDF' }).click()
-  const about = page.getByRole('dialog', { name: 'About Local PDF' })
+  await page.getByRole('button', { name: 'About Slay PDF' }).click()
+  const about = page.getByRole('dialog', { name: 'About Slay PDF' })
   await expect(about).toBeVisible()
-  await expect(about).toContainText('Local PDF is a completely local PDF editor to split, merge, posterise, sign or edit any PDF.')
+  await expect(about).toContainText('Slay PDF is a completely local PDF editor to split, merge, posterise, sign or edit any PDF.')
   await expect(about).toContainText('Super quick and no more random dodgy sites. Enterprise level security (since your data stays with you and is never sent over the internet)')
   await expect(about).toContainText('Your documents and edits stay in this browser. Passwords are never saved.')
-  await expect(about.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/local-pdf')
+  await expect(about.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/slay-pdf')
   await expect(about.getByText('License links')).toBeVisible()
-  await expect(about.getByRole('link', { name: 'Local PDF (AGPL-3.0)' })).toBeHidden()
+  await expect(about.getByRole('link', { name: 'Slay PDF (AGPL-3.0)' })).toBeHidden()
   await about.getByText('License links').click()
-  await expect(about.getByRole('link', { name: 'Local PDF (AGPL-3.0)' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/local-pdf')
+  await expect(about.getByRole('link', { name: 'Slay PDF (AGPL-3.0)' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/slay-pdf')
   await expect(about.getByRole('link', { name: 'GhostPDL/Ghostscript WASM (AGPL-3.0-or-later)' })).toHaveAttribute('href', 'https://github.com/okathira/ghostpdl-wasm')
   await expect(about.getByRole('link', { name: 'qpdf-wasm wrapper (ISC)' })).toHaveAttribute('href', 'https://github.com/neslinesli93/qpdf-wasm')
   await expect(about.getByRole('link', { name: 'QPDF engine source' })).toHaveAttribute('href', 'https://github.com/qpdf/qpdf')

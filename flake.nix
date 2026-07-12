@@ -1,5 +1,5 @@
 {
-  description = "Development shell for Local PDF";
+  description = "Development shell for Slay PDF";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -21,7 +21,7 @@
         in
         {
           default = pkgs.mkShellNoCC {
-            name = "local-pdf";
+            name = "slay-pdf";
 
             packages = with pkgs; [
               git
@@ -34,7 +34,7 @@
               export PLAYWRIGHT_BROWSERS_PATH="$PWD/.cache/ms-playwright"
               export npm_config_update_notifier=false
 
-              echo "local-pdf dev shell: node $(node --version), npm $(npm --version)"
+              echo "slay-pdf dev shell: node $(node --version), npm $(npm --version)"
             '';
           };
         });

@@ -1,9 +1,9 @@
-# Local PDF
+# Slay PDF
 
 > [!WARNING]
 > This project is entirely slopped. Enter at your own risk (that being said, it is entirely client side so hopefully has no vulnerabilities)
 
-Local PDF is a static, installable browser app for everyday PDF editing. It keeps documents on your device, stores the active workspace in IndexedDB, and uses browser-side WebAssembly engines for heavier PDF operations.
+Slay PDF is a static, installable browser app for everyday PDF editing. It keeps documents on your device, stores the active workspace in IndexedDB, and uses browser-side WebAssembly engines for heavier PDF operations.
 
 ## What It Does
 
@@ -17,7 +17,7 @@ Local PDF is a static, installable browser app for everyday PDF editing. It keep
 
 ## Privacy Model
 
-Local PDF is designed to run as a static site. PDF contents are processed in the browser and are not uploaded to an application server.
+Slay PDF is designed to run as a static site. PDF contents are processed in the browser and are not uploaded to an application server.
 
 The practical limits are still the user's browser, memory, CPU, and storage quota. Imports are capped at 200 MB per file, and OCR currently bundles English language data only.
 
@@ -88,6 +88,6 @@ The app builds to static files in `dist/` and is designed for GitHub Pages. The 
 
 ## License
 
-Local PDF is licensed under AGPL-3.0-only.
+Slay PDF is licensed under AGPL-3.0-only.
 
 The app also uses AGPL-licensed GhostPDL/Ghostscript through `@okathira/ghostpdl-wasm`, so the project is licensed under AGPL as a whole. The About modal links to the app source and the major third-party PDF/OCR engines used at runtime.

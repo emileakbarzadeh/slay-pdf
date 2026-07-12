@@ -19,8 +19,8 @@ export function downloadBlob(blob: Blob, filename: string) {
 }
 
 export function pdfFilenameBase(filename: string) {
-  const fallback = filename.trim() || 'local-pdf.pdf'
-  return fallback.replace(/\.pdf$/i, '') || 'local-pdf'
+  const fallback = filename.trim() || 'slay-pdf.pdf'
+  return fallback.replace(/\.pdf$/i, '') || 'slay-pdf'
 }
 
 export function ensurePdfFilename(filename: string) {
@@ -223,7 +223,7 @@ export async function buildPdf(
   if (metadata.author) output.setAuthor(metadata.author)
   if (metadata.subject) output.setSubject(metadata.subject)
   if (metadata.keywords) output.setKeywords(metadata.keywords.split(',').map((value) => value.trim()).filter(Boolean))
-  output.setProducer('Local PDF')
+  output.setProducer('Slay PDF')
   output.setModificationDate(new Date())
   const bytes = await output.save({ useObjectStreams: true })
   return new Blob([bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer], { type: 'application/pdf' })

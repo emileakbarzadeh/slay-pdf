@@ -93,7 +93,7 @@ export type JobState = {
 } | null
 
 export const defaultExportSettings: ExportSettings = {
-  filename: 'local-pdf.pdf',
+  filename: 'slay-pdf.pdf',
   pageNumbers: false,
   watermark: '',
   watermarkOpacity: 0.18,

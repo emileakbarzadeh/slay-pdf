@@ -1,16 +1,16 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type { PersistedWorkspace } from '../types'
 
-class LocalPdfDatabase extends Dexie {
+class SlayPdfDatabase extends Dexie {
   workspaces!: EntityTable<PersistedWorkspace, 'id'>
 
   constructor() {
-    super('local-pdf')
+    super('slay-pdf')
     this.version(1).stores({ workspaces: 'id,savedAt' })
   }
 }
 
-export const db = new LocalPdfDatabase()
+export const db = new SlayPdfDatabase()
 
 export async function loadWorkspace() {
   return db.workspaces.get('active')

@@ -26,7 +26,7 @@ const shortcutRows = [
 ]
 
 const licenseLinks = [
-  { label: 'Local PDF (AGPL-3.0)', href: 'https://github.com/emileakbarzadeh/local-pdf' },
+  { label: 'Slay PDF (AGPL-3.0)', href: 'https://github.com/emileakbarzadeh/slay-pdf' },
   { label: 'GhostPDL/Ghostscript WASM (AGPL-3.0-or-later)', href: 'https://github.com/okathira/ghostpdl-wasm' },
   { label: 'qpdf-wasm wrapper (ISC)', href: 'https://github.com/neslinesli93/qpdf-wasm' },
   { label: 'QPDF engine source', href: 'https://github.com/qpdf/qpdf' },
@@ -306,16 +306,16 @@ export default function App() {
     }
   }, [aboutOpen, allSelected, editorPage, pageEntries, pageMenu, startupView, state])
   const aboutModal = aboutOpen && <div className="app-modal-backdrop" role="presentation" onMouseDown={() => setAboutOpen(false)}>
-    <div className="app-modal about-modal" role="dialog" aria-modal="true" aria-label="About Local PDF" onMouseDown={(event) => event.stopPropagation()}>
+    <div className="app-modal about-modal" role="dialog" aria-modal="true" aria-label="About Slay PDF" onMouseDown={(event) => event.stopPropagation()}>
       <button className="icon-button app-modal-close" type="button" onClick={() => setAboutOpen(false)} aria-label="Close about"><X size={17} /></button>
       <div className="about-modal-header">
-        <div className="brand-mark">L</div>
+        <div className="brand-mark">S</div>
         <div>
-          <h2>Local PDF</h2>
+          <h2>Slay PDF</h2>
           <p>Private. Local. Always.</p>
         </div>
       </div>
-      <p>Local PDF is a completely local PDF editor to split, merge, posterise, sign or edit any PDF.</p>
+      <p>Slay PDF is a completely local PDF editor to split, merge, posterise, sign or edit any PDF.</p>
       <p>Super quick and no more random dodgy sites. Enterprise level security (since your data stays with you and is never sent over the internet)</p>
       <p>Your documents and edits stay in this browser. Passwords are never saved.</p>
       <details className="about-license-list">
@@ -327,7 +327,7 @@ export default function App() {
         </div>
       </details>
       <div className="app-modal-actions">
-        <a className="button secondary" href="https://github.com/emileakbarzadeh/local-pdf" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
+        <a className="button secondary" href="https://github.com/emileakbarzadeh/slay-pdf" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
         <button className="button primary" type="button" onClick={() => setAboutOpen(false)}>Done</button>
       </div>
     </div>
@@ -402,14 +402,14 @@ export default function App() {
         </form>}
   </div>
 
-  if (!state.hydrated || startupView === 'loading') return <main className="boot"><div className="brand-mark">L</div><p>Restoring local workspace…</p></main>
+  if (!state.hydrated || startupView === 'loading') return <main className="boot"><div className="brand-mark">S</div><p>Restoring local workspace…</p></main>
 
   return <div className="app-shell">
     <header className="topbar">
       <div className="brand">
-        <button className="brand-button" type="button" onClick={() => setAboutOpen(true)} aria-label="About Local PDF">
-          <div className="brand-mark">L</div>
-          <div className="brand-copy"><strong>Local PDF</strong><span><ShieldCheck size={12} /> Private. Local. Always.</span></div>
+        <button className="brand-button" type="button" onClick={() => setAboutOpen(true)} aria-label="About Slay PDF">
+          <div className="brand-mark">S</div>
+          <div className="brand-copy"><strong>Slay PDF</strong><span><ShieldCheck size={12} /> Private. Local. Always.</span></div>
         </button>
         <button className="button new-pdf-button" type="button" onClick={newPdf}><FilePlus2 size={17} /> <span>New PDF</span></button>
       </div>

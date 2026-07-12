@@ -54,7 +54,7 @@ function tesseractAssets() {
 }
 
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/local-pdf/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/slay-pdf/' : '/',
   plugins: [
     react(),
     tesseractAssets(),
@@ -62,8 +62,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'Local PDF',
-        short_name: 'Local PDF',
+        name: 'Slay PDF',
+        short_name: 'Slay PDF',
         description: 'Private PDF tools that run entirely in your browser.',
         theme_color: '#f7f7f4',
         background_color: '#f7f7f4',

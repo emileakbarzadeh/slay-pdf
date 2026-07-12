@@ -56,9 +56,9 @@ export function Inspector({ mobileExpanded, onToggleMobile }: Props) {
           downloadBlob(processed, ensurePdfFilename(settings.filename))
         }
       }
-      if (kind === 'split') downloadBlob(await exportSplit(itemsForSplit, sources, settings, progress), 'local-pdf-pages.zip')
-      if (kind === 'images') downloadBlob(await exportImages(pagesForExport, sources, settings, progress), 'local-pdf-images.zip')
-      if (kind === 'text') downloadBlob(await exportText(pagesForExport, sources, settings, progress), 'local-pdf-text.txt')
+      if (kind === 'split') downloadBlob(await exportSplit(itemsForSplit, sources, settings, progress), 'slay-pdf-pages.zip')
+      if (kind === 'images') downloadBlob(await exportImages(pagesForExport, sources, settings, progress), 'slay-pdf-images.zip')
+      if (kind === 'text') downloadBlob(await exportText(pagesForExport, sources, settings, progress), 'slay-pdf-text.txt')
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Export failed.')
     } finally {
