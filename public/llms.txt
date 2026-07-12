@@ -272,6 +272,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Password Protect PDF Without Uploading - Slay PDF: https://slaypdf.com/password-protect-pdf-without-uploading.html
   Summary: Password protect PDF files without uploading them to a Slay PDF app server. Encrypt exported PDFs locally in the browser, and passwords are never saved.
   Last modified: 2026-07-13
+- PDF to Images Without Uploading - Slay PDF: https://slaypdf.com/pdf-to-images-without-uploading.html
+  Summary: Convert PDF pages to images without uploading them to a Slay PDF app server. Export selected pages as images locally in your browser.
+  Last modified: 2026-07-13
+- Extract PDF Text Without Uploading - Slay PDF: https://slaypdf.com/extract-pdf-text-without-uploading.html
+  Summary: Extract PDF text without uploading files to a Slay PDF app server. Download plain text from selected pages locally in your browser.
+  Last modified: 2026-07-13
+- OCR PDF Without Uploading - Slay PDF: https://slaypdf.com/ocr-pdf-without-uploading.html
+  Summary: Run OCR on PDF files without uploading them to a Slay PDF app server. Create searchable English OCR PDFs locally in your browser.
+  Last modified: 2026-07-13
+- Fill PDF Forms Without Uploading - Slay PDF: https://slaypdf.com/fill-pdf-forms-without-uploading.html
+  Summary: Fill PDF forms without uploading them to a Slay PDF app server. Edit supported AcroForm fields, add text and export locally in your browser.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

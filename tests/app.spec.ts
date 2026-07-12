@@ -451,6 +451,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'rotate-pdf-without-uploading.html',
     'crop-pdf-without-uploading.html',
     'password-protect-pdf-without-uploading.html',
+    'pdf-to-images-without-uploading.html',
+    'extract-pdf-text-without-uploading.html',
+    'ocr-pdf-without-uploading.html',
+    'fill-pdf-forms-without-uploading.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -713,7 +717,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(91)
+  expect(toolAppPageCount).toBe(95)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -813,6 +817,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/rotate-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/crop-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-to-images-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/extract-pdf-text-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/ocr-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -957,6 +965,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/rotate-pdf-without-uploading.html')
   expect(tools).toContain('/crop-pdf-without-uploading.html')
   expect(tools).toContain('/password-protect-pdf-without-uploading.html')
+  expect(tools).toContain('/pdf-to-images-without-uploading.html')
+  expect(tools).toContain('/extract-pdf-text-without-uploading.html')
+  expect(tools).toContain('/ocr-pdf-without-uploading.html')
+  expect(tools).toContain('/fill-pdf-forms-without-uploading.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

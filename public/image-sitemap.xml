@@ -705,6 +705,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf-to-images-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF to Images Without Uploading - Slay PDF</image:title>
+      <image:caption>Convert PDF pages to images without uploading them to a Slay PDF app server. Export selected pages as images locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/extract-pdf-text-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Extract PDF Text Without Uploading - Slay PDF</image:title>
+      <image:caption>Extract PDF text without uploading files to a Slay PDF app server. Download plain text from selected pages locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/ocr-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>OCR PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Run OCR on PDF files without uploading them to a Slay PDF app server. Create searchable English OCR PDFs locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/fill-pdf-forms-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Fill PDF Forms Without Uploading - Slay PDF</image:title>
+      <image:caption>Fill PDF forms without uploading them to a Slay PDF app server. Edit supported AcroForm fields, add text and export locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>
