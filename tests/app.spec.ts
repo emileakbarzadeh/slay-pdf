@@ -371,6 +371,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(feedItems[0]).toContain('<guid isPermaLink="true">https://slaypdf.com/</guid>')
   expect(feedItems[0]).toContain(`<pubDate>${new Date(`${sitemapByUrl.get('https://slaypdf.com/')?.lastmod}T00:00:00.000Z`).toUTCString()}</pubDate>`)
   expect(feedItems.some((item) => item.includes('<link>https://slaypdf.com/adobe-acrobat-alternative.html</link>'))).toBe(true)
+  expect(llms).toContain('## Canonical Pages')
+  expect(llms).toContain('## Discovery Files')
+  expect(llms).toContain('## Use Cases')
+  for (const entry of pagesJson.pages) {
+    expect(llms).toContain(`- ${entry.title}: ${entry.url}`)
+    expect(llms).toContain(`  Summary: ${entry.description}`)
+    expect(llms).toContain(`  Last modified: ${entry.lastmod}`)
+  }
   expect(llms).toContain('https://slaypdf.com/pages.txt')
   expect(llms).toContain('https://slaypdf.com/pages.json')
   expect(llms).toContain('https://slaypdf.com/feed.xml')

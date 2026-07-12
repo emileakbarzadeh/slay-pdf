@@ -218,7 +218,14 @@ for (const [index, url] of toolsChildUrls.entries()) {
 }
 
 const llms = await readPublic('llms.txt')
-for (const url of urls) assert(llms.includes(url), `llms.txt is missing ${url}`)
+assert(llms.includes('## Canonical Pages'), 'llms.txt is missing canonical pages section')
+assert(llms.includes('## Discovery Files'), 'llms.txt is missing discovery files section')
+assert(llms.includes('## Use Cases'), 'llms.txt is missing use cases section')
+for (const page of pagesJson.pages) {
+  assert(llms.includes(`- ${page.title}: ${page.url}`), `llms.txt is missing page heading for ${page.url}`)
+  assert(llms.includes(`  Summary: ${page.description}`), `llms.txt is missing page summary for ${page.url}`)
+  assert(llms.includes(`  Last modified: ${page.lastmod}`), `llms.txt is missing page lastmod for ${page.url}`)
+}
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
