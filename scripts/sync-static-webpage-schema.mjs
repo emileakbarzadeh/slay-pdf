@@ -22,6 +22,23 @@ function h1For(html) {
   return html.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim()
 }
 
+function visibleRelatedLinksFor(html, url) {
+  const links = new Set()
+  const relatedSections = [
+    ...html.matchAll(/<(?:div|section) class="(?:links|tool-list)"[^>]*>([\s\S]*?)<\/(?:div|section)>/g),
+  ]
+
+  for (const section of relatedSections) {
+    for (const link of section[1].matchAll(/<a href="([^"]+)"/g)) {
+      const href = link[1]
+      const relatedUrl = new URL(href, site).href
+      if (relatedUrl !== url) links.add(relatedUrl)
+    }
+  }
+
+  return [...links]
+}
+
 function stripManagedSchema(html) {
   return html.replace(
     /\n    <script type="application\/ld\+json" data-managed="webpage">[\s\S]*?<\/script>\n/,
@@ -119,6 +136,9 @@ function webpageSchemaFor(html, file) {
 
   const mainEntity = mainEntityRefsFor(html, file, url)
   if (mainEntity) schema.mainEntity = mainEntity
+
+  const relatedLinks = visibleRelatedLinksFor(html, url)
+  if (relatedLinks.length > 0) schema.relatedLink = relatedLinks
 
   if (hasBreadcrumbSchema(html, file)) {
     schema.breadcrumb = {

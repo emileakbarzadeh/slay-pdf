@@ -38,6 +38,22 @@ function textFromInlineHtml(value) {
   return decodeHtml(value.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
 }
 
+function visibleRelatedLinks(html, url) {
+  const links = new Set()
+  const relatedSections = [
+    ...html.matchAll(/<(?:div|section) class="(?:links|tool-list)"[^>]*>([\s\S]*?)<\/(?:div|section)>/g),
+  ]
+
+  for (const section of relatedSections) {
+    for (const link of section[1].matchAll(/<a href="([^"]+)"/g)) {
+      const relatedUrl = new URL(link[1], site).href
+      if (relatedUrl !== url) links.add(relatedUrl)
+    }
+  }
+
+  return [...links]
+}
+
 function structuredDataBlocks(html, file) {
   return [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
     .map((match) => {
@@ -118,6 +134,9 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   const expectedMainEntities = expectedMainEntityIds({ html, file, url, blocks })
   const actualMainEntities = mainEntityIds(webpage.mainEntity)
   assert(JSON.stringify(actualMainEntities) === JSON.stringify(expectedMainEntities), `${file} WebPage mainEntity references are wrong`)
+  const expectedRelatedLinks = visibleRelatedLinks(html, url)
+  const actualRelatedLinks = webpage.relatedLink ?? []
+  assert(JSON.stringify(actualRelatedLinks) === JSON.stringify(expectedRelatedLinks), `${file} WebPage relatedLink entries must match visible related links`)
   const breadcrumb = blocks.find((block) => block['@type'] === 'BreadcrumbList')
   if (breadcrumb) {
     assert(webpage.breadcrumb?.['@id'] === `${url}#breadcrumb`, `${file} WebPage breadcrumb reference is wrong`)

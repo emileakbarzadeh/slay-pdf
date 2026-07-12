@@ -91,6 +91,22 @@ function workflowStepsFor(html: string) {
     }))
 }
 
+function visibleRelatedLinks(html: string, url: string) {
+  const links = new Set<string>()
+  const relatedSections = [
+    ...html.matchAll(/<(?:div|section) class="(?:links|tool-list)"[^>]*>([\s\S]*?)<\/(?:div|section)>/g),
+  ]
+
+  for (const section of relatedSections) {
+    for (const link of section[1].matchAll(/<a href="([^"]+)"/g)) {
+      const relatedUrl = new URL(link[1], 'https://slaypdf.com/').href
+      if (relatedUrl !== url) links.add(relatedUrl)
+    }
+  }
+
+  return [...links]
+}
+
 function structuredDataEntity(blocks: Record<string, any>[], type: string) {
   for (const block of blocks) {
     if (block['@type'] === type) return block
@@ -328,6 +344,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     if (faq) expectedMainEntityIds.push(`https://slaypdf.com/${path}#faq`)
     if (itemListEntity) expectedMainEntityIds.push(`https://slaypdf.com/${path}#itemlist`)
     expect(mainEntityIds(webpage.mainEntity)).toEqual(expectedMainEntityIds)
+    expect(webpage.relatedLink ?? []).toEqual(visibleRelatedLinks(html, `https://slaypdf.com/${path}`))
     if (faq) {
       expect(faq['@id']).toBe(`https://slaypdf.com/${path}#faq`)
       expect(faq.url).toBe(`https://slaypdf.com/${path}`)
