@@ -42,6 +42,7 @@ lines.push(
   `- Structured page index: ${site}/pages.json`,
   `- RSS discovery feed: ${site}/feed.xml`,
   `- JSON discovery feed: ${site}/feed.json`,
+  `- Full text LLM index: ${site}/llms-full.txt`,
   `- Source code: ${source}`,
   '',
   '## Use Cases',

@@ -9,6 +9,7 @@ const steps = [
   'seo:feed',
   'seo:feed:json',
   'seo:llms',
+  'seo:llms:full',
 ]
 
 function run(step) {

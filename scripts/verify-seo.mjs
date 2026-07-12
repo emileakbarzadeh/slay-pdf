@@ -423,12 +423,30 @@ assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
 assert(llms.includes(`${site}/feed.json`), 'llms.txt is missing feed.json')
+assert(llms.includes(`${site}/llms-full.txt`), 'llms.txt is missing llms-full.txt')
+
+const llmsFull = await readPublic('llms-full.txt')
+assert(llmsFull.startsWith('# Slay PDF full text index'), 'llms-full.txt is missing title')
+assert(llmsFull.includes(`Site: ${site}/`), 'llms-full.txt is missing site URL')
+assert(llmsFull.includes(`Source index: ${site}/pages.json`), 'llms-full.txt is missing pages.json reference')
+assert(llmsFull.includes(`Compact index: ${site}/llms.txt`), 'llms-full.txt is missing llms.txt reference')
+for (const page of pagesJson.pages) {
+  assert(llmsFull.includes(`## ${page.title}`), `llms-full.txt is missing page heading for ${page.url}`)
+  assert(llmsFull.includes(`URL: ${page.url}`), `llms-full.txt is missing URL for ${page.url}`)
+  assert(llmsFull.includes(`Last modified: ${page.lastmod}`), `llms-full.txt is missing lastmod for ${page.url}`)
+  assert(llmsFull.includes(`Summary: ${page.description}`), `llms-full.txt is missing summary for ${page.url}`)
+  assert(llmsFull.includes(`H1: ${page.h1}`), `llms-full.txt is missing h1 for ${page.url}`)
+}
+assert(llmsFull.includes('Related links:'), 'llms-full.txt is missing related links')
+assert(llmsFull.includes('Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html'), 'llms-full.txt is missing formatted tool-list link')
 
 const robots = await readPublic('robots.txt')
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
 assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is missing feed.json')
+assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
+assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml', 'feed.json']) {
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -446,6 +464,9 @@ if (live) {
   const jsonFeedResponse = await fetch(`${site}/feed.json`)
   assert(jsonFeedResponse.ok, `live JSON feed failed ${jsonFeedResponse.status}`)
   assert((await jsonFeedResponse.json()).title === 'Slay PDF pages', 'live JSON feed content mismatch')
+  const llmsFullResponse = await fetch(`${site}/llms-full.txt`)
+  assert(llmsFullResponse.ok, `live llms-full.txt failed ${llmsFullResponse.status}`)
+  assert((await llmsFullResponse.text()).includes('# Slay PDF full text index'), 'live llms-full.txt content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://slaypdf.com/sitemap.xml
-# Discovery indexes: https://slaypdf.com/pages.txt, https://slaypdf.com/pages.json, https://slaypdf.com/feed.xml and https://slaypdf.com/feed.json
+# Discovery indexes: https://slaypdf.com/pages.txt, https://slaypdf.com/pages.json, https://slaypdf.com/feed.xml, https://slaypdf.com/feed.json, https://slaypdf.com/llms.txt and https://slaypdf.com/llms-full.txt
