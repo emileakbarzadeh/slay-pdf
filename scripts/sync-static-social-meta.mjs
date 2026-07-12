@@ -99,10 +99,13 @@ let changed = 0
 for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
   const withoutSocialMeta = stripManagedSocialMeta(html)
-  const updated = withoutSocialMeta.replace(
+  const withSocialMeta = withoutSocialMeta.replace(
     /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
     `\n${socialBlockFor(html, file)}$1`,
   )
+  const updated = withSocialMeta === withoutSocialMeta
+    ? withoutSocialMeta.replace(/(\s*<title>)/, `\n${socialBlockFor(html, file)}$1`)
+    : withSocialMeta
   if (updated !== html) {
     await writeFile(url, updated)
     changed += 1

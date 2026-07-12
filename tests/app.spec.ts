@@ -397,6 +397,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'adobe-split-pdf-alternative.html',
     'adobe-sign-pdf-alternative.html',
     'adobe-redact-pdf-alternative.html',
+    'adobe-ocr-pdf-alternative.html',
+    'adobe-protect-pdf-alternative.html',
+    'adobe-rotate-pdf-alternative.html',
+    'adobe-crop-pdf-alternative.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -658,8 +662,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
-  expect(workflowPageCount).toBe(24)
-  expect(toolAppPageCount).toBe(55)
+  expect(workflowPageCount).toBe(28)
+  expect(toolAppPageCount).toBe(59)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -723,6 +727,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/adobe-split-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-sign-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/adobe-redact-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-ocr-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-protect-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-rotate-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-crop-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -831,6 +839,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/adobe-split-pdf-alternative.html')
   expect(tools).toContain('/adobe-sign-pdf-alternative.html')
   expect(tools).toContain('/adobe-redact-pdf-alternative.html')
+  expect(tools).toContain('/adobe-ocr-pdf-alternative.html')
+  expect(tools).toContain('/adobe-protect-pdf-alternative.html')
+  expect(tools).toContain('/adobe-rotate-pdf-alternative.html')
+  expect(tools).toContain('/adobe-crop-pdf-alternative.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

@@ -65,7 +65,7 @@ Content:
 - Image, scan and print workflows
 - Convert images to PDF, clean scanned documents, flatten form fields and posterise one page into printable tiles.
 - Adobe replacement workflows
-- Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign and organize workflows.
+- Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign, OCR, protect, rotate, crop and organize workflows.
 - No-account and platform workflows
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -119,6 +119,10 @@ Related links:
 - Adobe split PDF alternative: https://slaypdf.com/adobe-split-pdf-alternative.html
 - Adobe sign PDF alternative: https://slaypdf.com/adobe-sign-pdf-alternative.html
 - Adobe redact PDF alternative: https://slaypdf.com/adobe-redact-pdf-alternative.html
+- Adobe OCR PDF alternative: https://slaypdf.com/adobe-ocr-pdf-alternative.html
+- Adobe protect PDF alternative: https://slaypdf.com/adobe-protect-pdf-alternative.html
+- Adobe rotate PDF alternative: https://slaypdf.com/adobe-rotate-pdf-alternative.html
+- Adobe crop PDF alternative: https://slaypdf.com/adobe-crop-pdf-alternative.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -215,7 +219,7 @@ Content:
 - Tools
 - Direct links to each local PDF tool for editing, exporting, protecting and reorganizing documents in the browser.
 - Adobe alternatives
-- Acrobat-style workflows for people who want merge, compress, fill, sign and organize jobs handled locally.
+- Acrobat-style workflows for people who want merge, compress, fill, sign, OCR, protect, rotate, crop and organize jobs handled locally.
 - No-account and platform pages
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -271,6 +275,10 @@ Related links:
 - Adobe Split PDF Alternative: https://slaypdf.com/adobe-split-pdf-alternative.html
 - Adobe Sign PDF Alternative: https://slaypdf.com/adobe-sign-pdf-alternative.html
 - Adobe Redact PDF Alternative: https://slaypdf.com/adobe-redact-pdf-alternative.html
+- Adobe OCR PDF Alternative: https://slaypdf.com/adobe-ocr-pdf-alternative.html
+- Adobe Protect PDF Alternative: https://slaypdf.com/adobe-protect-pdf-alternative.html
+- Adobe Rotate PDF Alternative: https://slaypdf.com/adobe-rotate-pdf-alternative.html
+- Adobe Crop PDF Alternative: https://slaypdf.com/adobe-crop-pdf-alternative.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -1463,6 +1471,122 @@ Related links:
 - PDF redaction tool: https://slaypdf.com/pdf-redaction-tool.html
 - Crop PDF: https://slaypdf.com/crop-pdf.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+
+## Adobe OCR PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-ocr-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe OCR PDF alternative. Run local English OCR, make scanned PDFs searchable and export cleaned files from your browser.
+H1: OCR scanned PDFs locally without Acrobat.
+
+Content:
+- OCR alternative
+- OCR scanned PDFs locally without Acrobat.
+- Run English OCR in your browser, clean scanned pages and export a searchable PDF without sending the document through an app server.
+- Scan cleanup
+- Rotate pages, crop margins and remove blank scans before OCR.
+- English OCR
+- Run browser-side English OCR to create a searchable PDF export.
+- Local export
+- Download the OCR result from the browser workspace without uploading the source PDF.
+- For searchable scans that should stay local.
+- Slay PDF is a practical fit for everyday scanned documents that need rotation, cropping, cleanup and English OCR before sharing or archiving.
+- OCR quality depends on scan quality, language and browser resources. Inspect the exported PDF before relying on the searchable text.
+- Adobe OCR PDF alternative FAQ
+- Yes. Slay PDF can run English OCR in the browser and export a searchable PDF.
+- No. OCR runs locally in the browser, so the source PDF is not uploaded to Slay PDF servers.
+
+Related links:
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+- Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+
+## Adobe Protect PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-protect-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe protect PDF alternative. Add password protection to exported PDFs locally in your browser. Passwords are never saved.
+H1: Password protect PDF exports locally.
+
+Content:
+- Protect alternative
+- Password protect PDF exports locally.
+- Add a password to exported PDFs from the browser workspace, clean up pages first and avoid sending the source document to a converter site.
+- Prepare pages
+- Merge, delete, rotate, crop or reorder pages before protecting the final export.
+- Password export
+- Set an export password only when downloading the protected PDF copy.
+- No saved passwords
+- Passwords are used for the current export and are never saved by Slay PDF.
+- For simple protected PDF exports.
+- Slay PDF is useful when a finished PDF needs basic password protection after local page cleanup or signing.
+- Share passwords through a separate trusted channel and keep your downloaded protected files somewhere appropriate for the document sensitivity.
+- Adobe protect PDF alternative FAQ
+- Yes. Slay PDF can add password protection during local PDF export from the browser workspace.
+- No. Passwords are used for the current encrypted export and are never saved.
+
+Related links:
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Privacy: https://slaypdf.com/privacy.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Adobe Rotate PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-rotate-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe rotate PDF alternative. Fix sideways pages, clean scanned PDFs and export rotated documents locally from your browser.
+H1: Rotate PDF pages locally without Acrobat.
+
+Content:
+- Rotate alternative
+- Rotate PDF pages locally without Acrobat.
+- Fix sideways scans, rotate selected pages, reorder the document and download a clean PDF from your browser.
+- Select pages
+- Choose one page, multiple pages or the whole document before rotating.
+- Fix orientation
+- Rotate sideways scans and mixed-orientation pages in the browser workspace.
+- Export locally
+- Download the corrected PDF without uploading the original document to Slay PDF.
+- For scanned packets and sideways pages.
+- Rotation is often part of a larger cleanup job. Slay PDF lets you rotate, delete, crop and reorder pages before exporting the corrected document.
+- The workflow is especially useful for scans, forms and client packets with a few pages facing the wrong direction.
+- Adobe rotate PDF alternative FAQ
+- Yes. Select pages in the workspace, rotate them and export the corrected PDF locally.
+- Yes. Select the pages that need rotation rather than rotating the whole document.
+
+Related links:
+- Rotate PDF: https://slaypdf.com/rotate-pdf.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+
+## Adobe Crop PDF Alternative - Slay PDF
+URL: https://slaypdf.com/adobe-crop-pdf-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an Adobe crop PDF alternative. Trim margins, clean scanned pages and export cropped PDFs locally from your browser.
+H1: Crop PDF pages locally without Acrobat.
+
+Content:
+- Crop alternative
+- Crop PDF pages locally without Acrobat.
+- Trim margins, clean scanned pages, resize outputs and download the cropped PDF without uploading the original document.
+- Trim margins
+- Crop extra scan borders, printer margins or unwanted page edges.
+- Clean pages
+- Rotate, delete and reorder pages before exporting the cropped result.
+- Local download
+- Export the cropped PDF directly from the browser workspace.
+- For scans that need cleanup before sharing.
+- Slay PDF helps when scanned pages have oversized margins, messy borders or page sizes that need adjustment before sending.
+- Crop is part of the same local workspace as rotate, resize, delete pages, OCR and export options.
+- Adobe crop PDF alternative FAQ
+- Yes. Crop PDF pages in the browser workspace and export the cropped PDF locally.
+- Yes. Slay PDF can trim margins and clean scanned pages before export.
+
+Related links:
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Rotate PDF: https://slaypdf.com/rotate-pdf.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html

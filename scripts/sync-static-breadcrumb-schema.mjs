@@ -88,10 +88,13 @@ function insertBreadcrumbSchema(html, schema) {
     )
   }
 
-  return html.replace(
+  const withBreadcrumb = html.replace(
     /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
     `\n${script}$1`,
   )
+  return withBreadcrumb === html
+    ? html.replace(/(\s*<title>)/, `\n${script}$1`)
+    : withBreadcrumb
 }
 
 const files = (await readdir(publicDir))
