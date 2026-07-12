@@ -440,4 +440,28 @@
       <image:caption>Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor-for-linux.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor for Linux - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor-for-iphone-ipad.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor for iPhone and iPad - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/android-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Android PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.</image:caption>
+    </image:image>
+  </url>
 </urlset>

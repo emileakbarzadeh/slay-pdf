@@ -173,6 +173,15 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF Editor for Chromebook - Slay PDF: https://slaypdf.com/pdf-editor-for-chromebook.html
   Summary: Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13
+- PDF Editor for Linux - Slay PDF: https://slaypdf.com/pdf-editor-for-linux.html
+  Summary: Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.
+  Last modified: 2026-07-13
+- PDF Editor for iPhone and iPad - Slay PDF: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
+  Summary: Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.
+  Last modified: 2026-07-13
+- Android PDF Editor - Slay PDF: https://slaypdf.com/android-pdf-editor.html
+  Summary: Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.
+  Last modified: 2026-07-13
 
 ## Discovery Files
 

@@ -660,6 +660,42 @@
       "priority": 0.75,
       "webpageId": "https://slaypdf.com/pdf-editor-for-chromebook.html#webpage",
       "breadcrumbId": "https://slaypdf.com/pdf-editor-for-chromebook.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-linux.html",
+      "path": "/pdf-editor-for-linux.html",
+      "title": "PDF Editor for Linux - Slay PDF",
+      "description": "Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
+      "h1": "Edit PDFs on Linux in the browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-linux.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-linux.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-iphone-ipad.html",
+      "path": "/pdf-editor-for-iphone-ipad.html",
+      "title": "PDF Editor for iPhone and iPad - Slay PDF",
+      "description": "Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.",
+      "h1": "Edit PDFs on iPhone and iPad.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-iphone-ipad.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-iphone-ipad.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/android-pdf-editor.html",
+      "path": "/android-pdf-editor.html",
+      "title": "Android PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.",
+      "h1": "Edit PDFs on Android in the browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/android-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/android-pdf-editor.html#breadcrumb"
     }
   ]
 }

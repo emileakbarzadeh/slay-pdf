@@ -445,6 +445,30 @@
       "summary": "Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.",
       "content_text": "Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.",
       "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/pdf-editor-for-linux.html",
+      "url": "https://slaypdf.com/pdf-editor-for-linux.html",
+      "title": "PDF Editor for Linux - Slay PDF",
+      "summary": "Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
+      "content_text": "Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/pdf-editor-for-iphone-ipad.html",
+      "url": "https://slaypdf.com/pdf-editor-for-iphone-ipad.html",
+      "title": "PDF Editor for iPhone and iPad - Slay PDF",
+      "summary": "Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.",
+      "content_text": "Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/android-pdf-editor.html",
+      "url": "https://slaypdf.com/android-pdf-editor.html",
+      "title": "Android PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.",
+      "content_text": "Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
     }
   ]
 }

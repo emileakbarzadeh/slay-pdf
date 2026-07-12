@@ -67,7 +67,7 @@ Content:
 - Adobe replacement workflows
 - Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign and organize workflows.
 - No-account and platform workflows
-- Browser-first pages for no-signup, no-watermark, secure local editing and common Mac, Windows and Chromebook searches.
+- Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
 Related links:
 - Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html
@@ -123,6 +123,9 @@ Related links:
 - PDF editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
 - PDF editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
 - PDF editor for Chromebook: https://slaypdf.com/pdf-editor-for-chromebook.html
+- PDF editor for Linux: https://slaypdf.com/pdf-editor-for-linux.html
+- PDF editor for iPhone and iPad: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
+- Android PDF editor: https://slaypdf.com/android-pdf-editor.html
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -205,7 +208,7 @@ Content:
 - Adobe alternatives
 - Acrobat-style workflows for people who want merge, compress, fill, sign and organize jobs handled locally.
 - No-account and platform pages
-- Browser-first pages for no-signup, no-watermark, secure local editing and common Mac, Windows and Chromebook searches.
+- Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
 Related links:
 - Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative: https://slaypdf.com/
@@ -263,6 +266,9 @@ Related links:
 - PDF Editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
 - PDF Editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
 - PDF Editor for Chromebook: https://slaypdf.com/pdf-editor-for-chromebook.html
+- PDF Editor for Linux: https://slaypdf.com/pdf-editor-for-linux.html
+- PDF Editor for iPhone and iPad: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
+- Android PDF Editor: https://slaypdf.com/android-pdf-editor.html
 
 ## Online PDF Editor - Slay PDF
 URL: https://slaypdf.com/online-pdf-editor.html
@@ -1513,4 +1519,82 @@ Related links:
 - Images to PDF: https://slaypdf.com/images-to-pdf.html
 - Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
 - No signup editor: https://slaypdf.com/free-pdf-editor-no-signup.html
+
+## PDF Editor for Linux - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-linux.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a local PDF editor for Linux in a modern browser. Merge, split, sign, organize and export PDFs without uploads.
+H1: Edit PDFs on Linux in the browser.
+
+Content:
+- Linux PDF editor
+- Edit PDFs on Linux in the browser.
+- Use Slay PDF on Linux with a modern browser for local merge, split, sign, page organization, image conversion and export workflows.
+- No distro package
+- Open the browser app instead of hunting for a distro-specific PDF editor package.
+- Local workspace
+- Documents stay in this browser while you reorder, delete, rotate, sign and export pages.
+- Works across desktops
+- Use the same PDF workflow on common Linux desktop browsers with WebAssembly support.
+- For quick Linux PDF cleanup.
+- Slay PDF is useful when you need a browser-based PDF editor for everyday Linux document work. Merge files, remove pages, convert images, add a visual signature or export selected pages locally.
+- Use a current desktop browser for the best WebAssembly PDF editing experience.
+
+Related links:
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+- Combine PDF files: https://slaypdf.com/combine-pdf-files.html
+- Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
+
+## PDF Editor for iPhone and iPad - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a browser PDF editor for iPhone and iPad. Split, sign, organize and export PDFs locally without uploading documents.
+H1: Edit PDFs on iPhone and iPad.
+
+Content:
+- iPhone and iPad PDF editor
+- Edit PDFs on iPhone and iPad.
+- Open Slay PDF in a mobile browser to split, sign, organize, rotate and export PDFs while keeping documents in this browser.
+- No account wall
+- Open the web app, import a PDF, make quick edits and download the result without creating an account.
+- Touch-friendly jobs
+- Use selection, page organization, signatures and export tools from a browser-based workspace.
+- Private by default
+- Files and edits stay in this browser instead of being sent to a random upload site.
+- For mobile PDF edits.
+- Slay PDF gives iPhone and iPad users a local web workflow for common PDF edits: split pages, delete pages, add a visual signature, export page images and download a clean PDF.
+- Large documents are easier on desktop, but quick mobile edits work directly from a modern browser.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- No signup PDF editor: https://slaypdf.com/free-pdf-editor-no-signup.html
+
+## Android PDF Editor - Slay PDF
+URL: https://slaypdf.com/android-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a browser PDF editor for Android. Merge, split, sign, organize and export PDFs locally without sending files away.
+H1: Edit PDFs on Android in the browser.
+
+Content:
+- Android PDF editor
+- Edit PDFs on Android in the browser.
+- Use Slay PDF on Android for quick local PDF edits, page organization, signing, image conversion and export workflows.
+- Browser-based
+- Use a modern Android browser instead of installing a heavy PDF suite for one small edit.
+- Local documents
+- PDFs stay in the browser workspace while you merge, split, delete, rotate and export pages.
+- Fast mobile cleanup
+- Handle common document chores such as signing, page extraction and image-to-PDF conversion.
+- For quick Android PDF tasks.
+- Slay PDF gives Android users a local browser workflow for common PDF edits without random upload sites. Import a PDF, make changes and download the result from the same browser session.
+- For very large files, a desktop browser may be more comfortable, but Android is useful for quick document fixes.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
 

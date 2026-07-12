@@ -388,7 +388,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'browser-pdf-editor.html',
     'pdf-editor-for-mac.html',
     'pdf-editor-for-windows.html',
-    'pdf-editor-for-chromebook.html'
+    'pdf-editor-for-chromebook.html',
+    'pdf-editor-for-linux.html',
+    'pdf-editor-for-iphone-ipad.html',
+    'android-pdf-editor.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
   const navigationEntries = htmlPaths.map((path, index) => {
@@ -631,7 +634,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(21)
-  expect(toolAppPageCount).toBe(49)
+  expect(toolAppPageCount).toBe(52)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -699,6 +702,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/pdf-editor-for-mac.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-for-windows.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-for-chromebook.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-linux.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-iphone-ipad.html')
+  expect(llms).toContain('https://slaypdf.com/android-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/llms-full.txt')
 
   const llmsFull = await (await page.request.get('/llms-full.txt')).text()
@@ -801,6 +807,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/pdf-editor-for-mac.html')
   expect(tools).toContain('/pdf-editor-for-windows.html')
   expect(tools).toContain('/pdf-editor-for-chromebook.html')
+  expect(tools).toContain('/pdf-editor-for-linux.html')
+  expect(tools).toContain('/pdf-editor-for-iphone-ipad.html')
+  expect(tools).toContain('/android-pdf-editor.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')
