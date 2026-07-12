@@ -439,6 +439,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdf-editor-for-teachers.html',
     'pdf-editor-for-business.html',
     'contract-pdf-editor.html',
+    'invoice-pdf-editor.html',
+    'receipt-pdf-organizer.html',
+    'tax-document-pdf-editor.html',
+    'resume-pdf-editor.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -701,7 +705,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(79)
+  expect(toolAppPageCount).toBe(83)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -789,6 +793,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/pdf-editor-for-teachers.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-for-business.html')
   expect(llms).toContain('https://slaypdf.com/contract-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/invoice-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/receipt-pdf-organizer.html')
+  expect(llms).toContain('https://slaypdf.com/tax-document-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/resume-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -921,6 +929,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/pdf-editor-for-teachers.html')
   expect(tools).toContain('/pdf-editor-for-business.html')
   expect(tools).toContain('/contract-pdf-editor.html')
+  expect(tools).toContain('/invoice-pdf-editor.html')
+  expect(tools).toContain('/receipt-pdf-organizer.html')
+  expect(tools).toContain('/tax-document-pdf-editor.html')
+  expect(tools).toContain('/resume-pdf-editor.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

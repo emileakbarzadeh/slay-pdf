@@ -609,6 +609,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/invoice-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Invoice PDF Editor - Slay PDF</image:title>
+      <image:caption>Edit invoice PDFs locally with Slay PDF. Merge invoices, remove pages, rotate scans, redact details, compress and export PDFs in the browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/receipt-pdf-organizer.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Receipt PDF Organizer - Slay PDF</image:title>
+      <image:caption>Organize receipt PDFs locally with Slay PDF. Combine scans, remove blank pages, rotate receipts, extract text and export tidy PDF records.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/tax-document-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Tax Document PDF Editor - Slay PDF</image:title>
+      <image:caption>Edit tax document PDFs locally with Slay PDF. Merge statements, remove pages, redact visible details, password protect and export PDF packets.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/resume-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Resume PDF Editor - Slay PDF</image:title>
+      <image:caption>Edit resume PDFs locally with Slay PDF. Combine resume pages, remove extras, compress files, annotate drafts and export clean PDFs in the browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

@@ -236,6 +236,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Contract PDF Editor - Slay PDF: https://slaypdf.com/contract-pdf-editor.html
   Summary: A local contract PDF editor for quick document cleanup. Add visual signatures, redact, split, merge and export contract PDFs from your browser.
   Last modified: 2026-07-13
+- Invoice PDF Editor - Slay PDF: https://slaypdf.com/invoice-pdf-editor.html
+  Summary: Edit invoice PDFs locally with Slay PDF. Merge invoices, remove pages, rotate scans, redact details, compress and export PDFs in the browser.
+  Last modified: 2026-07-13
+- Receipt PDF Organizer - Slay PDF: https://slaypdf.com/receipt-pdf-organizer.html
+  Summary: Organize receipt PDFs locally with Slay PDF. Combine scans, remove blank pages, rotate receipts, extract text and export tidy PDF records.
+  Last modified: 2026-07-13
+- Tax Document PDF Editor - Slay PDF: https://slaypdf.com/tax-document-pdf-editor.html
+  Summary: Edit tax document PDFs locally with Slay PDF. Merge statements, remove pages, redact visible details, password protect and export PDF packets.
+  Last modified: 2026-07-13
+- Resume PDF Editor - Slay PDF: https://slaypdf.com/resume-pdf-editor.html
+  Summary: Edit resume PDFs locally with Slay PDF. Combine resume pages, remove extras, compress files, annotate drafts and export clean PDFs in the browser.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

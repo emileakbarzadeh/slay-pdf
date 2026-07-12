@@ -72,6 +72,8 @@ Content:
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
 - Pages for students, teachers, business documents and contract PDFs where local browser editing is enough for the job.
+- Everyday document workflows
+- Practical local PDF pages for invoices, receipts, tax paperwork and resumes that need fast cleanup before sharing or filing.
 - No-account and platform workflows
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -149,6 +151,10 @@ Related links:
 - PDF editor for teachers: https://slaypdf.com/pdf-editor-for-teachers.html
 - PDF editor for business: https://slaypdf.com/pdf-editor-for-business.html
 - Contract PDF editor: https://slaypdf.com/contract-pdf-editor.html
+- Invoice PDF editor: https://slaypdf.com/invoice-pdf-editor.html
+- Receipt PDF organizer: https://slaypdf.com/receipt-pdf-organizer.html
+- Tax document PDF editor: https://slaypdf.com/tax-document-pdf-editor.html
+- Resume PDF editor: https://slaypdf.com/resume-pdf-editor.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -266,6 +272,8 @@ Content:
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
 - Pages for students, teachers, business documents and contract PDFs where a local browser editor can handle the job.
+- Everyday document workflows
+- Practical local PDF pages for invoices, receipts, tax paperwork and resumes that need quick cleanup before sharing or filing.
 - No-account and platform pages
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -346,6 +354,10 @@ Related links:
 - PDF Editor for Teachers: https://slaypdf.com/pdf-editor-for-teachers.html
 - PDF Editor for Business: https://slaypdf.com/pdf-editor-for-business.html
 - Contract PDF Editor: https://slaypdf.com/contract-pdf-editor.html
+- Invoice PDF Editor: https://slaypdf.com/invoice-pdf-editor.html
+- Receipt PDF Organizer: https://slaypdf.com/receipt-pdf-organizer.html
+- Tax Document PDF Editor: https://slaypdf.com/tax-document-pdf-editor.html
+- Resume PDF Editor: https://slaypdf.com/resume-pdf-editor.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -2234,6 +2246,122 @@ Related links:
 - Redact PDF: https://slaypdf.com/redact-pdf.html
 - Merge PDF: https://slaypdf.com/merge-pdf.html
 - Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+
+## Invoice PDF Editor - Slay PDF
+URL: https://slaypdf.com/invoice-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Edit invoice PDFs locally with Slay PDF. Merge invoices, remove pages, rotate scans, redact details, compress and export PDFs in the browser.
+H1: Invoice PDF editor.
+
+Content:
+- Invoice PDF editor
+- Invoice PDF editor.
+- Clean up invoice PDFs locally: merge files, remove extras, rotate scans, redact details and export a tidy copy.
+- Invoice packets
+- Merge multiple invoice PDFs, reorder pages and export one document for records or sharing.
+- Scan cleanup
+- Rotate pages, crop margins, delete blank pages and compress large scanned invoice files.
+- Local redaction
+- Add redaction blocks over visible details and export a flattened copy from your browser.
+- For quick invoice PDF admin.
+- Invoices often arrive as separate downloads, scans or email attachments that need small edits before filing or forwarding.
+- Slay PDF keeps those edits in the browser, so invoice PDFs do not need to be uploaded to a Slay PDF app server.
+- Invoice PDF editor FAQ
+- Yes. Import the PDFs, reorder pages and export one combined invoice packet locally.
+- You can place redaction blocks over visible content and export a flattened redacted copy from the browser.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+
+## Receipt PDF Organizer - Slay PDF
+URL: https://slaypdf.com/receipt-pdf-organizer.html
+Last modified: 2026-07-13
+Summary: Organize receipt PDFs locally with Slay PDF. Combine scans, remove blank pages, rotate receipts, extract text and export tidy PDF records.
+H1: Receipt PDF organizer.
+
+Content:
+- Receipt PDF organizer
+- Receipt PDF organizer.
+- Combine receipt scans, rotate pages, remove blanks and export a cleaner PDF archive from your browser.
+- Receipt bundles
+- Merge receipt PDFs and image exports into one ordered document for expenses or records.
+- Page cleanup
+- Remove blank pages, rotate sideways scans, crop margins and export selected receipt pages.
+- Text export
+- Extract available PDF text or run OCR workflows for searchable English receipt scans.
+- Keep small records tidy.
+- Receipts are easy to scatter across downloads, email attachments and scans. Slay PDF gives you a local workspace to assemble them.
+- Use it for practical PDF organization, then export the file you want to keep or send.
+- Receipt PDF organizer FAQ
+- Yes. Import receipt files, reorder pages and export one combined PDF from the browser.
+- For English scans, Slay PDF can run local OCR workflows so the exported PDF is easier to search.
+
+Related links:
+- Images to PDF: https://slaypdf.com/images-to-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+
+## Tax Document PDF Editor - Slay PDF
+URL: https://slaypdf.com/tax-document-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Edit tax document PDFs locally with Slay PDF. Merge statements, remove pages, redact visible details, password protect and export PDF packets.
+H1: Tax document PDF editor.
+
+Content:
+- Tax document PDF editor
+- Tax document PDF editor.
+- Prepare local PDF packets for tax paperwork: merge statements, remove extras, redact details and protect exports.
+- Document packets
+- Combine statements, receipts, forms and schedules into ordered PDFs for your records.
+- Visible redaction
+- Cover visible identifiers or account details with redaction blocks before exporting a flattened copy.
+- Protected exports
+- Compress large packets and add password protection when you need a guarded PDF export.
+- Local cleanup for sensitive paperwork.
+- Tax PDFs can contain personal details, account numbers and scanned records. Slay PDF is designed for local browser edits rather than app-server document uploads.
+- Slay PDF edits PDFs only. It does not provide tax advice, filing guidance or accounting review.
+- Tax document PDF editor FAQ
+- Yes. Import the PDFs, order the pages and export a combined packet locally from your browser.
+- No. Slay PDF is a local PDF editor. It does not provide tax advice, filing guidance or accounting review.
+
+Related links:
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+
+## Resume PDF Editor - Slay PDF
+URL: https://slaypdf.com/resume-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Edit resume PDFs locally with Slay PDF. Combine resume pages, remove extras, compress files, annotate drafts and export clean PDFs in the browser.
+H1: Resume PDF editor.
+
+Content:
+- Resume PDF editor
+- Resume PDF editor.
+- Clean up resume PDFs locally: combine pages, remove extras, annotate drafts, compress and export a polished file.
+- Resume packets
+- Merge resume pages, cover letters, references or portfolio pages into one ordered PDF.
+- Draft markup
+- Add text notes, highlights and simple shapes while reviewing a PDF draft before export.
+- Final export
+- Delete extra pages, rotate scans, compress the file and export selected pages locally.
+- Small edits before sending.
+- Sometimes a resume PDF only needs practical cleanup: remove a page, combine a cover letter, mark a draft or reduce file size.
+- Slay PDF handles those PDF edits in the browser, so you can export the final file without uploading it to a Slay PDF app server.
+- Resume PDF editor FAQ
+- Yes. Import both files, put the pages in the right order and export one combined PDF.
+- Yes. Use the compression tools to create a smaller PDF export locally in the browser.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Delete pages: https://slaypdf.com/delete-pdf-pages.html
+- Compress PDF: https://slaypdf.com/compress-pdf.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html
