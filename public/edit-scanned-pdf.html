@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to edit a scanned PDF",
-        "description": "Clean up scanned PDFs locally in the browser.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the scan", "text": "Open Slay PDF and import the scanned PDF." },
-          { "@type": "HowToStep", "name": "Clean pages", "text": "Rotate sideways pages, crop margins and remove blank or duplicate pages." },
-          { "@type": "HowToStep", "name": "Export", "text": "Download a cleaned PDF, selected pages or a searchable OCR PDF." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/edit-scanned-pdf.html#howto",
+            "name": "Edit Scanned PDF workflow",
+            "description": "Edit scanned PDFs locally with Slay PDF. Rotate scans, crop margins, remove blank pages, run OCR and export clean PDFs from your browser.",
+            "url": "https://slaypdf.com/edit-scanned-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Fix orientation",
+                        "text": "Rotate sideways pages and reorder scans before export."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Clean margins",
+                        "text": "Crop rough edges, remove blank pages and resize output pages."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Searchable output",
+                        "text": "Run English OCR for scans that need selectable search text."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

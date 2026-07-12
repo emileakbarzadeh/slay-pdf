@@ -30,6 +30,14 @@ function decodeXml(value) {
     .replaceAll('&amp;', '&')
 }
 
+function decodeHtml(value) {
+  return decodeXml(value)
+}
+
+function textFromInlineHtml(value) {
+  return decodeHtml(value.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
+}
+
 function structuredDataBlocks(html, file) {
   return [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
     .map((match) => {
@@ -39,6 +47,23 @@ function structuredDataBlocks(html, file) {
         throw new Error(`${file} has invalid JSON-LD: ${error.message}`)
       }
     })
+}
+
+function workflowSteps(html, file) {
+  const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
+  if (!section) return undefined
+  const label = section[1].toLowerCase()
+  if (!label.includes('workflow') && label !== 'pdf page organization tools') return undefined
+
+  const steps = [...section[2].matchAll(/<article class="card"><h2>([\s\S]*?)<\/h2><p>([\s\S]*?)<\/p><\/article>/g)]
+    .map((match, index) => ({
+      position: index + 1,
+      name: textFromInlineHtml(match[1]),
+      text: textFromInlineHtml(match[2]),
+    }))
+
+  assert(steps.length >= 2, `${file} workflow grid must include at least two visible steps`)
+  return steps
 }
 
 function assertWebPageSchema({ html, file, url, title, description, h1 }) {
@@ -66,6 +91,37 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
     assert(webpage.breadcrumb?.['@id'] === `${url}#breadcrumb`, `${file} WebPage breadcrumb reference is wrong`)
     assert(breadcrumb['@id'] === `${url}#breadcrumb`, `${file} BreadcrumbList @id is wrong`)
     assert(breadcrumb.itemListElement?.at(-1)?.item === url, `${file} breadcrumb must end at canonical URL`)
+  }
+}
+
+function assertHowToSchema({ html, file, url, title, description }) {
+  const steps = workflowSteps(html, file)
+  const blocks = structuredDataBlocks(html, file)
+  const howTo = blocks.find((block) => block['@type'] === 'HowTo')
+
+  if (!steps) {
+    assert(!html.includes('data-managed="howto"'), `${file} should not include managed HowTo JSON-LD without an eligible visible workflow`)
+    return
+  }
+
+  assert(html.includes('type="application/ld+json" data-managed="howto"'), `${file} is missing managed HowTo JSON-LD`)
+  assert(howTo, `${file} is missing HowTo JSON-LD`)
+  assert(howTo['@context'] === 'https://schema.org', `${file} HowTo context is wrong`)
+  assert(howTo['@id'] === `${url}#howto`, `${file} HowTo @id does not match canonical URL`)
+  assert(howTo.url === url, `${file} HowTo URL does not match canonical URL`)
+  assert(howTo.name === `${title.replace(/ - Slay PDF$/, '')} workflow`, `${file} HowTo name is wrong`)
+  assert(howTo.description === description, `${file} HowTo description does not match meta description`)
+  assert(howTo.inLanguage === 'en', `${file} HowTo language is wrong`)
+  assert(howTo.tool?.[0]?.['@type'] === 'HowToTool', `${file} HowTo tool type is wrong`)
+  assert(howTo.tool?.[0]?.name === 'Slay PDF', `${file} HowTo tool name is wrong`)
+  assert(howTo.step?.length === steps.length, `${file} HowTo step count must match visible workflow cards`)
+
+  for (const [index, step] of steps.entries()) {
+    const schemaStep = howTo.step[index]
+    assert(schemaStep['@type'] === 'HowToStep', `${file} HowTo step ${index + 1} type is wrong`)
+    assert(schemaStep.position === step.position, `${file} HowTo step ${index + 1} position is wrong`)
+    assert(schemaStep.name === step.name, `${file} HowTo step ${index + 1} name does not match visible card`)
+    assert(schemaStep.text === step.text, `${file} HowTo step ${index + 1} text does not match visible card`)
   }
 }
 
@@ -158,6 +214,7 @@ for (const url of htmlUrls) {
   assert(html.includes('aria-label="Breadcrumb"'), `${file} is missing visible breadcrumbs`)
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
   assertWebPageSchema({ html, file, url, title, description, h1 })
+  assertHowToSchema({ html, file, url, title, description })
   assert(!titles.has(title), `${file} title duplicates ${titles.get(title)}`)
   assert(!descriptions.has(description), `${file} description duplicates ${descriptions.get(description)}`)
   titles.set(title, file)

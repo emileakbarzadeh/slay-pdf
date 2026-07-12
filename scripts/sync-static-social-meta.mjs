@@ -79,7 +79,7 @@ for (const file of files) {
   const html = await readFile(url, 'utf8')
   const withoutSocialMeta = stripManagedSocialMeta(html)
   const updated = withoutSocialMeta.replace(
-    /(\s*<script type="application\/ld\+json">)/,
+    /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
     `\n${socialBlockFor(html, file)}$1`,
   )
   if (updated !== html) {

@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to combine PDF files with Slay PDF",
-        "description": "Combine multiple PDFs or images into one local browser PDF export.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import files", "text": "Open Slay PDF and import the PDFs or images you want to combine." },
-          { "@type": "HowToStep", "name": "Arrange pages", "text": "Drag pages into order, rotate scans, delete unwanted pages or add page numbers." },
-          { "@type": "HowToStep", "name": "Export one PDF", "text": "Download all pages as one combined PDF from the local workspace." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/combine-pdf-files.html#howto",
+            "name": "Combine PDF Files workflow",
+            "description": "Combine PDF files locally with Slay PDF. Import multiple PDFs or images, reorder pages and export one clean PDF from your browser.",
+            "url": "https://slaypdf.com/combine-pdf-files.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Multiple imports",
+                        "text": "Add PDFs plus PNG, JPEG or WebP images to the same workspace."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Page control",
+                        "text": "Reorder, rotate, remove, duplicate or edit pages before the final export."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "One download",
+                        "text": "Export the whole organized workspace as a single PDF."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

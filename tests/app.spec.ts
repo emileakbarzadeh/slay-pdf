@@ -64,6 +64,33 @@ async function waitForSavedPageCount(page: Page, count: number) {
   }))).toBe(count)
 }
 
+function decodeHtml(value: string) {
+  return value
+    .replaceAll('&apos;', "'")
+    .replaceAll('&quot;', '"')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&amp;', '&')
+}
+
+function textFromInlineHtml(value: string) {
+  return decodeHtml(value.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim())
+}
+
+function workflowStepsFor(html: string) {
+  const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
+  if (!section) return undefined
+  const label = section[1].toLowerCase()
+  if (!label.includes('workflow') && label !== 'pdf page organization tools') return undefined
+
+  return [...section[2].matchAll(/<article class="card"><h2>([\s\S]*?)<\/h2><p>([\s\S]*?)<\/p><\/article>/g)]
+    .map((match, index) => ({
+      position: index + 1,
+      name: textFromInlineHtml(match[1]),
+      text: textFromInlineHtml(match[2]),
+    }))
+}
+
 test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
@@ -208,6 +235,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdf-editor-for-chromebook.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  let workflowPageCount = 0
   for (const path of htmlPaths) {
     expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
     const response = await page.request.get(`/${path}`)
@@ -258,12 +286,40 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       '@id': `https://slaypdf.com/${path}#breadcrumb`,
     })
     expect(breadcrumb?.itemListElement.at(-1).item).toBe(`https://slaypdf.com/${path}`)
+    const workflowSteps = workflowStepsFor(html)
+    const howTo = structuredData.find((block) => block['@type'] === 'HowTo') as {
+      '@id'?: string
+      url?: string
+      inLanguage?: string
+      tool?: { '@type'?: string; name?: string }[]
+      step?: { '@type'?: string; position?: number; name?: string; text?: string }[]
+    } | undefined
+    if (workflowSteps) {
+      workflowPageCount += 1
+      expect(html).toContain('type="application/ld+json" data-managed="howto"')
+      expect(howTo?.['@id']).toBe(`https://slaypdf.com/${path}#howto`)
+      expect(howTo?.url).toBe(`https://slaypdf.com/${path}`)
+      expect(howTo?.inLanguage).toBe('en')
+      expect(howTo?.tool?.[0]).toMatchObject({ '@type': 'HowToTool', name: 'Slay PDF' })
+      expect(howTo?.step).toHaveLength(workflowSteps.length)
+      for (const [index, step] of workflowSteps.entries()) {
+        expect(howTo?.step?.[index]).toMatchObject({
+          '@type': 'HowToStep',
+          position: step.position,
+          name: step.name,
+          text: step.text,
+        })
+      }
+    } else {
+      expect(html).not.toContain('data-managed="howto"')
+    }
     expect(html).toContain('<h1>')
     expect(html).toContain('"@type": "BreadcrumbList"')
     expect(html).toContain('aria-label="Breadcrumb"')
     if (path !== 'tools.html') expect(html).toContain('href="/tools.html"')
     expect(html).toContain('Open editor')
   }
+  expect(workflowPageCount).toBe(21)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)

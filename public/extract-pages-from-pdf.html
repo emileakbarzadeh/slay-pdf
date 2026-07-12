@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to extract pages from a PDF",
-        "description": "Create a new PDF from selected pages in a local browser workspace.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the document." },
-          { "@type": "HowToStep", "name": "Select pages", "text": "Choose the exact pages that should be in the new PDF." },
-          { "@type": "HowToStep", "name": "Export selected pages", "text": "Download the selected pages as a separate PDF." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/extract-pages-from-pdf.html#howto",
+            "name": "Extract Pages from PDF workflow",
+            "description": "Extract pages from a PDF locally with Slay PDF. Select the pages you need and export them as a new PDF without uploading files.",
+            "url": "https://slaypdf.com/extract-pages-from-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Precise selection",
+                        "text": "Select one page, multiple pages or ranges before exporting."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "New PDF",
+                        "text": "Download selected pages as their own PDF without rebuilding the document elsewhere."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Extra cleanup",
+                        "text": "Rotate, crop, annotate, redact or resize extracted pages before export."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to convert JPG to PDF",
-        "description": "Use Slay PDF to convert JPEG images into a browser-local PDF.",
-        "step": [
-          { "@type": "HowToStep", "name": "Add JPG files", "text": "Open Slay PDF and import the JPEG images." },
-          { "@type": "HowToStep", "name": "Organize pages", "text": "Reorder the image pages and rotate anything sideways." },
-          { "@type": "HowToStep", "name": "Download PDF", "text": "Export the arranged JPG pages as a PDF." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/jpg-to-pdf.html#howto",
+            "name": "JPG to PDF workflow",
+            "description": "Convert JPG to PDF locally with Slay PDF. Import JPEG images, arrange pages and export a PDF directly from your browser.",
+            "url": "https://slaypdf.com/jpg-to-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "JPEG import",
+                        "text": "Add one JPG or a set of JPEG images to the workspace."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Clean order",
+                        "text": "Reorder and rotate image pages before downloading the PDF."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "No upload",
+                        "text": "The conversion workflow runs locally in the browser."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

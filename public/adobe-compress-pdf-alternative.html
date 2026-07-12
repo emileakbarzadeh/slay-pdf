@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to compress a PDF without Acrobat",
-        "description": "Use local browser PDF compression presets before export.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the document." },
-          { "@type": "HowToStep", "name": "Choose compression", "text": "Select an export compression preset for a smaller PDF." },
-          { "@type": "HowToStep", "name": "Download", "text": "Export the compressed PDF from the browser." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/adobe-compress-pdf-alternative.html#howto",
+            "name": "Adobe Compress PDF Alternative workflow",
+            "description": "Use Slay PDF as an Adobe compress PDF alternative. Choose compression presets and export smaller PDFs locally from your browser.",
+            "url": "https://slaypdf.com/adobe-compress-pdf-alternative.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Export presets",
+                        "text": "Choose compression options before downloading the final PDF."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Clean first",
+                        "text": "Delete extra pages, crop scans and resize pages before compressing."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Local workflow",
+                        "text": "Compression runs in the browser using bundled PDF tooling."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

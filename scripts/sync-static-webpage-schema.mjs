@@ -142,7 +142,7 @@ for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
   const withoutManagedSchema = stripManagedSchema(syncBreadcrumbIds(html, file))
   const updated = withoutManagedSchema.replace(
-    /(\s*<script type="application\/ld\+json">)/,
+    /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
     `\n${scriptFor(webpageSchemaFor(html, file))}$1`,
   )
   if (updated !== html) {

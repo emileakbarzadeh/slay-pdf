@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to redact a PDF locally",
-        "description": "Cover sensitive content and rasterize redacted pages before export.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the document to redact." },
-          { "@type": "HowToStep", "name": "Place redactions", "text": "Add redaction blocks over sensitive content in the page editor." },
-          { "@type": "HowToStep", "name": "Export safely", "text": "Export with redacted pages rasterized so covered content is not left behind as selectable text." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/pdf-redaction-tool.html#howto",
+            "name": "PDF Redaction Tool workflow",
+            "description": "Use Slay PDF as a local PDF redaction tool. Add redaction blocks and rasterize redacted pages before export in your browser.",
+            "url": "https://slaypdf.com/pdf-redaction-tool.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Redaction blocks",
+                        "text": "Place visible redaction areas over text, numbers, names or other sensitive regions."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Rasterized export",
+                        "text": "Redacted pages can be flattened to avoid leaving covered content behind as selectable text."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Local workflow",
+                        "text": "Review and export the redacted copy without uploading the source PDF to an app server."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

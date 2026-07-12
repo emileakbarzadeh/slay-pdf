@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to convert images to PDF",
-        "description": "Import images, arrange them as PDF pages and export a local PDF.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import images", "text": "Open Slay PDF and add PNG, JPEG or WebP images." },
-          { "@type": "HowToStep", "name": "Arrange pages", "text": "Reorder image pages, rotate them or combine them with existing PDF pages." },
-          { "@type": "HowToStep", "name": "Export PDF", "text": "Download the arranged image pages as one PDF from the browser." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/images-to-pdf.html#howto",
+            "name": "Images to PDF workflow",
+            "description": "Convert images to PDF locally with Slay PDF. Import PNG, JPEG or WebP images, reorder pages and export one PDF from your browser.",
+            "url": "https://slaypdf.com/images-to-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Image imports",
+                        "text": "Add PNG, JPEG and WebP images to the same workspace as PDFs."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Page order",
+                        "text": "Drag images into the right order and rotate pages before export."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "One PDF",
+                        "text": "Download the final document as a PDF generated in the browser."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

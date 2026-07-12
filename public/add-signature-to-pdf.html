@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to add a signature to a PDF",
-        "description": "Place a visual signature on a PDF page locally in the browser.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the document that needs a signature." },
-          { "@type": "HowToStep", "name": "Open the page editor", "text": "Choose the page and add a visual signature, text or drawing." },
-          { "@type": "HowToStep", "name": "Export", "text": "Download the signed PDF from the local workspace." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/add-signature-to-pdf.html#howto",
+            "name": "Add Signature to PDF workflow",
+            "description": "Add a signature to a PDF locally with Slay PDF. Place a visual signature, text and marks on PDF pages in your browser.",
+            "url": "https://slaypdf.com/add-signature-to-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Visual signatures",
+                        "text": "Add signature-style marks and place them where the document needs approval."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Page editing",
+                        "text": "Add text, highlights, rectangles, ink and other annotations in the same editor."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Local export",
+                        "text": "Download the signed PDF without uploading the source document to Slay PDF."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

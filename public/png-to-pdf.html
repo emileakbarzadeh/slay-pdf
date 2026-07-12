@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to convert PNG to PDF",
-        "description": "Use Slay PDF to convert PNG images into a browser-local PDF.",
-        "step": [
-          { "@type": "HowToStep", "name": "Add PNG files", "text": "Open Slay PDF and import the PNG images." },
-          { "@type": "HowToStep", "name": "Arrange pages", "text": "Move image pages into the right order and rotate anything sideways." },
-          { "@type": "HowToStep", "name": "Export PDF", "text": "Download the PNG pages as one PDF from the browser." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/png-to-pdf.html#howto",
+            "name": "PNG to PDF workflow",
+            "description": "Convert PNG to PDF locally with Slay PDF. Import PNG images, reorder pages and export a PDF from your browser.",
+            "url": "https://slaypdf.com/png-to-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "PNG import",
+                        "text": "Add PNG files to the same workspace as PDFs and other images."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Page editing",
+                        "text": "Reorder, rotate, resize or annotate pages before export."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "PDF output",
+                        "text": "Download one PDF generated locally in the browser."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

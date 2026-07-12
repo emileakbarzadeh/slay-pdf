@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to make a printable poster PDF",
-        "description": "Posterise one PDF page across multiple printable pages locally.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the page you want to posterise." },
-          { "@type": "HowToStep", "name": "Choose poster settings", "text": "Pick posterise settings and orientation for the selected page." },
-          { "@type": "HowToStep", "name": "Export tiles", "text": "Download the generated printable PDF pages." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/printable-poster-pdf.html#howto",
+            "name": "Printable Poster PDF workflow",
+            "description": "Make a printable poster PDF locally with Slay PDF. Posterise one PDF page across multiple printable pages without stretching content.",
+            "url": "https://slaypdf.com/printable-poster-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Poster tiles",
+                        "text": "Split one page across multiple printable pages for large-format output."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Page-aware layout",
+                        "text": "Use orientation and sizing controls that avoid stretching the source page."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Local export",
+                        "text": "Download the poster PDF generated in your browser."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

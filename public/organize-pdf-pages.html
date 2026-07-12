@@ -57,29 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to organize PDF pages with Slay PDF",
-        "description": "Reorder, delete, rotate, merge, split and export PDF pages locally in the browser.",
-        "step": [
-          {
-            "@type": "HowToStep",
-            "name": "Import PDFs",
-            "text": "Open Slay PDF and import the PDFs or images you want to organize."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Arrange pages",
-            "text": "Drag pages, select pages, delete unwanted pages, rotate scans or add split markers."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Export",
-            "text": "Download all pages, selected pages or separate PDFs from the local browser workspace."
-          }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/organize-pdf-pages.html#howto",
+            "name": "Organize PDF Pages workflow",
+            "description": "Organize PDF pages locally with Slay PDF. Reorder, delete, rotate, merge, split and export selected PDF pages from your browser.",
+            "url": "https://slaypdf.com/organize-pdf-pages.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Reorder pages",
+                        "text": "Drag pages in the workspace to put the document in the right order."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Clean up scans",
+                        "text": "Delete blank pages, rotate sideways pages, crop margins and resize paper."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Export your way",
+                        "text": "Download one organized PDF, selected pages or multiple PDFs divided by split markers."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

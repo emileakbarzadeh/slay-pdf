@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to remove pages from a PDF",
-        "description": "Delete unwanted pages from a PDF locally in the browser.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF", "text": "Open Slay PDF and import the document." },
-          { "@type": "HowToStep", "name": "Select pages", "text": "Choose blank, duplicate, incorrect or unwanted pages in the workspace." },
-          { "@type": "HowToStep", "name": "Delete and export", "text": "Remove the selected pages and download the cleaned PDF." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/remove-pages-from-pdf.html#howto",
+            "name": "Remove Pages from PDF workflow",
+            "description": "Remove pages from a PDF locally with Slay PDF. Delete blank, duplicate or sensitive pages and export a clean PDF from your browser.",
+            "url": "https://slaypdf.com/remove-pages-from-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Select pages",
+                        "text": "Click individual pages, select ranges or deselect everything when needed."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Clean scans",
+                        "text": "Remove blank pages and rotate sideways scans before export."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Stay local",
+                        "text": "The source PDF stays in the browser instead of being uploaded to a converter site."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">

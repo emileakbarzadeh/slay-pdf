@@ -57,17 +57,41 @@
             }
       }
     </script>
-    <script type="application/ld+json">
+    <script type="application/ld+json" data-managed="howto">
       {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How to flatten a PDF form",
-        "description": "Fill supported PDF form fields and export a flattened PDF locally.",
-        "step": [
-          { "@type": "HowToStep", "name": "Import the PDF form", "text": "Open Slay PDF and import a supported AcroForm PDF." },
-          { "@type": "HowToStep", "name": "Fill fields", "text": "Edit supported text, checkbox, dropdown, list and radio fields." },
-          { "@type": "HowToStep", "name": "Flatten on export", "text": "Use flattening on export to bake supported form field values into the PDF." }
-        ]
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://slaypdf.com/flatten-pdf.html#howto",
+            "name": "Flatten PDF workflow",
+            "description": "Flatten PDF form fields locally with Slay PDF. Fill supported forms, optionally flatten fields and export a clean PDF from your browser.",
+            "url": "https://slaypdf.com/flatten-pdf.html",
+            "inLanguage": "en",
+            "tool": [
+                  {
+                        "@type": "HowToTool",
+                        "name": "Slay PDF"
+                  }
+            ],
+            "step": [
+                  {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Supported fields",
+                        "text": "Edit text, checkbox, dropdown, list and radio fields where the PDF exposes them."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Flatten export",
+                        "text": "Optionally flatten supported form fields so values stay in the exported file."
+                  },
+                  {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Local form work",
+                        "text": "Fill and export forms in the browser without app-server document uploads."
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">
