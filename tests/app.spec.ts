@@ -252,6 +252,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const robots = await (await page.request.get('/robots.txt')).text()
   expect(robots).toContain('Allow: /')
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap.xml')
+  expect(robots).toContain('Sitemap: https://slaypdf.com/image-sitemap.xml')
   expect(robots).toContain('https://slaypdf.com/feed.xml')
   expect(robots).toContain('https://slaypdf.com/feed.json')
 
@@ -329,6 +330,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdf-editor-for-chromebook.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  const imageSitemap = await (await page.request.get('/image-sitemap.xml')).text()
+  expect(imageSitemap).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"')
+  expect(imageSitemap).toContain('<image:loc>https://slaypdf.com/og-image.png</image:loc>')
+  expect(imageSitemap).toContain('<image:title>Slay PDF - Free Local PDF Editor &amp; Adobe Acrobat Alternative</image:title>')
+  expect(imageSitemap).toContain('<image:caption>Slay PDF is a free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in your browser.</image:caption>')
+  expect([...imageSitemap.matchAll(/<image:image>/g)]).toHaveLength(sitemapEntries.length)
+  for (const entry of sitemapEntries) {
+    expect(imageSitemap).toContain(`<loc>${entry.url}</loc>`)
+  }
   let workflowPageCount = 0
   let toolAppPageCount = 0
   for (const path of htmlPaths) {

@@ -451,6 +451,25 @@ for (const [index, page] of pagesJson.pages.entries()) {
   }
 }
 
+const imageSitemap = await readPublic('image-sitemap.xml')
+assert(imageSitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'image-sitemap.xml is missing XML declaration')
+assert(imageSitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), 'image-sitemap.xml is missing image namespace')
+const imageSitemapEntries = [...imageSitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<image:image>\s*<image:loc>(.*?)<\/image:loc>\s*<image:title>([\s\S]*?)<\/image:title>\s*<image:caption>([\s\S]*?)<\/image:caption>\s*<\/image:image>\s*<\/url>/g)]
+  .map((match) => ({
+    url: decodeXml(match[1]),
+    image: decodeXml(match[2]),
+    title: decodeXml(match[3]),
+    caption: decodeXml(match[4]),
+  }))
+assert(imageSitemapEntries.length === pagesJson.pages.length, 'image-sitemap.xml URL count differs from pages.json')
+for (const [index, entry] of imageSitemapEntries.entries()) {
+  const page = pagesJson.pages[index]
+  assert(entry.url === page.url, `image-sitemap.xml URL mismatch at ${index}`)
+  assert(entry.image === `${site}/og-image.png`, `image-sitemap.xml image URL mismatch for ${entry.url}`)
+  assert(entry.title === page.title, `image-sitemap.xml title mismatch for ${entry.url}`)
+  assert(entry.caption === page.description, `image-sitemap.xml caption mismatch for ${entry.url}`)
+}
+
 const feed = await readPublic('feed.xml')
 assert(feed.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'feed.xml is missing XML declaration')
 assert(feed.includes('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">'), 'feed.xml is not an RSS 2.0 feed')
@@ -540,12 +559,14 @@ assert(llmsFull.includes('Related links:'), 'llms-full.txt is missing related li
 assert(llmsFull.includes('Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html'), 'llms-full.txt is missing formatted tool-list link')
 
 const robots = await readPublic('robots.txt')
+assert(robots.includes(`Sitemap: ${site}/sitemap.xml`), 'robots.txt is missing sitemap.xml')
+assert(robots.includes(`Sitemap: ${site}/image-sitemap.xml`), 'robots.txt is missing image-sitemap.xml')
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
 assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is missing feed.json')
 assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
 assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -566,6 +587,9 @@ if (live) {
   const llmsFullResponse = await fetch(`${site}/llms-full.txt`)
   assert(llmsFullResponse.ok, `live llms-full.txt failed ${llmsFullResponse.status}`)
   assert((await llmsFullResponse.text()).includes('# Slay PDF full text index'), 'live llms-full.txt content mismatch')
+  const imageSitemapResponse = await fetch(`${site}/image-sitemap.xml`)
+  assert(imageSitemapResponse.ok, `live image sitemap failed ${imageSitemapResponse.status}`)
+  assert((await imageSitemapResponse.text()).includes(`${site}/og-image.png`), 'live image sitemap content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

@@ -9,6 +9,7 @@ const steps = [
   'seo:howto',
   'seo:entities',
   'seo:index',
+  'seo:image-sitemap',
   'seo:sitegraph',
   'seo:feed',
   'seo:feed:json',
