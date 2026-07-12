@@ -200,6 +200,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Local Adobe PDF Editor Alternative - Slay PDF: https://slaypdf.com/adobe-local-pdf-editor-alternative.html
   Summary: Use Slay PDF as a local Adobe PDF editor alternative. Merge, split, sign, redact, OCR, resize and export PDFs in the browser without uploads.
   Last modified: 2026-07-13
+- Edit PDF Without Adobe - Slay PDF: https://slaypdf.com/edit-pdf-without-adobe.html
+  Summary: Edit PDF files without Adobe. Reorder, delete, rotate, sign, redact and export PDFs locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Merge PDF Without Adobe - Slay PDF: https://slaypdf.com/merge-pdf-without-adobe.html
+  Summary: Merge PDF files without Adobe. Combine PDFs and images, reorder pages and export one local PDF in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Sign PDF Without Adobe - Slay PDF: https://slaypdf.com/sign-pdf-without-adobe.html
+  Summary: Sign PDF files without Adobe. Add visual signatures, initials, dates and text locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Compress PDF Without Adobe - Slay PDF: https://slaypdf.com/compress-pdf-without-adobe.html
+  Summary: Compress PDF files without Adobe. Reduce file size, remove extra pages and export smaller PDFs locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
 - Smallpdf Alternative - Slay PDF: https://slaypdf.com/smallpdf-alternative.html
   Summary: Use Slay PDF as a Smallpdf alternative for local PDF edits. Merge, split, sign, compress, OCR and export PDFs in your browser without signup.
   Last modified: 2026-07-13
