@@ -1145,6 +1145,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/delete-pdf-pages-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Delete PDF Pages Without Uploading - Slay PDF</image:title>
+      <image:caption>Delete PDF pages without uploading them to a Slay PDF app server. Remove pages, reorder the rest and export locally from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/resize-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Resize PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Resize PDF pages without uploading them to a Slay PDF app server. Change page size, preserve aspect ratio and export locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/annotate-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Annotate PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Annotate PDF without uploading it to a Slay PDF app server. Add text, marks and signatures locally, then export from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/add-page-numbers-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Add Page Numbers Without Uploading - Slay PDF</image:title>
+      <image:caption>Add page numbers to a PDF without uploading it to a Slay PDF app server. Number pages locally and export from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/password-protect-pdf-without-uploading.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

@@ -506,6 +506,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'compress-pdf-without-uploading.html',
     'rotate-pdf-without-uploading.html',
     'crop-pdf-without-uploading.html',
+    'delete-pdf-pages-without-uploading.html',
+    'resize-pdf-without-uploading.html',
+    'annotate-pdf-without-uploading.html',
+    'add-page-numbers-without-uploading.html',
     'password-protect-pdf-without-uploading.html',
     'pdf-to-images-without-uploading.html',
     'extract-pdf-text-without-uploading.html',
@@ -781,7 +785,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(159)
+  expect(toolAppPageCount).toBe(163)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -936,6 +940,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/compress-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/rotate-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/crop-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/delete-pdf-pages-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/resize-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/annotate-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/add-page-numbers-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/pdf-to-images-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text-without-uploading.html')
@@ -1148,6 +1156,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/compress-pdf-without-uploading.html')
   expect(tools).toContain('/rotate-pdf-without-uploading.html')
   expect(tools).toContain('/crop-pdf-without-uploading.html')
+  expect(tools).toContain('/delete-pdf-pages-without-uploading.html')
+  expect(tools).toContain('/resize-pdf-without-uploading.html')
+  expect(tools).toContain('/annotate-pdf-without-uploading.html')
+  expect(tools).toContain('/add-page-numbers-without-uploading.html')
   expect(tools).toContain('/password-protect-pdf-without-uploading.html')
   expect(tools).toContain('/pdf-to-images-without-uploading.html')
   expect(tools).toContain('/extract-pdf-text-without-uploading.html')

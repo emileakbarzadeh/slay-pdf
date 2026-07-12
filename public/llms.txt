@@ -437,6 +437,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Crop PDF Without Uploading - Slay PDF: https://slaypdf.com/crop-pdf-without-uploading.html
   Summary: Crop PDF pages without uploading them to a Slay PDF app server. Trim margins, clean scanned pages and export cropped PDFs locally.
   Last modified: 2026-07-13
+- Delete PDF Pages Without Uploading - Slay PDF: https://slaypdf.com/delete-pdf-pages-without-uploading.html
+  Summary: Delete PDF pages without uploading them to a Slay PDF app server. Remove pages, reorder the rest and export locally from your browser.
+  Last modified: 2026-07-13
+- Resize PDF Without Uploading - Slay PDF: https://slaypdf.com/resize-pdf-without-uploading.html
+  Summary: Resize PDF pages without uploading them to a Slay PDF app server. Change page size, preserve aspect ratio and export locally.
+  Last modified: 2026-07-13
+- Annotate PDF Without Uploading - Slay PDF: https://slaypdf.com/annotate-pdf-without-uploading.html
+  Summary: Annotate PDF without uploading it to a Slay PDF app server. Add text, marks and signatures locally, then export from your browser.
+  Last modified: 2026-07-13
+- Add Page Numbers Without Uploading - Slay PDF: https://slaypdf.com/add-page-numbers-without-uploading.html
+  Summary: Add page numbers to a PDF without uploading it to a Slay PDF app server. Number pages locally and export from your browser.
+  Last modified: 2026-07-13
 - Password Protect PDF Without Uploading - Slay PDF: https://slaypdf.com/password-protect-pdf-without-uploading.html
   Summary: Password protect PDF files without uploading them to a Slay PDF app server. Encrypt exported PDFs locally in the browser, and passwords are never saved.
   Last modified: 2026-07-13

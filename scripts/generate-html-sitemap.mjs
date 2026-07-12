@@ -91,7 +91,7 @@ const sections = [
   {
     title: 'No-upload tool workflows',
     description: 'Direct pages for common private PDF jobs where local browser editing matters more than app-server upload workflows.',
-    paths: ['/merge-pdf-without-uploading.html', '/split-pdf-without-uploading.html', '/sign-pdf-without-uploading.html', '/redact-pdf-without-uploading.html', '/compress-pdf-without-uploading.html', '/rotate-pdf-without-uploading.html', '/crop-pdf-without-uploading.html', '/password-protect-pdf-without-uploading.html', '/pdf-to-images-without-uploading.html', '/extract-pdf-text-without-uploading.html', '/ocr-pdf-without-uploading.html', '/fill-pdf-forms-without-uploading.html'],
+    paths: ['/merge-pdf-without-uploading.html', '/split-pdf-without-uploading.html', '/sign-pdf-without-uploading.html', '/redact-pdf-without-uploading.html', '/compress-pdf-without-uploading.html', '/rotate-pdf-without-uploading.html', '/crop-pdf-without-uploading.html', '/delete-pdf-pages-without-uploading.html', '/resize-pdf-without-uploading.html', '/annotate-pdf-without-uploading.html', '/add-page-numbers-without-uploading.html', '/password-protect-pdf-without-uploading.html', '/pdf-to-images-without-uploading.html', '/extract-pdf-text-without-uploading.html', '/ocr-pdf-without-uploading.html', '/fill-pdf-forms-without-uploading.html'],
   },
   {
     title: 'No-account and platform pages',

@@ -1718,6 +1718,54 @@
       "breadcrumbId": "https://slaypdf.com/crop-pdf-without-uploading.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/delete-pdf-pages-without-uploading.html",
+      "path": "/delete-pdf-pages-without-uploading.html",
+      "title": "Delete PDF Pages Without Uploading - Slay PDF",
+      "description": "Delete PDF pages without uploading them to a Slay PDF app server. Remove pages, reorder the rest and export locally from your browser.",
+      "h1": "Delete PDF pages without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/delete-pdf-pages-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/delete-pdf-pages-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/resize-pdf-without-uploading.html",
+      "path": "/resize-pdf-without-uploading.html",
+      "title": "Resize PDF Without Uploading - Slay PDF",
+      "description": "Resize PDF pages without uploading them to a Slay PDF app server. Change page size, preserve aspect ratio and export locally.",
+      "h1": "Resize PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/resize-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/resize-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/annotate-pdf-without-uploading.html",
+      "path": "/annotate-pdf-without-uploading.html",
+      "title": "Annotate PDF Without Uploading - Slay PDF",
+      "description": "Annotate PDF without uploading it to a Slay PDF app server. Add text, marks and signatures locally, then export from your browser.",
+      "h1": "Annotate PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/annotate-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/annotate-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/add-page-numbers-without-uploading.html",
+      "path": "/add-page-numbers-without-uploading.html",
+      "title": "Add Page Numbers Without Uploading - Slay PDF",
+      "description": "Add page numbers to a PDF without uploading it to a Slay PDF app server. Number pages locally and export from your browser.",
+      "h1": "Add page numbers without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/add-page-numbers-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/add-page-numbers-without-uploading.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/password-protect-pdf-without-uploading.html",
       "path": "/password-protect-pdf-without-uploading.html",
       "title": "Password Protect PDF Without Uploading - Slay PDF",

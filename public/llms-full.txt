@@ -230,6 +230,10 @@ Related links:
 - Compress PDF without uploading: https://slaypdf.com/compress-pdf-without-uploading.html
 - Rotate PDF without uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
 - Crop PDF without uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Delete PDF pages without uploading: https://slaypdf.com/delete-pdf-pages-without-uploading.html
+- Resize PDF without uploading: https://slaypdf.com/resize-pdf-without-uploading.html
+- Annotate PDF without uploading: https://slaypdf.com/annotate-pdf-without-uploading.html
+- Add page numbers without uploading: https://slaypdf.com/add-page-numbers-without-uploading.html
 - Password protect PDF without uploading: https://slaypdf.com/password-protect-pdf-without-uploading.html
 - PDF to images without uploading: https://slaypdf.com/pdf-to-images-without-uploading.html
 - Extract PDF text without uploading: https://slaypdf.com/extract-pdf-text-without-uploading.html
@@ -521,6 +525,10 @@ Related links:
 - Compress PDF Without Uploading: https://slaypdf.com/compress-pdf-without-uploading.html
 - Rotate PDF Without Uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
 - Crop PDF Without Uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Delete PDF Pages Without Uploading: https://slaypdf.com/delete-pdf-pages-without-uploading.html
+- Resize PDF Without Uploading: https://slaypdf.com/resize-pdf-without-uploading.html
+- Annotate PDF Without Uploading: https://slaypdf.com/annotate-pdf-without-uploading.html
+- Add Page Numbers Without Uploading: https://slaypdf.com/add-page-numbers-without-uploading.html
 - Password Protect PDF Without Uploading: https://slaypdf.com/password-protect-pdf-without-uploading.html
 - PDF to Images Without Uploading: https://slaypdf.com/pdf-to-images-without-uploading.html
 - Extract PDF Text Without Uploading: https://slaypdf.com/extract-pdf-text-without-uploading.html
@@ -4205,6 +4213,122 @@ Related links:
 - Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
 - Resize PDF: https://slaypdf.com/resize-pdf.html
 - Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+
+## Delete PDF Pages Without Uploading - Slay PDF
+URL: https://slaypdf.com/delete-pdf-pages-without-uploading.html
+Last modified: 2026-07-13
+Summary: Delete PDF pages without uploading them to a Slay PDF app server. Remove pages, reorder the rest and export locally from your browser.
+H1: Delete PDF pages without uploading.
+
+Content:
+- No-upload page deletion
+- Delete PDF pages without uploading.
+- Remove blank pages, duplicates or sensitive sections locally, then export a clean PDF from your browser.
+- Local page cleanup
+- Delete unwanted PDF pages inside the browser workspace without sending the source file to Slay PDF.
+- Reorder before export
+- Move, rotate or crop remaining pages before downloading the cleaned document.
+- Clean local download
+- Export the finished PDF locally after removing pages that should not be shared.
+- For private document cleanup.
+- Use Slay PDF when a packet includes blank scans, duplicates, cover sheets or pages that should not be sent onward.
+- The deletion workflow stays local in the browser and pairs with split, merge, rotate, crop and selected-page export tools.
+- Delete PDF pages without uploading FAQ
+- Yes. Import the PDF, delete unwanted pages and export the cleaned document locally from your browser.
+- Yes. Remove pages, move remaining pages into the right order and download the final PDF.
+
+Related links:
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Delete pages without Adobe: https://slaypdf.com/delete-pdf-pages-without-adobe.html
+- Delete pages without Acrobat: https://slaypdf.com/delete-pdf-pages-without-acrobat.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+
+## Resize PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/resize-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Resize PDF pages without uploading them to a Slay PDF app server. Change page size, preserve aspect ratio and export locally.
+H1: Resize PDF without uploading.
+
+Content:
+- No-upload PDF resize
+- Resize PDF without uploading.
+- Change PDF page size locally, switch between standard formats and keep content scaled instead of stretched.
+- Local page sizing
+- Resize selected pages or the whole PDF in the browser without uploading the document to Slay PDF.
+- Aspect-ratio aware
+- Move between portrait and landscape sizes while scaling content with white letterboxing instead of stretching it.
+- Ready-to-share export
+- Download the resized PDF locally after page size, crop and rotation cleanup.
+- For print, filing and presentation sizes.
+- PDFs often need to be normalized to A4, Letter, landscape slides or a custom page size before printing or sharing.
+- Slay PDF handles that resize locally in the browser, then exports a fresh PDF from the workspace.
+- Resize PDF without uploading FAQ
+- Yes. Open the PDF in Slay PDF, choose a new page size and export the resized file locally.
+- No. Slay PDF scales the existing page content into the new size and uses white letterboxing when needed.
+
+Related links:
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Crop without uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Rotate without uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
+- Printable poster PDF: https://slaypdf.com/printable-poster-pdf.html
+
+## Annotate PDF Without Uploading - Slay PDF
+URL: https://slaypdf.com/annotate-pdf-without-uploading.html
+Last modified: 2026-07-13
+Summary: Annotate PDF without uploading it to a Slay PDF app server. Add text, marks and signatures locally, then export from your browser.
+H1: Annotate PDF without uploading.
+
+Content:
+- No-upload PDF annotation
+- Annotate PDF without uploading.
+- Add text, marks, notes or signatures to a PDF locally, then export the annotated copy from your browser.
+- Local annotations
+- Add text boxes, marks and signature-style edits without uploading the source document to Slay PDF.
+- Editable placement
+- Move and resize edits on the page before committing them to the exported PDF.
+- Flattened export
+- Download a shareable PDF with the visible annotations applied from the browser workspace.
+- For private review notes and quick markups.
+- Use Slay PDF when a PDF needs labels, notes, dates, signatures or simple visual edits before it is sent onward.
+- The annotation workflow stays local and works beside signing, redaction, forms and page organization tools.
+- Annotate PDF without uploading FAQ
+- Yes. Add annotations locally in Slay PDF and export the finished PDF from your browser.
+- Yes. Select an edit, move or resize it, then export once the placement looks right.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Sign without uploading: https://slaypdf.com/sign-pdf-without-uploading.html
+- Fill forms without uploading: https://slaypdf.com/fill-pdf-forms-without-uploading.html
+- Redact without uploading: https://slaypdf.com/redact-pdf-without-uploading.html
+
+## Add Page Numbers Without Uploading - Slay PDF
+URL: https://slaypdf.com/add-page-numbers-without-uploading.html
+Last modified: 2026-07-13
+Summary: Add page numbers to a PDF without uploading it to a Slay PDF app server. Number pages locally and export from your browser.
+H1: Add page numbers without uploading.
+
+Content:
+- No-upload page numbering
+- Add page numbers without uploading.
+- Number PDF pages locally before sharing, printing or filing a clean copy.
+- Local numbering
+- Add visible page numbers in the browser without sending the source PDF to Slay PDF.
+- Selected pages
+- Number the pages that need references while leaving unrelated pages unchanged.
+- Clean export
+- Download the numbered PDF locally after merging, splitting or organizing the packet.
+- For packets that need reliable references.
+- Contracts, forms, coursework and review packs are easier to discuss when each page has a clear number.
+- Slay PDF keeps page numbering local and pairs it with page organization, merge, split and signing tools.
+- Add page numbers without uploading FAQ
+- Yes. Add numbers in Slay PDF and export the numbered file locally from your browser.
+- Yes. Select the pages you want to number and leave the rest of the PDF unchanged.
+
+Related links:
+- Add page numbers to PDF: https://slaypdf.com/add-page-numbers-to-pdf.html
+- Add page numbers without Adobe: https://slaypdf.com/add-page-numbers-without-adobe.html
+- Add page numbers without Acrobat: https://slaypdf.com/add-page-numbers-without-acrobat.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
 
 ## Password Protect PDF Without Uploading - Slay PDF
 URL: https://slaypdf.com/password-protect-pdf-without-uploading.html
