@@ -78,10 +78,15 @@ function hasWorkflowGrid(html) {
   return label.includes('workflow') || label === 'pdf page organization tools'
 }
 
+function hasManagedToolAppSchema(html) {
+  return html.includes('type="application/ld+json" data-managed="tool-app"')
+}
+
 function mainEntityRefsFor(html, file, url) {
   const refs = []
 
   if (file === 'index.html') refs.push({ '@id': `${url}#app` })
+  if (hasManagedToolAppSchema(html)) refs.push({ '@id': `${url}#tool` })
   if (hasWorkflowGrid(html) || hasStructuredDataType(html, file, 'HowTo')) refs.push({ '@id': `${url}#howto` })
   if (hasStructuredDataType(html, file, 'FAQPage')) refs.push({ '@id': `${url}#faq` })
   if (hasStructuredDataType(html, file, 'ItemList')) refs.push({ '@id': `${url}#itemlist` })

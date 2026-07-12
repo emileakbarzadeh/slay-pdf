@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/secure-pdf-editor.html#faq"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/secure-pdf-editor.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/secure-pdf-editor.html#faq"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/privacy.html",
                   "https://slaypdf.com/private-pdf-editor.html",
@@ -99,6 +104,39 @@
                         "name": "Secure Local PDF Editor",
                         "item": "https://slaypdf.com/secure-pdf-editor.html"
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/secure-pdf-editor.html#tool",
+            "name": "Secure Local PDF Editor",
+            "alternateName": "Edit private PDFs in your browser.",
+            "description": "Use Slay PDF as a secure local PDF editor for private documents. PDFs and edits stay in your browser, and passwords are never saved.",
+            "url": "https://slaypdf.com/secure-pdf-editor.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "No app-server upload: PDF processing happens in the browser rather than on Slay PDF servers.",
+                  "Password handling: Export passwords are not saved by the app.",
+                  "Privacy controls: Clear recent workspace state when the local edit is finished."
             ]
       }
     </script>

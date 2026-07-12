@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/sign-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/sign-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/sign-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/free-pdf-editor.html",
                   "https://slaypdf.com/private-pdf-editor.html",
@@ -135,6 +140,39 @@
                         "name": "Private files",
                         "text": "Documents and edits stay in local browser storage. Passwords are never saved."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/sign-pdf.html#tool",
+            "name": "Sign PDF Locally",
+            "alternateName": "Add a signature to a PDF without sending it away.",
+            "description": "Sign PDFs locally with Slay PDF. Add a visual signature, text, highlights and page edits without uploading the document.",
+            "url": "https://slaypdf.com/sign-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "Visual signatures: Add a signature overlay to the page and position it where it belongs.",
+                  "Form-friendly: Fill supported AcroForm fields and optionally flatten fields on export.",
+                  "Private files: Documents and edits stay in local browser storage. Passwords are never saved."
             ]
       }
     </script>

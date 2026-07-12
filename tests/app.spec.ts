@@ -91,6 +91,18 @@ function workflowStepsFor(html: string) {
     }))
 }
 
+function visibleToolFeatures(html: string) {
+  const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
+  if (!section) return undefined
+  if (section[1].toLowerCase() === 'privacy summary') return undefined
+
+  return [...section[2].matchAll(/<article class="card"><h2>([\s\S]*?)<\/h2><p>([\s\S]*?)<\/p><\/article>/g)]
+    .map((match) => ({
+      name: textFromInlineHtml(match[1]),
+      text: textFromInlineHtml(match[2]),
+    }))
+}
+
 function visibleRelatedLinks(html: string, url: string) {
   const links = new Set<string>()
   const relatedSections = [
@@ -318,6 +330,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
   let workflowPageCount = 0
+  let toolAppPageCount = 0
   for (const path of htmlPaths) {
     expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
     const response = await page.request.get(`/${path}`)
@@ -389,7 +402,26 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       inLanguage?: string
       itemListElement?: unknown[]
     } | undefined
+    const toolApp = structuredData.find((block) => block['@type'] === 'WebApplication' && block['@id'] === `https://slaypdf.com/${path}#tool`) as {
+      '@context'?: string
+      '@id'?: string
+      name?: string
+      alternateName?: string
+      description?: string
+      url?: string
+      applicationCategory?: string
+      applicationSubCategory?: string
+      operatingSystem?: string
+      browserRequirements?: string
+      isAccessibleForFree?: boolean
+      inLanguage?: string
+      isPartOf?: { '@id'?: string }
+      publisher?: { '@id'?: string }
+      offers?: { price?: string; priceCurrency?: string }
+      featureList?: string[]
+    } | undefined
     const expectedMainEntityIds = []
+    if (toolApp) expectedMainEntityIds.push(`https://slaypdf.com/${path}#tool`)
     if (workflowStepsFor(html)) expectedMainEntityIds.push(`https://slaypdf.com/${path}#howto`)
     if (faq) expectedMainEntityIds.push(`https://slaypdf.com/${path}#faq`)
     if (itemListEntity) expectedMainEntityIds.push(`https://slaypdf.com/${path}#itemlist`)
@@ -407,6 +439,29 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       expect(itemListEntity.url).toBe(`https://slaypdf.com/${path}`)
       expect(itemListEntity.inLanguage).toBe('en')
       expect(itemListEntity.itemListElement?.length).toBeGreaterThan(0)
+    }
+    const toolFeatures = visibleToolFeatures(html)
+    if (toolFeatures) {
+      toolAppPageCount += 1
+      expect(html).toContain('type="application/ld+json" data-managed="tool-app"')
+      expect(toolApp).toMatchObject({
+        '@context': 'https://schema.org',
+        '@id': `https://slaypdf.com/${path}#tool`,
+        name: title?.replace(/ - Slay PDF$/, ''),
+        url: `https://slaypdf.com/${path}`,
+        applicationCategory: 'BusinessApplication',
+        applicationSubCategory: 'PDF editor',
+        operatingSystem: 'Web',
+        browserRequirements: 'Requires a modern browser with WebAssembly and IndexedDB support.',
+        isAccessibleForFree: true,
+        inLanguage: 'en',
+        isPartOf: { '@id': 'https://slaypdf.com/#app' },
+        publisher: { '@id': 'https://slaypdf.com/#organization' },
+        offers: { price: '0', priceCurrency: 'USD' },
+      })
+      expect(toolApp?.featureList).toEqual(toolFeatures.map((feature) => `${feature.name}: ${feature.text}`))
+    } else {
+      expect(html).not.toContain('data-managed="tool-app"')
     }
     const breadcrumb = structuredData.find((block) => block['@type'] === 'BreadcrumbList')
     expect(breadcrumb).toMatchObject({
@@ -448,6 +503,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(21)
+  expect(toolAppPageCount).toBe(49)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)

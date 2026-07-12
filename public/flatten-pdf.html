@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/flatten-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/flatten-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/flatten-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/fill-pdf-forms.html",
                   "https://slaypdf.com/add-signature-to-pdf.html",
@@ -136,6 +141,39 @@
                         "name": "Local form work",
                         "text": "Fill and export forms in the browser without app-server document uploads."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/flatten-pdf.html#tool",
+            "name": "Flatten PDF",
+            "alternateName": "Fill and flatten supported PDF forms.",
+            "description": "Flatten PDF form fields locally with Slay PDF. Fill supported forms, optionally flatten fields and export a clean PDF from your browser.",
+            "url": "https://slaypdf.com/flatten-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "Supported fields: Edit text, checkbox, dropdown, list and radio fields where the PDF exposes them.",
+                  "Flatten export: Optionally flatten supported form fields so values stay in the exported file.",
+                  "Local form work: Fill and export forms in the browser without app-server document uploads."
             ]
       }
     </script>

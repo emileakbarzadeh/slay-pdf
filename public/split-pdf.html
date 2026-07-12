@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/split-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/split-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/split-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/merge-pdf.html",
                   "https://slaypdf.com/free-pdf-editor.html",
@@ -135,6 +140,39 @@
                         "name": "No upload",
                         "text": "The split operation runs locally in your browser, not on a third-party server."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/split-pdf.html#tool",
+            "name": "Split PDF Files Locally",
+            "alternateName": "Split a PDF into exactly the pages you need.",
+            "description": "Split PDF files locally with Slay PDF. Delete pages, export selected pages or add split markers to create separate PDFs from one document.",
+            "url": "https://slaypdf.com/split-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "Selected pages: Pick the pages you need and export only those pages as a new PDF.",
+                  "Separate PDFs: Use split markers in the workspace to create multiple PDFs in one pass.",
+                  "No upload: The split operation runs locally in your browser, not on a third-party server."
             ]
       }
     </script>

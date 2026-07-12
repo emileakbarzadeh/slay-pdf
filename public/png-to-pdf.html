@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/png-to-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/png-to-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/png-to-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/images-to-pdf.html",
                   "https://slaypdf.com/jpg-to-pdf.html",
@@ -136,6 +141,39 @@
                         "name": "PDF output",
                         "text": "Download one PDF generated locally in the browser."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/png-to-pdf.html#tool",
+            "name": "PNG to PDF",
+            "alternateName": "Convert PNG images to PDF locally.",
+            "description": "Convert PNG to PDF locally with Slay PDF. Import PNG images, reorder pages and export a PDF from your browser.",
+            "url": "https://slaypdf.com/png-to-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "PNG import: Add PNG files to the same workspace as PDFs and other images.",
+                  "Page editing: Reorder, rotate, resize or annotate pages before export.",
+                  "PDF output: Download one PDF generated locally in the browser."
             ]
       }
     </script>

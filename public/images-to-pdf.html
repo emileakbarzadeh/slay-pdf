@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/images-to-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/images-to-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/images-to-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/jpg-to-pdf.html",
                   "https://slaypdf.com/png-to-pdf.html",
@@ -136,6 +141,39 @@
                         "name": "One PDF",
                         "text": "Download the final document as a PDF generated in the browser."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/images-to-pdf.html#tool",
+            "name": "Images to PDF",
+            "alternateName": "Convert images into a local PDF.",
+            "description": "Convert images to PDF locally with Slay PDF. Import PNG, JPEG or WebP images, reorder pages and export one PDF from your browser.",
+            "url": "https://slaypdf.com/images-to-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "Image imports: Add PNG, JPEG and WebP images to the same workspace as PDFs.",
+                  "Page order: Drag images into the right order and rotate pages before export.",
+                  "One PDF: Download the final document as a PDF generated in the browser."
             ]
       }
     </script>

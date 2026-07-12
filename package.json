@@ -76,6 +76,7 @@
     "seo:discovery": "node scripts/sync-static-discovery-links.mjs",
     "seo:breadcrumbs": "node scripts/sync-static-breadcrumb-schema.mjs",
     "seo:social": "node scripts/sync-static-social-meta.mjs",
+    "seo:toolapps": "node scripts/sync-static-tool-app-schema.mjs",
     "seo:schema": "node scripts/sync-static-webpage-schema.mjs",
     "seo:howto": "node scripts/sync-static-howto-schema.mjs",
     "seo:entities": "node scripts/sync-static-entity-schema.mjs",

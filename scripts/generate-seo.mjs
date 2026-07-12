@@ -4,6 +4,7 @@ const steps = [
   'seo:discovery',
   'seo:breadcrumbs',
   'seo:social',
+  'seo:toolapps',
   'seo:schema',
   'seo:howto',
   'seo:entities',

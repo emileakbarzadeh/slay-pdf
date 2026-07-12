@@ -114,6 +114,21 @@ function workflowSteps(html, file) {
   return steps
 }
 
+function visibleToolFeatures(html, file) {
+  const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
+  if (!section) return undefined
+  if (section[1].toLowerCase() === 'privacy summary') return undefined
+
+  const features = [...section[2].matchAll(/<article class="card"><h2>([\s\S]*?)<\/h2><p>([\s\S]*?)<\/p><\/article>/g)]
+    .map((match) => ({
+      name: textFromInlineHtml(match[1]),
+      text: textFromInlineHtml(match[2]),
+    }))
+
+  assert(features.length >= 2, `${file} tool feature grid must include at least two visible cards`)
+  return features
+}
+
 function mainEntityIds(value) {
   if (!value) return []
   return (Array.isArray(value) ? value : [value])
@@ -125,6 +140,7 @@ function expectedMainEntityIds({ html, file, url, blocks }) {
   const ids = []
 
   if (file === 'index.html') ids.push(`${url}#app`)
+  if (structuredDataEntity(blocks, 'WebApplication')?.['@id'] === `${url}#tool`) ids.push(`${url}#tool`)
   if (workflowSteps(html, file) || structuredDataEntity(blocks, 'HowTo')) ids.push(`${url}#howto`)
   if (structuredDataEntity(blocks, 'FAQPage')) ids.push(`${url}#faq`)
   if (structuredDataEntity(blocks, 'ItemList')) ids.push(`${url}#itemlist`)
@@ -190,6 +206,36 @@ function assertRichEntitySchema({ html, file, url }) {
     assert(itemList.inLanguage === 'en', `${file} ItemList language is wrong`)
     assert(Array.isArray(itemList.itemListElement) && itemList.itemListElement.length >= 1, `${file} ItemList must include items`)
   }
+}
+
+function assertToolAppSchema({ html, file, url, title, description, h1 }) {
+  const features = visibleToolFeatures(html, file)
+  const blocks = structuredDataBlocks(html, file)
+  const toolApp = blocks.find((block) => block['@type'] === 'WebApplication' && block['@id'] === `${url}#tool`)
+
+  if (!features) {
+    assert(!html.includes('data-managed="tool-app"'), `${file} should not include managed tool WebApplication JSON-LD without an eligible visible feature grid`)
+    return
+  }
+
+  assert(html.includes('type="application/ld+json" data-managed="tool-app"'), `${file} is missing managed tool WebApplication JSON-LD`)
+  assert(toolApp, `${file} is missing tool WebApplication JSON-LD`)
+  assert(toolApp['@context'] === 'https://schema.org', `${file} tool WebApplication context is wrong`)
+  assert(toolApp.name === title.replace(/ - Slay PDF$/, ''), `${file} tool WebApplication name is wrong`)
+  assert(toolApp.alternateName === h1, `${file} tool WebApplication alternateName must match h1`)
+  assert(toolApp.description === description, `${file} tool WebApplication description must match meta description`)
+  assert(toolApp.url === url, `${file} tool WebApplication URL is wrong`)
+  assert(toolApp.applicationCategory === 'BusinessApplication', `${file} tool WebApplication category is wrong`)
+  assert(toolApp.applicationSubCategory === 'PDF editor', `${file} tool WebApplication subcategory is wrong`)
+  assert(toolApp.operatingSystem === 'Web', `${file} tool WebApplication operating system is wrong`)
+  assert(toolApp.browserRequirements === 'Requires a modern browser with WebAssembly and IndexedDB support.', `${file} tool WebApplication browser requirements are wrong`)
+  assert(toolApp.isAccessibleForFree === true, `${file} tool WebApplication free access flag is wrong`)
+  assert(toolApp.inLanguage === 'en', `${file} tool WebApplication language is wrong`)
+  assert(toolApp.isPartOf?.['@id'] === `${site}/#app`, `${file} tool WebApplication app reference is wrong`)
+  assert(toolApp.publisher?.['@id'] === `${site}/#organization`, `${file} tool WebApplication publisher is wrong`)
+  assert(toolApp.offers?.price === '0', `${file} tool WebApplication price is wrong`)
+  assert(toolApp.offers?.priceCurrency === 'USD', `${file} tool WebApplication currency is wrong`)
+  assert(JSON.stringify(toolApp.featureList) === JSON.stringify(features.map((feature) => `${feature.name}: ${feature.text}`)), `${file} tool WebApplication featureList must match visible feature cards`)
 }
 
 function assertHowToSchema({ html, file, url, title, description }) {
@@ -338,6 +384,7 @@ for (const url of htmlUrls) {
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
   assertWebPageSchema({ html, file, url, title, description, h1 })
   assertRichEntitySchema({ html, file, url })
+  assertToolAppSchema({ html, file, url, title, description, h1 })
   assertHowToSchema({ html, file, url, title, description })
   assert(!titles.has(title), `${file} title duplicates ${titles.get(title)}`)
   assert(!descriptions.has(description), `${file} description duplicates ${descriptions.get(description)}`)

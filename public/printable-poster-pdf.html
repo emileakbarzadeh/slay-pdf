@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/printable-poster-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/printable-poster-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/printable-poster-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/posterise-pdf.html",
                   "https://slaypdf.com/resize-pdf.html",
@@ -136,6 +141,39 @@
                         "name": "Local export",
                         "text": "Download the poster PDF generated in your browser."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/printable-poster-pdf.html#tool",
+            "name": "Printable Poster PDF",
+            "alternateName": "Make a printable poster from one PDF page.",
+            "description": "Make a printable poster PDF locally with Slay PDF. Posterise one PDF page across multiple printable pages without stretching content.",
+            "url": "https://slaypdf.com/printable-poster-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "Poster tiles: Split one page across multiple printable pages for large-format output.",
+                  "Page-aware layout: Use orientation and sizing controls that avoid stretching the source page.",
+                  "Local export: Download the poster PDF generated in your browser."
             ]
       }
     </script>

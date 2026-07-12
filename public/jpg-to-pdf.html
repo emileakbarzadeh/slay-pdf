@@ -61,9 +61,14 @@
                   "height": 630
             },
             "inLanguage": "en",
-            "mainEntity": {
-                  "@id": "https://slaypdf.com/jpg-to-pdf.html#howto"
-            },
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/jpg-to-pdf.html#tool"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/jpg-to-pdf.html#howto"
+                  }
+            ],
             "relatedLink": [
                   "https://slaypdf.com/images-to-pdf.html",
                   "https://slaypdf.com/png-to-pdf.html",
@@ -136,6 +141,39 @@
                         "name": "No upload",
                         "text": "The conversion workflow runs locally in the browser."
                   }
+            ]
+      }
+    </script>
+    <script type="application/ld+json" data-managed="tool-app">
+      {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://slaypdf.com/jpg-to-pdf.html#tool",
+            "name": "JPG to PDF",
+            "alternateName": "Convert JPG images to PDF locally.",
+            "description": "Convert JPG to PDF locally with Slay PDF. Import JPEG images, arrange pages and export a PDF directly from your browser.",
+            "url": "https://slaypdf.com/jpg-to-pdf.html",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "PDF editor",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "isPartOf": {
+                  "@id": "https://slaypdf.com/#app"
+            },
+            "publisher": {
+                  "@id": "https://slaypdf.com/#organization"
+            },
+            "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+            },
+            "featureList": [
+                  "JPEG import: Add one JPG or a set of JPEG images to the workspace.",
+                  "Clean order: Reorder and rotate image pages before downloading the PDF.",
+                  "No upload: The conversion workflow runs locally in the browser."
             ]
       }
     </script>
