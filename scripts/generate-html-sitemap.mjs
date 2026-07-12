@@ -46,7 +46,7 @@ const sections = [
   {
     title: 'PDF editor alternatives',
     description: 'Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.',
-    paths: ['/smallpdf-alternative.html', '/ilovepdf-alternative.html', '/sejda-alternative.html', '/pdf24-alternative.html', '/xodo-alternative.html', '/pdfescape-alternative.html', '/dochub-alternative.html', '/foxit-pdf-editor-alternative.html'],
+    paths: ['/smallpdf-alternative.html', '/ilovepdf-alternative.html', '/sejda-alternative.html', '/pdf24-alternative.html', '/xodo-alternative.html', '/pdfescape-alternative.html', '/dochub-alternative.html', '/foxit-pdf-editor-alternative.html', '/pdf-candy-alternative.html', '/soda-pdf-alternative.html', '/nitro-pdf-alternative.html', '/pdf2go-alternative.html'],
   },
   {
     title: 'Local PDF task pages',

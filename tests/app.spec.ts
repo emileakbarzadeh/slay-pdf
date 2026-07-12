@@ -451,6 +451,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdfescape-alternative.html',
     'dochub-alternative.html',
     'foxit-pdf-editor-alternative.html',
+    'pdf-candy-alternative.html',
+    'soda-pdf-alternative.html',
+    'nitro-pdf-alternative.html',
+    'pdf2go-alternative.html',
     'local-pdf-merger.html',
     'local-pdf-splitter.html',
     'local-pdf-signer.html',
@@ -769,7 +773,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(147)
+  expect(toolAppPageCount).toBe(151)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -869,6 +873,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/pdfescape-alternative.html')
   expect(llms).toContain('https://slaypdf.com/dochub-alternative.html')
   expect(llms).toContain('https://slaypdf.com/foxit-pdf-editor-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-candy-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/soda-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/nitro-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdf2go-alternative.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-merger.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-signer.html')
@@ -1069,6 +1077,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/pdfescape-alternative.html')
   expect(tools).toContain('/dochub-alternative.html')
   expect(tools).toContain('/foxit-pdf-editor-alternative.html')
+  expect(tools).toContain('/pdf-candy-alternative.html')
+  expect(tools).toContain('/soda-pdf-alternative.html')
+  expect(tools).toContain('/nitro-pdf-alternative.html')
+  expect(tools).toContain('/pdf2go-alternative.html')
   expect(tools).toContain('/local-pdf-merger.html')
   expect(tools).toContain('/local-pdf-splitter.html')
   expect(tools).toContain('/local-pdf-signer.html')

@@ -272,6 +272,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Foxit PDF Editor Alternative - Slay PDF: https://slaypdf.com/foxit-pdf-editor-alternative.html
   Summary: Use Slay PDF as a Foxit PDF Editor alternative for local browser PDF tasks. Merge, split, sign, annotate, compress, OCR and export PDFs without signup.
   Last modified: 2026-07-13
+- PDF Candy Alternative - Slay PDF: https://slaypdf.com/pdf-candy-alternative.html
+  Summary: Use Slay PDF as a PDF Candy alternative for local browser PDF tools. Merge, split, sign, compress, OCR and export PDFs without signup.
+  Last modified: 2026-07-13
+- Soda PDF Alternative - Slay PDF: https://slaypdf.com/soda-pdf-alternative.html
+  Summary: Use Slay PDF as a Soda PDF alternative for local browser PDF editing. Organize, sign, compress, OCR and export PDFs without signup.
+  Last modified: 2026-07-13
+- Nitro PDF Alternative - Slay PDF: https://slaypdf.com/nitro-pdf-alternative.html
+  Summary: Use Slay PDF as a Nitro PDF alternative for local browser PDF tasks. Merge, split, sign, redact, compress and export PDFs without signup.
+  Last modified: 2026-07-13
+- PDF2Go Alternative - Slay PDF: https://slaypdf.com/pdf2go-alternative.html
+  Summary: Use Slay PDF as a PDF2Go alternative for local browser PDF tools. Edit, merge, split, compress, OCR and export PDFs without uploading documents to an app server.
+  Last modified: 2026-07-13
 - Local PDF Merger - Slay PDF: https://slaypdf.com/local-pdf-merger.html
   Summary: Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.
   Last modified: 2026-07-13
