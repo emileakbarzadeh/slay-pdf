@@ -70,6 +70,7 @@
     "seo:generate": "node scripts/generate-seo.mjs",
     "seo:index": "node scripts/generate-page-index.mjs",
     "seo:image-sitemap": "node scripts/generate-image-sitemap.mjs",
+    "seo:sitemap-index": "node scripts/generate-sitemap-index.mjs",
     "seo:feed": "node scripts/generate-discovery-feed.mjs",
     "seo:feed:json": "node scripts/generate-json-feed.mjs",
     "seo:llms": "node scripts/generate-llms.mjs",

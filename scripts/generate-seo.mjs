@@ -10,6 +10,7 @@ const steps = [
   'seo:entities',
   'seo:index',
   'seo:image-sitemap',
+  'seo:sitemap-index',
   'seo:sitegraph',
   'seo:feed',
   'seo:feed:json',

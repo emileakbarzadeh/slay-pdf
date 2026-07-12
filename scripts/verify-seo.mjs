@@ -470,13 +470,28 @@ for (const [index, entry] of imageSitemapEntries.entries()) {
   assert(entry.caption === page.description, `image-sitemap.xml caption mismatch for ${entry.url}`)
 }
 
+const latestLastmod = sitemapEntries.map((entry) => entry.lastmod).sort().at(-1)
+const sitemapIndex = await readPublic('sitemap-index.xml')
+assert(sitemapIndex.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'sitemap-index.xml is missing XML declaration')
+assert(sitemapIndex.includes('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'), 'sitemap-index.xml is missing sitemapindex namespace')
+const sitemapIndexEntries = [...sitemapIndex.matchAll(/<sitemap>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<\/sitemap>/g)]
+  .map((match) => ({
+    loc: decodeXml(match[1]),
+    lastmod: match[2],
+  }))
+assert(JSON.stringify(sitemapIndexEntries.map((entry) => entry.loc)) === JSON.stringify([`${site}/sitemap.xml`, `${site}/image-sitemap.xml`]), 'sitemap-index.xml must list canonical and image sitemaps in order')
+for (const entry of sitemapIndexEntries) {
+  assert(entry.lastmod === latestLastmod, `${entry.loc} sitemap-index.xml lastmod must match latest sitemap lastmod`)
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod), `${entry.loc} sitemap-index.xml lastmod must be YYYY-MM-DD`)
+}
+
 const feed = await readPublic('feed.xml')
 assert(feed.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'feed.xml is missing XML declaration')
 assert(feed.includes('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">'), 'feed.xml is not an RSS 2.0 feed')
 assert(feed.includes('<title>Slay PDF pages</title>'), 'feed.xml channel title is wrong')
 assert(feed.includes(`<link>${site}/</link>`), 'feed.xml channel link is wrong')
 assert(feed.includes(`<atom:link href="${site}/feed.xml" rel="self" type="application/rss+xml" />`), 'feed.xml self link is wrong')
-assert(feed.includes(`<lastBuildDate>${pubDate(sitemapEntries.map((entry) => entry.lastmod).sort().at(-1))}</lastBuildDate>`), 'feed.xml lastBuildDate does not match sitemap')
+assert(feed.includes(`<lastBuildDate>${pubDate(latestLastmod)}</lastBuildDate>`), 'feed.xml lastBuildDate does not match sitemap')
 const feedItems = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => {
   const item = match[1]
   return {
@@ -559,6 +574,7 @@ assert(llmsFull.includes('Related links:'), 'llms-full.txt is missing related li
 assert(llmsFull.includes('Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html'), 'llms-full.txt is missing formatted tool-list link')
 
 const robots = await readPublic('robots.txt')
+assert(robots.includes(`Sitemap: ${site}/sitemap-index.xml`), 'robots.txt is missing sitemap-index.xml')
 assert(robots.includes(`Sitemap: ${site}/sitemap.xml`), 'robots.txt is missing sitemap.xml')
 assert(robots.includes(`Sitemap: ${site}/image-sitemap.xml`), 'robots.txt is missing image-sitemap.xml')
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
@@ -566,7 +582,7 @@ assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is mi
 assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
 assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -590,6 +606,10 @@ if (live) {
   const imageSitemapResponse = await fetch(`${site}/image-sitemap.xml`)
   assert(imageSitemapResponse.ok, `live image sitemap failed ${imageSitemapResponse.status}`)
   assert((await imageSitemapResponse.text()).includes(`${site}/og-image.png`), 'live image sitemap content mismatch')
+  const sitemapIndexResponse = await fetch(`${site}/sitemap-index.xml`)
+  assert(sitemapIndexResponse.ok, `live sitemap index failed ${sitemapIndexResponse.status}`)
+  const liveSitemapIndex = await sitemapIndexResponse.text()
+  assert(liveSitemapIndex.includes(`${site}/sitemap.xml`) && liveSitemapIndex.includes(`${site}/image-sitemap.xml`), 'live sitemap index content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

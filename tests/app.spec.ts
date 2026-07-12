@@ -251,6 +251,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const robots = await (await page.request.get('/robots.txt')).text()
   expect(robots).toContain('Allow: /')
+  expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap-index.xml')
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap.xml')
   expect(robots).toContain('Sitemap: https://slaypdf.com/image-sitemap.xml')
   expect(robots).toContain('https://slaypdf.com/feed.xml')
@@ -339,6 +340,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   for (const entry of sitemapEntries) {
     expect(imageSitemap).toContain(`<loc>${entry.url}</loc>`)
   }
+  const latestLastmod = sitemapEntries.map((entry) => entry.lastmod).sort().at(-1)
+  const sitemapIndex = await (await page.request.get('/sitemap-index.xml')).text()
+  expect(sitemapIndex).toContain('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+  expect(sitemapIndex).toContain('<loc>https://slaypdf.com/sitemap.xml</loc>')
+  expect(sitemapIndex).toContain('<loc>https://slaypdf.com/image-sitemap.xml</loc>')
+  expect([...sitemapIndex.matchAll(/<lastmod>(.*?)<\/lastmod>/g)].map((match) => match[1])).toEqual([latestLastmod, latestLastmod])
   let workflowPageCount = 0
   let toolAppPageCount = 0
   for (const path of htmlPaths) {
