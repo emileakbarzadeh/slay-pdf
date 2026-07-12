@@ -13,6 +13,10 @@ Important URLs:
 - PDF tools hub: https://slaypdf.com/tools.html
 - FAQ: https://slaypdf.com/faq.html
 - Privacy: https://slaypdf.com/privacy.html
+- Online PDF editor: https://slaypdf.com/online-pdf-editor.html
+- Edit PDF without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+- Adobe Acrobat vs Slay PDF: https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Merge PDF: https://slaypdf.com/merge-pdf.html
 - Split PDF: https://slaypdf.com/split-pdf.html

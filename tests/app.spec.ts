@@ -94,11 +94,16 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const sitemap = await (await page.request.get('/sitemap.xml')).text()
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
-  for (const path of [
+  const htmlPaths = [...sitemap.matchAll(/<loc>https:\/\/slaypdf\.com\/([^<]+\.html)<\/loc>/g)].map((match) => match[1])
+  expect(htmlPaths).toEqual(expect.arrayContaining([
     'free-pdf-editor.html',
     'tools.html',
     'faq.html',
     'privacy.html',
+    'online-pdf-editor.html',
+    'edit-pdf-without-uploading.html',
+    'organize-pdf-pages.html',
+    'adobe-acrobat-vs-slay-pdf.html',
     'adobe-acrobat-alternative.html',
     'merge-pdf.html',
     'split-pdf.html',
@@ -119,7 +124,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'add-page-numbers-to-pdf.html',
     'fill-pdf-forms.html',
     'password-protect-pdf.html'
-  ]) {
+  ]))
+  expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  for (const path of htmlPaths) {
     expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
     const response = await page.request.get(`/${path}`)
     expect(response.ok()).toBe(true)
@@ -140,6 +147,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/tools.html')
   expect(llms).toContain('https://slaypdf.com/faq.html')
   expect(llms).toContain('https://slaypdf.com/privacy.html')
+  expect(llms).toContain('https://slaypdf.com/online-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/edit-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/organize-pdf-pages.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html')
   expect(llms).toContain('https://slaypdf.com/merge-pdf.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf.html')
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text.html')
@@ -151,6 +162,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/password-protect-pdf.html')
   expect(tools).toContain('/faq.html')
   expect(tools).toContain('/privacy.html')
+  expect(tools).toContain('/online-pdf-editor.html')
+  expect(tools).toContain('/edit-pdf-without-uploading.html')
+  expect(tools).toContain('/organize-pdf-pages.html')
+  expect(tools).toContain('/adobe-acrobat-vs-slay-pdf.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')
