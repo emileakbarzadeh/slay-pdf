@@ -45,7 +45,13 @@
     "png-to-pdf",
     "edit-scanned-pdf",
     "flatten-pdf",
-    "printable-poster-pdf"
+    "printable-poster-pdf",
+    "free-adobe-pdf-editor-alternative",
+    "acrobat-online-alternative",
+    "adobe-pdf-merge-alternative",
+    "adobe-compress-pdf-alternative",
+    "adobe-fill-and-sign-alternative",
+    "adobe-pdf-organizer-alternative"
   ],
   "type": "module",
   "license": "AGPL-3.0-only",

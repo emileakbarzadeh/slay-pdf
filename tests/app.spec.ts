@@ -135,7 +135,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'watermark-pdf.html',
     'add-page-numbers-to-pdf.html',
     'fill-pdf-forms.html',
-    'password-protect-pdf.html'
+    'password-protect-pdf.html',
+    'free-adobe-pdf-editor-alternative.html',
+    'acrobat-online-alternative.html',
+    'adobe-pdf-merge-alternative.html',
+    'adobe-compress-pdf-alternative.html',
+    'adobe-fill-and-sign-alternative.html',
+    'adobe-pdf-organizer-alternative.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
   for (const path of htmlPaths) {
@@ -184,6 +190,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/redact-pdf.html')
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text.html')
   expect(llms).toContain('https://slaypdf.com/password-protect-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/free-adobe-pdf-editor-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/acrobat-online-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-pdf-merge-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-compress-pdf-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-fill-and-sign-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/adobe-pdf-organizer-alternative.html')
 
   const tools = await (await page.request.get('/tools.html')).text()
   expect(tools).toContain('"@type": "ItemList"')
@@ -216,6 +228,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/edit-scanned-pdf.html')
   expect(tools).toContain('/flatten-pdf.html')
   expect(tools).toContain('/printable-poster-pdf.html')
+  expect(tools).toContain('/free-adobe-pdf-editor-alternative.html')
+  expect(tools).toContain('/acrobat-online-alternative.html')
+  expect(tools).toContain('/adobe-pdf-merge-alternative.html')
+  expect(tools).toContain('/adobe-compress-pdf-alternative.html')
+  expect(tools).toContain('/adobe-fill-and-sign-alternative.html')
+  expect(tools).toContain('/adobe-pdf-organizer-alternative.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')

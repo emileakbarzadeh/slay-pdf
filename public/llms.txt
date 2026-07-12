@@ -49,6 +49,12 @@ Important URLs:
 - Add page numbers to PDF: https://slaypdf.com/add-page-numbers-to-pdf.html
 - Fill PDF forms: https://slaypdf.com/fill-pdf-forms.html
 - Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+- Free Adobe PDF editor alternative: https://slaypdf.com/free-adobe-pdf-editor-alternative.html
+- Acrobat Online alternative: https://slaypdf.com/acrobat-online-alternative.html
+- Adobe PDF merge alternative: https://slaypdf.com/adobe-pdf-merge-alternative.html
+- Adobe compress PDF alternative: https://slaypdf.com/adobe-compress-pdf-alternative.html
+- Adobe Fill and Sign alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
+- Adobe PDF organizer alternative: https://slaypdf.com/adobe-pdf-organizer-alternative.html
 - IndexNow URL list: https://slaypdf.com/indexnow-urls.txt
 - Plain page index: https://slaypdf.com/pages.txt
 - Structured page index: https://slaypdf.com/pages.json
