@@ -22,6 +22,16 @@ const pageMetadata = new Map()
 const htmlUrls = urls.filter((url) => url.endsWith('.html'))
 const titles = new Map()
 const descriptions = new Map()
+const requiredSocialTags = [
+  ['property', 'og:type', 'website'],
+  ['property', 'og:site_name', 'Slay PDF'],
+  ['property', 'og:image:type', 'image/png'],
+  ['property', 'og:image:width', '1200'],
+  ['property', 'og:image:height', '630'],
+  ['property', 'og:image:alt', 'Slay PDF local PDF editor preview'],
+  ['name', 'twitter:card', 'summary_large_image'],
+  ['name', 'twitter:image', 'https://slaypdf.com/og-image.png'],
+]
 for (const url of htmlUrls) {
   const file = basename(new URL(url).pathname)
   const html = await readPublic(file)
@@ -36,7 +46,11 @@ for (const url of htmlUrls) {
   assert(html.includes('property="og:title" content="'), `${file} is missing Open Graph title`)
   assert(html.includes('property="og:description" content="'), `${file} is missing Open Graph description`)
   assert(html.includes('property="og:image" content="https://slaypdf.com/og-image.png"'), `${file} is missing social preview image`)
-  assert(html.includes('name="twitter:card" content="summary_large_image"'), `${file} is missing Twitter card metadata`)
+  assert(html.includes('name="twitter:title" content="'), `${file} is missing Twitter title metadata`)
+  assert(html.includes('name="twitter:description" content="'), `${file} is missing Twitter description metadata`)
+  for (const [attribute, name, content] of requiredSocialTags) {
+    assert(html.includes(`${attribute}="${name}" content="${content}"`), `${file} is missing ${name} metadata`)
+  }
   assert(html.includes('aria-label="Breadcrumb"'), `${file} is missing visible breadcrumbs`)
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
   assert(!titles.has(title), `${file} title duplicates ${titles.get(title)}`)
