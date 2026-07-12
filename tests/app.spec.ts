@@ -77,14 +77,22 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute('content', '630')
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image')
 
-  const structuredData = await page.locator('script[type="application/ld+json"]').first().textContent()
-  expect(structuredData).not.toBeNull()
-  const app = JSON.parse(structuredData ?? '{}') as { '@type'?: string; name?: string; offers?: { price?: string }; featureList?: string[] }
-  expect(app['@type']).toBe('WebApplication')
-  expect(app.name).toBe('Slay PDF')
-  expect(app.offers?.price).toBe('0')
-  expect(app.featureList).toContain('Merge PDF files')
   const structuredGraphs = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) => scripts.map((script) => JSON.parse(script.textContent ?? '{}')))
+  const rootWebPage = structuredGraphs.find((block) => block['@type'] === 'WebPage') as {
+    '@id'?: string
+    url?: string
+    name?: string
+    isPartOf?: { '@id'?: string }
+  } | undefined
+  expect(rootWebPage?.['@id']).toBe('https://slaypdf.com/#webpage')
+  expect(rootWebPage?.url).toBe('https://slaypdf.com/')
+  expect(rootWebPage?.name).toBe('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
+  expect(rootWebPage?.isPartOf?.['@id']).toBe('https://slaypdf.com/#website')
+  const app = structuredGraphs.find((block) => block['@type'] === 'WebApplication') as { '@type'?: string; name?: string; offers?: { price?: string }; featureList?: string[] } | undefined
+  expect(app?.['@type']).toBe('WebApplication')
+  expect(app?.name).toBe('Slay PDF')
+  expect(app?.offers?.price).toBe('0')
+  expect(app?.featureList).toContain('Merge PDF files')
   expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
   expect(JSON.stringify(structuredGraphs)).toContain('Adobe Acrobat alternative')
 
@@ -171,6 +179,27 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('meta name="twitter:title"')
     expect(html).toContain('meta name="twitter:description"')
     expect(html).toContain('meta name="twitter:image" content="https://slaypdf.com/og-image.png"')
+    expect(html).toContain('type="application/ld+json" data-managed="webpage"')
+    const structuredData = [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
+      .map((match) => JSON.parse(match[1]))
+    const webpage = structuredData.find((block) => block['@type'] === 'WebPage')
+    expect(webpage).toMatchObject({
+      '@context': 'https://schema.org',
+      '@id': `https://slaypdf.com/${path}#webpage`,
+      url: `https://slaypdf.com/${path}`,
+      isPartOf: {
+        '@id': 'https://slaypdf.com/#website',
+      },
+      publisher: {
+        '@id': 'https://slaypdf.com/#organization',
+      },
+      primaryImageOfPage: {
+        url: 'https://slaypdf.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+      inLanguage: 'en',
+    })
     expect(html).toContain('<h1>')
     expect(html).toContain('"@type": "BreadcrumbList"')
     expect(html).toContain('aria-label="Breadcrumb"')

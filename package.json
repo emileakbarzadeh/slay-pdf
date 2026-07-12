@@ -69,6 +69,7 @@
     "test:e2e": "playwright test",
     "seo:index": "node scripts/generate-page-index.mjs",
     "seo:social": "node scripts/sync-static-social-meta.mjs",
+    "seo:schema": "node scripts/sync-static-webpage-schema.mjs",
     "seo:check": "node scripts/verify-seo.mjs",
     "seo:check:live": "node scripts/verify-seo.mjs --live",
     "check": "npm run seo:check && npm run test && npm run build",

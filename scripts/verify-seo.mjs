@@ -13,6 +13,38 @@ function assert(condition, message) {
   if (!condition) throw new Error(message)
 }
 
+function structuredDataBlocks(html, file) {
+  return [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
+    .map((match) => {
+      try {
+        return JSON.parse(match[1])
+      } catch (error) {
+        throw new Error(`${file} has invalid JSON-LD: ${error.message}`)
+      }
+    })
+}
+
+function assertWebPageSchema({ html, file, url, title, description, h1 }) {
+  assert(html.includes('type="application/ld+json" data-managed="webpage"'), `${file} is missing managed WebPage JSON-LD`)
+  const blocks = structuredDataBlocks(html, file)
+  const webpage = blocks.find((block) => block['@type'] === 'WebPage')
+  assert(webpage, `${file} is missing WebPage JSON-LD`)
+  assert(webpage['@context'] === 'https://schema.org', `${file} WebPage context is wrong`)
+  assert(webpage['@id'] === `${url}#webpage`, `${file} WebPage @id does not match canonical URL`)
+  assert(webpage.url === url, `${file} WebPage URL does not match canonical URL`)
+  assert(webpage.name === title, `${file} WebPage name does not match title`)
+  assert(webpage.headline === h1, `${file} WebPage headline does not match h1`)
+  assert(webpage.description === description, `${file} WebPage description does not match meta description`)
+  assert(webpage.isPartOf?.['@type'] === 'WebSite', `${file} WebPage isPartOf should be WebSite`)
+  assert(webpage.isPartOf?.['@id'] === `${site}/#website`, `${file} WebPage isPartOf @id is wrong`)
+  assert(webpage.publisher?.['@type'] === 'Organization', `${file} WebPage publisher should be Organization`)
+  assert(webpage.publisher?.['@id'] === `${site}/#organization`, `${file} WebPage publisher @id is wrong`)
+  assert(webpage.primaryImageOfPage?.url === `${site}/og-image.png`, `${file} WebPage image URL is wrong`)
+  assert(webpage.primaryImageOfPage?.width === 1200, `${file} WebPage image width is wrong`)
+  assert(webpage.primaryImageOfPage?.height === 630, `${file} WebPage image height is wrong`)
+  assert(webpage.inLanguage === 'en', `${file} WebPage language is wrong`)
+}
+
 const sitemap = await readPublic('sitemap.xml')
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
@@ -37,9 +69,10 @@ for (const url of htmlUrls) {
   const html = await readPublic(file)
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
   const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim()
+  const h1 = html.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim()
   assert(title && title.length >= 15 && title.length <= 70, `${file} title should be 15-70 characters`)
   assert(description && description.length >= 80 && description.length <= 180, `${file} description should be 80-180 characters`)
-  assert(html.match(/<h1>[^<]+<\/h1>/), `${file} is missing a visible h1`)
+  assert(h1, `${file} is missing a visible h1`)
   assert(html.includes(`rel="canonical" href="${url}"`), `${file} canonical does not match sitemap URL`)
   assert(html.includes('name="robots" content="index, follow, max-image-preview:large"'), `${file} is missing indexable robots meta`)
   assert(html.includes(`property="og:url" content="${url}"`), `${file} Open Graph URL does not match sitemap URL`)
@@ -53,19 +86,27 @@ for (const url of htmlUrls) {
   }
   assert(html.includes('aria-label="Breadcrumb"'), `${file} is missing visible breadcrumbs`)
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
+  assertWebPageSchema({ html, file, url, title, description, h1 })
   assert(!titles.has(title), `${file} title duplicates ${titles.get(title)}`)
   assert(!descriptions.has(description), `${file} description duplicates ${descriptions.get(description)}`)
   titles.set(title, file)
   descriptions.set(description, file)
-  pageMetadata.set(url, { title, description, h1: html.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim() })
+  pageMetadata.set(url, { title, description, h1 })
 }
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
-pageMetadata.set(`${site}/`, {
+const rootMetadata = {
   title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),
   description: rootHtml.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim(),
   h1: rootHtml.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim(),
+}
+assertWebPageSchema({
+  html: rootHtml,
+  file: 'index.html',
+  url: `${site}/`,
+  ...rootMetadata,
 })
+pageMetadata.set(`${site}/`, rootMetadata)
 
 const indexNow = JSON.parse(await readPublic('indexnow.json'))
 assert(indexNow.host === 'slaypdf.com', 'IndexNow host is wrong')
@@ -92,8 +133,7 @@ for (const [index, page] of pagesJson.pages.entries()) {
 }
 
 const toolsHtml = await readPublic('tools.html')
-const toolsStructuredData = [...toolsHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-  .map((match) => JSON.parse(match[1]))
+const toolsStructuredData = structuredDataBlocks(toolsHtml, 'tools.html')
 const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
 assert(itemList, 'tools.html is missing ItemList JSON-LD')
 const itemListUrls = itemList.itemListElement?.map((item) => item.url) ?? []
