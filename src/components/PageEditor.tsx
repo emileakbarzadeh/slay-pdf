@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Highlighter, Maximize2, MousePointer2, PenLine, RectangleHorizontal, Redo2, Save, Signature, Square, Trash2, Type, Undo2, X, ZoomIn, ZoomOut } from 'lucide-react'
-import { renderPage, uid } from '../lib/pdf'
+import { renderWorkspacePage, uid } from '../lib/pdf'
 import { useWorkspace } from '../store'
-import { isWorkspacePage, type PageOverlay, type Point, type SourceDocument, type WorkspacePage } from '../types'
+import { isWorkspacePage, isWorkspacePageResized, originalPageSize, type PageOverlay, type Point, type SourceDocument, type WorkspacePage } from '../types'
 
 type Tool = 'select' | 'text' | 'highlight' | 'rectangle' | 'redact' | 'ink' | 'signature'
 type ResizeHandle = 'nw' | 'ne' | 'sw' | 'se'
@@ -118,17 +118,19 @@ export function PageEditor({ page, source, onClose }: Props) {
   const renderScale = Math.min(6, Math.max(BASE_RENDER_SCALE, zoom * 2.8))
   const selectedOverlay = currentPage.overlays.find((overlay) => overlay.id === selectedOverlayId)
   const deleteOverlay = currentPage.overlays.find((overlay) => overlay.id === deleteOverlayId)
+  const resized = isWorkspacePageResized(currentPage)
+  const originalSize = originalPageSize(currentPage)
 
   useEffect(() => {
     let active = true
     setRendering(true)
-    void renderPage(source, page.sourcePageIndex, renderScale, EDITOR_RENDER_QUALITY).then((value) => {
+    void renderWorkspacePage(currentPage, source, renderScale, EDITOR_RENDER_QUALITY).then((value) => {
       if (active) setPreview(value)
     }).finally(() => {
       if (active) setRendering(false)
     })
     return () => { active = false }
-  }, [page.sourcePageIndex, renderScale, source])
+  }, [currentPage, renderScale, source])
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (textModal || deleteOverlayId) return
@@ -301,8 +303,9 @@ export function PageEditor({ page, source, onClose }: Props) {
     <div className="editor-backdrop" role="dialog" aria-modal="true" aria-label="Page editor">
       <header className="editor-header">
         <div className="editor-title">
-          <strong>Edit page</strong>
+          <strong>Edit page {resized && <span className="editor-resize-badge">Resized</span>}</strong>
           <span>{Math.round(currentPage.width)} x {Math.round(currentPage.height)} pt</span>
+          {resized && <small>Original {Math.round(originalSize.width)} x {Math.round(originalSize.height)} pt</small>}
         </div>
         <div className="editor-zoom-bar" role="toolbar" aria-label="Zoom controls">
           <button className="icon-button" type="button" onClick={() => changeZoom(-0.25)} disabled={zoom <= MIN_ZOOM} title="Zoom out"><ZoomOut size={18} /></button>

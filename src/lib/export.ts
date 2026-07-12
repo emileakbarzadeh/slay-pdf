@@ -33,13 +33,28 @@ function parseHex(value: string) {
   return rgb(parseInt(valid.slice(0, 2), 16) / 255, parseInt(valid.slice(2, 4), 16) / 255, parseInt(valid.slice(4, 6), 16) / 255)
 }
 
-function drawOverlay(page: ReturnType<PDFDocument['addPage']>, overlay: PageOverlay, font: Awaited<ReturnType<PDFDocument['embedFont']>>) {
+type PageBox = { x: number; y: number; width: number; height: number }
+
+export function fitIntoBox(sourceWidth: number, sourceHeight: number, targetWidth: number, targetHeight: number): PageBox {
+  const scale = Math.min(targetWidth / sourceWidth, targetHeight / sourceHeight)
+  const width = sourceWidth * scale
+  const height = sourceHeight * scale
+  return {
+    x: (targetWidth - width) / 2,
+    y: (targetHeight - height) / 2,
+    width,
+    height
+  }
+}
+
+function drawOverlay(page: ReturnType<PDFDocument['addPage']>, overlay: PageOverlay, font: Awaited<ReturnType<PDFDocument['embedFont']>>, box?: PageBox) {
   const width = page.getWidth()
   const height = page.getHeight()
-  const x = overlay.type === 'ink' ? 0 : overlay.x * width
-  const y = overlay.type === 'ink' ? 0 : height - ((overlay.y + overlay.height) * height)
-  const boxWidth = overlay.type === 'ink' ? 0 : overlay.width * width
-  const boxHeight = overlay.type === 'ink' ? 0 : overlay.height * height
+  const drawBox = box ?? { x: 0, y: 0, width, height }
+  const x = overlay.type === 'ink' ? 0 : drawBox.x + overlay.x * drawBox.width
+  const y = overlay.type === 'ink' ? 0 : drawBox.y + drawBox.height - ((overlay.y + overlay.height) * drawBox.height)
+  const boxWidth = overlay.type === 'ink' ? 0 : overlay.width * drawBox.width
+  const boxHeight = overlay.type === 'ink' ? 0 : overlay.height * drawBox.height
 
   if (overlay.type === 'text') {
     page.drawText(overlay.text, { x, y: y + Math.max(0, boxHeight - overlay.fontSize), size: overlay.fontSize, font, color: parseHex(overlay.color), maxWidth: boxWidth })
@@ -57,8 +72,8 @@ function drawOverlay(page: ReturnType<PDFDocument['addPage']>, overlay: PageOver
       const start = overlay.points[index - 1]
       const end = overlay.points[index]
       page.drawLine({
-        start: { x: start.x * width, y: height - start.y * height },
-        end: { x: end.x * width, y: height - end.y * height },
+        start: { x: drawBox.x + start.x * drawBox.width, y: drawBox.y + drawBox.height - start.y * drawBox.height },
+        end: { x: drawBox.x + end.x * drawBox.width, y: drawBox.y + drawBox.height - end.y * drawBox.height },
         thickness: overlay.lineWidth,
         color: parseHex(overlay.color),
         lineCap: 1
@@ -90,6 +105,10 @@ function applyFormValues(document: PDFDocument, source: SourceDocument, flatten:
       form.updateFieldAppearances()
     }
   }
+}
+
+function nearlyEqual(left: number, right: number) {
+  return Math.abs(left - right) < 0.5
 }
 
 async function addOcrTextLayer(blob: Blob, ocrPages: OcrPage[]) {
@@ -136,32 +155,49 @@ export async function buildPdf(
     const source = sources.find((candidate) => candidate.id === item.sourceId)
     if (!source) throw new Error('A source document is missing from local storage.')
     let page
+    let sourceDocument = sourceDocuments.get(source.id)
+    if (!sourceDocument) {
+      sourceDocument = await PDFDocument.load(await source.blob.arrayBuffer(), { ignoreEncryption: false })
+      applyFormValues(sourceDocument, source, settings.flattenForms)
+      sourceDocuments.set(source.id, sourceDocument)
+    }
+    const sourcePage = sourceDocument.getPage(item.sourcePageIndex)
+    const shouldReframe = !nearlyEqual(item.width, sourcePage.getWidth()) || !nearlyEqual(item.height, sourcePage.getHeight())
+    let contentBox: PageBox | undefined
 
     // Rasterizing pages with redactions removes the underlying text and image data.
     if (item.overlays.some((overlay) => overlay.type === 'redact')) {
       const imageBlob = await renderPageBlob(source, item.sourcePageIndex, 'image/png', 2)
       const image = await output.embedPng(await imageBlob.arrayBuffer())
       page = output.addPage([item.width, item.height])
-      page.drawImage(image, { x: 0, y: 0, width: item.width, height: item.height })
+      contentBox = fitIntoBox(image.width, image.height, item.width, item.height)
+      page.drawImage(image, contentBox)
+    } else if (shouldReframe) {
+      const sourceWidth = sourcePage.getWidth()
+      const sourceHeight = sourcePage.getHeight()
+      const croppedWidth = sourceWidth * (1 - item.crop.left - item.crop.right)
+      const croppedHeight = sourceHeight * (1 - item.crop.top - item.crop.bottom)
+      const embedded = await output.embedPage(sourcePage, {
+        left: item.crop.left * sourceWidth,
+        right: sourceWidth * (1 - item.crop.right),
+        bottom: item.crop.bottom * sourceHeight,
+        top: sourceHeight * (1 - item.crop.top)
+      })
+      page = output.addPage([item.width, item.height])
+      contentBox = fitIntoBox(croppedWidth, croppedHeight, item.width, item.height)
+      page.drawPage(embedded, contentBox)
     } else {
-      let sourceDocument = sourceDocuments.get(source.id)
-      if (!sourceDocument) {
-        sourceDocument = await PDFDocument.load(await source.blob.arrayBuffer(), { ignoreEncryption: false })
-        applyFormValues(sourceDocument, source, settings.flattenForms)
-        sourceDocuments.set(source.id, sourceDocument)
-      }
       const [copied] = await output.copyPages(sourceDocument, [item.sourcePageIndex])
       page = output.addPage(copied)
+      if (item.crop.left || item.crop.right || item.crop.top || item.crop.bottom) {
+        const width = page.getWidth()
+        const height = page.getHeight()
+        page.setCropBox(item.crop.left * width, item.crop.bottom * height, width * (1 - item.crop.left - item.crop.right), height * (1 - item.crop.top - item.crop.bottom))
+      }
     }
 
     page.setRotation(degrees((page.getRotation().angle + item.rotation) % 360))
-    if (item.crop.left || item.crop.right || item.crop.top || item.crop.bottom) {
-      const width = page.getWidth()
-      const height = page.getHeight()
-      page.setCropBox(item.crop.left * width, item.crop.bottom * height, width * (1 - item.crop.left - item.crop.right), height * (1 - item.crop.top - item.crop.bottom))
-    }
-
-    for (const overlay of item.overlays) drawOverlay(page, overlay, overlay.type === 'signature' ? signatureFont : font)
+    for (const overlay of item.overlays) drawOverlay(page, overlay, overlay.type === 'signature' ? signatureFont : font, contentBox)
     if (settings.watermark.trim()) {
       const size = Math.max(22, Math.min(54, page.getWidth() / 10))
       const textWidth = font.widthOfTextAtSize(settings.watermark, size)

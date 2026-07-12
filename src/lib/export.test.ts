@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { PDFDocument, rgb } from 'pdf-lib'
 import JSZip from 'jszip'
-import { buildPdf, ensurePdfFilename, exportSplit, exportText, pdfFilenameBase, splitPdfFilename, splitPdfGroups } from './export'
+import { buildPdf, ensurePdfFilename, exportSplit, exportText, fitIntoBox, pdfFilenameBase, splitPdfFilename, splitPdfGroups } from './export'
 import { defaultExportSettings, type SourceDocument, type WorkspacePage } from '../types'
 
 async function makeSource() {
@@ -60,6 +60,25 @@ describe('buildPdf', () => {
     expect(Math.round(crop.y)).toBe(40)
     expect(Math.round(crop.width)).toBe(398)
     expect(Math.round(crop.height)).toBe(673)
+  })
+
+  it('resizes pages to the workspace page size during export', async () => {
+    const { source, page } = await makeSource()
+    const output = await buildPdf([{ ...page, width: 612, height: 792 }], [source], defaultExportSettings)
+    const loaded = await PDFDocument.load(await output.arrayBuffer())
+    const exportedPage = loaded.getPage(0)
+
+    expect(Math.round(exportedPage.getWidth())).toBe(612)
+    expect(Math.round(exportedPage.getHeight())).toBe(792)
+  })
+
+  it('fits resized page content without stretching', () => {
+    const fit = fitIntoBox(612, 792, 792, 612)
+
+    expect(fit.x).toBeCloseTo(159.55)
+    expect(fit.y).toBe(0)
+    expect(fit.width).toBeCloseTo(472.91)
+    expect(fit.height).toBe(612)
   })
 
   it('exports text from the composed edited document', async () => {

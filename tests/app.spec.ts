@@ -3,13 +3,19 @@ import type { Download, Page } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { PDFDocument, rgb } from 'pdf-lib'
 
-async function samplePdf() {
+async function samplePdf(pageCount = 2) {
   const document = await PDFDocument.create()
-  const page = document.addPage([420, 594])
-  page.drawText('Local PDF test document', { x: 48, y: 520, size: 20, color: rgb(0, 0, 0) })
-  page.drawText('Page one', { x: 48, y: 486, size: 14, color: rgb(0.1, 0.1, 0.1) })
-  const second = document.addPage([420, 594])
-  second.drawText('Page two', { x: 48, y: 520, size: 18, color: rgb(0, 0, 0) })
+  for (let index = 0; index < pageCount; index += 1) {
+    const page = document.addPage([420, 594])
+    if (index === 0) {
+      page.drawRectangle({ x: 0, y: 297, width: 210, height: 297, color: rgb(0.95, 0.2, 0.32) })
+      page.drawRectangle({ x: 210, y: 297, width: 210, height: 297, color: rgb(0.15, 0.42, 0.72) })
+      page.drawRectangle({ x: 0, y: 0, width: 210, height: 297, color: rgb(0.16, 0.62, 0.38) })
+      page.drawRectangle({ x: 210, y: 0, width: 210, height: 297, color: rgb(0.97, 0.78, 0.2) })
+    }
+    page.drawText('Local PDF test document', { x: 48, y: 520, size: 20, color: rgb(0, 0, 0) })
+    page.drawText(`Page ${index + 1}`, { x: 48, y: 486, size: 14, color: rgb(0.1, 0.1, 0.1) })
+  }
   const bytes = await document.save()
   return Buffer.from(bytes)
 }
@@ -35,14 +41,51 @@ async function hideInspector(page: Page) {
   await page.getByTitle('Hide inspector').click()
 }
 
+async function waitForSavedPageCount(page: Page, count: number) {
+  await expect.poll(async () => page.evaluate(async () => new Promise<number>((resolve) => {
+    const open = indexedDB.open('local-pdf')
+    open.onerror = () => resolve(0)
+    open.onsuccess = () => {
+      const database = open.result
+      if (!database.objectStoreNames.contains('workspaces')) {
+        database.close()
+        resolve(0)
+        return
+      }
+      const transaction = database.transaction('workspaces', 'readonly')
+      const request = transaction.objectStore('workspaces').get('active')
+      request.onerror = () => resolve(0)
+      request.onsuccess = () => {
+        const workspace = request.result as { pages?: unknown[] } | undefined
+        database.close()
+        resolve(workspace?.pages?.length ?? 0)
+      }
+    }
+  }))).toBe(count)
+}
+
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   await page.goto('/')
   await page.getByRole('button', { name: 'About Local PDF' }).click()
   const about = page.getByRole('dialog', { name: 'About Local PDF' })
   await expect(about).toBeVisible()
-  await expect(about.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/emile/local-pdf')
+  await expect(about).toContainText('Local PDF is a completely local PDF editor to split, merge, posterise, sign or edit any PDF.')
+  await expect(about).toContainText('Super quick and no more random dodgy sites. Enterprise level security (since your data stays with you and is never sent over the internet)')
+  await expect(about).toContainText('Your documents and edits stay in this browser. Passwords are never saved.')
+  await expect(about.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/local-pdf')
+  await expect(about.getByText('License links')).toBeVisible()
+  await expect(about.getByRole('link', { name: 'Local PDF (AGPL-3.0)' })).toBeHidden()
+  await about.getByText('License links').click()
+  await expect(about.getByRole('link', { name: 'Local PDF (AGPL-3.0)' })).toHaveAttribute('href', 'https://github.com/emileakbarzadeh/local-pdf')
+  await expect(about.getByRole('link', { name: 'GhostPDL/Ghostscript WASM (AGPL-3.0-or-later)' })).toHaveAttribute('href', 'https://github.com/okathira/ghostpdl-wasm')
+  await expect(about.getByRole('link', { name: 'qpdf-wasm wrapper (ISC)' })).toHaveAttribute('href', 'https://github.com/neslinesli93/qpdf-wasm')
+  await expect(about.getByRole('link', { name: 'QPDF engine source' })).toHaveAttribute('href', 'https://github.com/qpdf/qpdf')
+  await expect(about.getByRole('link', { name: 'PDF.js (Apache-2.0)' })).toHaveAttribute('href', 'https://mozilla.github.io/pdf.js/')
+  await expect(about.getByRole('link', { name: 'pdf-lib (MIT)' })).toHaveAttribute('href', 'https://pdf-lib.js.org/')
+  await expect(about.getByRole('link', { name: 'Tesseract.js (Apache-2.0)' })).toHaveAttribute('href', 'https://github.com/naptha/tesseract.js')
   await about.getByRole('button', { name: 'Done' }).click()
   await expect(about).toBeHidden()
+  await expect(page.getByRole('navigation', { name: 'Workspace actions' }).getByRole('button', { name: 'Import' })).toHaveCount(0)
 
   await page.setInputFiles('input[type="file"]', {
     name: 'sample.pdf',
@@ -51,7 +94,12 @@ test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   })
 
   await expect(page.getByTestId('page-tile')).toHaveCount(2)
-  await expect(page.getByText('2 pages')).toBeVisible()
+  await page.locator('.page-preview img').first().waitFor()
+  await expect.poll(async () => page.locator('.page-preview img').first().evaluate((image) => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(290)
+  await expect(page.locator('.statusbar')).toContainText('2 pages')
+  await expect.poll(async () => (await page.locator('.statusbar').boundingBox())?.height ?? 0).toBeLessThanOrEqual(27)
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
+  await expect(page.locator('.toolstrip > button').first()).toHaveText('Deselect all (2)')
   if (await page.getByRole('button', { name: 'Expand export drawer' }).isVisible().catch(() => false)) {
     await expect(page.getByRole('button', { name: /^Export all pages$/i })).toBeHidden()
   }
@@ -64,6 +112,12 @@ test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   await expect(page.getByRole('button', { name: /^Export selected pages$/i })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Other downloads' })).toBeVisible()
   await expect(page.getByRole('button', { name: /^Separate pages$/i })).toBeVisible()
+  await expect(page.getByRole('button', { name: /^Page images$/i })).toBeVisible()
+  await expect(page.getByRole('button', { name: /^Plain text$/i })).toBeVisible()
+  await page.getByLabel('File name').fill('renamed.pdf')
+  await expect(page.getByLabel('File name')).toHaveValue('renamed')
+  await page.getByLabel('File name').fill('sample')
+  await waitForSavedPageCount(page, 2)
 
   const headerDownload = page.waitForEvent('download')
   await page.getByTitle('Download all pages').click()
@@ -80,6 +134,7 @@ test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   await page.getByRole('button', { name: /^Export selected pages$/i }).click()
   const exported = await download
   expect(exported.suggestedFilename()).toBe('sample.pdf')
+  await waitForSavedPageCount(page, 2)
 
   await page.reload()
   const recents = page.getByRole('dialog', { name: 'Recent PDFs' })
@@ -109,17 +164,18 @@ test('deselects blank grid clicks and does not import internal thumbnail drags',
 
   await expect(page.getByTestId('page-tile')).toHaveCount(2)
   await hideInspector(page)
-  await expect(page.getByRole('button', { name: 'Deselect all' })).toBeVisible()
-  await page.getByRole('button', { name: 'Deselect all' }).click()
-  await expect(page.locator('.toolstrip > span')).toHaveText('2 pages')
+  await expect(page.getByRole('button', { name: 'Deselect all (2)' })).toBeVisible()
+  await page.getByRole('button', { name: 'Deselect all (2)' }).click()
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
   await expect(page.getByRole('button', { name: 'Select all' })).toBeVisible()
   await page.getByRole('button', { name: 'Select all' }).click()
-  await expect(page.locator('.toolstrip > span')).toHaveText('2 selected')
-  await expect(page.getByRole('button', { name: 'Deselect all' })).toBeVisible()
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
+  await expect(page.getByRole('button', { name: 'Deselect all (2)' })).toBeVisible()
   await page.getByLabel('Select page 1').click()
-  await expect(page.locator('.toolstrip > span')).toHaveText('1 selected')
+  await expect(page.getByRole('button', { name: 'Select all (1)' })).toBeVisible()
   await page.locator('.page-grid').click({ position: { x: 5, y: 5 } })
-  await expect(page.locator('.toolstrip > span')).toHaveText('2 pages')
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
+  await expect(page.getByRole('button', { name: 'Select all' })).toBeVisible()
 
   const preview = page.getByLabel('Select page 1')
   const box = await preview.boundingBox()
@@ -130,6 +186,59 @@ test('deselects blank grid clicks and does not import internal thumbnail drags',
   await page.mouse.move(box.x + box.width + 240, box.y + box.height / 2, { steps: 8 })
   await page.mouse.up()
   await expect(page.getByTestId('page-tile')).toHaveCount(2)
+})
+
+test('supports range selection and workspace keyboard shortcuts', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'mobile', 'Keyboard shortcut coverage is desktop-only')
+  await page.goto('/')
+  await page.setInputFiles('input[type="file"]', {
+    name: 'sample.pdf',
+    mimeType: 'application/pdf',
+    buffer: await samplePdf(4)
+  })
+
+  await expect(page.getByTestId('page-tile')).toHaveCount(4)
+  await hideInspector(page)
+  await page.getByRole('button', { name: 'Deselect all (4)' }).click()
+  await page.getByLabel('Select page 1').click()
+  await page.getByLabel('Select page 3').click({ modifiers: ['Shift'] })
+  await expect(page.getByRole('button', { name: 'Select all (3)' })).toBeVisible()
+  await expect(page.getByLabel('Select page 1')).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByLabel('Select page 2')).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByLabel('Select page 3')).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByLabel('Select page 4')).toHaveAttribute('aria-pressed', 'false')
+
+  await page.keyboard.down('Meta')
+  await expect(page.getByLabel('Keyboard shortcuts')).toBeVisible()
+  await expect(page.getByLabel('Keyboard shortcuts')).toContainText('Cmd A')
+  await page.keyboard.up('Meta')
+  await expect(page.getByLabel('Keyboard shortcuts')).toBeHidden()
+
+  await page.keyboard.press('Meta+Shift+A')
+  await expect(page.getByRole('button', { name: 'Select all' })).toBeVisible()
+  await page.keyboard.press('Meta+A')
+  await expect(page.getByRole('button', { name: 'Deselect all (4)' })).toBeVisible()
+  await page.keyboard.press('Meta+Shift+A')
+  await page.getByLabel('Select page 2').click()
+  await page.keyboard.press(']')
+  await expect(page.getByText('90°')).toBeVisible()
+  await page.keyboard.press('Meta+Z')
+  await expect(page.getByText('90°')).toBeHidden()
+  await page.keyboard.press('Meta+Shift+Z')
+  await expect(page.getByText('90°')).toBeVisible()
+  await page.getByLabel('Select page 2').click()
+  await page.keyboard.press('BracketLeft')
+  await expect(page.getByText('90°')).toBeHidden()
+  await page.keyboard.press('Escape')
+  await expect(page.getByRole('button', { name: 'Select all' })).toBeVisible()
+  await page.getByLabel('Select page 2').click()
+  await page.keyboard.press('Meta+D')
+  await expect(page.getByTestId('page-tile')).toHaveCount(5)
+  const shortcutDownload = page.waitForEvent('download')
+  await page.keyboard.press('Meta+S')
+  expect((await shortcutDownload).suggestedFilename()).toBe('sample.pdf')
+  await page.keyboard.press('Delete')
+  await expect(page.getByTestId('page-tile')).toHaveCount(4)
 })
 
 test('opens page edit options from the right click menu', async ({ page }, testInfo) => {
@@ -152,7 +261,8 @@ test('opens page edit options from the right click menu', async ({ page }, testI
   await expect(menu.getByRole('menuitem', { name: 'Rotate right' })).toBeVisible()
   await expect(menu.getByRole('menuitem', { name: 'Duplicate' })).toBeVisible()
   await expect(menu.getByRole('menuitem', { name: 'Delete' })).toBeVisible()
-  await expect(page.locator('.toolstrip > span')).toHaveText('1 selected')
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
+  await expect(page.getByRole('button', { name: 'Select all (1)' })).toBeVisible()
 
   await menu.getByRole('menuitem', { name: 'Rotate right' }).click()
   await expect(page.getByText('90°')).toBeVisible()
@@ -243,6 +353,143 @@ test('edits can be selected, moved, resized, and deleted with app modals', async
   expect(browserDialogs).toBe(0)
 })
 
+test('keeps the add pages hover menu open while moving into it', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'mobile', 'Hover menu coverage is desktop-only')
+  await page.goto('/')
+  await page.setInputFiles('input[type="file"]', {
+    name: 'sample.pdf',
+    mimeType: 'application/pdf',
+    buffer: await samplePdf()
+  })
+
+  await expect(page.getByTestId('page-tile')).toHaveCount(2)
+  const toggle = page.getByRole('button', { name: 'Add…' })
+  await toggle.hover()
+  const toggleBox = await toggle.boundingBox()
+  const menu = page.locator('.add-pages-menu')
+  await expect(menu).toBeVisible()
+  const menuBox = await menu.boundingBox()
+  expect(toggleBox).not.toBeNull()
+  expect(menuBox).not.toBeNull()
+  if (!toggleBox || !menuBox) return
+
+  await page.mouse.move(toggleBox.x + toggleBox.width / 2, toggleBox.y + 2)
+  await page.mouse.move(menuBox.x + menuBox.width / 2, menuBox.y + menuBox.height - 2, { steps: 8 })
+  await expect(page.getByRole('menuitem', { name: 'Split PDF marker' })).toBeVisible()
+})
+
+test('resizes and posterises selected pages from the tools dropdown', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'mobile', 'Toolbar menu coverage is desktop-only')
+  await page.goto('/')
+  await page.setInputFiles('input[type="file"]', {
+    name: 'sample.pdf',
+    mimeType: 'application/pdf',
+    buffer: await samplePdf(1)
+  })
+
+  await expect(page.getByTestId('page-tile')).toHaveCount(1)
+  await hideInspector(page)
+  await page.getByRole('button', { name: /Tools/ }).click()
+  await page.getByRole('menuitem', { name: 'Resize selected pages' }).click()
+  const resizeDialog = page.getByRole('dialog', { name: 'Resize selected pages' })
+  await expect(resizeDialog).toBeVisible()
+  await resizeDialog.getByLabel('Paper size').selectOption('letter')
+  await resizeDialog.getByLabel('Orientation').selectOption('landscape')
+  await resizeDialog.getByRole('button', { name: 'Resize', exact: true }).click()
+  await expect(resizeDialog).toBeHidden()
+
+  const resizedDownload = page.waitForEvent('download')
+  await page.getByTitle('Download all pages').click()
+  const resizedPath = await (await resizedDownload).path()
+  expect(resizedPath).not.toBeNull()
+  if (!resizedPath) return
+  const resizedPdf = await PDFDocument.load(await readFile(resizedPath))
+  expect(Math.round(resizedPdf.getPage(0).getWidth())).toBe(792)
+  expect(Math.round(resizedPdf.getPage(0).getHeight())).toBe(612)
+  await expect(page.getByTitle('Page has been resized')).toBeVisible()
+  await page.locator('.page-number').first().click()
+  const editor = page.getByRole('dialog', { name: 'Page editor' })
+  await expect(editor.locator('.editor-title')).toContainText('Resized')
+  await expect(editor.locator('.editor-title')).toContainText('Original 420 x 594 pt')
+  await editor.getByTitle('Close').click()
+  await expect(editor).toBeHidden()
+
+  await page.getByRole('button', { name: /Tools/ }).click()
+  await page.getByRole('menuitem', { name: 'Posterise selected pages' }).click()
+  const posterDialog = page.getByRole('dialog', { name: 'Posterise selected pages' })
+  await expect(posterDialog).toBeVisible()
+  await expect(posterDialog.getByLabel('Orientation')).toHaveValue('landscape')
+  await posterDialog.getByRole('button', { name: 'Cancel' }).click()
+  await expect(posterDialog).toBeHidden()
+
+  await page.getByRole('button', { name: /Tools/ }).click()
+  await page.getByRole('menuitem', { name: 'Resize selected pages' }).click()
+  await resizeDialog.getByLabel('Paper size').selectOption('custom')
+  await resizeDialog.getByLabel('Width (mm)').fill('100')
+  await resizeDialog.getByLabel('Height (mm)').fill('150')
+  await expect(resizeDialog).toContainText('100 x 150 mm')
+  await resizeDialog.getByRole('button', { name: 'Resize', exact: true }).click()
+
+  const customDownload = page.waitForEvent('download')
+  await page.getByTitle('Download all pages').click()
+  const customPath = await (await customDownload).path()
+  expect(customPath).not.toBeNull()
+  if (!customPath) return
+  const customPdf = await PDFDocument.load(await readFile(customPath))
+  expect(Math.round(customPdf.getPage(0).getWidth())).toBe(283)
+  expect(Math.round(customPdf.getPage(0).getHeight())).toBe(425)
+
+  await page.getByRole('button', { name: /Tools/ }).click()
+  await page.getByRole('menuitem', { name: 'Posterise selected pages' }).click()
+  await expect(posterDialog).toBeVisible()
+  await expect(posterDialog.getByLabel('Orientation')).toHaveValue('portrait')
+  await posterDialog.getByLabel('Columns').fill('2')
+  await posterDialog.getByLabel('Rows').fill('2')
+  await posterDialog.getByLabel('Paper size').selectOption('a4')
+  await posterDialog.getByRole('button', { name: 'Posterise', exact: true }).click()
+  await expect(page.getByTestId('page-tile')).toHaveCount(4)
+  await expect(page.getByRole('button', { name: 'Deselect all (4)' })).toBeVisible()
+  await expect(page.locator('.page-preview img')).toHaveCount(4)
+  const posterPreviewSources = await page.locator('.page-preview img').evaluateAll((images) => images.map((image) => (image as HTMLImageElement).src))
+  expect(new Set(posterPreviewSources).size).toBeGreaterThan(1)
+
+  const posterDownload = page.waitForEvent('download')
+  await page.getByTitle('Download all pages').click()
+  const posterPath = await (await posterDownload).path()
+  expect(posterPath).not.toBeNull()
+  if (!posterPath) return
+  const posterPdf = await PDFDocument.load(await readFile(posterPath))
+  expect(posterPdf.getPageCount()).toBe(4)
+  expect(Math.round(posterPdf.getPage(0).getWidth())).toBe(595)
+  expect(Math.round(posterPdf.getPage(0).getHeight())).toBe(842)
+})
+
+test('keeps the tools hover menu open while moving into it', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'mobile', 'Hover menu coverage is desktop-only')
+  await page.goto('/')
+  await page.setInputFiles('input[type="file"]', {
+    name: 'sample.pdf',
+    mimeType: 'application/pdf',
+    buffer: await samplePdf()
+  })
+
+  await expect(page.getByTestId('page-tile')).toHaveCount(2)
+  await hideInspector(page)
+  const toggle = page.getByRole('button', { name: /Tools/ })
+  await toggle.hover()
+  const toggleBox = await toggle.boundingBox()
+  const menu = page.locator('.tools-menu')
+  await expect(menu).toBeVisible()
+  const menuBox = await menu.boundingBox()
+  expect(toggleBox).not.toBeNull()
+  expect(menuBox).not.toBeNull()
+  if (!toggleBox || !menuBox) return
+
+  await page.mouse.move(toggleBox.x + toggleBox.width / 2, toggleBox.y + toggleBox.height - 2)
+  await page.mouse.move(menuBox.x + menuBox.width / 2, menuBox.y + 2, { steps: 8 })
+  await expect(page.getByRole('menuitem', { name: 'Resize selected pages' })).toBeVisible()
+})
+
 test('adds a split PDF marker from the add dropdown', async ({ page }) => {
   await page.goto('/')
   await page.setInputFiles('input[type="file"]', {
@@ -256,7 +503,7 @@ test('adds a split PDF marker from the add dropdown', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Split PDF marker' }).click()
   await expect(page.getByTestId('split-marker')).toHaveCount(1)
   await expect(page.getByTestId('split-marker').getByText('New PDF')).toBeVisible()
-  await expect(page.getByText('2 pages')).toBeVisible()
+  await expect(page.locator('.toolstrip')).not.toContainText('2 pages')
 
   const firstPage = await page.getByTestId('page-tile').first().boundingBox()
   const marker = await page.getByTestId('split-marker').boundingBox()

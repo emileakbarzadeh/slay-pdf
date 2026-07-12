@@ -1,7 +1,7 @@
 import { PDFCheckBox, PDFDocument, PDFDropdown, PDFOptionList, PDFRadioGroup, PDFTextField } from 'pdf-lib'
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs'
 import workerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url'
-import type { FormField, SourceDocument, WorkspacePage } from '../types'
+import type { CropBox, FormField, SourceDocument, WorkspacePage } from '../types'
 import { decryptPdf } from './processing'
 
 pdfjs.GlobalWorkerOptions.workerSrc = import.meta.env.MODE === 'test'
@@ -94,6 +94,8 @@ export async function importFile(file: File): Promise<ImportedDocument> {
       sourcePageIndex: index,
       width: viewport.width,
       height: viewport.height,
+      originalWidth: viewport.width,
+      originalHeight: viewport.height,
       rotation: 0,
       crop: { top: 0, right: 0, bottom: 0, left: 0 },
       overlays: []
@@ -108,7 +110,13 @@ export async function importFile(file: File): Promise<ImportedDocument> {
   }
 }
 
-export async function renderPage(source: SourceDocument, pageIndex: number, scale = 0.35, quality = 0.82) {
+type RenderedPage = {
+  dataUrl: string
+  width: number
+  height: number
+}
+
+async function renderSourcePage(source: SourceDocument, pageIndex: number, scale = 0.35, quality = 0.82): Promise<RenderedPage> {
   const bytes = new Uint8Array(await source.blob.arrayBuffer())
   const pdfDocument = await pdfjs.getDocument({ data: bytes }).promise
   const page = await pdfDocument.getPage(pageIndex + 1)
@@ -121,7 +129,42 @@ export async function renderPage(source: SourceDocument, pageIndex: number, scal
   const dataUrl = canvas.toDataURL('image/jpeg', quality)
   page.cleanup()
   await pdfDocument.destroy()
-  return dataUrl
+  return { dataUrl, width: canvas.width, height: canvas.height }
+}
+
+function hasCrop(crop: CropBox) {
+  return Boolean(crop.left || crop.right || crop.top || crop.bottom)
+}
+
+export async function renderPage(source: SourceDocument, pageIndex: number, scale = 0.35, quality = 0.82) {
+  return (await renderSourcePage(source, pageIndex, scale, quality)).dataUrl
+}
+
+export async function renderWorkspacePage(page: WorkspacePage, source: SourceDocument, scale = 0.35, quality = 0.82) {
+  const rendered = await renderSourcePage(source, page.sourcePageIndex, scale, quality)
+  const targetWidth = Math.max(1, Math.ceil(page.width * scale))
+  const targetHeight = Math.max(1, Math.ceil(page.height * scale))
+  const shouldCompose = hasCrop(page.crop) || Math.abs(targetWidth - rendered.width) > 1 || Math.abs(targetHeight - rendered.height) > 1
+  if (!shouldCompose) return rendered.dataUrl
+
+  const image = new Image()
+  image.src = rendered.dataUrl
+  await image.decode()
+  const canvas = window.document.createElement('canvas')
+  canvas.width = targetWidth
+  canvas.height = targetHeight
+  const context = canvas.getContext('2d', { alpha: false })!
+  context.fillStyle = '#ffffff'
+  context.fillRect(0, 0, targetWidth, targetHeight)
+  const sourceX = page.crop.left * rendered.width
+  const sourceY = page.crop.top * rendered.height
+  const sourceWidth = rendered.width * (1 - page.crop.left - page.crop.right)
+  const sourceHeight = rendered.height * (1 - page.crop.top - page.crop.bottom)
+  const fitScale = Math.min(targetWidth / sourceWidth, targetHeight / sourceHeight)
+  const drawWidth = sourceWidth * fitScale
+  const drawHeight = sourceHeight * fitScale
+  context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, (targetWidth - drawWidth) / 2, (targetHeight - drawHeight) / 2, drawWidth, drawHeight)
+  return canvas.toDataURL('image/jpeg', quality)
 }
 
 export async function extractText(source: SourceDocument, pageIndexes?: number[]) {

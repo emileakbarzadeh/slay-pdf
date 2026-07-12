@@ -34,6 +34,8 @@ export type WorkspacePage = {
   sourcePageIndex: number
   width: number
   height: number
+  originalWidth?: number
+  originalHeight?: number
   rotation: 0 | 90 | 180 | 270
   crop: CropBox
   overlays: PageOverlay[]
@@ -48,6 +50,15 @@ export type WorkspaceItem = WorkspacePage | WorkspaceSplitMarker
 
 export function isWorkspacePage(item: WorkspaceItem): item is WorkspacePage {
   return item.kind !== 'split'
+}
+
+export function originalPageSize(page: WorkspacePage) {
+  return { width: page.originalWidth ?? page.width, height: page.originalHeight ?? page.height }
+}
+
+export function isWorkspacePageResized(page: WorkspacePage) {
+  const original = originalPageSize(page)
+  return Math.abs(page.width - original.width) >= 0.5 || Math.abs(page.height - original.height) >= 0.5
 }
 
 export type DocumentMetadata = {

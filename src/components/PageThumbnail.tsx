@@ -1,19 +1,22 @@
 import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { GripVertical, MessageSquareText, PencilLine, RotateCw } from 'lucide-react'
-import { renderPage } from '../lib/pdf'
-import type { SourceDocument, WorkspacePage } from '../types'
+import { GripVertical, Maximize2, MessageSquareText, PencilLine, RotateCw } from 'lucide-react'
+import { renderWorkspacePage } from '../lib/pdf'
+import { isWorkspacePageResized, type SourceDocument, type WorkspacePage } from '../types'
 
 type Props = {
   page: WorkspacePage
   source?: SourceDocument
   number: number
   selected: boolean
-  onSelect: (additive: boolean) => void
+  onSelect: (event: MouseEvent<HTMLButtonElement>) => void
   onOpen: () => void
   onContextMenu: (event: MouseEvent) => void
 }
+
+const THUMBNAIL_RENDER_SCALE = 0.72
+const THUMBNAIL_RENDER_QUALITY = 0.9
 
 export function PageThumbnail({ page, source, number, selected, onSelect, onOpen, onContextMenu }: Props) {
   const [preview, setPreview] = useState<string>()
@@ -21,6 +24,7 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
   const root = useRef<HTMLDivElement>(null)
   const sortable = useSortable({ id: page.id })
   const style = { transform: CSS.Transform.toString(sortable.transform), transition: sortable.transition }
+  const resized = isWorkspacePageResized(page)
 
   useEffect(() => {
     if (!root.current) return
@@ -32,10 +36,10 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
   useEffect(() => {
     let active = true
     if (visible && source && !preview) {
-      void renderPage(source, page.sourcePageIndex).then((value) => active && setPreview(value)).catch(() => undefined)
+      void renderWorkspacePage(page, source, THUMBNAIL_RENDER_SCALE, THUMBNAIL_RENDER_QUALITY).then((value) => active && setPreview(value)).catch(() => undefined)
     }
     return () => { active = false }
-  }, [page.sourcePageIndex, preview, source, visible])
+  }, [page, preview, source, visible])
 
   return (
     <div
@@ -50,7 +54,7 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
       <button
         className="page-preview"
         type="button"
-        onClick={(event) => onSelect(event.metaKey || event.ctrlKey || event.shiftKey)}
+        onClick={onSelect}
         onDoubleClick={onOpen}
         aria-label={`Select page ${number}`}
         aria-pressed={selected}
@@ -58,6 +62,7 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
       >
         {preview ? <img src={preview} alt="" draggable={false} style={{ transform: `rotate(${page.rotation}deg)` }} /> : <span className="page-skeleton" />}
         {page.overlays.length > 0 && <span className="edit-badge" title="Page has edits"><MessageSquareText size={13} /> {page.overlays.length}</span>}
+        {resized && <span className="resize-badge" title="Page has been resized"><Maximize2 size={12} /> Resized</span>}
         {page.rotation !== 0 && <span className="rotation-badge"><RotateCw size={12} /> {page.rotation}°</span>}
       </button>
       <button

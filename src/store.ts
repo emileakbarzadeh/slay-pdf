@@ -19,12 +19,15 @@ type WorkspaceState = {
   hydrate: () => Promise<void>
   importFiles: (files: File[]) => Promise<void>
   select: (id: string, additive?: boolean) => void
+  selectMany: (ids: string[]) => void
   selectAll: () => void
   selectNone: () => void
   reorder: (activeId: string, overId: string) => void
   rotate: (degrees: 90 | -90) => void
   remove: () => void
   duplicate: () => void
+  resizeSelected: (width: number, height: number) => void
+  posterizeSelected: (columns: number, rows: number, width: number, height: number) => void
   addSplitMarker: () => void
   removeSplitMarker: (id: string) => void
   updatePage: (id: string, changes: Partial<WorkspacePage>) => void
@@ -122,6 +125,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
     if (!additive) return { selected: [id] }
     return { selected: state.selected.includes(id) ? state.selected.filter((value) => value !== id) : [...state.selected, id] }
   }),
+  selectMany: (ids) => set({ selected: ids }),
   selectAll: () => set((state) => ({ selected: state.pages.filter(isWorkspacePage).map((page) => page.id) })),
   selectNone: () => set({ selected: [] }),
 
@@ -159,6 +163,56 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
     const selected = new Set(state.selected)
     const pages = state.pages.flatMap((page) => isWorkspacePage(page) && selected.has(page.id) ? [page, { ...structuredClone(page), id: uid('page') }] : [page])
     set(withHistory(state, pages))
+    scheduleSave()
+  },
+
+  resizeSelected: (width, height) => {
+    const state = get()
+    const selected = new Set(state.selected)
+    const pages = state.pages.map((page) => isWorkspacePage(page) && selected.has(page.id)
+      ? { ...page, originalWidth: page.originalWidth ?? page.width, originalHeight: page.originalHeight ?? page.height, width, height }
+      : page)
+    set(withHistory(state, pages))
+    scheduleSave()
+  },
+
+  posterizeSelected: (columns, rows, width, height) => {
+    const state = get()
+    const selected = new Set(state.selected)
+    const nextSelected: string[] = []
+    const pages = state.pages.flatMap((page) => {
+      if (!isWorkspacePage(page) || !selected.has(page.id)) return [page]
+      const visibleLeft = page.crop.left
+      const visibleRight = 1 - page.crop.right
+      const visibleTop = 1 - page.crop.top
+      const visibleBottom = page.crop.bottom
+      const tileWidth = (visibleRight - visibleLeft) / columns
+      const tileHeight = (visibleTop - visibleBottom) / rows
+      return Array.from({ length: rows * columns }, (_, index) => {
+        const row = Math.floor(index / columns)
+        const column = index % columns
+        const left = visibleLeft + column * tileWidth
+        const right = left + tileWidth
+        const top = visibleTop - row * tileHeight
+        const bottom = top - tileHeight
+        const id = uid('page')
+        nextSelected.push(id)
+        return {
+          ...structuredClone(page),
+          id,
+          width,
+          height,
+          crop: {
+            left,
+            right: 1 - right,
+            top: 1 - top,
+            bottom
+          },
+          overlays: []
+        }
+      })
+    })
+    set({ ...withHistory(state, pages), selected: nextSelected })
     scheduleSave()
   },
 

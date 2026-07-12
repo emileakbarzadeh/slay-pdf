@@ -1,42 +1,93 @@
 # Local PDF
 
-Local PDF is a static, installable browser app for common PDF chores. It keeps files on the device and uses WebAssembly-backed engines for heavier processing.
+> [!WARNING]
+> This project is entirely slopped. Enter at your own risk (that being said, it is entirely client side so hopefully has no vulnerabilities)
 
-## Features
+Local PDF is a static, installable browser app for everyday PDF editing. It keeps documents on your device, stores the active workspace in IndexedDB, and uses browser-side WebAssembly engines for heavier PDF operations.
 
-- Import PDFs and PNG/JPEG/WebP images.
-- Merge, split, reorder, duplicate, delete, rotate, crop, and export selected pages.
+## What It Does
+
+- Import PDFs plus PNG, JPEG, and WebP images.
+- Merge, split, reorder, duplicate, delete, rotate, crop, resize, and posterise pages.
 - Add text, highlights, rectangles, ink, visual signatures, watermarks, page numbers, metadata, and secure redactions.
-- Export merged PDFs, split PDFs, page images, plain text, and searchable English OCR PDFs.
 - Fill imported AcroForm text, checkbox, dropdown/list, and radio fields, with optional flattening on export.
-- Compress with Ghostscript presets, optimize with qpdf, and optionally encrypt exports with AES-256 passwords.
-- Autosave the active workspace in IndexedDB and run as a PWA after the first load.
+- Export merged PDFs, selected pages, separate pages, page images, plain text, and searchable English OCR PDFs.
+- Compress with GhostPDL/Ghostscript, optimize with qpdf, and optionally encrypt exports with AES-256 passwords.
+- Continue recent local workspaces after refresh or install the app as a PWA.
 
-## Local Development
+## Privacy Model
 
-Use Nix for the toolchain:
+Local PDF is designed to run as a static site. PDF contents are processed in the browser and are not uploaded to an application server.
+
+The practical limits are still the user's browser, memory, CPU, and storage quota. Imports are capped at 200 MB per file, and OCR currently bundles English language data only.
+
+## Development Shell
+
+This repo ships a Nix flake with a default development shell for the project. It provides:
+
+- Node.js 24 and npm.
+- Git and `jq` for local project work.
+- `nixpkgs-fmt` as the flake formatter.
+- A local Playwright browser cache at `.cache/ms-playwright`.
+
+Enter the shell:
 
 ```sh
-nix develop --command npm install
+nix develop
+```
+
+Or run commands without entering an interactive shell:
+
+```sh
+nix develop --command npm ci
 nix develop --command npm run dev -- --host 127.0.0.1
 ```
 
-Run checks:
+For first-time Playwright setup, install the Chromium browser bundle into the project-local cache:
 
 ```sh
-nix develop --command npm run test
-nix develop --command npm run build
+nix develop --command npx playwright install chromium
+```
+
+## Common Commands
+
+Install dependencies:
+
+```sh
+nix develop --command npm ci
+```
+
+Start the dev server:
+
+```sh
+nix develop --command npm run dev -- --host 127.0.0.1
+```
+
+Run unit tests and the production build:
+
+```sh
+nix develop --command npm run check
+```
+
+Run the Playwright regression suite:
+
+```sh
 nix develop --command npm run test:e2e
 ```
 
-The app is designed for GitHub Pages. The workflow in `.github/workflows/deploy.yml` builds the static bundle from Nix with `npm run build`.
+Check the flake output shape and formatter:
 
-## Privacy And Limits
+```sh
+nix flake check
+nix fmt
+```
 
-PDF contents are processed in the browser. The app does not upload documents to a server. Browser storage, memory, and CPU are still the limiting factors, so imports are capped at 200 MB per file.
+## Deployment
 
-OCR currently bundles English language data. Adding more languages means adding their traineddata package and extending the OCR language controls.
+The app builds to static files in `dist/` and is designed for GitHub Pages. The workflow in `.github/workflows/deploy.yml` installs Nix, runs `npm ci` inside the dev shell, builds with `npm run build`, and uploads the static bundle.
 
 ## License
 
-AGPL-3.0-only. Ghostscript is AGPL, so the app is licensed under AGPL as a whole.
+Local PDF is licensed under AGPL-3.0-only.
+
+The app also uses AGPL-licensed GhostPDL/Ghostscript through `@okathira/ghostpdl-wasm`, so the project is licensed under AGPL as a whole. The About modal links to the app source and the major third-party PDF/OCR engines used at runtime.

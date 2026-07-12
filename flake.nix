@@ -1,22 +1,44 @@
 {
-  description = "Local PDF browser development environment";
+  description = "Development shell for Local PDF";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }:
+  outputs = { nixpkgs, ... }:
     let
-      systems = [ "aarch64-darwin" "x86_64-darwin" "x86_64-linux" "aarch64-linux" ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in {
+      supportedSystems = [
+        "aarch64-darwin"
+        "x86_64-darwin"
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+      pkgsFor = system: import nixpkgs { inherit system; };
+    in
+    {
       devShells = forAllSystems (system:
-        let pkgs = import nixpkgs { inherit system; };
-        in {
-          default = pkgs.mkShell {
-            packages = with pkgs; [ nodejs_24 git ];
+        let
+          pkgs = pkgsFor system;
+        in
+        {
+          default = pkgs.mkShellNoCC {
+            name = "local-pdf";
+
+            packages = with pkgs; [
+              git
+              jq
+              nixpkgs-fmt
+              nodejs_24
+            ];
+
             shellHook = ''
               export PLAYWRIGHT_BROWSERS_PATH="$PWD/.cache/ms-playwright"
+              export npm_config_update_notifier=false
+
+              echo "local-pdf dev shell: node $(node --version), npm $(npm --version)"
             '';
           };
         });
+
+      formatter = forAllSystems (system: (pkgsFor system).nixpkgs-fmt);
     };
 }
