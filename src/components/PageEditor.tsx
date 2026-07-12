@@ -90,7 +90,7 @@ export function PageEditor({ page, source, onClose }: Props) {
   const [rendering, setRendering] = useState(false)
   const [tool, setTool] = useState<Tool>('select')
   const [zoom, setZoom] = useState(1)
-  const [color, setColor] = useState('#1b5d78')
+  const [color, setColor] = useState('#EF476F')
   const [textSize, setTextSize] = useState(16)
   const [lineWidth, setLineWidth] = useState(2.5)
   const [highlightOpacity, setHighlightOpacity] = useState(0.42)
@@ -239,10 +239,10 @@ export function PageEditor({ page, source, onClose }: Props) {
   const fitPage = () => setZoom(1)
   const selectTool = (nextTool: Tool) => {
     setTool(nextTool)
-    if (nextTool === 'text') setColor('#161918')
+    if (nextTool === 'text') setColor('#24181d')
     if (nextTool === 'highlight') setColor('#f3d450')
-    if (nextTool === 'rectangle') setColor('#c43d31')
-    if (nextTool === 'ink') setColor('#1b5d78')
+    if (nextTool === 'rectangle') setColor('#EF476F')
+    if (nextTool === 'ink') setColor('#EF476F')
   }
   const activeTool = tools.find((item) => item.id === tool)
   const submitTextModal = () => {
