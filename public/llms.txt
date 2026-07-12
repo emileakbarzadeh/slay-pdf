@@ -212,6 +212,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF24 Alternative - Slay PDF: https://slaypdf.com/pdf24-alternative.html
   Summary: Use Slay PDF as a PDF24 alternative for local PDF tools in the browser: merge, split, compress, OCR, protect, convert images and edit pages.
   Last modified: 2026-07-13
+- Open Source PDF Editor - Slay PDF: https://slaypdf.com/open-source-pdf-editor.html
+  Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
+  Last modified: 2026-07-13
+- Open Source Adobe Acrobat Alternative - Slay PDF: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+  Summary: Use Slay PDF as an open source Adobe Acrobat alternative for local PDF edits, page organization, signing, OCR, redaction and browser exports.
+  Last modified: 2026-07-13
+- Offline PDF Editor - Slay PDF: https://slaypdf.com/offline-pdf-editor.html
+  Summary: Use Slay PDF as an offline-capable PDF editor. After the app is loaded and cached, common PDF edits can run locally in the browser.
+  Last modified: 2026-07-13
+- Client-Side PDF Editor - Slay PDF: https://slaypdf.com/client-side-pdf-editor.html
+  Summary: Use Slay PDF as a client-side PDF editor. PDF documents and edits stay in the browser while WebAssembly tools handle local PDF workflows.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

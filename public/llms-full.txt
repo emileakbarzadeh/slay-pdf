@@ -68,6 +68,8 @@ Content:
 - Pages for common Acrobat-style jobs that Slay PDF handles locally in the browser, including merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize workflows.
 - PDF editor alternatives
 - Alternative pages for common PDF utility searches where a local browser workflow is enough for the job.
+- Open source and local app pages
+- Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - No-account and platform workflows
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -137,6 +139,10 @@ Related links:
 - iLovePDF alternative: https://slaypdf.com/ilovepdf-alternative.html
 - Sejda alternative: https://slaypdf.com/sejda-alternative.html
 - PDF24 alternative: https://slaypdf.com/pdf24-alternative.html
+- Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Open source Adobe Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+- Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
+- Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -250,6 +256,8 @@ Content:
 - Acrobat-style workflows for people who want merge, compress, fill, sign, OCR, protect, rotate, crop, delete, extract, convert and organize jobs handled locally.
 - PDF editor alternatives
 - Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.
+- Open source and local app pages
+- Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - No-account and platform pages
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -322,6 +330,10 @@ Related links:
 - iLovePDF Alternative: https://slaypdf.com/ilovepdf-alternative.html
 - Sejda Alternative: https://slaypdf.com/sejda-alternative.html
 - PDF24 Alternative: https://slaypdf.com/pdf24-alternative.html
+- Open Source PDF Editor: https://slaypdf.com/open-source-pdf-editor.html
+- Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+- Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
+- Client-Side PDF Editor: https://slaypdf.com/client-side-pdf-editor.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -1978,6 +1990,122 @@ Related links:
 - Compress PDF: https://slaypdf.com/compress-pdf.html
 - Password protect PDF: https://slaypdf.com/password-protect-pdf.html
 - OCR PDF: https://slaypdf.com/ocr-pdf.html
+
+## Open Source PDF Editor - Slay PDF
+URL: https://slaypdf.com/open-source-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
+H1: An open source PDF editor that runs locally.
+
+Content:
+- Open source
+- An open source PDF editor that runs locally.
+- Slay PDF is an AGPL browser app for practical PDF editing without sending documents through a hosted document processor.
+- AGPL source
+- The Slay PDF source code is public on GitHub under the AGPL-3.0 license.
+- Browser-local work
+- PDF documents and edits stay in this browser while you merge, split, sign, redact, OCR and export.
+- No account gate
+- Open the editor, import documents and export PDFs without creating a Slay PDF account.
+- For transparent PDF utility work.
+- Slay PDF is built for the everyday jobs people often reach for a PDF utility to solve: combine files, remove pages, rotate scans, add visible signatures, redact areas and export a cleaned copy.
+- Because the app is open source and client-side, teams can inspect how the editor works instead of trusting a random upload site with private documents.
+- Open source PDF editor FAQ
+- Yes. Slay PDF is published on GitHub under the AGPL-3.0 license.
+- No. Open source means the app code is public. Your PDF documents and edits stay in your browser workspace.
+
+Related links:
+- Open source Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+- Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
+- Free PDF editor: https://slaypdf.com/free-pdf-editor.html
+
+## Open Source Adobe Acrobat Alternative - Slay PDF
+URL: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an open source Adobe Acrobat alternative for local PDF edits, page organization, signing, OCR, redaction and browser exports.
+H1: An open source Adobe Acrobat alternative for local jobs.
+
+Content:
+- Open source Acrobat alternative
+- An open source Adobe Acrobat alternative for local jobs.
+- Use Slay PDF when the job is a lightweight PDF edit and you want source-available, browser-local tooling instead of an account-backed document platform.
+- Transparent app
+- Slay PDF is AGPL software with source code available on GitHub.
+- Acrobat-style tasks
+- Merge, split, sign, rotate, crop, resize, redact, OCR, compress and password protect PDF exports.
+- Local by default
+- Documents and edits stay in this browser, and export passwords are never saved.
+- For common edits, not enterprise document management.
+- Acrobat is a full commercial document platform. Slay PDF is a focused open source alternative for everyday local PDF edits that do not need that platform.
+- It is especially useful when you want a quick browser workflow with no Slay PDF account, no subscription and no document upload to a Slay PDF app server.
+- Open source Acrobat alternative FAQ
+- No. Slay PDF is an independent open source PDF editor for common local browser editing workflows.
+- Use Acrobat for enterprise document management, organization-controlled signing and advanced Adobe platform workflows.
+
+Related links:
+- Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
+- Acrobat Pro alternative: https://slaypdf.com/adobe-acrobat-pro-alternative.html
+- Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Local Adobe alternative: https://slaypdf.com/adobe-local-pdf-editor-alternative.html
+
+## Offline PDF Editor - Slay PDF
+URL: https://slaypdf.com/offline-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as an offline-capable PDF editor. After the app is loaded and cached, common PDF edits can run locally in the browser.
+H1: An offline-capable PDF editor after the app is cached.
+
+Content:
+- Offline-capable
+- An offline-capable PDF editor after the app is cached.
+- Slay PDF is a static PWA, so once the browser has loaded and cached the app, common PDF editing workflows can continue locally.
+- PWA cache
+- The app ships as a progressive web app with static assets cached by the browser after loading.
+- Local workspace
+- Import PDFs and perform page edits in the browser without a Slay PDF app-server document upload.
+- Download results
+- Export all pages, selected pages, separate PDFs, images, text or encrypted PDFs from the local workspace.
+- Load it before you need it.
+- For the best offline experience, open Slay PDF while online first so the browser can cache the app and its editing assets. After that, many common workflows are local browser work.
+- Offline behavior still depends on the browser, cache state and device storage. For sensitive work, test your needed workflow before relying on it away from a connection.
+- Offline PDF editor FAQ
+- Slay PDF is offline-capable after the app and browser assets have been loaded and cached by your browser.
+- No. Offline work happens in the local browser workspace and cannot upload documents to Slay PDF.
+
+Related links:
+- Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
+- Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
+
+## Client-Side PDF Editor - Slay PDF
+URL: https://slaypdf.com/client-side-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a client-side PDF editor. PDF documents and edits stay in the browser while WebAssembly tools handle local PDF workflows.
+H1: A client-side PDF editor for private browser workflows.
+
+Content:
+- Client-side
+- A client-side PDF editor for private browser workflows.
+- Slay PDF runs PDF editing in the browser using local JavaScript and WebAssembly tools instead of a hosted document processing backend.
+- Browser processing
+- Common PDF operations run in the browser workspace rather than a Slay PDF app server.
+- Wasm tools
+- Advanced export, compression, encryption and OCR workflows use browser-side WebAssembly assets.
+- Local state
+- Recent workspace state lives in browser storage, and passwords are never saved.
+- Why client-side matters.
+- Many PDF jobs are private but simple: merge files, delete a page, crop a scan, sign a document, export selected pages or protect a final copy.
+- A client-side editor keeps those jobs close to the device, reducing the need to upload contracts, receipts, forms or scans to random PDF sites.
+- Client-side PDF editor FAQ
+- Client-side means the editing workflow runs in your browser instead of sending the PDF to a Slay PDF app server for processing.
+- Yes. Slay PDF uses browser-side WebAssembly tools for heavier PDF operations such as compression, encryption and OCR-related workflows.
+
+Related links:
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+- Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
+- Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html

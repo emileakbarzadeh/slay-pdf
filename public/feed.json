@@ -551,6 +551,38 @@
       "date_modified": "2026-07-13T00:00:00.000Z"
     },
     {
+      "id": "https://slaypdf.com/open-source-pdf-editor.html",
+      "url": "https://slaypdf.com/open-source-pdf-editor.html",
+      "title": "Open Source PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.",
+      "content_text": "Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/open-source-adobe-acrobat-alternative.html",
+      "url": "https://slaypdf.com/open-source-adobe-acrobat-alternative.html",
+      "title": "Open Source Adobe Acrobat Alternative - Slay PDF",
+      "summary": "Use Slay PDF as an open source Adobe Acrobat alternative for local PDF edits, page organization, signing, OCR, redaction and browser exports.",
+      "content_text": "Use Slay PDF as an open source Adobe Acrobat alternative for local PDF edits, page organization, signing, OCR, redaction and browser exports.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/offline-pdf-editor.html",
+      "url": "https://slaypdf.com/offline-pdf-editor.html",
+      "title": "Offline PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as an offline-capable PDF editor. After the app is loaded and cached, common PDF edits can run locally in the browser.",
+      "content_text": "Use Slay PDF as an offline-capable PDF editor. After the app is loaded and cached, common PDF edits can run locally in the browser.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/client-side-pdf-editor.html",
+      "url": "https://slaypdf.com/client-side-pdf-editor.html",
+      "title": "Client-Side PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as a client-side PDF editor. PDF documents and edits stay in the browser while WebAssembly tools handle local PDF workflows.",
+      "content_text": "Use Slay PDF as a client-side PDF editor. PDF documents and edits stay in the browser while WebAssembly tools handle local PDF workflows.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
       "id": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "title": "Free PDF Editor No Signup - Slay PDF",

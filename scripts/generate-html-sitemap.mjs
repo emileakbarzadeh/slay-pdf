@@ -49,6 +49,11 @@ const sections = [
     paths: ['/smallpdf-alternative.html', '/ilovepdf-alternative.html', '/sejda-alternative.html', '/pdf24-alternative.html'],
   },
   {
+    title: 'Open source and local app pages',
+    description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
+    paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],
+  },
+  {
     title: 'No-account and platform pages',
     description: 'Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.',
     paths: ['/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html', '/pdf-editor-for-linux.html', '/pdf-editor-for-iphone-ipad.html', '/android-pdf-editor.html'],
