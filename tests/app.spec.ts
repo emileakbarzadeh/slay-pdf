@@ -523,6 +523,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'rotate-pdf-no-signup.html',
     'crop-pdf-no-signup.html',
     'ocr-pdf-no-signup.html',
+    'delete-pdf-pages-no-signup.html',
+    'resize-pdf-no-signup.html',
+    'annotate-pdf-no-signup.html',
+    'add-page-numbers-no-signup.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -785,7 +789,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(163)
+  expect(toolAppPageCount).toBe(167)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -957,6 +961,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/rotate-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/crop-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/ocr-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/delete-pdf-pages-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/resize-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/annotate-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/add-page-numbers-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -1173,6 +1181,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/rotate-pdf-no-signup.html')
   expect(tools).toContain('/crop-pdf-no-signup.html')
   expect(tools).toContain('/ocr-pdf-no-signup.html')
+  expect(tools).toContain('/delete-pdf-pages-no-signup.html')
+  expect(tools).toContain('/resize-pdf-no-signup.html')
+  expect(tools).toContain('/annotate-pdf-no-signup.html')
+  expect(tools).toContain('/add-page-numbers-no-signup.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')
