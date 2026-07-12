@@ -459,6 +459,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'split-pdf-no-signup.html',
     'sign-pdf-no-signup.html',
     'redact-pdf-no-signup.html',
+    'compress-pdf-no-signup.html',
+    'rotate-pdf-no-signup.html',
+    'crop-pdf-no-signup.html',
+    'ocr-pdf-no-signup.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -721,7 +725,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(99)
+  expect(toolAppPageCount).toBe(103)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -829,6 +833,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/split-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/sign-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/compress-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/rotate-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/crop-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/ocr-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -981,6 +989,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/split-pdf-no-signup.html')
   expect(tools).toContain('/sign-pdf-no-signup.html')
   expect(tools).toContain('/redact-pdf-no-signup.html')
+  expect(tools).toContain('/compress-pdf-no-signup.html')
+  expect(tools).toContain('/rotate-pdf-no-signup.html')
+  expect(tools).toContain('/crop-pdf-no-signup.html')
+  expect(tools).toContain('/ocr-pdf-no-signup.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

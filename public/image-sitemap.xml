@@ -769,6 +769,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/compress-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Compress PDF No Signup - Slay PDF</image:title>
+      <image:caption>Compress PDF files with no signup. Reduce file size, remove unneeded pages and export smaller PDFs locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/rotate-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Rotate PDF No Signup - Slay PDF</image:title>
+      <image:caption>Rotate PDF pages with no signup. Fix sideways scans, rotate selected pages and export corrected PDFs locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/crop-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Crop PDF No Signup - Slay PDF</image:title>
+      <image:caption>Crop PDF pages with no signup. Trim margins, clean scanned pages and export cropped PDFs locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/ocr-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>OCR PDF No Signup - Slay PDF</image:title>
+      <image:caption>OCR PDF files with no signup. Create searchable English OCR PDFs from scanned pages locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>
