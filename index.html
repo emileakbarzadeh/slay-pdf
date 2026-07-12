@@ -63,10 +63,17 @@
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
+        "@id": "https://slaypdf.com/#app",
         "name": "Slay PDF",
         "alternateName": "Slay PDF Local PDF Editor",
         "description": "A free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in the browser.",
         "url": "https://slaypdf.com/",
+        "isPartOf": {
+          "@id": "https://slaypdf.com/#website"
+        },
+        "publisher": {
+          "@id": "https://slaypdf.com/#organization"
+        },
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
@@ -96,10 +103,25 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "WebSite",
+            "@type": "Organization",
+            "@id": "https://slaypdf.com/#organization",
             "name": "Slay PDF",
             "url": "https://slaypdf.com/",
-            "description": "Free local PDF editor and Adobe Acrobat alternative that runs in the browser."
+            "logo": "https://slaypdf.com/favicon.svg",
+            "sameAs": [
+              "https://github.com/emileakbarzadeh/slay-pdf"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://slaypdf.com/#website",
+            "name": "Slay PDF",
+            "url": "https://slaypdf.com/",
+            "description": "Free local PDF editor and Adobe Acrobat alternative that runs in the browser.",
+            "publisher": {
+              "@id": "https://slaypdf.com/#organization"
+            },
+            "inLanguage": "en"
           },
           {
             "@type": "FAQPage",

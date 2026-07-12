@@ -69,6 +69,38 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   }
 }
 
+function assertSiteIdentitySchema(html, file) {
+  const blocks = structuredDataBlocks(html, file)
+  const graph = blocks.find((block) => Array.isArray(block['@graph']))?.['@graph'] ?? []
+  const organization = graph.find((node) => node['@type'] === 'Organization')
+  const website = graph.find((node) => node['@type'] === 'WebSite')
+  const app = blocks.find((block) => block['@type'] === 'WebApplication')
+
+  assert(organization, `${file} is missing Organization JSON-LD`)
+  assert(organization['@id'] === `${site}/#organization`, `${file} Organization @id is wrong`)
+  assert(organization.name === 'Slay PDF', `${file} Organization name is wrong`)
+  assert(organization.url === `${site}/`, `${file} Organization URL is wrong`)
+  assert(organization.logo === `${site}/favicon.svg`, `${file} Organization logo is wrong`)
+  assert(organization.sameAs?.includes('https://github.com/emileakbarzadeh/slay-pdf'), `${file} Organization sameAs is missing GitHub`)
+
+  assert(website, `${file} is missing WebSite JSON-LD`)
+  assert(website['@id'] === `${site}/#website`, `${file} WebSite @id is wrong`)
+  assert(website.name === 'Slay PDF', `${file} WebSite name is wrong`)
+  assert(website.url === `${site}/`, `${file} WebSite URL is wrong`)
+  assert(website.description === 'Free local PDF editor and Adobe Acrobat alternative that runs in the browser.', `${file} WebSite description is wrong`)
+  assert(website.publisher?.['@id'] === `${site}/#organization`, `${file} WebSite publisher is wrong`)
+  assert(website.inLanguage === 'en', `${file} WebSite language is wrong`)
+
+  assert(app, `${file} is missing WebApplication JSON-LD`)
+  assert(app['@id'] === `${site}/#app`, `${file} WebApplication @id is wrong`)
+  assert(app.name === 'Slay PDF', `${file} WebApplication name is wrong`)
+  assert(app.url === `${site}/`, `${file} WebApplication URL is wrong`)
+  assert(app.isPartOf?.['@id'] === `${site}/#website`, `${file} WebApplication isPartOf is wrong`)
+  assert(app.publisher?.['@id'] === `${site}/#organization`, `${file} WebApplication publisher is wrong`)
+  assert(app.offers?.price === '0', `${file} WebApplication price is wrong`)
+  assert(app.codeRepository === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} WebApplication repository is wrong`)
+}
+
 const sitemap = await readPublic('sitemap.xml')
 const sitemapLocs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*<changefreq>(.*?)<\/changefreq>\s*<priority>(.*?)<\/priority>\s*<\/url>/g)]
@@ -147,6 +179,7 @@ assertWebPageSchema({
   url: `${site}/`,
   ...rootMetadata,
 })
+assertSiteIdentitySchema(rootHtml, 'index.html')
 pageMetadata.set(`${site}/`, rootMetadata)
 
 const indexNow = JSON.parse(await readPublic('indexnow.json'))

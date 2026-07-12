@@ -91,9 +91,45 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(rootWebPage?.url).toBe('https://slaypdf.com/')
   expect(rootWebPage?.name).toBe('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
   expect(rootWebPage?.isPartOf?.['@id']).toBe('https://slaypdf.com/#website')
-  const app = structuredGraphs.find((block) => block['@type'] === 'WebApplication') as { '@type'?: string; name?: string; offers?: { price?: string }; featureList?: string[] } | undefined
+  const siteGraph = structuredGraphs.find((block) => Array.isArray(block['@graph']))?.['@graph'] ?? []
+  const organization = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'Organization') as {
+    '@id'?: string
+    name?: string
+    url?: string
+    logo?: string
+    sameAs?: string[]
+  } | undefined
+  const webSite = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'WebSite') as {
+    '@id'?: string
+    name?: string
+    url?: string
+    publisher?: { '@id'?: string }
+    inLanguage?: string
+  } | undefined
+  expect(organization?.['@id']).toBe('https://slaypdf.com/#organization')
+  expect(organization?.name).toBe('Slay PDF')
+  expect(organization?.url).toBe('https://slaypdf.com/')
+  expect(organization?.logo).toBe('https://slaypdf.com/favicon.svg')
+  expect(organization?.sameAs).toContain('https://github.com/emileakbarzadeh/slay-pdf')
+  expect(webSite?.['@id']).toBe('https://slaypdf.com/#website')
+  expect(webSite?.name).toBe('Slay PDF')
+  expect(webSite?.url).toBe('https://slaypdf.com/')
+  expect(webSite?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
+  expect(webSite?.inLanguage).toBe('en')
+  const app = structuredGraphs.find((block) => block['@type'] === 'WebApplication') as {
+    '@id'?: string
+    '@type'?: string
+    name?: string
+    offers?: { price?: string }
+    featureList?: string[]
+    isPartOf?: { '@id'?: string }
+    publisher?: { '@id'?: string }
+  } | undefined
+  expect(app?.['@id']).toBe('https://slaypdf.com/#app')
   expect(app?.['@type']).toBe('WebApplication')
   expect(app?.name).toBe('Slay PDF')
+  expect(app?.isPartOf?.['@id']).toBe('https://slaypdf.com/#website')
+  expect(app?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(app?.offers?.price).toBe('0')
   expect(app?.featureList).toContain('Merge PDF files')
   expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
