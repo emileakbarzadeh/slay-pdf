@@ -18,6 +18,7 @@ const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
 assert(new Set(urls).size === urls.length, 'sitemap contains duplicate URLs')
 
+const pageMetadata = new Map()
 const htmlUrls = urls.filter((url) => url.endsWith('.html'))
 const titles = new Map()
 const descriptions = new Map()
@@ -42,7 +43,15 @@ for (const url of htmlUrls) {
   assert(!descriptions.has(description), `${file} description duplicates ${descriptions.get(description)}`)
   titles.set(title, file)
   descriptions.set(description, file)
+  pageMetadata.set(url, { title, description, h1: html.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim() })
 }
+
+const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
+pageMetadata.set(`${site}/`, {
+  title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),
+  description: rootHtml.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim(),
+  h1: rootHtml.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim(),
+})
 
 const indexNow = JSON.parse(await readPublic('indexnow.json'))
 assert(indexNow.host === 'slaypdf.com', 'IndexNow host is wrong')
@@ -51,10 +60,42 @@ assert((await readPublic(`${indexNow.key}.txt`)).trim() === indexNow.key, 'Index
 assert(indexNow.urlList.length === urls.length, 'IndexNow URL count differs from sitemap URL count')
 for (const url of indexNow.urlList) assert(urls.includes(url), `IndexNow URL is missing from sitemap: ${url}`)
 
+const pagesTxt = (await readPublic('pages.txt')).trim().split(/\n+/)
+assert(JSON.stringify(pagesTxt) === JSON.stringify(urls), 'pages.txt must match sitemap URL order exactly')
+
+const pagesJson = JSON.parse(await readPublic('pages.json'))
+assert(pagesJson.site === site, 'pages.json site is wrong')
+assert(pagesJson.generatedFrom === `${site}/sitemap.xml`, 'pages.json generatedFrom is wrong')
+assert(Array.isArray(pagesJson.pages), 'pages.json pages must be an array')
+assert(pagesJson.pages.length === urls.length, 'pages.json URL count differs from sitemap URL count')
+for (const [index, page] of pagesJson.pages.entries()) {
+  const expectedUrl = urls[index]
+  const expected = pageMetadata.get(expectedUrl)
+  assert(page.url === expectedUrl, `pages.json URL order mismatch at ${index}`)
+  assert(page.path === new URL(expectedUrl).pathname, `pages.json path mismatch for ${expectedUrl}`)
+  assert(page.title === expected?.title, `pages.json title mismatch for ${expectedUrl}`)
+  assert(page.description === expected?.description, `pages.json description mismatch for ${expectedUrl}`)
+}
+
+const toolsHtml = await readPublic('tools.html')
+const toolsStructuredData = [...toolsHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+  .map((match) => JSON.parse(match[1]))
+const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
+assert(itemList, 'tools.html is missing ItemList JSON-LD')
+const itemListUrls = itemList.itemListElement?.map((item) => item.url) ?? []
+const toolsChildUrls = htmlUrls.filter((url) => url !== `${site}/tools.html`)
+assert(itemListUrls.length === toolsChildUrls.length, 'tools.html ItemList count must match linked sitemap pages')
+for (const [index, url] of toolsChildUrls.entries()) {
+  assert(itemListUrls[index] === url, `tools.html ItemList URL mismatch at position ${index + 1}`)
+  assert(toolsHtml.includes(`href="${new URL(url).pathname}"`), `tools.html is missing visible link to ${url}`)
+}
+
 const llms = await readPublic('llms.txt')
 for (const url of urls) assert(llms.includes(url), `llms.txt is missing ${url}`)
+assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
+assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css']) {
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json']) {
   await stat(new URL(asset, publicDir))
 }
 

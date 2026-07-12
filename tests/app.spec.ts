@@ -176,6 +176,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const tools = await (await page.request.get('/tools.html')).text()
   expect(tools).toContain('"@type": "ItemList"')
   expect(tools).toContain('PDF Tools - Slay PDF')
+  const toolStructuredData = [...tools.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]))
+  const toolItemList = toolStructuredData.find((block) => block['@type'] === 'ItemList') as { itemListElement: { url: string }[] } | undefined
+  expect(toolItemList).toBeTruthy()
+  const toolItemUrls = toolItemList?.itemListElement.map((item) => item.url) ?? []
+  expect(toolItemUrls).toHaveLength(htmlPaths.length - 1)
+  for (const path of htmlPaths.filter((path) => path !== 'tools.html')) {
+    expect(toolItemUrls).toContain(`https://slaypdf.com/${path}`)
+    expect(tools).toContain(`href="/${path}"`)
+  }
   expect(tools).toContain('/password-protect-pdf.html')
   expect(tools).toContain('/faq.html')
   expect(tools).toContain('/privacy.html')
@@ -199,6 +208,16 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const indexNowUrls = await (await page.request.get('/indexnow-urls.txt')).text()
   expect(indexNowUrls).toContain('https://slaypdf.com/tools.html')
   expect(indexNowPayload.urlList.every((url) => sitemap.includes(`<loc>${url}</loc>`))).toBe(true)
+
+  const pagesTxt = await (await page.request.get('/pages.txt')).text()
+  expect(pagesTxt.trim().split(/\n+/)).toEqual(['https://slaypdf.com/', ...htmlPaths.map((path) => `https://slaypdf.com/${path}`)])
+  const pagesJson = await (await page.request.get('/pages.json')).json() as { site: string; generatedFrom: string; pages: { url: string; path: string; title: string; description: string }[] }
+  expect(pagesJson.site).toBe('https://slaypdf.com')
+  expect(pagesJson.generatedFrom).toBe('https://slaypdf.com/sitemap.xml')
+  expect(pagesJson.pages.map((entry) => entry.url)).toEqual(['https://slaypdf.com/', ...htmlPaths.map((path) => `https://slaypdf.com/${path}`)])
+  expect(pagesJson.pages.find((entry) => entry.path === '/online-pdf-editor.html')?.title).toBe('Online PDF Editor - Slay PDF')
+  expect(llms).toContain('https://slaypdf.com/pages.txt')
+  expect(llms).toContain('https://slaypdf.com/pages.json')
 })
 
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {

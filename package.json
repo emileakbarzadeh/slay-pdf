@@ -32,7 +32,14 @@
     "add-page-numbers-to-pdf",
     "fill-pdf-forms",
     "password-protect-pdf",
-    "browser-pdf-editor"
+    "browser-pdf-editor",
+    "online-pdf-editor",
+    "combine-pdf-files",
+    "remove-pages-from-pdf",
+    "extract-pages-from-pdf",
+    "searchable-pdf",
+    "pdf-redaction-tool",
+    "no-upload-pdf-editor"
   ],
   "type": "module",
   "license": "AGPL-3.0-only",
@@ -42,6 +49,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "seo:index": "node scripts/generate-page-index.mjs",
     "seo:check": "node scripts/verify-seo.mjs",
     "seo:check:live": "node scripts/verify-seo.mjs --live",
     "check": "npm run seo:check && npm run test && npm run build",

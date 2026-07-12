@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://slaypdf.com/sitemap.xml
+# Discovery indexes: https://slaypdf.com/pages.txt and https://slaypdf.com/pages.json
