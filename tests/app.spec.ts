@@ -91,6 +91,24 @@ function workflowStepsFor(html: string) {
     }))
 }
 
+function structuredDataEntity(blocks: Record<string, any>[], type: string) {
+  for (const block of blocks) {
+    if (block['@type'] === type) return block
+    const graphEntity = Array.isArray(block['@graph'])
+      ? block['@graph'].find((node: Record<string, any>) => node['@type'] === type)
+      : undefined
+    if (graphEntity) return graphEntity
+  }
+  return undefined
+}
+
+function mainEntityIds(value: unknown) {
+  if (!value) return []
+  return (Array.isArray(value) ? value : [value])
+    .map((entity) => (entity as { '@id'?: string })?.['@id'])
+    .filter(Boolean)
+}
+
 test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
@@ -113,11 +131,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     name?: string
     dateModified?: string
     isPartOf?: { '@id'?: string }
+    mainEntity?: { '@id'?: string } | { '@id'?: string }[]
   } | undefined
   expect(rootWebPage?.['@id']).toBe('https://slaypdf.com/#webpage')
   expect(rootWebPage?.url).toBe('https://slaypdf.com/')
   expect(rootWebPage?.name).toBe('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
   expect(rootWebPage?.isPartOf?.['@id']).toBe('https://slaypdf.com/#website')
+  expect(mainEntityIds(rootWebPage?.mainEntity)).toEqual(['https://slaypdf.com/#app', 'https://slaypdf.com/#faq'])
   const siteGraph = structuredGraphs.find((block) => Array.isArray(block['@graph']))?.['@graph'] ?? []
   const organization = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'Organization') as {
     '@id'?: string
@@ -143,6 +163,16 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(webSite?.url).toBe('https://slaypdf.com/')
   expect(webSite?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(webSite?.inLanguage).toBe('en')
+  const rootFaq = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'FAQPage') as {
+    '@id'?: string
+    url?: string
+    inLanguage?: string
+    mainEntity?: unknown[]
+  } | undefined
+  expect(rootFaq?.['@id']).toBe('https://slaypdf.com/#faq')
+  expect(rootFaq?.url).toBe('https://slaypdf.com/')
+  expect(rootFaq?.inLanguage).toBe('en')
+  expect(rootFaq?.mainEntity?.length).toBeGreaterThan(0)
   const app = structuredGraphs.find((block) => block['@type'] === 'WebApplication') as {
     '@id'?: string
     '@type'?: string
@@ -281,6 +311,36 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
         '@id': `https://slaypdf.com/${path}#breadcrumb`,
       },
     })
+    const faq = structuredDataEntity(structuredData, 'FAQPage') as {
+      '@id'?: string
+      url?: string
+      inLanguage?: string
+      mainEntity?: { '@type'?: string; name?: string; acceptedAnswer?: { '@type'?: string; text?: string } }[]
+    } | undefined
+    const itemListEntity = structuredDataEntity(structuredData, 'ItemList') as {
+      '@id'?: string
+      url?: string
+      inLanguage?: string
+      itemListElement?: unknown[]
+    } | undefined
+    const expectedMainEntityIds = []
+    if (workflowStepsFor(html)) expectedMainEntityIds.push(`https://slaypdf.com/${path}#howto`)
+    if (faq) expectedMainEntityIds.push(`https://slaypdf.com/${path}#faq`)
+    if (itemListEntity) expectedMainEntityIds.push(`https://slaypdf.com/${path}#itemlist`)
+    expect(mainEntityIds(webpage.mainEntity)).toEqual(expectedMainEntityIds)
+    if (faq) {
+      expect(faq['@id']).toBe(`https://slaypdf.com/${path}#faq`)
+      expect(faq.url).toBe(`https://slaypdf.com/${path}`)
+      expect(faq.inLanguage).toBe('en')
+      expect(faq.mainEntity?.length).toBeGreaterThan(0)
+      expect(faq.mainEntity?.every((question) => question['@type'] === 'Question' && question.name && question.acceptedAnswer?.['@type'] === 'Answer' && question.acceptedAnswer.text)).toBe(true)
+    }
+    if (itemListEntity) {
+      expect(itemListEntity['@id']).toBe(`https://slaypdf.com/${path}#itemlist`)
+      expect(itemListEntity.url).toBe(`https://slaypdf.com/${path}`)
+      expect(itemListEntity.inLanguage).toBe('en')
+      expect(itemListEntity.itemListElement?.length).toBeGreaterThan(0)
+    }
     const breadcrumb = structuredData.find((block) => block['@type'] === 'BreadcrumbList')
     expect(breadcrumb).toMatchObject({
       '@id': `https://slaypdf.com/${path}#breadcrumb`,

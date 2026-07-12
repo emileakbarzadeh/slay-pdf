@@ -49,6 +49,17 @@ function structuredDataBlocks(html, file) {
     })
 }
 
+function structuredDataEntity(blocks, type) {
+  for (const block of blocks) {
+    if (block['@type'] === type) return block
+    const graphEntity = Array.isArray(block['@graph'])
+      ? block['@graph'].find((node) => node['@type'] === type)
+      : undefined
+    if (graphEntity) return graphEntity
+  }
+  return undefined
+}
+
 function workflowSteps(html, file) {
   const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
   if (!section) return undefined
@@ -64,6 +75,24 @@ function workflowSteps(html, file) {
 
   assert(steps.length >= 2, `${file} workflow grid must include at least two visible steps`)
   return steps
+}
+
+function mainEntityIds(value) {
+  if (!value) return []
+  return (Array.isArray(value) ? value : [value])
+    .map((entity) => entity?.['@id'])
+    .filter(Boolean)
+}
+
+function expectedMainEntityIds({ html, file, url, blocks }) {
+  const ids = []
+
+  if (file === 'index.html') ids.push(`${url}#app`)
+  if (workflowSteps(html, file) || structuredDataEntity(blocks, 'HowTo')) ids.push(`${url}#howto`)
+  if (structuredDataEntity(blocks, 'FAQPage')) ids.push(`${url}#faq`)
+  if (structuredDataEntity(blocks, 'ItemList')) ids.push(`${url}#itemlist`)
+
+  return ids
 }
 
 function assertWebPageSchema({ html, file, url, title, description, h1 }) {
@@ -86,11 +115,40 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   assert(webpage.primaryImageOfPage?.width === 1200, `${file} WebPage image width is wrong`)
   assert(webpage.primaryImageOfPage?.height === 630, `${file} WebPage image height is wrong`)
   assert(webpage.inLanguage === 'en', `${file} WebPage language is wrong`)
+  const expectedMainEntities = expectedMainEntityIds({ html, file, url, blocks })
+  const actualMainEntities = mainEntityIds(webpage.mainEntity)
+  assert(JSON.stringify(actualMainEntities) === JSON.stringify(expectedMainEntities), `${file} WebPage mainEntity references are wrong`)
   const breadcrumb = blocks.find((block) => block['@type'] === 'BreadcrumbList')
   if (breadcrumb) {
     assert(webpage.breadcrumb?.['@id'] === `${url}#breadcrumb`, `${file} WebPage breadcrumb reference is wrong`)
     assert(breadcrumb['@id'] === `${url}#breadcrumb`, `${file} BreadcrumbList @id is wrong`)
     assert(breadcrumb.itemListElement?.at(-1)?.item === url, `${file} breadcrumb must end at canonical URL`)
+  }
+}
+
+function assertRichEntitySchema({ html, file, url }) {
+  const blocks = structuredDataBlocks(html, file)
+  const faq = structuredDataEntity(blocks, 'FAQPage')
+  const itemList = structuredDataEntity(blocks, 'ItemList')
+
+  if (faq) {
+    assert(faq['@id'] === `${url}#faq`, `${file} FAQPage @id is wrong`)
+    assert(faq.url === url, `${file} FAQPage URL is wrong`)
+    assert(faq.inLanguage === 'en', `${file} FAQPage language is wrong`)
+    assert(Array.isArray(faq.mainEntity) && faq.mainEntity.length >= 1, `${file} FAQPage must include questions`)
+    for (const [index, question] of faq.mainEntity.entries()) {
+      assert(question['@type'] === 'Question', `${file} FAQ question ${index + 1} type is wrong`)
+      assert(question.name, `${file} FAQ question ${index + 1} is missing name`)
+      assert(question.acceptedAnswer?.['@type'] === 'Answer', `${file} FAQ answer ${index + 1} type is wrong`)
+      assert(question.acceptedAnswer?.text, `${file} FAQ answer ${index + 1} is missing text`)
+    }
+  }
+
+  if (itemList) {
+    assert(itemList['@id'] === `${url}#itemlist`, `${file} ItemList @id is wrong`)
+    assert(itemList.url === url, `${file} ItemList URL is wrong`)
+    assert(itemList.inLanguage === 'en', `${file} ItemList language is wrong`)
+    assert(Array.isArray(itemList.itemListElement) && itemList.itemListElement.length >= 1, `${file} ItemList must include items`)
   }
 }
 
@@ -214,6 +272,7 @@ for (const url of htmlUrls) {
   assert(html.includes('aria-label="Breadcrumb"'), `${file} is missing visible breadcrumbs`)
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
   assertWebPageSchema({ html, file, url, title, description, h1 })
+  assertRichEntitySchema({ html, file, url })
   assertHowToSchema({ html, file, url, title, description })
   assert(!titles.has(title), `${file} title duplicates ${titles.get(title)}`)
   assert(!descriptions.has(description), `${file} description duplicates ${descriptions.get(description)}`)
@@ -236,6 +295,7 @@ assertWebPageSchema({
   url: `${site}/`,
   ...rootMetadata,
 })
+assertRichEntitySchema({ html: rootHtml, file: 'index.html', url: `${site}/` })
 assertSiteIdentitySchema(rootHtml, 'index.html')
 pageMetadata.set(`${site}/`, rootMetadata)
 

@@ -47,6 +47,32 @@ function hasBreadcrumbSchema(html, file) {
   return structuredDataScripts(html, file).some(({ data }) => data['@type'] === 'BreadcrumbList')
 }
 
+function hasStructuredDataType(html, file, type) {
+  return structuredDataScripts(html, file).some(({ data }) => {
+    if (data['@type'] === type) return true
+    return Array.isArray(data['@graph']) && data['@graph'].some((node) => node['@type'] === type)
+  })
+}
+
+function hasWorkflowGrid(html) {
+  const section = html.match(/<section class="grid" aria-label="([^"]+)">([\s\S]*?)<\/section>/i)
+  if (!section) return false
+  const label = section[1].toLowerCase()
+  return label.includes('workflow') || label === 'pdf page organization tools'
+}
+
+function mainEntityRefsFor(html, file, url) {
+  const refs = []
+
+  if (file === 'index.html') refs.push({ '@id': `${url}#app` })
+  if (hasWorkflowGrid(html) || hasStructuredDataType(html, file, 'HowTo')) refs.push({ '@id': `${url}#howto` })
+  if (hasStructuredDataType(html, file, 'FAQPage')) refs.push({ '@id': `${url}#faq` })
+  if (hasStructuredDataType(html, file, 'ItemList')) refs.push({ '@id': `${url}#itemlist` })
+
+  if (refs.length === 0) return undefined
+  return refs.length === 1 ? refs[0] : refs
+}
+
 function webpageSchemaFor(html, file) {
   const url = linkHref(html, 'rel="canonical"')
   const title = titleFor(html)
@@ -90,6 +116,9 @@ function webpageSchemaFor(html, file) {
     },
     inLanguage: 'en',
   }
+
+  const mainEntity = mainEntityRefsFor(html, file, url)
+  if (mainEntity) schema.mainEntity = mainEntity
 
   if (hasBreadcrumbSchema(html, file)) {
     schema.breadcrumb = {

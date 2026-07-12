@@ -56,7 +56,15 @@
                   "width": 1200,
                   "height": 630
             },
-            "inLanguage": "en"
+            "inLanguage": "en",
+            "mainEntity": [
+                  {
+                        "@id": "https://slaypdf.com/#app"
+                  },
+                  {
+                        "@id": "https://slaypdf.com/#faq"
+                  }
+            ]
       }
     </script>
     <script type="application/ld+json">
@@ -100,59 +108,62 @@
     </script>
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://slaypdf.com/#organization",
-            "name": "Slay PDF",
-            "url": "https://slaypdf.com/",
-            "logo": "https://slaypdf.com/favicon.svg",
-            "sameAs": [
-              "https://github.com/emileakbarzadeh/slay-pdf"
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "Organization",
+                        "@id": "https://slaypdf.com/#organization",
+                        "name": "Slay PDF",
+                        "url": "https://slaypdf.com/",
+                        "logo": "https://slaypdf.com/favicon.svg",
+                        "sameAs": [
+                              "https://github.com/emileakbarzadeh/slay-pdf"
+                        ]
+                  },
+                  {
+                        "@type": "WebSite",
+                        "@id": "https://slaypdf.com/#website",
+                        "name": "Slay PDF",
+                        "url": "https://slaypdf.com/",
+                        "description": "Free local PDF editor and Adobe Acrobat alternative that runs in the browser.",
+                        "publisher": {
+                              "@id": "https://slaypdf.com/#organization"
+                        },
+                        "inLanguage": "en"
+                  },
+                  {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                              {
+                                    "@type": "Question",
+                                    "name": "Is Slay PDF free?",
+                                    "acceptedAnswer": {
+                                          "@type": "Answer",
+                                          "text": "Yes. Slay PDF is a free browser-based PDF editor for common tasks such as merging, splitting, signing, resizing and exporting PDFs."
+                                    }
+                              },
+                              {
+                                    "@type": "Question",
+                                    "name": "Does Slay PDF upload my documents?",
+                                    "acceptedAnswer": {
+                                          "@type": "Answer",
+                                          "text": "No. Slay PDF is designed as a client-side app. Documents and edits stay in the browser and are not sent to an application server."
+                                    }
+                              },
+                              {
+                                    "@type": "Question",
+                                    "name": "Is Slay PDF an Adobe Acrobat alternative?",
+                                    "acceptedAnswer": {
+                                          "@type": "Answer",
+                                          "text": "Slay PDF is an Adobe Acrobat alternative for everyday local PDF edits like merge, split, delete pages, sign, annotate, resize, posterise and export. Enterprise document workflows may still need dedicated document platforms."
+                                    }
+                              }
+                        ],
+                        "@id": "https://slaypdf.com/#faq",
+                        "url": "https://slaypdf.com/",
+                        "inLanguage": "en"
+                  }
             ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://slaypdf.com/#website",
-            "name": "Slay PDF",
-            "url": "https://slaypdf.com/",
-            "description": "Free local PDF editor and Adobe Acrobat alternative that runs in the browser.",
-            "publisher": {
-              "@id": "https://slaypdf.com/#organization"
-            },
-            "inLanguage": "en"
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Is Slay PDF free?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Slay PDF is a free browser-based PDF editor for common tasks such as merging, splitting, signing, resizing and exporting PDFs."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Slay PDF upload my documents?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. Slay PDF is designed as a client-side app. Documents and edits stay in the browser and are not sent to an application server."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is Slay PDF an Adobe Acrobat alternative?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Slay PDF is an Adobe Acrobat alternative for everyday local PDF edits like merge, split, delete pages, sign, annotate, resize, posterise and export. Enterprise document workflows may still need dedicated document platforms."
-                }
-              }
-            ]
-          }
-        ]
       }
     </script>
     <title>Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative</title>
