@@ -54,6 +54,27 @@ function visibleRelatedLinks(html, url) {
   return [...links]
 }
 
+function visibleBreadcrumbItems(html, file, url) {
+  const nav = html.match(/<nav class="crumbs" aria-label="Breadcrumb">([\s\S]*?)<\/nav>/)
+  assert(nav, `${file} is missing visible breadcrumb navigation`)
+
+  const items = [...nav[1].matchAll(/<(a|span)(?: href="([^"]+)")?[^>]*>([\s\S]*?)<\/\1>/g)]
+    .map((match, index) => {
+      const [, tag, href, label] = match
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: textFromInlineHtml(label),
+        item: tag === 'a' && href ? new URL(href, site).href : url,
+      }
+    })
+
+  assert(items.length >= 2, `${file} visible breadcrumb navigation must include at least two items`)
+  assert(items.every((item) => item.name), `${file} visible breadcrumb navigation contains an empty label`)
+  assert(items.at(-1)?.item === url, `${file} visible breadcrumb navigation must end at canonical URL`)
+  return items
+}
+
 function structuredDataBlocks(html, file) {
   return [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
     .map((match) => {
@@ -141,7 +162,7 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   if (breadcrumb) {
     assert(webpage.breadcrumb?.['@id'] === `${url}#breadcrumb`, `${file} WebPage breadcrumb reference is wrong`)
     assert(breadcrumb['@id'] === `${url}#breadcrumb`, `${file} BreadcrumbList @id is wrong`)
-    assert(breadcrumb.itemListElement?.at(-1)?.item === url, `${file} breadcrumb must end at canonical URL`)
+    assert(JSON.stringify(breadcrumb.itemListElement) === JSON.stringify(visibleBreadcrumbItems(html, file, url)), `${file} BreadcrumbList must match visible breadcrumbs`)
   }
 }
 
@@ -299,6 +320,7 @@ for (const url of htmlUrls) {
     assert(html.includes(`${attribute}="${name}" content="${content}"`), `${file} is missing ${name} metadata`)
   }
   assert(html.includes('aria-label="Breadcrumb"'), `${file} is missing visible breadcrumbs`)
+  assert(html.includes('data-managed="breadcrumb"'), `${file} is missing managed breadcrumb JSON-LD`)
   assert(html.includes('"@type": "BreadcrumbList"'), `${file} is missing breadcrumb JSON-LD`)
   assertWebPageSchema({ html, file, url, title, description, h1 })
   assertRichEntitySchema({ html, file, url })

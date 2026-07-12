@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process'
 
 const steps = [
   'seo:discovery',
+  'seo:breadcrumbs',
   'seo:social',
   'seo:schema',
   'seo:howto',

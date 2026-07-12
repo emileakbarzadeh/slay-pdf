@@ -107,6 +107,22 @@ function visibleRelatedLinks(html: string, url: string) {
   return [...links]
 }
 
+function visibleBreadcrumbItems(html: string, url: string) {
+  const nav = html.match(/<nav class="crumbs" aria-label="Breadcrumb">([\s\S]*?)<\/nav>/)
+  expect(nav).toBeTruthy()
+
+  return [...(nav?.[1] ?? '').matchAll(/<(a|span)(?: href="([^"]+)")?[^>]*>([\s\S]*?)<\/\1>/g)]
+    .map((match, index) => {
+      const [, tag, href, label] = match
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: textFromInlineHtml(label),
+        item: tag === 'a' && href ? new URL(href, 'https://slaypdf.com/').href : url,
+      }
+    })
+}
+
 function structuredDataEntity(blocks: Record<string, any>[], type: string) {
   for (const block of blocks) {
     if (block['@type'] === type) return block
@@ -373,7 +389,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(breadcrumb).toMatchObject({
       '@id': `https://slaypdf.com/${path}#breadcrumb`,
     })
-    expect(breadcrumb?.itemListElement.at(-1).item).toBe(`https://slaypdf.com/${path}`)
+    expect(html).toContain('type="application/ld+json" data-managed="breadcrumb"')
+    expect(breadcrumb?.itemListElement).toEqual(visibleBreadcrumbItems(html, `https://slaypdf.com/${path}`))
     const workflowSteps = workflowStepsFor(html)
     const howTo = structuredData.find((block) => block['@type'] === 'HowTo') as {
       '@id'?: string

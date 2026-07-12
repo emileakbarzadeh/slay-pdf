@@ -163,6 +163,7 @@ function syncBreadcrumbIds(html, file) {
   let updated = html
   for (const { fullMatch, data } of structuredDataScripts(html, file)) {
     if (data['@type'] !== 'BreadcrumbList') continue
+    const attributes = fullMatch.match(/<script type="application\/ld\+json"([^>]*)>/)?.[1]?.trim()
     const nextData = {
       '@context': data['@context'] ?? 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -173,7 +174,7 @@ function syncBreadcrumbIds(html, file) {
       .split('\n')
       .map((line) => `      ${line}`)
       .join('\n')
-    updated = updated.replace(fullMatch, `    <script type="application/ld+json">\n${json}\n    </script>`)
+    updated = updated.replace(fullMatch, `    <script type="application/ld+json"${attributes ? ` ${attributes}` : ''}>\n${json}\n    </script>`)
   }
   return updated
 }

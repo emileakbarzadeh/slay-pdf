@@ -111,6 +111,32 @@ function scriptFor(schema) {
   return `    <script type="application/ld+json" data-managed="howto">\n${json}\n    </script>`
 }
 
+function insertHowToSchema(html, schema) {
+  const script = scriptFor(schema)
+  if (html.includes('type="application/ld+json" data-managed="breadcrumb"')) {
+    return html.replace(
+      /(    <script type="application\/ld\+json" data-managed="breadcrumb">[\s\S]*?    <\/script>)/,
+      `$1\n${script}`,
+    )
+  }
+
+  if (html.includes('type="application/ld+json" data-managed="webpage"')) {
+    return html.replace(
+      /(    <script type="application\/ld\+json" data-managed="webpage">[\s\S]*?    <\/script>)/,
+      `$1\n${script}`,
+    )
+  }
+
+  if (html.includes('<script type="application/ld+json"')) {
+    return html.replace(
+      /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
+      `\n${script}$1`,
+    )
+  }
+
+  return html.replace(/(\s*<title>)/, `\n${script}$1`)
+}
+
 const files = (await readdir(publicDir))
   .filter((file) => file.endsWith('.html'))
   .sort()
@@ -123,12 +149,7 @@ for (const file of files) {
   const html = await readFile(url, 'utf8')
   const howTo = workflowFor(html, file)
   const withoutHowTo = howTo ? stripAllHowToSchema(html, file) : stripManagedHowToSchema(html)
-  const updated = howTo
-    ? withoutHowTo.replace(
-      /(\s*<script type="application\/ld\+json">)/,
-      `\n${scriptFor(howTo)}$1`,
-    )
-    : withoutHowTo
+  const updated = howTo ? insertHowToSchema(withoutHowTo, howTo) : withoutHowTo
 
   if (howTo) synced += 1
   if (updated !== html) {
