@@ -94,6 +94,10 @@ https://slaypdf.com/secure-pdf-merger.html
 https://slaypdf.com/secure-pdf-splitter.html
 https://slaypdf.com/secure-pdf-signer.html
 https://slaypdf.com/secure-pdf-redactor.html
+https://slaypdf.com/private-pdf-merger.html
+https://slaypdf.com/private-pdf-splitter.html
+https://slaypdf.com/private-pdf-signer.html
+https://slaypdf.com/private-pdf-redactor.html
 https://slaypdf.com/open-source-pdf-editor.html
 https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 https://slaypdf.com/offline-pdf-editor.html

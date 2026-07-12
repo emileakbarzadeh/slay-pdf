@@ -64,6 +64,11 @@ const sections = [
     paths: ['/secure-pdf-merger.html', '/secure-pdf-splitter.html', '/secure-pdf-signer.html', '/secure-pdf-redactor.html'],
   },
   {
+    title: 'Private PDF task pages',
+    description: 'Private PDF merger, splitter, signer and redactor pages for browser-only document handling.',
+    paths: ['/private-pdf-merger.html', '/private-pdf-splitter.html', '/private-pdf-signer.html', '/private-pdf-redactor.html'],
+  },
+  {
     title: 'Open source and local app pages',
     description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
     paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],
