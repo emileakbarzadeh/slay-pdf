@@ -224,6 +224,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Client-Side PDF Editor - Slay PDF: https://slaypdf.com/client-side-pdf-editor.html
   Summary: Use Slay PDF as a client-side PDF editor. PDF documents and edits stay in the browser while WebAssembly tools handle local PDF workflows.
   Last modified: 2026-07-13
+- PDF Editor for Students - Slay PDF: https://slaypdf.com/pdf-editor-for-students.html
+  Summary: A free local PDF editor for students. Merge lecture notes, remove pages, annotate readings, sign forms and export PDFs without uploading documents.
+  Last modified: 2026-07-13
+- PDF Editor for Teachers - Slay PDF: https://slaypdf.com/pdf-editor-for-teachers.html
+  Summary: A free local PDF editor for teachers. Build handouts, split worksheets, remove pages, annotate resources and export class PDFs in the browser.
+  Last modified: 2026-07-13
+- PDF Editor for Business - Slay PDF: https://slaypdf.com/pdf-editor-for-business.html
+  Summary: A free local PDF editor for business documents. Merge invoices, split contracts, sign, redact, protect and export PDFs without uploading files.
+  Last modified: 2026-07-13
+- Contract PDF Editor - Slay PDF: https://slaypdf.com/contract-pdf-editor.html
+  Summary: A local contract PDF editor for quick document cleanup. Add visual signatures, redact, split, merge and export contract PDFs from your browser.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13

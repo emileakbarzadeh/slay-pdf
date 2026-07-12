@@ -70,6 +70,8 @@ Content:
 - Alternative pages for common PDF utility searches where a local browser workflow is enough for the job.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
+- Role and document workflows
+- Pages for students, teachers, business documents and contract PDFs where local browser editing is enough for the job.
 - No-account and platform workflows
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -143,6 +145,10 @@ Related links:
 - Open source Adobe Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
 - Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
+- PDF editor for students: https://slaypdf.com/pdf-editor-for-students.html
+- PDF editor for teachers: https://slaypdf.com/pdf-editor-for-teachers.html
+- PDF editor for business: https://slaypdf.com/pdf-editor-for-business.html
+- Contract PDF editor: https://slaypdf.com/contract-pdf-editor.html
 - Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure PDF editor: https://slaypdf.com/secure-pdf-editor.html
@@ -258,6 +264,8 @@ Content:
 - Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
+- Role and document workflows
+- Pages for students, teachers, business documents and contract PDFs where a local browser editor can handle the job.
 - No-account and platform pages
 - Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.
 
@@ -334,6 +342,10 @@ Related links:
 - Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
 - Client-Side PDF Editor: https://slaypdf.com/client-side-pdf-editor.html
+- PDF Editor for Students: https://slaypdf.com/pdf-editor-for-students.html
+- PDF Editor for Teachers: https://slaypdf.com/pdf-editor-for-teachers.html
+- PDF Editor for Business: https://slaypdf.com/pdf-editor-for-business.html
+- Contract PDF Editor: https://slaypdf.com/contract-pdf-editor.html
 - Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
 - PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
 - Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
@@ -2106,6 +2118,122 @@ Related links:
 - Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+
+## PDF Editor for Students - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-students.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for students. Merge lecture notes, remove pages, annotate readings, sign forms and export PDFs without uploading documents.
+H1: PDF editor for students.
+
+Content:
+- Student PDF editor
+- PDF editor for students.
+- Combine class notes, trim readings, sign forms and prepare submissions in a local browser workspace.
+- Lecture packets
+- Merge lecture slides, readings and scanned notes into one organized PDF before class or revision.
+- Submission cleanup
+- Remove blank pages, rotate scans, crop margins and export selected pages for a cleaner upload.
+- Forms and annotations
+- Add text, highlights, simple drawings and visual signatures to forms or study material locally.
+- Built for small study jobs.
+- Slay PDF is useful when the PDF job is simple but the document is still personal: assignments, forms, notes, scans and readings.
+- The workspace runs in the browser, so you can do common edits without sending student documents to a Slay PDF app server.
+- Student PDF editor FAQ
+- Yes. Import the PDFs, reorder the pages, add split markers if needed and export a combined PDF locally.
+- You can add a visual signature, text and annotations to a PDF form, then export the edited document from your browser.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Delete pages: https://slaypdf.com/delete-pdf-pages.html
+
+## PDF Editor for Teachers - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-teachers.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for teachers. Build handouts, split worksheets, remove pages, annotate resources and export class PDFs in the browser.
+H1: PDF editor for teachers.
+
+Content:
+- Teacher PDF editor
+- PDF editor for teachers.
+- Assemble worksheets, split packets, mark resources and export clean classroom PDFs without a server upload.
+- Handout assembly
+- Merge source PDFs, reorder pages and remove duplicate sheets before printing or sharing.
+- Worksheet splitting
+- Add split markers or export selected pages when one packet needs to become separate classroom files.
+- Classroom markup
+- Add text notes, highlights, boxes, freehand marks and visual signatures directly on PDF pages.
+- Local tools for repeat classroom work.
+- Teachers often need quick PDF edits before a lesson: extract one chapter, remove answer pages, rotate scans or combine printable resources.
+- Slay PDF keeps those edits in the browser, which is useful for internal class materials and student-facing handouts.
+- Teacher PDF editor FAQ
+- Yes. Use selected-page export or split markers to create separate PDFs from one imported document.
+- Yes. Add text, highlights, rectangles, drawings, visual signatures and redaction blocks before export.
+
+Related links:
+- Combine PDF files: https://slaypdf.com/combine-pdf-files.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+
+## PDF Editor for Business - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-business.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for business documents. Merge invoices, split contracts, sign, redact, protect and export PDFs without uploading files.
+H1: PDF editor for business documents.
+
+Content:
+- Business PDF editor
+- PDF editor for business documents.
+- Merge, split, sign, redact, compress and protect everyday business PDFs in a local browser workspace.
+- Document packets
+- Combine invoices, purchase orders, reports and attachments into ordered PDFs for sharing or archiving.
+- Review edits
+- Add visual signatures, text, highlights, redaction blocks and page changes before exporting a final copy.
+- Local export controls
+- Compress files, protect PDFs with a password and export selected pages without a Slay PDF app-server upload.
+- Useful for everyday admin PDFs.
+- Business PDF work is often repetitive: combine a few files, remove a page, mark a document, reduce file size or send a protected version.
+- Slay PDF is built for those quick jobs in the browser, while documents and edits stay on the device unless you choose to share the exported file.
+- Business PDF editor FAQ
+- Yes. Slay PDF performs the editing workflow in your browser instead of sending documents to a Slay PDF app server.
+- Yes. You can password protect a PDF export, and passwords are never saved by Slay PDF.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+
+## Contract PDF Editor - Slay PDF
+URL: https://slaypdf.com/contract-pdf-editor.html
+Last modified: 2026-07-13
+Summary: A local contract PDF editor for quick document cleanup. Add visual signatures, redact, split, merge and export contract PDFs from your browser.
+H1: Contract PDF editor.
+
+Content:
+- Contract PDF editor
+- Contract PDF editor.
+- Clean up contract PDFs locally: merge attachments, remove pages, add visual signatures, redact and export.
+- Contract packets
+- Merge schedules, exhibits and attachments, then reorder pages into a single contract PDF.
+- Visual signing
+- Add a drawn or typed visual signature, initials, dates and text notes before exporting a copy.
+- Local cleanup
+- Delete pages, redact visible content, compress, rotate or password protect PDFs in the browser.
+- Fast contract edits without a random upload.
+- Slay PDF is for practical contract cleanup: combining attachments, removing extra pages, marking a copy and exporting selected pages.
+- Visual signing is for placing marks on a PDF. It is not a certificate-based e-signature or contract management system.
+- Contract PDF editor FAQ
+- You can add a visual signature, initials, dates and text to a PDF. Slay PDF does not provide certificate-based e-signature workflows.
+- Yes. Add redaction blocks and export a rasterized redacted copy so the covered page content is flattened into the output.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
 
 ## Free PDF Editor No Signup - Slay PDF
 URL: https://slaypdf.com/free-pdf-editor-no-signup.html

@@ -435,6 +435,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'open-source-adobe-acrobat-alternative.html',
     'offline-pdf-editor.html',
     'client-side-pdf-editor.html',
+    'pdf-editor-for-students.html',
+    'pdf-editor-for-teachers.html',
+    'pdf-editor-for-business.html',
+    'contract-pdf-editor.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -697,7 +701,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(75)
+  expect(toolAppPageCount).toBe(79)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -781,6 +785,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/open-source-adobe-acrobat-alternative.html')
   expect(llms).toContain('https://slaypdf.com/offline-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/client-side-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-students.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-teachers.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-editor-for-business.html')
+  expect(llms).toContain('https://slaypdf.com/contract-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -909,6 +917,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/open-source-adobe-acrobat-alternative.html')
   expect(tools).toContain('/offline-pdf-editor.html')
   expect(tools).toContain('/client-side-pdf-editor.html')
+  expect(tools).toContain('/pdf-editor-for-students.html')
+  expect(tools).toContain('/pdf-editor-for-teachers.html')
+  expect(tools).toContain('/pdf-editor-for-business.html')
+  expect(tools).toContain('/contract-pdf-editor.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

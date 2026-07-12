@@ -866,6 +866,54 @@
       "breadcrumbId": "https://slaypdf.com/client-side-pdf-editor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/pdf-editor-for-students.html",
+      "path": "/pdf-editor-for-students.html",
+      "title": "PDF Editor for Students - Slay PDF",
+      "description": "A free local PDF editor for students. Merge lecture notes, remove pages, annotate readings, sign forms and export PDFs without uploading documents.",
+      "h1": "PDF editor for students.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-students.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-students.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-teachers.html",
+      "path": "/pdf-editor-for-teachers.html",
+      "title": "PDF Editor for Teachers - Slay PDF",
+      "description": "A free local PDF editor for teachers. Build handouts, split worksheets, remove pages, annotate resources and export class PDFs in the browser.",
+      "h1": "PDF editor for teachers.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-teachers.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-teachers.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor-for-business.html",
+      "path": "/pdf-editor-for-business.html",
+      "title": "PDF Editor for Business - Slay PDF",
+      "description": "A free local PDF editor for business documents. Merge invoices, split contracts, sign, redact, protect and export PDFs without uploading files.",
+      "h1": "PDF editor for business documents.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-business.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-business.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/contract-pdf-editor.html",
+      "path": "/contract-pdf-editor.html",
+      "title": "Contract PDF Editor - Slay PDF",
+      "description": "A local contract PDF editor for quick document cleanup. Add visual signatures, redact, split, merge and export contract PDFs from your browser.",
+      "h1": "Contract PDF editor.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/contract-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/contract-pdf-editor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "path": "/free-pdf-editor-no-signup.html",
       "title": "Free PDF Editor No Signup - Slay PDF",
