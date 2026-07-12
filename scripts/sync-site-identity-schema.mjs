@@ -41,6 +41,24 @@ const hasPart = pagesJson.pages.map((page) => {
   }
 })
 
+const siteNavigation = {
+  '@type': 'ItemList',
+  '@id': 'https://slaypdf.com/#site-navigation',
+  name: 'Slay PDF site navigation',
+  itemListElement: pagesJson.pages
+    .filter((page) => page.path !== '/')
+    .map((page, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'SiteNavigationElement',
+        '@id': `${page.url}#site-navigation`,
+        name: page.title.replace(/ - Slay PDF$/, ''),
+        url: page.url,
+      },
+    })),
+}
+
 const url = new URL('index.html', rootDir)
 const html = await readFile(url, 'utf8')
 let updated = html
@@ -54,14 +72,19 @@ for (const { fullMatch, attributes, data } of structuredDataScripts(html, 'index
 
   const nextData = {
     ...data,
-    '@graph': data['@graph'].map((node) => (
-      node['@type'] === 'WebSite'
-        ? {
-          ...node,
-          hasPart,
-        }
-        : node
-    )),
+    '@graph': [
+      ...data['@graph']
+        .filter((node) => node['@id'] !== siteNavigation['@id'])
+        .map((node) => (
+          node['@type'] === 'WebSite'
+            ? {
+              ...node,
+              hasPart,
+            }
+            : node
+        )),
+      siteNavigation,
+    ],
   }
 
   updated = updated.replace(fullMatch, scriptFor(nextData, attributes))

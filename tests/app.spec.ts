@@ -210,6 +210,14 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     inLanguage?: string
     hasPart?: { '@type'?: string; '@id'?: string; url?: string; name?: string }[]
   } | undefined
+  const siteNavigation = siteGraph.find((node: { '@type'?: string; '@id'?: string }) => node['@type'] === 'ItemList' && node['@id'] === 'https://slaypdf.com/#site-navigation') as {
+    name?: string
+    itemListElement?: {
+      '@type'?: string
+      position?: number
+      item?: { '@type'?: string; '@id'?: string; name?: string; url?: string }
+    }[]
+  } | undefined
   expect(organization?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(organization?.name).toBe('Slay PDF')
   expect(organization?.url).toBe('https://slaypdf.com/')
@@ -220,6 +228,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(webSite?.url).toBe('https://slaypdf.com/')
   expect(webSite?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(webSite?.inLanguage).toBe('en')
+  expect(siteNavigation?.name).toBe('Slay PDF site navigation')
   const rootFaq = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'FAQPage') as {
     '@id'?: string
     url?: string
@@ -332,6 +341,20 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdf-editor-for-chromebook.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  const navigationEntries = htmlPaths.map((path, index) => {
+    const url = `https://slaypdf.com/${path}`
+    return {
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'SiteNavigationElement',
+        '@id': `${url}#site-navigation`,
+        name: webSite?.hasPart?.find((part) => part.url === url)?.name?.replace(/ - Slay PDF$/, ''),
+        url,
+      },
+    }
+  })
+  expect(siteNavigation?.itemListElement).toEqual(navigationEntries)
   const homepageHtml = await (await page.request.get('/')).text()
   const noscriptNav = homepageHtml.match(/<nav aria-label="PDF tools">([\s\S]*?)<\/nav>/)?.[1] ?? ''
   const noscriptPaths = [...noscriptNav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1])

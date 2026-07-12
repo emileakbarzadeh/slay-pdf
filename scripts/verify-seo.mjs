@@ -143,7 +143,7 @@ function expectedMainEntityIds({ html, file, url, blocks }) {
   if (structuredDataEntity(blocks, 'WebApplication')?.['@id'] === `${url}#tool`) ids.push(`${url}#tool`)
   if (workflowSteps(html, file) || structuredDataEntity(blocks, 'HowTo')) ids.push(`${url}#howto`)
   if (structuredDataEntity(blocks, 'FAQPage')) ids.push(`${url}#faq`)
-  if (structuredDataEntity(blocks, 'ItemList')) ids.push(`${url}#itemlist`)
+  if (structuredDataEntity(blocks, 'ItemList')?.['@id'] === `${url}#itemlist`) ids.push(`${url}#itemlist`)
 
   return ids
 }
@@ -185,7 +185,9 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
 function assertRichEntitySchema({ html, file, url }) {
   const blocks = structuredDataBlocks(html, file)
   const faq = structuredDataEntity(blocks, 'FAQPage')
-  const itemList = structuredDataEntity(blocks, 'ItemList')
+  const itemList = structuredDataEntity(blocks, 'ItemList')?.['@id'] === `${url}#itemlist`
+    ? structuredDataEntity(blocks, 'ItemList')
+    : undefined
 
   if (faq) {
     assert(faq['@id'] === `${url}#faq`, `${file} FAQPage @id is wrong`)
@@ -274,6 +276,7 @@ function assertSiteIdentitySchema(html, file) {
   const graph = blocks.find((block) => Array.isArray(block['@graph']))?.['@graph'] ?? []
   const organization = graph.find((node) => node['@type'] === 'Organization')
   const website = graph.find((node) => node['@type'] === 'WebSite')
+  const siteNavigation = graph.find((node) => node['@type'] === 'ItemList' && node['@id'] === `${site}/#site-navigation`)
   const app = blocks.find((block) => block['@type'] === 'WebApplication')
 
   assert(organization, `${file} is missing Organization JSON-LD`)
@@ -300,6 +303,23 @@ function assertSiteIdentitySchema(html, file) {
     }
   })
   assert(JSON.stringify(website.hasPart) === JSON.stringify(expectedHasPart), `${file} WebSite hasPart entries must match sitemap pages`)
+
+  assert(siteNavigation, `${file} is missing site navigation ItemList JSON-LD`)
+  const expectedNavigation = htmlUrls.map((url, index) => {
+    const metadata = pageMetadata.get(url)
+    return {
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'SiteNavigationElement',
+        '@id': `${url}#site-navigation`,
+        name: metadata?.title?.replace(/ - Slay PDF$/, ''),
+        url,
+      },
+    }
+  })
+  assert(siteNavigation.name === 'Slay PDF site navigation', `${file} site navigation name is wrong`)
+  assert(JSON.stringify(siteNavigation.itemListElement) === JSON.stringify(expectedNavigation), `${file} site navigation entries must match sitemap HTML pages`)
 
   assert(app, `${file} is missing WebApplication JSON-LD`)
   assert(app['@id'] === `${site}/#app`, `${file} WebApplication @id is wrong`)
