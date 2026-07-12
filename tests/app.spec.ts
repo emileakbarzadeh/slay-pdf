@@ -451,6 +451,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'local-pdf-splitter.html',
     'local-pdf-signer.html',
     'local-pdf-redactor.html',
+    'free-online-pdf-merger.html',
+    'free-online-pdf-splitter.html',
+    'free-online-pdf-signer.html',
+    'free-online-pdf-redactor.html',
     'open-source-pdf-editor.html',
     'open-source-adobe-acrobat-alternative.html',
     'offline-pdf-editor.html',
@@ -745,7 +749,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(123)
+  expect(toolAppPageCount).toBe(127)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -845,6 +849,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/local-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-signer.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-redactor.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-merger.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-splitter.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-signer.html')
+  expect(llms).toContain('https://slaypdf.com/free-online-pdf-redactor.html')
   expect(llms).toContain('https://slaypdf.com/open-source-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/open-source-adobe-acrobat-alternative.html')
   expect(llms).toContain('https://slaypdf.com/offline-pdf-editor.html')
@@ -1021,6 +1029,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/local-pdf-splitter.html')
   expect(tools).toContain('/local-pdf-signer.html')
   expect(tools).toContain('/local-pdf-redactor.html')
+  expect(tools).toContain('/free-online-pdf-merger.html')
+  expect(tools).toContain('/free-online-pdf-splitter.html')
+  expect(tools).toContain('/free-online-pdf-signer.html')
+  expect(tools).toContain('/free-online-pdf-redactor.html')
   expect(tools).toContain('/open-source-pdf-editor.html')
   expect(tools).toContain('/open-source-adobe-acrobat-alternative.html')
   expect(tools).toContain('/offline-pdf-editor.html')

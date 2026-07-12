@@ -54,6 +54,11 @@ const sections = [
     paths: ['/local-pdf-merger.html', '/local-pdf-splitter.html', '/local-pdf-signer.html', '/local-pdf-redactor.html'],
   },
   {
+    title: 'Free online PDF task pages',
+    description: 'Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.',
+    paths: ['/free-online-pdf-merger.html', '/free-online-pdf-splitter.html', '/free-online-pdf-signer.html', '/free-online-pdf-redactor.html'],
+  },
+  {
     title: 'Open source and local app pages',
     description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
     paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],
