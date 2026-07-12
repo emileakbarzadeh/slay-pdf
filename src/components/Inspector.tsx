@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import { Crop, Download, FileArchive, FileImage, FileText, HardDrive, Info, ListChecks, LockKeyhole, ScanText, Settings2, SlidersHorizontal } from 'lucide-react'
-import { buildSearchablePdf, downloadBlob, ensurePdfFilename, exportImages, exportSplit, exportText } from '../lib/export'
 import { getStorageEstimate } from '../lib/database'
-import { downloadPdfExport } from '../lib/pdfDownloads'
-import { processPdf } from '../lib/processing'
 import { useWorkspace } from '../store'
 import { isWorkspacePage, type CropBox } from '../types'
 
@@ -46,19 +43,27 @@ export function Inspector({ mobileExpanded, onToggleMobile }: Props) {
       if (kind === 'pdf' || kind === 'ocr') {
         if (protect && password.length < 6) throw new Error('Use at least 6 characters for the PDF password.')
         if (kind === 'pdf') {
+          const { downloadPdfExport } = await import('../lib/pdfDownloads')
           await downloadPdfExport(scope === 'all' ? pages : pagesForExport, sources, settings, {
             password: protect ? password : undefined,
             onJob: (label, value) => setJob({ label, progress: value })
           })
         } else {
+          const [{ buildSearchablePdf, downloadBlob, ensurePdfFilename }, { processPdf }] = await Promise.all([
+            import('../lib/export'),
+            import('../lib/processing')
+          ])
           const composed = await buildSearchablePdf(pagesForExport, sources, settings, (value, label) => setJob({ label, progress: value }))
           const processed = await processPdf(composed, { compression: settings.compression, password: protect ? password : undefined }, (value, label) => setJob({ label, progress: value }))
           downloadBlob(processed, ensurePdfFilename(settings.filename))
         }
       }
-      if (kind === 'split') downloadBlob(await exportSplit(itemsForSplit, sources, settings, progress), 'slay-pdf-pages.zip')
-      if (kind === 'images') downloadBlob(await exportImages(pagesForExport, sources, settings, progress), 'slay-pdf-images.zip')
-      if (kind === 'text') downloadBlob(await exportText(pagesForExport, sources, settings, progress), 'slay-pdf-text.txt')
+      if (kind === 'split' || kind === 'images' || kind === 'text') {
+        const { downloadBlob, exportImages, exportSplit, exportText } = await import('../lib/export')
+        if (kind === 'split') downloadBlob(await exportSplit(itemsForSplit, sources, settings, progress), 'slay-pdf-pages.zip')
+        if (kind === 'images') downloadBlob(await exportImages(pagesForExport, sources, settings, progress), 'slay-pdf-images.zip')
+        if (kind === 'text') downloadBlob(await exportText(pagesForExport, sources, settings, progress), 'slay-pdf-text.txt')
+      }
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Export failed.')
     } finally {

@@ -7,7 +7,6 @@ import { PageEditor } from './components/PageEditor'
 import { PageThumbnail } from './components/PageThumbnail'
 import { Inspector } from './components/Inspector'
 import { SplitMarkerTile } from './components/SplitMarkerTile'
-import { downloadPdfExport } from './lib/pdfDownloads'
 import { useWorkspace } from './store'
 import { isWorkspacePage } from './types'
 import './styles.css'
@@ -142,6 +141,7 @@ export default function App() {
     state.setError(null)
     state.setJob({ label: 'Building PDF', progress: 0 })
     try {
+      const { downloadPdfExport } = await import('./lib/pdfDownloads')
       await downloadPdfExport(state.pages, state.sources, state.settings, { onJob: (label, progress) => state.setJob({ label, progress }) })
     } catch (error) {
       state.setError(error instanceof Error ? error.message : 'Export failed.')

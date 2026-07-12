@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import App from './App'
 
-registerSW({
+const registerServiceWorker = () => registerSW({
   onNeedRefresh() {
     if (window.confirm('An update is ready. Reload Slay PDF now?')) window.location.reload()
   }
 })
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>)
+
+window.setTimeout(registerServiceWorker, 1200)

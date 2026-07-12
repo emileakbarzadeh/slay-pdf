@@ -355,13 +355,29 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(block).toContain(`<xhtml:link rel="alternate" hreflang="en" href="${entry.url}" />`)
     expect(block).toContain(`<xhtml:link rel="alternate" hreflang="x-default" href="${entry.url}" />`)
   }
-  expect(webSite?.hasPart).toHaveLength(sitemapEntries.length)
+  const prominentPaths = [
+    '/',
+    '/free-pdf-editor.html',
+    '/tools.html',
+    '/search.html',
+    '/sitemap.html',
+    '/privacy.html',
+    '/online-pdf-editor.html',
+    '/adobe-acrobat-alternative.html',
+    '/edit-pdf-without-uploading.html',
+    '/secure-pdf-editor.html',
+    '/browser-pdf-editor.html',
+  ]
+  const prominentUrls = prominentPaths.map((path) => new URL(path, 'https://slaypdf.com/').href)
+  const prominentNavigationPaths = prominentPaths.filter((path) => path !== '/')
+  expect(webSite?.hasPart).toHaveLength(prominentUrls.length)
   expect(webSite?.hasPart?.[0]).toMatchObject({
     '@type': 'WebPage',
     '@id': 'https://slaypdf.com/#webpage',
     url: 'https://slaypdf.com/',
     name: 'Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative',
   })
+  expect(webSite?.hasPart?.map((part) => part.url)).toEqual(prominentUrls)
   const htmlPaths = [...sitemap.matchAll(/<loc>https:\/\/slaypdf\.com\/([^<]+\.html)<\/loc>/g)].map((match) => match[1])
   expect(htmlPaths).toEqual(expect.arrayContaining([
     'free-pdf-editor.html',
@@ -567,8 +583,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'android-pdf-editor.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
-  const navigationEntries = htmlPaths.map((path, index) => {
-    const url = `https://slaypdf.com/${path}`
+  const navigationEntries = prominentNavigationPaths.map((path, index) => {
+    const url = new URL(path, 'https://slaypdf.com/').href
     return {
       '@type': 'ListItem',
       position: index + 1,
@@ -584,7 +600,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const homepageHtml = await (await page.request.get('/')).text()
   const noscriptNav = homepageHtml.match(/<nav aria-label="PDF tools">([\s\S]*?)<\/nav>/)?.[1] ?? ''
   const noscriptPaths = [...noscriptNav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1])
-  expect(noscriptPaths).toEqual(htmlPaths.map((path) => `/${path}`))
+  expect(noscriptPaths).toEqual(prominentNavigationPaths)
   const imageSitemap = await (await page.request.get('/image-sitemap.xml')).text()
   expect(imageSitemap).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"')
   expect(imageSitemap).toContain('<image:loc>https://slaypdf.com/og-image.png</image:loc>')
@@ -612,12 +628,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(response.ok()).toBe(true)
     const html = await response.text()
     const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
-    expect(webSite?.hasPart).toContainEqual({
-      '@type': 'WebPage',
-      '@id': `https://slaypdf.com/${path}#webpage`,
-      url: `https://slaypdf.com/${path}`,
-      name: title,
-    })
+    expect(title).toBeTruthy()
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
     expect(html).toContain(`rel="alternate" hreflang="en" href="https://slaypdf.com/${path}"`)
     expect(html).toContain(`rel="alternate" hreflang="x-default" href="https://slaypdf.com/${path}"`)

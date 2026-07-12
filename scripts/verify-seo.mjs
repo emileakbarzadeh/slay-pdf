@@ -367,7 +367,7 @@ function assertSiteIdentitySchema(html, file) {
   assert(website.potentialAction?.target?.['@type'] === 'EntryPoint', `${file} WebSite search action target type is wrong`)
   assert(website.potentialAction?.target?.urlTemplate === `${site}/search.html?q={search_term_string}`, `${file} WebSite search action URL is wrong`)
   assert(website.potentialAction?.['query-input'] === 'required name=search_term_string', `${file} WebSite search action query input is wrong`)
-  const expectedHasPart = urls.map((url) => {
+  const expectedHasPart = prominentSiteUrls.map((url) => {
     const metadata = pageMetadata.get(url)
     return {
       '@type': 'WebPage',
@@ -376,10 +376,10 @@ function assertSiteIdentitySchema(html, file) {
       name: metadata?.title,
     }
   })
-  assert(JSON.stringify(website.hasPart) === JSON.stringify(expectedHasPart), `${file} WebSite hasPart entries must match sitemap pages`)
+  assert(JSON.stringify(website.hasPart) === JSON.stringify(expectedHasPart), `${file} WebSite hasPart entries must match prominent site pages`)
 
   assert(siteNavigation, `${file} is missing site navigation ItemList JSON-LD`)
-  const expectedNavigation = htmlUrls.map((url, index) => {
+  const expectedNavigation = prominentNavigationUrls.map((url, index) => {
     const metadata = pageMetadata.get(url)
     return {
       '@type': 'ListItem',
@@ -393,7 +393,7 @@ function assertSiteIdentitySchema(html, file) {
     }
   })
   assert(siteNavigation.name === 'Slay PDF site navigation', `${file} site navigation name is wrong`)
-  assert(JSON.stringify(siteNavigation.itemListElement) === JSON.stringify(expectedNavigation), `${file} site navigation entries must match sitemap HTML pages`)
+  assert(JSON.stringify(siteNavigation.itemListElement) === JSON.stringify(expectedNavigation), `${file} site navigation entries must match prominent HTML pages`)
 
   assert(app, `${file} is missing WebApplication JSON-LD`)
   assert(app['@id'] === `${site}/#app`, `${file} WebApplication @id is wrong`)
@@ -427,6 +427,21 @@ const sitemapEntries = [...sitemap.matchAll(/<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S
   }))
 const urls = sitemapEntries.map((entry) => entry.url)
 const sitemapMetadata = new Map(sitemapEntries.map((entry) => [entry.url, entry]))
+const prominentSitePaths = [
+  '/',
+  '/free-pdf-editor.html',
+  '/tools.html',
+  '/search.html',
+  '/sitemap.html',
+  '/privacy.html',
+  '/online-pdf-editor.html',
+  '/adobe-acrobat-alternative.html',
+  '/edit-pdf-without-uploading.html',
+  '/secure-pdf-editor.html',
+  '/browser-pdf-editor.html',
+]
+const prominentSiteUrls = prominentSitePaths.map((path) => new URL(path, `${site}/`).href)
+const prominentNavigationUrls = prominentSiteUrls.filter((url) => url !== `${site}/`)
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
 assert(sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'), 'sitemap is missing xhtml namespace for hreflang alternates')
 assert(new Set(urls).size === urls.length, 'sitemap contains duplicate URLs')
@@ -553,8 +568,8 @@ assertSiteIdentitySchema(rootHtml, 'index.html')
 const noscriptNav = rootHtml.match(/<nav aria-label="PDF tools">([\s\S]*?)<\/nav>/)?.[1]
 assert(noscriptNav, 'homepage is missing noscript PDF tools navigation')
 const noscriptPaths = [...noscriptNav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1])
-const expectedNoscriptPaths = htmlUrls.map((url) => new URL(url).pathname)
-assert(JSON.stringify(noscriptPaths) === JSON.stringify(expectedNoscriptPaths), 'homepage noscript PDF tools navigation must match sitemap HTML URL order')
+const expectedNoscriptPaths = prominentNavigationUrls.map((url) => new URL(url).pathname)
+assert(JSON.stringify(noscriptPaths) === JSON.stringify(expectedNoscriptPaths), 'homepage noscript PDF tools navigation must match prominent HTML page order')
 
 const indexNow = JSON.parse(await readPublic('indexnow.json'))
 assert(indexNow.host === 'slaypdf.com', 'IndexNow host is wrong')

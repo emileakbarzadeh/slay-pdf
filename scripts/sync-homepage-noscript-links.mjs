@@ -26,7 +26,23 @@ async function titleForPath(path) {
 
 const sitemap = await readFile(new URL('sitemap.xml', publicDir), 'utf8')
 const urls = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>/g)].map((match) => match[1])
-const htmlUrls = urls.filter((url) => url.endsWith('.html'))
+const prominentPaths = [
+  '/free-pdf-editor.html',
+  '/tools.html',
+  '/search.html',
+  '/sitemap.html',
+  '/privacy.html',
+  '/online-pdf-editor.html',
+  '/adobe-acrobat-alternative.html',
+  '/edit-pdf-without-uploading.html',
+  '/secure-pdf-editor.html',
+  '/browser-pdf-editor.html',
+]
+const sitemapPaths = new Set(urls.map((url) => new URL(url).pathname))
+const htmlUrls = prominentPaths.map((path) => {
+  if (!sitemapPaths.has(path)) throw new Error(`sitemap.xml is missing homepage noscript path: ${path}`)
+  return `${site}${path}`
+})
 
 if (htmlUrls.length === 0) throw new Error('sitemap.xml has no HTML URLs for homepage noscript navigation')
 
@@ -43,8 +59,8 @@ const updated = html.replace(
 )
 
 if (updated === html) {
-  console.log(`Synced homepage noscript navigation for ${htmlUrls.length} HTML pages.`)
+  console.log(`Synced compact homepage noscript navigation for ${htmlUrls.length} HTML pages.`)
 } else {
   await writeFile(new URL('index.html', rootDir), updated)
-  console.log(`Synced homepage noscript navigation for ${htmlUrls.length} HTML pages (1 changed).`)
+  console.log(`Synced compact homepage noscript navigation for ${htmlUrls.length} HTML pages (1 changed).`)
 }

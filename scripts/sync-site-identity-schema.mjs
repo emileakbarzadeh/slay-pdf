@@ -31,7 +31,28 @@ if (!Array.isArray(pagesJson.pages) || pagesJson.pages.length === 0) {
   throw new Error('pages.json must contain canonical pages before syncing site identity schema')
 }
 
-const hasPart = pagesJson.pages.map((page) => {
+const prominentPaths = [
+  '/',
+  '/free-pdf-editor.html',
+  '/tools.html',
+  '/search.html',
+  '/sitemap.html',
+  '/privacy.html',
+  '/online-pdf-editor.html',
+  '/adobe-acrobat-alternative.html',
+  '/edit-pdf-without-uploading.html',
+  '/secure-pdf-editor.html',
+  '/browser-pdf-editor.html',
+]
+
+const pageByPath = new Map(pagesJson.pages.map((page) => [page.path, page]))
+const prominentPages = prominentPaths.map((path) => {
+  const page = pageByPath.get(path)
+  if (!page) throw new Error(`pages.json is missing prominent page for site identity schema: ${path}`)
+  return page
+})
+
+const hasPart = prominentPages.map((page) => {
   if (!page.url || !page.title || !page.webpageId) throw new Error(`pages.json entry is missing WebPage fields for ${page.url ?? 'unknown URL'}`)
   return {
     '@type': 'WebPage',
@@ -45,7 +66,7 @@ const siteNavigation = {
   '@type': 'ItemList',
   '@id': 'https://slaypdf.com/#site-navigation',
   name: 'Slay PDF site navigation',
-  itemListElement: pagesJson.pages
+  itemListElement: prominentPages
     .filter((page) => page.path !== '/')
     .map((page, index) => ({
       '@type': 'ListItem',
@@ -114,7 +135,7 @@ if (!synced) throw new Error('index.html is missing WebSite JSON-LD graph')
 
 if (updated !== html) {
   await writeFile(url, updated)
-  console.log(`Synced WebSite hasPart schema for ${hasPart.length} canonical pages (1 changed).`)
+  console.log(`Synced compact WebSite hasPart schema for ${hasPart.length} prominent pages (1 changed).`)
 } else {
-  console.log(`Synced WebSite hasPart schema for ${hasPart.length} canonical pages.`)
+  console.log(`Synced compact WebSite hasPart schema for ${hasPart.length} prominent pages.`)
 }

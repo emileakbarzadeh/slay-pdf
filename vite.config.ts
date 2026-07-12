@@ -61,86 +61,40 @@ export default defineConfig({
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['favicon.svg'],
-      manifest: {
-        name: 'Slay PDF',
-        short_name: 'Slay PDF',
-        description: 'Free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in your browser.',
-        categories: ['business', 'productivity', 'utilities'],
-        theme_color: '#f7f7f4',
-        background_color: '#f7f7f4',
-        display: 'standalone',
-        scope: '.',
-        start_url: '.',
-        shortcuts: [
-          {
-            name: 'Merge PDF files',
-            short_name: 'Merge PDFs',
-            description: 'Combine PDF files and images locally in the browser.',
-            url: '/merge-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Split PDF files',
-            short_name: 'Split PDFs',
-            description: 'Export selected pages or separate PDFs with split markers.',
-            url: '/split-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Sign a PDF',
-            short_name: 'Sign PDF',
-            description: 'Add a visual signature or quick annotation without uploading the PDF.',
-            url: '/sign-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Organize PDF pages',
-            short_name: 'Organize',
-            description: 'Reorder, delete, rotate and export PDF pages locally.',
-            url: '/organize-pdf-pages.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Compress a PDF',
-            short_name: 'Compress',
-            description: 'Use local export presets for smaller PDF files.',
-            url: '/compress-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Redact a PDF',
-            short_name: 'Redact',
-            description: 'Add redaction blocks and rasterize redacted pages before export.',
-            url: '/redact-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Run OCR on a PDF',
-            short_name: 'OCR PDF',
-            description: 'Create searchable English OCR PDFs locally in the browser.',
-            url: '/ocr-pdf.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          },
-          {
-            name: 'Private PDF editor',
-            short_name: 'Private PDF',
-            description: 'Open the local PDF editor for private no-upload workflows.',
-            url: '/private-pdf-editor.html',
-            icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }]
-          }
+      manifest: false,
+      workbox: {
+        globPatterns: [
+          'index.html',
+          'favicon.svg',
+          'manifest.webmanifest',
+          'assets/index-*.css',
+          'assets/index-*.js',
+          'assets/workbox-window*.js'
         ],
-        icons: [
-          { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
-          { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'maskable' }
+        globIgnores: [
+          '**/*.wasm',
+          'vendor/tesseract/**',
+          'llms-full.txt'
+        ],
+        maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
+        navigateFallback: 'index.html',
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [
+          {
+            urlPattern: /\/(assets|vendor\/tesseract)\//,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'slay-pdf-heavy-assets',
+              expiration: {
+                maxEntries: 40,
+                maxAgeSeconds: 60 * 60 * 24 * 30
+              }
+            }
+          }
         ]
       },
-      workbox: {
-        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024,
-        navigateFallback: 'index.html',
-        cleanupOutdatedCaches: true
-      },
       devOptions: {
-        enabled: true
+        enabled: false
       }
     })
   ],
