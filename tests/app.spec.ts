@@ -158,6 +158,21 @@ function isoDate(lastmod: string | undefined) {
   return new Date(`${lastmod}T00:00:00.000Z`).toISOString()
 }
 
+function appUseAction(name: string) {
+  return {
+    '@type': 'UseAction',
+    name,
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://slaypdf.com/',
+      actionPlatform: [
+        'https://schema.org/DesktopWebPlatform',
+        'https://schema.org/MobileWebPlatform',
+      ],
+    },
+  }
+}
+
 test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
@@ -266,6 +281,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     license?: string
     privacyPolicy?: string
     keywords?: string[]
+    potentialAction?: unknown
   } | undefined
   expect(app?.['@id']).toBe('https://slaypdf.com/#app')
   expect(app?.['@type']).toBe('WebApplication')
@@ -280,6 +296,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(app?.license).toBe('https://www.gnu.org/licenses/agpl-3.0.en.html')
   expect(app?.privacyPolicy).toBe('https://slaypdf.com/privacy.html')
   expect(app?.keywords).toEqual(['local PDF editor', 'free PDF editor', 'Adobe Acrobat alternative', 'browser PDF editor', 'private PDF editor'])
+  expect(app?.potentialAction).toEqual(appUseAction('Open Slay PDF'))
   expect(app?.featureList).toContain('Merge PDF files')
   expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
   expect(JSON.stringify(structuredGraphs)).toContain('Adobe Acrobat alternative')
@@ -520,6 +537,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       isPartOf?: { '@id'?: string }
       publisher?: { '@id'?: string }
       offers?: { price?: string; priceCurrency?: string }
+      potentialAction?: unknown
       featureList?: string[]
     } | undefined
     const expectedMainEntityIds = []
@@ -567,6 +585,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
         isPartOf: { '@id': 'https://slaypdf.com/#app' },
         publisher: { '@id': 'https://slaypdf.com/#organization' },
         offers: { price: '0', priceCurrency: 'USD' },
+        potentialAction: appUseAction(`Open ${title?.replace(/ - Slay PDF$/, '')} in Slay PDF`),
       })
       expect(toolApp?.featureList).toEqual(toolFeatures.map((feature) => `${feature.name}: ${feature.text}`))
     } else {

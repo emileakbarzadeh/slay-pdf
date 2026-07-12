@@ -11,6 +11,10 @@ const appKeywords = [
   'browser PDF editor',
   'private PDF editor',
 ]
+const appActionPlatform = [
+  'https://schema.org/DesktopWebPlatform',
+  'https://schema.org/MobileWebPlatform',
+]
 
 async function readPublic(path) {
   return readFile(new URL(path, publicDir), 'utf8')
@@ -274,6 +278,11 @@ function assertToolAppSchema({ html, file, url, title, description, h1 }) {
   assert(toolApp.publisher?.['@id'] === `${site}/#organization`, `${file} tool WebApplication publisher is wrong`)
   assert(toolApp.offers?.price === '0', `${file} tool WebApplication price is wrong`)
   assert(toolApp.offers?.priceCurrency === 'USD', `${file} tool WebApplication currency is wrong`)
+  assert(toolApp.potentialAction?.['@type'] === 'UseAction', `${file} tool WebApplication action type is wrong`)
+  assert(toolApp.potentialAction?.name === `Open ${title.replace(/ - Slay PDF$/, '')} in Slay PDF`, `${file} tool WebApplication action name is wrong`)
+  assert(toolApp.potentialAction?.target?.['@type'] === 'EntryPoint', `${file} tool WebApplication action target type is wrong`)
+  assert(toolApp.potentialAction?.target?.urlTemplate === `${site}/`, `${file} tool WebApplication action target URL is wrong`)
+  assert(JSON.stringify(toolApp.potentialAction?.target?.actionPlatform) === JSON.stringify(appActionPlatform), `${file} tool WebApplication action platforms are wrong`)
   assert(JSON.stringify(toolApp.featureList) === JSON.stringify(features.map((feature) => `${feature.name}: ${feature.text}`)), `${file} tool WebApplication featureList must match visible feature cards`)
 }
 
@@ -372,6 +381,11 @@ function assertSiteIdentitySchema(html, file) {
   assert(app.privacyPolicy === `${site}/privacy.html`, `${file} WebApplication privacyPolicy is wrong`)
   assert(JSON.stringify(app.keywords) === JSON.stringify(appKeywords), `${file} WebApplication keywords are wrong`)
   assert(app.codeRepository === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} WebApplication repository is wrong`)
+  assert(app.potentialAction?.['@type'] === 'UseAction', `${file} WebApplication action type is wrong`)
+  assert(app.potentialAction?.name === 'Open Slay PDF', `${file} WebApplication action name is wrong`)
+  assert(app.potentialAction?.target?.['@type'] === 'EntryPoint', `${file} WebApplication action target type is wrong`)
+  assert(app.potentialAction?.target?.urlTemplate === `${site}/`, `${file} WebApplication action target URL is wrong`)
+  assert(JSON.stringify(app.potentialAction?.target?.actionPlatform) === JSON.stringify(appActionPlatform), `${file} WebApplication action platforms are wrong`)
 }
 
 const sitemap = await readPublic('sitemap.xml')

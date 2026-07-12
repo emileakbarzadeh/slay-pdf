@@ -14,6 +14,10 @@ const keywords = [
   'browser PDF editor',
   'private PDF editor',
 ]
+const actionPlatform = [
+  'https://schema.org/DesktopWebPlatform',
+  'https://schema.org/MobileWebPlatform',
+]
 
 function titleFor(html) {
   return html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
@@ -118,6 +122,15 @@ function toolAppFor(html, file) {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
+    },
+    potentialAction: {
+      '@type': 'UseAction',
+      name: `Open ${title.replace(/ - Slay PDF$/, '')} in Slay PDF`,
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: site,
+        actionPlatform,
+      },
     },
     featureList: features.map((feature) => `${feature.name}: ${feature.text}`),
   }

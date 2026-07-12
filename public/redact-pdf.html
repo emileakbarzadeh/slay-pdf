@@ -152,6 +152,18 @@
                   "price": "0",
                   "priceCurrency": "USD"
             },
+            "potentialAction": {
+                  "@type": "UseAction",
+                  "name": "Open Redact PDF Locally in Slay PDF",
+                  "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://slaypdf.com/",
+                        "actionPlatform": [
+                              "https://schema.org/DesktopWebPlatform",
+                              "https://schema.org/MobileWebPlatform"
+                        ]
+                  }
+            },
             "featureList": [
                   "Redaction blocks: Place black redaction rectangles over sensitive areas.",
                   "Rasterized export: Pages with redactions are rendered before export to remove covered source content.",
