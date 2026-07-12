@@ -362,6 +362,11 @@ function assertSiteIdentitySchema(html, file) {
   assert(website.description === 'Free local PDF editor and Adobe Acrobat alternative that runs in the browser.', `${file} WebSite description is wrong`)
   assert(website.publisher?.['@id'] === `${site}/#organization`, `${file} WebSite publisher is wrong`)
   assert(website.inLanguage === 'en', `${file} WebSite language is wrong`)
+  assert(website.potentialAction?.['@type'] === 'SearchAction', `${file} WebSite search action type is wrong`)
+  assert(website.potentialAction?.name === 'Search Slay PDF tools', `${file} WebSite search action name is wrong`)
+  assert(website.potentialAction?.target?.['@type'] === 'EntryPoint', `${file} WebSite search action target type is wrong`)
+  assert(website.potentialAction?.target?.urlTemplate === `${site}/search.html?q={search_term_string}`, `${file} WebSite search action URL is wrong`)
+  assert(website.potentialAction?.['query-input'] === 'required name=search_term_string', `${file} WebSite search action query input is wrong`)
   const expectedHasPart = urls.map((url) => {
     const metadata = pageMetadata.get(url)
     return {

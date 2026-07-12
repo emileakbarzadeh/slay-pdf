@@ -25,6 +25,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/search.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Tool Search - Slay PDF</image:title>
+      <image:caption>Search Slay PDF tools and guides for local PDF editing, Adobe Acrobat alternatives, merge, split, sign, OCR, crop, redact and browser PDF workflows.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/faq.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

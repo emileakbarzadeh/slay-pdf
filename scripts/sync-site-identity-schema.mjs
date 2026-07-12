@@ -59,6 +59,16 @@ const siteNavigation = {
     })),
 }
 
+const searchAction = {
+  '@type': 'SearchAction',
+  name: 'Search Slay PDF tools',
+  target: {
+    '@type': 'EntryPoint',
+    urlTemplate: 'https://slaypdf.com/search.html?q={search_term_string}',
+  },
+  'query-input': 'required name=search_term_string',
+}
+
 function isSiteNavigationList(node) {
   return node['@type'] === 'ItemList' && (
     node['@id'] === siteNavigation['@id'] ||
@@ -88,6 +98,7 @@ for (const { fullMatch, attributes, data } of structuredDataScripts(html, 'index
             ? {
               ...node,
               hasPart,
+              potentialAction: searchAction,
             }
             : node
         )),

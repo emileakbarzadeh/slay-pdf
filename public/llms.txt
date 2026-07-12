@@ -17,6 +17,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF Tools - Slay PDF: https://slaypdf.com/tools.html
   Summary: Browse Slay PDF tools: merge, split, sign, rotate, crop, resize, redact, compress, OCR, extract text, export images, fill forms and password protect PDFs locally.
   Last modified: 2026-07-13
+- PDF Tool Search - Slay PDF: https://slaypdf.com/search.html
+  Summary: Search Slay PDF tools and guides for local PDF editing, Adobe Acrobat alternatives, merge, split, sign, OCR, crop, redact and browser PDF workflows.
+  Last modified: 2026-07-13
 - Slay PDF FAQ - Local PDF Editor: https://slaypdf.com/faq.html
   Summary: Answers about Slay PDF, the free local PDF editor for merging, splitting, signing, posterising, resizing, OCR, redaction and private PDF work in the browser.
   Last modified: 2026-07-13

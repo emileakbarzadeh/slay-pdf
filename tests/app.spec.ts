@@ -247,6 +247,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     url?: string
     publisher?: { '@id'?: string }
     inLanguage?: string
+    potentialAction?: unknown
     hasPart?: { '@type'?: string; '@id'?: string; url?: string; name?: string }[]
   } | undefined
   const siteNavigation = siteGraph.find((node: { '@type'?: string; '@id'?: string }) => node['@type'] === 'ItemList' && node['@id'] === 'https://slaypdf.com/#site-navigation') as {
@@ -267,6 +268,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(webSite?.url).toBe('https://slaypdf.com/')
   expect(webSite?.publisher?.['@id']).toBe('https://slaypdf.com/#organization')
   expect(webSite?.inLanguage).toBe('en')
+  expect(webSite?.potentialAction).toEqual({
+    '@type': 'SearchAction',
+    name: 'Search Slay PDF tools',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://slaypdf.com/search.html?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  })
   expect(siteNavigation?.name).toBe('Slay PDF site navigation')
   const rootFaq = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'FAQPage') as {
     '@id'?: string
@@ -313,6 +323,13 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
   expect(JSON.stringify(structuredGraphs)).toContain('Adobe Acrobat alternative')
 
+  await page.goto('/search.html?q=ocr')
+  await expect(page).toHaveTitle('PDF Tool Search - Slay PDF')
+  await expect(page.getByRole('heading', { name: 'Search Slay PDF tools and guides.' })).toBeVisible()
+  await expect(page.getByRole('searchbox', { name: 'Search PDF tools' })).toHaveValue('ocr')
+  await expect(page.locator('#search-summary')).toContainText('ocr')
+  await expect(page.locator('#search-results a[href="/ocr-pdf.html"]')).toBeVisible()
+
   const robots = await (await page.request.get('/robots.txt')).text()
   expect(robots).toContain('Allow: /')
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap-index.xml')
@@ -349,6 +366,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(htmlPaths).toEqual(expect.arrayContaining([
     'free-pdf-editor.html',
     'tools.html',
+    'search.html',
     'faq.html',
     'privacy.html',
     'sitemap.html',

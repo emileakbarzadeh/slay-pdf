@@ -138,6 +138,20 @@ Related links:
 - PDF editor for iPhone and iPad: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
 - Android PDF editor: https://slaypdf.com/android-pdf-editor.html
 
+## PDF Tool Search - Slay PDF
+URL: https://slaypdf.com/search.html
+Last modified: 2026-07-13
+Summary: Search Slay PDF tools and guides for local PDF editing, Adobe Acrobat alternatives, merge, split, sign, OCR, crop, redact and browser PDF workflows.
+H1: Search Slay PDF tools and guides.
+
+Content:
+- Search
+- Search Slay PDF tools and guides.
+- Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
+- Find a local PDF workflow
+- All searchable pages
+- Browse every indexed Slay PDF page below, or search for a specific PDF task.
+
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
 Last modified: 2026-07-13
@@ -213,7 +227,7 @@ Content:
 - Slay PDF sitemap
 - Every canonical Slay PDF app, tool and guide page in one crawlable HTML index.
 - Core pages
-- Start with the app, complete tool index, HTML sitemap, privacy details and help pages.
+- Start with the app, search page, complete tool index, HTML sitemap, privacy details and help pages.
 - Guides
 - Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.
 - PDF workflows
@@ -231,6 +245,7 @@ Related links:
 - Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative: https://slaypdf.com/
 - Free Local PDF Editor: https://slaypdf.com/free-pdf-editor.html
 - PDF Tools: https://slaypdf.com/tools.html
+- PDF Tool Search: https://slaypdf.com/search.html
 - HTML Sitemap: https://slaypdf.com/sitemap.html
 - Slay PDF FAQ - Local PDF Editor: https://slaypdf.com/faq.html
 - Privacy: https://slaypdf.com/privacy.html
