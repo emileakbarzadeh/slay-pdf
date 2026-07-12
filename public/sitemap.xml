@@ -737,6 +737,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://slaypdf.com/secure-pdf-merger.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/secure-pdf-merger.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/secure-pdf-merger.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-splitter.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/secure-pdf-splitter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/secure-pdf-splitter.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-signer.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/secure-pdf-signer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/secure-pdf-signer.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-redactor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/secure-pdf-redactor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/secure-pdf-redactor.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://slaypdf.com/open-source-pdf-editor.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/open-source-pdf-editor.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/open-source-pdf-editor.html" />

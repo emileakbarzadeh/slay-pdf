@@ -284,6 +284,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Free Online PDF Redactor - Slay PDF: https://slaypdf.com/free-online-pdf-redactor.html
   Summary: Use a free online PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.
   Last modified: 2026-07-13
+- Secure PDF Merger - Slay PDF: https://slaypdf.com/secure-pdf-merger.html
+  Summary: Use a secure PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Secure PDF Splitter - Slay PDF: https://slaypdf.com/secure-pdf-splitter.html
+  Summary: Use a secure PDF splitter that works locally in your browser. Extract or separate PDF pages without uploading private documents.
+  Last modified: 2026-07-13
+- Secure PDF Signer - Slay PDF: https://slaypdf.com/secure-pdf-signer.html
+  Summary: Use a secure PDF signer that works locally in your browser. Add signatures and text without uploading private PDFs.
+  Last modified: 2026-07-13
+- Secure PDF Redactor - Slay PDF: https://slaypdf.com/secure-pdf-redactor.html
+  Summary: Use a secure PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.
+  Last modified: 2026-07-13
 - Open Source PDF Editor - Slay PDF: https://slaypdf.com/open-source-pdf-editor.html
   Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
   Last modified: 2026-07-13

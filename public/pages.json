@@ -1106,6 +1106,54 @@
       "breadcrumbId": "https://slaypdf.com/free-online-pdf-redactor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/secure-pdf-merger.html",
+      "path": "/secure-pdf-merger.html",
+      "title": "Secure PDF Merger - Slay PDF",
+      "description": "Use a secure PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.",
+      "h1": "Securely merge PDFs in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/secure-pdf-merger.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/secure-pdf-merger.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/secure-pdf-splitter.html",
+      "path": "/secure-pdf-splitter.html",
+      "title": "Secure PDF Splitter - Slay PDF",
+      "description": "Use a secure PDF splitter that works locally in your browser. Extract or separate PDF pages without uploading private documents.",
+      "h1": "Securely split PDFs in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/secure-pdf-splitter.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/secure-pdf-splitter.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/secure-pdf-signer.html",
+      "path": "/secure-pdf-signer.html",
+      "title": "Secure PDF Signer - Slay PDF",
+      "description": "Use a secure PDF signer that works locally in your browser. Add signatures and text without uploading private PDFs.",
+      "h1": "Securely sign PDFs in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/secure-pdf-signer.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/secure-pdf-signer.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/secure-pdf-redactor.html",
+      "path": "/secure-pdf-redactor.html",
+      "title": "Secure PDF Redactor - Slay PDF",
+      "description": "Use a secure PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.",
+      "h1": "Securely redact PDFs in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/secure-pdf-redactor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/secure-pdf-redactor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "path": "/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",

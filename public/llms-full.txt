@@ -72,6 +72,8 @@ Content:
 - High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
 - Free online PDF task pages
 - Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.
+- Secure PDF task pages
+- Secure PDF merger, splitter, signer and redactor pages for local browser workflows on private documents.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -173,6 +175,10 @@ Related links:
 - Free online PDF splitter: https://slaypdf.com/free-online-pdf-splitter.html
 - Free online PDF signer: https://slaypdf.com/free-online-pdf-signer.html
 - Free online PDF redactor: https://slaypdf.com/free-online-pdf-redactor.html
+- Secure PDF merger: https://slaypdf.com/secure-pdf-merger.html
+- Secure PDF splitter: https://slaypdf.com/secure-pdf-splitter.html
+- Secure PDF signer: https://slaypdf.com/secure-pdf-signer.html
+- Secure PDF redactor: https://slaypdf.com/secure-pdf-redactor.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open source Adobe Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
@@ -322,6 +328,8 @@ Content:
 - High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
 - Free online PDF task pages
 - Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.
+- Secure PDF task pages
+- Secure PDF merger, splitter, signer and redactor pages for local browser workflows on private documents.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -426,6 +434,10 @@ Related links:
 - Free Online PDF Splitter: https://slaypdf.com/free-online-pdf-splitter.html
 - Free Online PDF Signer: https://slaypdf.com/free-online-pdf-signer.html
 - Free Online PDF Redactor: https://slaypdf.com/free-online-pdf-redactor.html
+- Secure PDF Merger: https://slaypdf.com/secure-pdf-merger.html
+- Secure PDF Splitter: https://slaypdf.com/secure-pdf-splitter.html
+- Secure PDF Signer: https://slaypdf.com/secure-pdf-signer.html
+- Secure PDF Redactor: https://slaypdf.com/secure-pdf-redactor.html
 - Open Source PDF Editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
@@ -2770,6 +2782,102 @@ Content:
 - Yes. Slay PDF can place redaction blocks and export a flattened PDF from the browser.
 - No. Redaction edits run locally in your browser.
 - Yes. Always inspect the exported PDF before sharing, especially when the document contains sensitive information.
+
+## Secure PDF Merger - Slay PDF
+URL: https://slaypdf.com/secure-pdf-merger.html
+Last modified: 2026-07-13
+Summary: Use a secure PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.
+H1: Securely merge PDFs in your browser.
+
+Content:
+- Secure PDF merger
+- Securely merge PDFs in your browser.
+- Combine sensitive PDFs locally on your device, review the page order and download a merged copy without an app-server upload.
+- Local merge
+- PDF pages are assembled in the browser rather than sent to a remote merge queue.
+- Page review
+- Check thumbnails, delete extras and reorder pages before creating the final PDF.
+- Private workspace
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Merge private document bundles without the upload step.
+- Use Slay PDF for contracts, statements, scan bundles, receipts and forms when combining files through a random upload site is not acceptable. The app gives you visual page control and a local export workflow.
+- Your browser environment still matters. Use a trusted device and clear recent work when the document bundle is finished.
+- Secure PDF merger FAQ
+- Slay PDF is designed for local browser processing, so source PDFs are not uploaded to an application server for merging.
+- Yes. You can inspect, reorder and remove pages before downloading the merged PDF.
+- The export is generated in your browser and downloaded to your device.
+
+## Secure PDF Splitter - Slay PDF
+URL: https://slaypdf.com/secure-pdf-splitter.html
+Last modified: 2026-07-13
+Summary: Use a secure PDF splitter that works locally in your browser. Extract or separate PDF pages without uploading private documents.
+H1: Securely split PDFs in your browser.
+
+Content:
+- Secure PDF splitter
+- Securely split PDFs in your browser.
+- Extract selected pages or create separate PDFs locally, without sending the source document to a remote splitter.
+- Selected pages
+- Choose exact pages or ranges before exporting only the portion you need.
+- Split markers
+- Place markers between sections to download multiple PDFs from one workspace.
+- Local export
+- The split files are created in the browser and downloaded to your device.
+- Split sensitive PDFs without a remote processing queue.
+- Slay PDF is useful when you need to separate pages from statements, applications, scan packets, client documents or HR files and want to avoid app-server uploads.
+- Review the exported files before sharing them, especially when the original document includes personal or financial information.
+- Secure PDF splitter FAQ
+- Yes. Slay PDF splits and exports PDF pages locally in your browser.
+- Yes. Add split markers between sections and export the separated PDFs.
+- Yes. Select the pages you need and export selected pages.
+
+## Secure PDF Signer - Slay PDF
+URL: https://slaypdf.com/secure-pdf-signer.html
+Last modified: 2026-07-13
+Summary: Use a secure PDF signer that works locally in your browser. Add signatures and text without uploading private PDFs.
+H1: Securely sign PDFs in your browser.
+
+Content:
+- Secure PDF signer
+- Securely sign PDFs in your browser.
+- Place signatures, dates and text locally on your device, then download the signed PDF without uploading private paperwork.
+- Local signature edits
+- Add signature and text items in the page editor without sending the source PDF to an app server.
+- Move and resize
+- Adjust each item visually before exporting the final signed document.
+- Browser download
+- The signed PDF is generated locally and downloaded from your browser.
+- Sign private PDFs without a document portal.
+- Slay PDF works for everyday signing and annotation tasks such as approvals, permission forms, internal acknowledgements and scanned documents.
+- It is not a certified e-signature platform. If a workflow requires identity verification, audit trails or legal signing compliance, use the required signing provider.
+- Secure PDF signer FAQ
+- Yes. Slay PDF places signature edits in the browser and exports a local signed PDF.
+- Yes. Select the signature item to move, resize or remove it before download.
+- No. Slay PDF edits the PDF locally. Use a compliant signing platform when audit trails or identity verification are required.
+
+## Secure PDF Redactor - Slay PDF
+URL: https://slaypdf.com/secure-pdf-redactor.html
+Last modified: 2026-07-13
+Summary: Use a secure PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.
+H1: Securely redact PDFs in your browser.
+
+Content:
+- Secure PDF redactor
+- Securely redact PDFs in your browser.
+- Cover sensitive information locally, export a flattened PDF and review the final file before sharing.
+- Local redaction edits
+- Place redaction blocks in the browser instead of uploading the document to a remote editor.
+- Precise review
+- Use editor zoom to position blocks over account numbers, addresses, signatures and identifiers.
+- Flattened export
+- Download a flattened output and inspect it carefully before sending it onward.
+- Redact sensitive documents without a remote upload.
+- Use Slay PDF for practical redaction of statements, receipts, forms, applications and scanned paperwork when a local browser workflow is enough.
+- Formal redaction can be high stakes. For legal discovery, regulated records or enterprise disclosure, follow the review process required by your organization.
+- Secure PDF redactor FAQ
+- Yes. Slay PDF lets you add redaction blocks and export from the browser.
+- Yes. Use a flattened export and review the final file before sharing it.
+- It depends on your requirements. Use your required legal or organizational review process for regulated redaction work.
 
 ## Open Source PDF Editor - Slay PDF
 URL: https://slaypdf.com/open-source-pdf-editor.html

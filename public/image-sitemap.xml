@@ -737,6 +737,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/secure-pdf-merger.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Secure PDF Merger - Slay PDF</image:title>
+      <image:caption>Use a secure PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-splitter.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Secure PDF Splitter - Slay PDF</image:title>
+      <image:caption>Use a secure PDF splitter that works locally in your browser. Extract or separate PDF pages without uploading private documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-signer.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Secure PDF Signer - Slay PDF</image:title>
+      <image:caption>Use a secure PDF signer that works locally in your browser. Add signatures and text without uploading private PDFs.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/secure-pdf-redactor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Secure PDF Redactor - Slay PDF</image:title>
+      <image:caption>Use a secure PDF redactor that works locally in your browser. Cover sensitive details and export a flattened PDF without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/open-source-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>
