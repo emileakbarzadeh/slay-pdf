@@ -64,6 +64,62 @@ async function waitForSavedPageCount(page: Page, count: number) {
   }))).toBe(count)
 }
 
+test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
+  await page.goto('/')
+  await expect(page).toHaveTitle('Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /free local PDF editor/i)
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Adobe Acrobat alternative/i)
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow, max-image-preview:large')
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slaypdf.com/')
+  await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Slay PDF - Free Local PDF Editor')
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://slaypdf.com/og-image.png')
+  await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute('content', '1200')
+  await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute('content', '630')
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image')
+
+  const structuredData = await page.locator('script[type="application/ld+json"]').first().textContent()
+  expect(structuredData).not.toBeNull()
+  const app = JSON.parse(structuredData ?? '{}') as { '@type'?: string; name?: string; offers?: { price?: string }; featureList?: string[] }
+  expect(app['@type']).toBe('WebApplication')
+  expect(app.name).toBe('Slay PDF')
+  expect(app.offers?.price).toBe('0')
+  expect(app.featureList).toContain('Merge PDF files')
+  const structuredGraphs = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) => scripts.map((script) => JSON.parse(script.textContent ?? '{}')))
+  expect(JSON.stringify(structuredGraphs)).toContain('FAQPage')
+  expect(JSON.stringify(structuredGraphs)).toContain('Adobe Acrobat alternative')
+
+  const robots = await (await page.request.get('/robots.txt')).text()
+  expect(robots).toContain('Allow: /')
+  expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap.xml')
+
+  const sitemap = await (await page.request.get('/sitemap.xml')).text()
+  expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
+  for (const path of [
+    'free-pdf-editor.html',
+    'adobe-acrobat-alternative.html',
+    'merge-pdf.html',
+    'split-pdf.html',
+    'sign-pdf.html',
+    'posterise-pdf.html',
+    'private-pdf-editor.html'
+  ]) {
+    expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
+    const response = await page.request.get(`/${path}`)
+    expect(response.ok()).toBe(true)
+    const html = await response.text()
+    expect(html).toContain(`href="https://slaypdf.com/${path}"`)
+    expect(html).toContain('Open editor')
+  }
+
+  const previewImage = await page.request.get('/og-image.png')
+  expect(previewImage.ok()).toBe(true)
+  expect(previewImage.headers()['content-type']).toContain('image/png')
+
+  const llms = await (await page.request.get('/llms.txt')).text()
+  expect(llms).toContain('Free local PDF editor and Adobe Acrobat alternative')
+  expect(llms).toContain('https://slaypdf.com/merge-pdf.html')
+})
+
 test('imports, organizes, and exports a PDF locally', async ({ page }) => {
   await page.goto('/')
   await page.getByRole('button', { name: 'About Slay PDF' }).click()

@@ -3,12 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#f7f7f4" />
-    <meta name="description" content="Private PDF editing tools that run locally in your browser." />
+    <meta name="application-name" content="Slay PDF" />
+    <meta name="apple-mobile-web-app-title" content="Slay PDF" />
+    <meta name="description" content="Slay PDF is a free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in your browser." />
+    <meta name="keywords" content="PDF editor, local PDF editor, free PDF editor, Adobe Acrobat alternative, merge PDF, split PDF, sign PDF, posterise PDF, resize PDF, private PDF editor, browser PDF editor" />
+    <link rel="canonical" href="https://slaypdf.com/" />
     <link rel="icon" href="/favicon.svg" />
-    <title>Slay PDF</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Slay PDF" />
+    <meta property="og:title" content="Slay PDF - Free Local PDF Editor" />
+    <meta property="og:description" content="Split, merge, sign, posterise, resize and edit PDFs locally. Slay PDF runs entirely in your browser, so your documents are never uploaded." />
+    <meta property="og:url" content="https://slaypdf.com/" />
+    <meta property="og:image" content="https://slaypdf.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Slay PDF private local PDF editor preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Slay PDF - Free Local PDF Editor" />
+    <meta name="twitter:description" content="A fast Adobe Acrobat alternative for private PDF edits that stay in your browser." />
+    <meta name="twitter:image" content="https://slaypdf.com/og-image.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Slay PDF",
+        "alternateName": "Slay PDF Local PDF Editor",
+        "description": "A free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in the browser.",
+        "url": "https://slaypdf.com/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires a modern browser with WebAssembly and IndexedDB support.",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Merge PDF files",
+          "Split PDF files",
+          "Delete and reorder PDF pages",
+          "Sign PDFs locally",
+          "Posterise and resize PDF pages",
+          "Export page images and text",
+          "Compress and encrypt PDF exports",
+          "OCR English PDFs in the browser"
+        ],
+        "softwareHelp": "https://github.com/emileakbarzadeh/slay-pdf#readme",
+        "codeRepository": "https://github.com/emileakbarzadeh/slay-pdf",
+        "license": "https://www.gnu.org/licenses/agpl-3.0.en.html"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Slay PDF",
+            "url": "https://slaypdf.com/",
+            "description": "Free local PDF editor and Adobe Acrobat alternative that runs in the browser."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Slay PDF free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Slay PDF is a free browser-based PDF editor for common tasks such as merging, splitting, signing, resizing and exporting PDFs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Slay PDF upload my documents?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Slay PDF is designed as a client-side app. Documents and edits stay in the browser and are not sent to an application server."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Slay PDF an Adobe Acrobat alternative?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Slay PDF is an Adobe Acrobat alternative for everyday local PDF edits like merge, split, delete pages, sign, annotate, resize, posterise and export. Enterprise document workflows may still need dedicated document platforms."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <title>Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative</title>
   </head>
   <body>
+    <noscript>
+      <main>
+        <h1>Slay PDF</h1>
+        <p>Slay PDF is a free local PDF editor for splitting, merging, signing, posterising, resizing and editing PDFs without uploading documents to a server.</p>
+        <p>Enable JavaScript to use the browser-based PDF workspace. Your documents and edits stay in this browser, and passwords are never saved.</p>
+        <nav aria-label="PDF tools">
+          <a href="/free-pdf-editor.html">Free PDF editor</a>
+          <a href="/merge-pdf.html">Merge PDF</a>
+          <a href="/split-pdf.html">Split PDF</a>
+          <a href="/sign-pdf.html">Sign PDF</a>
+          <a href="/posterise-pdf.html">Posterise PDF</a>
+          <a href="/private-pdf-editor.html">Private PDF editor</a>
+          <a href="/adobe-acrobat-alternative.html">Adobe Acrobat alternative</a>
+        </nav>
+      </main>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

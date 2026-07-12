@@ -3,7 +3,9 @@
 > [!WARNING]
 > This project is entirely slopped. Enter at your own risk (that being said, it is entirely client side so hopefully has no vulnerabilities)
 
-Slay PDF is a static, installable browser app for everyday PDF editing. It keeps documents on your device, stores the active workspace in IndexedDB, and uses browser-side WebAssembly engines for heavier PDF operations.
+Slay PDF is a free local PDF editor and Adobe Acrobat alternative for everyday PDF editing. It keeps documents on your device, stores the active workspace in IndexedDB, and uses browser-side WebAssembly engines for heavier PDF operations.
+
+Live app: https://slaypdf.com/
 
 ## What It Does
 

@@ -54,7 +54,7 @@ function tesseractAssets() {
 }
 
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/slay-pdf/' : '/',
+  base: '/',
   plugins: [
     react(),
     tesseractAssets(),
@@ -64,10 +64,12 @@ export default defineConfig({
       manifest: {
         name: 'Slay PDF',
         short_name: 'Slay PDF',
-        description: 'Private PDF tools that run entirely in your browser.',
+        description: 'Free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in your browser.',
+        categories: ['business', 'productivity', 'utilities'],
         theme_color: '#f7f7f4',
         background_color: '#f7f7f4',
         display: 'standalone',
+        scope: '.',
         start_url: '.',
         icons: [
           { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },

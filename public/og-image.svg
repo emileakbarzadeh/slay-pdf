@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Slay PDF social preview</title>
+  <desc id="desc">Slay PDF is a free local PDF editor that runs in the browser.</desc>
+  <rect width="1200" height="630" fill="#f7f7f4"/>
+  <rect x="70" y="72" width="1060" height="486" rx="24" fill="#fffafb" stroke="#d7c4ca" stroke-width="4"/>
+  <rect x="120" y="122" width="220" height="292" rx="10" fill="#fff" stroke="#ef476f" stroke-width="8"/>
+  <path d="M292 122v70h48" fill="none" stroke="#ef476f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M260 240c-16-18-78-22-95 9-30 52 105 44 92 104-12 47-86 45-118 14" fill="none" stroke="#24181d" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="395" y="223" fill="#24181d" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800">Slay PDF</text>
+  <text x="399" y="292" fill="#ef476f" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Free local PDF editor</text>
+  <text x="399" y="354" fill="#4f4549" font-family="Arial, Helvetica, sans-serif" font-size="30">Split, merge, sign, posterise and edit PDFs</text>
+  <text x="399" y="405" fill="#4f4549" font-family="Arial, Helvetica, sans-serif" font-size="30">entirely in your browser.</text>
+  <g fill="#fff" stroke="#d8c5cb" stroke-width="3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    <rect x="399" y="456" width="152" height="54" rx="10"/>
+    <text x="431" y="491" fill="#24181d" stroke="none">Merge</text>
+    <rect x="570" y="456" width="128" height="54" rx="10"/>
+    <text x="606" y="491" fill="#24181d" stroke="none">Split</text>
+    <rect x="717" y="456" width="120" height="54" rx="10"/>
+    <text x="753" y="491" fill="#24181d" stroke="none">Sign</text>
+    <rect x="856" y="456" width="168" height="54" rx="10"/>
+    <text x="888" y="491" fill="#24181d" stroke="none">Private</text>
+  </g>
+</svg>
