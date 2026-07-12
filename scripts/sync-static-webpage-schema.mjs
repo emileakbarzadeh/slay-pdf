@@ -5,6 +5,10 @@ const rootDir = new URL('../', import.meta.url)
 const publicDir = new URL('../public/', import.meta.url)
 const sitemap = await readFile(new URL('sitemap.xml', publicDir), 'utf8')
 const lastmodByUrl = new Map([...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>/g)].map((match) => [match[1], match[2]]))
+const aboutTopicsByFile = new Map([
+  ['adobe-acrobat-vs-slay-pdf.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+  ['free-adobe-pdf-editor-alternative.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+])
 
 function tagContent(html, selector) {
   return html.match(new RegExp(`<meta ${selector} content="([^"]+)"\\s*/>`))?.[1]
@@ -52,12 +56,36 @@ function structuredDataScripts(html, file) {
       try {
         return {
           fullMatch: match[0],
+          managedWebPage: match[0].includes('data-managed="webpage"'),
           data: JSON.parse(match[1]),
         }
       } catch (error) {
         throw new Error(`${file} has invalid JSON-LD: ${error.message}`)
       }
     })
+}
+
+function webPageAboutFor(html, file) {
+  const topics = new Set()
+  for (const { data } of structuredDataScripts(html, file)) {
+    if (data['@type'] !== 'WebPage') continue
+    const about = Array.isArray(data.about) ? data.about : [data.about]
+    for (const topic of about) {
+      if (typeof topic === 'string' && topic.trim()) topics.add(topic.trim())
+    }
+  }
+  if (topics.size > 0) return [...topics]
+  return aboutTopicsByFile.get(file) ?? []
+}
+
+function stripDuplicateWebPageSchemas(html, file) {
+  let updated = html
+  for (const { fullMatch, data, managedWebPage } of structuredDataScripts(html, file)) {
+    if (managedWebPage || data['@type'] !== 'WebPage') continue
+    updated = updated.replace(`${fullMatch}\n`, '')
+    updated = updated.replace(fullMatch, '')
+  }
+  return updated
 }
 
 function hasBreadcrumbSchema(html, file) {
@@ -154,6 +182,9 @@ function webpageSchemaFor(html, file) {
   const mainEntity = mainEntityRefsFor(html, file, url)
   if (mainEntity) schema.mainEntity = mainEntity
 
+  const about = webPageAboutFor(html, file)
+  if (about.length > 0) schema.about = about
+
   const relatedLinks = visibleRelatedLinksFor(html, url)
   if (relatedLinks.length > 0) schema.relatedLink = relatedLinks
 
@@ -207,7 +238,7 @@ let changed = 0
 
 for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
-  const withoutManagedSchema = stripManagedSchema(syncBreadcrumbIds(html, file))
+  const withoutManagedSchema = stripDuplicateWebPageSchemas(stripManagedSchema(syncBreadcrumbIds(html, file)), file)
   const updated = withoutManagedSchema.replace(
     /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
     `\n${scriptFor(webpageSchemaFor(html, file))}$1`,

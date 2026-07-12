@@ -159,6 +159,7 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   assert(html.includes('type="application/ld+json" data-managed="webpage"'), `${file} is missing managed WebPage JSON-LD`)
   const blocks = structuredDataBlocks(html, file)
   const webpage = blocks.find((block) => block['@type'] === 'WebPage')
+  assert(blocks.filter((block) => block['@type'] === 'WebPage').length === 1, `${file} must include exactly one top-level WebPage JSON-LD block`)
   assert(webpage, `${file} is missing WebPage JSON-LD`)
   assert(webpage['@context'] === 'https://schema.org', `${file} WebPage context is wrong`)
   assert(webpage['@id'] === `${url}#webpage`, `${file} WebPage @id does not match canonical URL`)
@@ -175,6 +176,12 @@ function assertWebPageSchema({ html, file, url, title, description, h1 }) {
   assert(webpage.primaryImageOfPage?.width === 1200, `${file} WebPage image width is wrong`)
   assert(webpage.primaryImageOfPage?.height === 630, `${file} WebPage image height is wrong`)
   assert(webpage.inLanguage === 'en', `${file} WebPage language is wrong`)
+  const expectedAbout = expectedWebPageAbout.get(file)
+  if (expectedAbout) {
+    assert(JSON.stringify(webpage.about) === JSON.stringify(expectedAbout), `${file} WebPage about topics are wrong`)
+  } else {
+    assert(!webpage.about, `${file} WebPage should not include unmanaged about topics`)
+  }
   const expectedMainEntities = expectedMainEntityIds({ html, file, url, blocks })
   const actualMainEntities = mainEntityIds(webpage.mainEntity)
   assert(JSON.stringify(actualMainEntities) === JSON.stringify(expectedMainEntities), `${file} WebPage mainEntity references are wrong`)
@@ -421,6 +428,10 @@ const requiredSocialTags = [
   ['name', 'twitter:image', 'https://slaypdf.com/og-image.png'],
   ['name', 'twitter:image:alt', 'Slay PDF local PDF editor preview'],
 ]
+const expectedWebPageAbout = new Map([
+  ['adobe-acrobat-vs-slay-pdf.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+  ['free-adobe-pdf-editor-alternative.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+])
 for (const url of htmlUrls) {
   const file = basename(new URL(url).pathname)
   const html = await readPublic(file)

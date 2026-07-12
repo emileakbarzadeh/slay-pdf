@@ -187,6 +187,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('meta[name="twitter:image:alt"]')).toHaveAttribute('content', 'Slay PDF local PDF editor preview')
 
   const structuredGraphs = await page.locator('script[type="application/ld+json"]').evaluateAll((scripts) => scripts.map((script) => JSON.parse(script.textContent ?? '{}')))
+  expect(structuredGraphs.filter((block) => block['@type'] === 'WebPage')).toHaveLength(1)
   const rootWebPage = structuredGraphs.find((block) => block['@type'] === 'WebPage') as {
     '@id'?: string
     url?: string
@@ -396,6 +397,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect([...sitemapIndex.matchAll(/<lastmod>(.*?)<\/lastmod>/g)].map((match) => match[1])).toEqual([latestLastmod, latestLastmod])
   let workflowPageCount = 0
   let toolAppPageCount = 0
+  const expectedWebPageAbout = new Map([
+    ['adobe-acrobat-vs-slay-pdf.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+    ['free-adobe-pdf-editor-alternative.html', ['PDF editor', 'Adobe Acrobat alternative', 'Local PDF editing']],
+  ])
   for (const path of htmlPaths) {
     expect(sitemap).toContain(`<loc>https://slaypdf.com/${path}</loc>`)
     const response = await page.request.get(`/${path}`)
@@ -439,6 +444,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('type="application/ld+json" data-managed="webpage"')
     const structuredData = [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
       .map((match) => JSON.parse(match[1]))
+    expect(structuredData.filter((block) => block['@type'] === 'WebPage')).toHaveLength(1)
     const webpage = structuredData.find((block) => block['@type'] === 'WebPage')
     expect(webpage).toMatchObject({
       '@context': 'https://schema.org',
@@ -461,6 +467,11 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
         '@id': `https://slaypdf.com/${path}#breadcrumb`,
       },
     })
+    if (expectedWebPageAbout.has(path)) {
+      expect(webpage.about).toEqual(expectedWebPageAbout.get(path))
+    } else {
+      expect(webpage.about).toBeUndefined()
+    }
     const faq = structuredDataEntity(structuredData, 'FAQPage') as {
       '@id'?: string
       url?: string
