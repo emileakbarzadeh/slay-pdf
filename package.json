@@ -39,7 +39,13 @@
     "extract-pages-from-pdf",
     "searchable-pdf",
     "pdf-redaction-tool",
-    "no-upload-pdf-editor"
+    "no-upload-pdf-editor",
+    "images-to-pdf",
+    "jpg-to-pdf",
+    "png-to-pdf",
+    "edit-scanned-pdf",
+    "flatten-pdf",
+    "printable-poster-pdf"
   ],
   "type": "module",
   "license": "AGPL-3.0-only",

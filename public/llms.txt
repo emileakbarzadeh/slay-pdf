@@ -23,6 +23,12 @@ Important URLs:
 - Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
 - Add signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
 - PDF redaction tool: https://slaypdf.com/pdf-redaction-tool.html
+- Images to PDF: https://slaypdf.com/images-to-pdf.html
+- JPG to PDF: https://slaypdf.com/jpg-to-pdf.html
+- PNG to PDF: https://slaypdf.com/png-to-pdf.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Flatten PDF: https://slaypdf.com/flatten-pdf.html
+- Printable poster PDF: https://slaypdf.com/printable-poster-pdf.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Merge PDF: https://slaypdf.com/merge-pdf.html
 - Split PDF: https://slaypdf.com/split-pdf.html

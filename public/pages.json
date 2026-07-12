@@ -108,6 +108,48 @@
       "h1": "Redact PDFs locally before sharing."
     },
     {
+      "url": "https://slaypdf.com/images-to-pdf.html",
+      "path": "/images-to-pdf.html",
+      "title": "Images to PDF - Slay PDF",
+      "description": "Convert images to PDF locally with Slay PDF. Import PNG, JPEG or WebP images, reorder pages and export one PDF from your browser.",
+      "h1": "Convert images into a local PDF."
+    },
+    {
+      "url": "https://slaypdf.com/jpg-to-pdf.html",
+      "path": "/jpg-to-pdf.html",
+      "title": "JPG to PDF - Slay PDF",
+      "description": "Convert JPG to PDF locally with Slay PDF. Import JPEG images, arrange pages and export a PDF directly from your browser.",
+      "h1": "Convert JPG images to PDF locally."
+    },
+    {
+      "url": "https://slaypdf.com/png-to-pdf.html",
+      "path": "/png-to-pdf.html",
+      "title": "PNG to PDF - Slay PDF",
+      "description": "Convert PNG to PDF locally with Slay PDF. Import PNG images, reorder pages and export a PDF from your browser.",
+      "h1": "Convert PNG images to PDF locally."
+    },
+    {
+      "url": "https://slaypdf.com/edit-scanned-pdf.html",
+      "path": "/edit-scanned-pdf.html",
+      "title": "Edit Scanned PDF - Slay PDF",
+      "description": "Edit scanned PDFs locally with Slay PDF. Rotate scans, crop margins, remove blank pages, run OCR and export clean PDFs from your browser.",
+      "h1": "Clean up scanned PDFs locally."
+    },
+    {
+      "url": "https://slaypdf.com/flatten-pdf.html",
+      "path": "/flatten-pdf.html",
+      "title": "Flatten PDF - Slay PDF",
+      "description": "Flatten PDF form fields locally with Slay PDF. Fill supported forms, optionally flatten fields and export a clean PDF from your browser.",
+      "h1": "Fill and flatten supported PDF forms."
+    },
+    {
+      "url": "https://slaypdf.com/printable-poster-pdf.html",
+      "path": "/printable-poster-pdf.html",
+      "title": "Printable Poster PDF - Slay PDF",
+      "description": "Make a printable poster PDF locally with Slay PDF. Posterise one PDF page across multiple printable pages without stretching content.",
+      "h1": "Make a printable poster from one PDF page."
+    },
+    {
       "url": "https://slaypdf.com/adobe-acrobat-alternative.html",
       "path": "/adobe-acrobat-alternative.html",
       "title": "Adobe Acrobat Alternative - Slay PDF",

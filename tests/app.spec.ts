@@ -110,6 +110,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'make-pdf-searchable.html',
     'add-signature-to-pdf.html',
     'pdf-redaction-tool.html',
+    'images-to-pdf.html',
+    'jpg-to-pdf.html',
+    'png-to-pdf.html',
+    'edit-scanned-pdf.html',
+    'flatten-pdf.html',
+    'printable-poster-pdf.html',
     'adobe-acrobat-alternative.html',
     'merge-pdf.html',
     'split-pdf.html',
@@ -168,6 +174,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/make-pdf-searchable.html')
   expect(llms).toContain('https://slaypdf.com/add-signature-to-pdf.html')
   expect(llms).toContain('https://slaypdf.com/pdf-redaction-tool.html')
+  expect(llms).toContain('https://slaypdf.com/images-to-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/jpg-to-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/png-to-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/edit-scanned-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/flatten-pdf.html')
+  expect(llms).toContain('https://slaypdf.com/printable-poster-pdf.html')
   expect(llms).toContain('https://slaypdf.com/merge-pdf.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf.html')
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text.html')
@@ -198,6 +210,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/make-pdf-searchable.html')
   expect(tools).toContain('/add-signature-to-pdf.html')
   expect(tools).toContain('/pdf-redaction-tool.html')
+  expect(tools).toContain('/images-to-pdf.html')
+  expect(tools).toContain('/jpg-to-pdf.html')
+  expect(tools).toContain('/png-to-pdf.html')
+  expect(tools).toContain('/edit-scanned-pdf.html')
+  expect(tools).toContain('/flatten-pdf.html')
+  expect(tools).toContain('/printable-poster-pdf.html')
 
   const indexNowKey = await (await page.request.get('/b758a32ef4c84ce7bf2f4bd2468227f8.txt')).text()
   expect(indexNowKey.trim()).toBe('b758a32ef4c84ce7bf2f4bd2468227f8')
