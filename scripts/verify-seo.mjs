@@ -13,6 +13,19 @@ function assert(condition, message) {
   if (!condition) throw new Error(message)
 }
 
+function pubDate(lastmod) {
+  return new Date(`${lastmod}T00:00:00.000Z`).toUTCString()
+}
+
+function decodeXml(value) {
+  return value
+    .replaceAll('&apos;', "'")
+    .replaceAll('&quot;', '"')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&amp;', '&')
+}
+
 function structuredDataBlocks(html, file) {
   return [...html.matchAll(/<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)<\/script>/g)]
     .map((match) => {
@@ -117,6 +130,7 @@ for (const url of htmlUrls) {
 }
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
+assert(rootHtml.includes('rel="alternate" type="application/rss+xml" title="Slay PDF discovery feed" href="https://slaypdf.com/feed.xml"'), 'homepage is missing RSS alternate link')
 const rootMetadata = {
   title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),
   description: rootHtml.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim(),
@@ -164,6 +178,33 @@ for (const [index, page] of pagesJson.pages.entries()) {
   }
 }
 
+const feed = await readPublic('feed.xml')
+assert(feed.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'feed.xml is missing XML declaration')
+assert(feed.includes('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">'), 'feed.xml is not an RSS 2.0 feed')
+assert(feed.includes('<title>Slay PDF pages</title>'), 'feed.xml channel title is wrong')
+assert(feed.includes(`<link>${site}/</link>`), 'feed.xml channel link is wrong')
+assert(feed.includes(`<atom:link href="${site}/feed.xml" rel="self" type="application/rss+xml" />`), 'feed.xml self link is wrong')
+assert(feed.includes(`<lastBuildDate>${pubDate(sitemapEntries.map((entry) => entry.lastmod).sort().at(-1))}</lastBuildDate>`), 'feed.xml lastBuildDate does not match sitemap')
+const feedItems = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => {
+  const item = match[1]
+  return {
+    title: decodeXml(item.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim() ?? ''),
+    link: decodeXml(item.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() ?? ''),
+    guid: decodeXml(item.match(/<guid isPermaLink="true">([\s\S]*?)<\/guid>/)?.[1]?.trim() ?? ''),
+    description: decodeXml(item.match(/<description>([\s\S]*?)<\/description>/)?.[1]?.trim() ?? ''),
+    pubDate: item.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1]?.trim(),
+  }
+})
+assert(feedItems.length === pagesJson.pages.length, 'feed.xml item count differs from pages.json')
+for (const [index, item] of feedItems.entries()) {
+  const page = pagesJson.pages[index]
+  assert(item.title === page.title, `feed.xml title mismatch at ${index}`)
+  assert(item.link === page.url, `feed.xml link mismatch at ${index}`)
+  assert(item.guid === page.url, `feed.xml guid mismatch at ${index}`)
+  assert(item.description === page.description, `feed.xml description mismatch at ${index}`)
+  assert(item.pubDate === pubDate(page.lastmod), `feed.xml pubDate mismatch at ${index}`)
+}
+
 const toolsHtml = await readPublic('tools.html')
 const toolsStructuredData = structuredDataBlocks(toolsHtml, 'tools.html')
 const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
@@ -180,8 +221,12 @@ const llms = await readPublic('llms.txt')
 for (const url of urls) assert(llms.includes(url), `llms.txt is missing ${url}`)
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
+assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json']) {
+const robots = await readPublic('robots.txt')
+assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
+
+for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'feed.xml']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -193,6 +238,9 @@ if (live) {
   const keyResponse = await fetch(indexNow.keyLocation)
   assert(keyResponse.ok, `live IndexNow key failed ${keyResponse.status}`)
   assert((await keyResponse.text()).trim() === indexNow.key, 'live IndexNow key content mismatch')
+  const feedResponse = await fetch(`${site}/feed.xml`)
+  assert(feedResponse.ok, `live feed failed ${feedResponse.status}`)
+  assert((await feedResponse.text()).includes('<title>Slay PDF pages</title>'), 'live feed content mismatch')
 }
 
 console.log(`SEO verification passed for ${urls.length} sitemap URLs${live ? ' and live deployment' : ''}.`)

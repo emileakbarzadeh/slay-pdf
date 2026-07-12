@@ -81,6 +81,7 @@ Regenerate the plain and structured page indexes from the sitemap and page schem
 
 ```sh
 nix develop --command npm run seo:index
+nix develop --command npm run seo:feed
 ```
 
 Regenerate managed social metadata and WebPage JSON-LD:
