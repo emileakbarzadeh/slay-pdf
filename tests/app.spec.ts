@@ -467,6 +467,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'split-pdf-no-watermark.html',
     'sign-pdf-no-watermark.html',
     'redact-pdf-no-watermark.html',
+    'compress-pdf-no-watermark.html',
+    'rotate-pdf-no-watermark.html',
+    'crop-pdf-no-watermark.html',
+    'ocr-pdf-no-watermark.html',
     'open-source-pdf-editor.html',
     'open-source-adobe-acrobat-alternative.html',
     'offline-pdf-editor.html',
@@ -761,7 +765,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(139)
+  expect(toolAppPageCount).toBe(143)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -877,6 +881,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/split-pdf-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/sign-pdf-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/redact-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/compress-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/rotate-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/crop-pdf-no-watermark.html')
+  expect(llms).toContain('https://slaypdf.com/ocr-pdf-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/open-source-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/open-source-adobe-acrobat-alternative.html')
   expect(llms).toContain('https://slaypdf.com/offline-pdf-editor.html')
@@ -1069,6 +1077,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/split-pdf-no-watermark.html')
   expect(tools).toContain('/sign-pdf-no-watermark.html')
   expect(tools).toContain('/redact-pdf-no-watermark.html')
+  expect(tools).toContain('/compress-pdf-no-watermark.html')
+  expect(tools).toContain('/rotate-pdf-no-watermark.html')
+  expect(tools).toContain('/crop-pdf-no-watermark.html')
+  expect(tools).toContain('/ocr-pdf-no-watermark.html')
   expect(tools).toContain('/open-source-pdf-editor.html')
   expect(tools).toContain('/open-source-adobe-acrobat-alternative.html')
   expect(tools).toContain('/offline-pdf-editor.html')

@@ -833,6 +833,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/compress-pdf-no-watermark.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Compress PDF No Watermark - Slay PDF</image:title>
+      <image:caption>Compress PDF files with no watermark in Slay PDF. Reduce file size locally in your browser and download a clean PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/rotate-pdf-no-watermark.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Rotate PDF No Watermark - Slay PDF</image:title>
+      <image:caption>Rotate PDF pages with no watermark in Slay PDF. Fix sideways pages locally in your browser and download a clean PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/crop-pdf-no-watermark.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Crop PDF No Watermark - Slay PDF</image:title>
+      <image:caption>Crop PDF pages with no watermark in Slay PDF. Trim margins locally in your browser and download a clean cropped PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/ocr-pdf-no-watermark.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>OCR PDF No Watermark - Slay PDF</image:title>
+      <image:caption>OCR PDF files with no watermark in Slay PDF. Make English scans searchable locally in your browser and download a clean PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/open-source-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

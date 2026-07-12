@@ -320,6 +320,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Redact PDF No Watermark - Slay PDF: https://slaypdf.com/redact-pdf-no-watermark.html
   Summary: Redact PDF files with no watermark in Slay PDF. Cover sensitive details locally and export a clean flattened PDF.
   Last modified: 2026-07-13
+- Compress PDF No Watermark - Slay PDF: https://slaypdf.com/compress-pdf-no-watermark.html
+  Summary: Compress PDF files with no watermark in Slay PDF. Reduce file size locally in your browser and download a clean PDF.
+  Last modified: 2026-07-13
+- Rotate PDF No Watermark - Slay PDF: https://slaypdf.com/rotate-pdf-no-watermark.html
+  Summary: Rotate PDF pages with no watermark in Slay PDF. Fix sideways pages locally in your browser and download a clean PDF.
+  Last modified: 2026-07-13
+- Crop PDF No Watermark - Slay PDF: https://slaypdf.com/crop-pdf-no-watermark.html
+  Summary: Crop PDF pages with no watermark in Slay PDF. Trim margins locally in your browser and download a clean cropped PDF.
+  Last modified: 2026-07-13
+- OCR PDF No Watermark - Slay PDF: https://slaypdf.com/ocr-pdf-no-watermark.html
+  Summary: OCR PDF files with no watermark in Slay PDF. Make English scans searchable locally in your browser and download a clean PDF.
+  Last modified: 2026-07-13
 - Open Source PDF Editor - Slay PDF: https://slaypdf.com/open-source-pdf-editor.html
   Summary: Use Slay PDF as an open source PDF editor. The AGPL app runs locally in your browser for merge, split, sign, OCR, redact and export workflows.
   Last modified: 2026-07-13

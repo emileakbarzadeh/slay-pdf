@@ -77,7 +77,7 @@ Content:
 - Private PDF task pages
 - Private PDF merger, splitter, signer and redactor pages for browser-only document handling.
 - No-watermark PDF task pages
-- No-watermark PDF merger, splitter, signer and redactor pages for clean local exports.
+- No-watermark PDF task pages for clean local merge, split, sign, redact, compress, rotate, crop and OCR exports.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -191,6 +191,10 @@ Related links:
 - Split PDF no watermark: https://slaypdf.com/split-pdf-no-watermark.html
 - Sign PDF no watermark: https://slaypdf.com/sign-pdf-no-watermark.html
 - Redact PDF no watermark: https://slaypdf.com/redact-pdf-no-watermark.html
+- Compress PDF no watermark: https://slaypdf.com/compress-pdf-no-watermark.html
+- Rotate PDF no watermark: https://slaypdf.com/rotate-pdf-no-watermark.html
+- Crop PDF no watermark: https://slaypdf.com/crop-pdf-no-watermark.html
+- OCR PDF no watermark: https://slaypdf.com/ocr-pdf-no-watermark.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open source Adobe Acrobat alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
@@ -345,7 +349,7 @@ Content:
 - Private PDF task pages
 - Private PDF merger, splitter, signer and redactor pages for browser-only document handling.
 - No-watermark PDF task pages
-- No-watermark PDF merger, splitter, signer and redactor pages for clean local exports.
+- No-watermark PDF task pages for clean local merge, split, sign, redact, compress, rotate, crop and OCR exports.
 - Open source and local app pages
 - Pages for open source, client-side, offline-capable and transparent local PDF editor searches.
 - Role and document workflows
@@ -462,6 +466,10 @@ Related links:
 - Split PDF No Watermark: https://slaypdf.com/split-pdf-no-watermark.html
 - Sign PDF No Watermark: https://slaypdf.com/sign-pdf-no-watermark.html
 - Redact PDF No Watermark: https://slaypdf.com/redact-pdf-no-watermark.html
+- Compress PDF No Watermark: https://slaypdf.com/compress-pdf-no-watermark.html
+- Rotate PDF No Watermark: https://slaypdf.com/rotate-pdf-no-watermark.html
+- Crop PDF No Watermark: https://slaypdf.com/crop-pdf-no-watermark.html
+- OCR PDF No Watermark: https://slaypdf.com/ocr-pdf-no-watermark.html
 - Open Source PDF Editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
 - Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
@@ -3094,6 +3102,102 @@ Content:
 - No. Redacted exports do not include a Slay PDF watermark.
 - Yes. Use a flattened export and inspect the final file before sharing.
 - No. Use your required legal, regulated or enterprise review process when it applies.
+
+## Compress PDF No Watermark - Slay PDF
+URL: https://slaypdf.com/compress-pdf-no-watermark.html
+Last modified: 2026-07-13
+Summary: Compress PDF files with no watermark in Slay PDF. Reduce file size locally in your browser and download a clean PDF.
+H1: Compress PDFs with no watermark.
+
+Content:
+- No-watermark PDF compressor
+- Compress PDFs with no watermark.
+- Reduce PDF size in your browser, remove pages you do not need and download a clean compressed file.
+- Clean compressed PDF
+- Download compressed PDFs without a Slay PDF watermark.
+- Local workflow
+- Compression and cleanup run in the browser without an app-server upload.
+- Trim before export
+- Delete pages, rotate scans or export selected pages before making the file smaller.
+- Make PDFs smaller without a branded result.
+- Slay PDF is useful when a PDF is too large for email, forms or portals and you need a clean output. Review the pages first, remove anything unnecessary and export a smaller PDF from the browser.
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Compress PDF no watermark FAQ
+- No. Compressed PDF exports do not include a Slay PDF watermark.
+- Yes. Delete unwanted pages or export selected pages before downloading the compressed file.
+- No. The compression workflow runs locally in your browser.
+
+## Rotate PDF No Watermark - Slay PDF
+URL: https://slaypdf.com/rotate-pdf-no-watermark.html
+Last modified: 2026-07-13
+Summary: Rotate PDF pages with no watermark in Slay PDF. Fix sideways pages locally in your browser and download a clean PDF.
+H1: Rotate PDFs with no watermark.
+
+Content:
+- No-watermark PDF rotator
+- Rotate PDFs with no watermark.
+- Fix sideways scans and mixed-orientation pages in your browser, then download a clean rotated PDF.
+- Clean rotated PDF
+- Export rotated pages without a Slay PDF watermark.
+- Page-level control
+- Rotate selected pages or correct the whole document before download.
+- Local export
+- The rotated PDF is generated in the browser and downloaded to your device.
+- Fix orientation without a branded PDF.
+- Slay PDF helps when scanned pages arrive sideways or a document mixes portrait and landscape pages. Rotate the pages you need and export a clean result from the browser.
+- Use it before merging, signing or sharing a scan so the final document is easier to read.
+- Rotate PDF no watermark FAQ
+- No. Rotated PDF exports do not include a Slay PDF watermark.
+- Yes. Select the pages you want to rotate, then export the corrected PDF.
+- No. The rotation workflow runs locally in your browser.
+
+## Crop PDF No Watermark - Slay PDF
+URL: https://slaypdf.com/crop-pdf-no-watermark.html
+Last modified: 2026-07-13
+Summary: Crop PDF pages with no watermark in Slay PDF. Trim margins locally in your browser and download a clean cropped PDF.
+H1: Crop PDFs with no watermark.
+
+Content:
+- No-watermark PDF cropper
+- Crop PDFs with no watermark.
+- Trim margins and clean scanned pages locally in your browser, then download a clean cropped PDF.
+- Clean cropped PDF
+- Export cropped pages without a Slay PDF watermark.
+- Custom page area
+- Crop pages to remove margins, scanner borders or unwanted whitespace.
+- Local editing
+- Cropping and export happen in the browser without an app-server upload.
+- Crop scanned PDFs without a branded output.
+- Slay PDF is useful for cleaning up scans, forms and document packets before sharing. Crop away rough edges or extra whitespace, then export a clean no-watermark PDF.
+- Review the exported file before sending it, especially when the crop is meant to hide irrelevant page content.
+- Crop PDF no watermark FAQ
+- No. Cropped PDF exports do not include a Slay PDF watermark.
+- Yes. Use crop controls to trim margins, borders or unwanted whitespace from scanned pages.
+- No. The crop workflow runs locally in your browser.
+
+## OCR PDF No Watermark - Slay PDF
+URL: https://slaypdf.com/ocr-pdf-no-watermark.html
+Last modified: 2026-07-13
+Summary: OCR PDF files with no watermark in Slay PDF. Make English scans searchable locally in your browser and download a clean PDF.
+H1: OCR PDFs with no watermark.
+
+Content:
+- No-watermark PDF OCR
+- OCR PDFs with no watermark.
+- Make English scans searchable in your browser and download a clean OCR PDF without added Slay PDF branding.
+- Clean OCR PDF
+- Export searchable PDFs without a Slay PDF watermark.
+- Searchable scans
+- Run OCR for English scanned pages so text can be found and selected.
+- Local workflow
+- OCR runs in the browser with WebAssembly support and downloads to your device.
+- Make scans searchable without a branded output.
+- Slay PDF helps turn English scanned PDFs into searchable documents without placing a watermark on the exported file. It is useful for receipts, forms, archive scans and document packets.
+- OCR quality depends on scan quality. Review the output before relying on it for important search or copy workflows.
+- OCR PDF no watermark FAQ
+- No. OCR PDF exports do not include a Slay PDF watermark.
+- Slay PDF is designed for English OCR workflows.
+- No. OCR runs locally in your browser with WebAssembly support.
 
 ## Open Source PDF Editor - Slay PDF
 URL: https://slaypdf.com/open-source-pdf-editor.html

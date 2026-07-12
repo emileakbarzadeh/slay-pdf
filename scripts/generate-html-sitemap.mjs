@@ -70,8 +70,8 @@ const sections = [
   },
   {
     title: 'No-watermark PDF task pages',
-    description: 'No-watermark PDF merger, splitter, signer and redactor pages for clean local exports.',
-    paths: ['/merge-pdf-no-watermark.html', '/split-pdf-no-watermark.html', '/sign-pdf-no-watermark.html', '/redact-pdf-no-watermark.html'],
+    description: 'No-watermark PDF task pages for clean local merge, split, sign, redact, compress, rotate, crop and OCR exports.',
+    paths: ['/merge-pdf-no-watermark.html', '/split-pdf-no-watermark.html', '/sign-pdf-no-watermark.html', '/redact-pdf-no-watermark.html', '/compress-pdf-no-watermark.html', '/rotate-pdf-no-watermark.html', '/crop-pdf-no-watermark.html', '/ocr-pdf-no-watermark.html'],
   },
   {
     title: 'Open source and local app pages',

@@ -1250,6 +1250,54 @@
       "breadcrumbId": "https://slaypdf.com/redact-pdf-no-watermark.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/compress-pdf-no-watermark.html",
+      "path": "/compress-pdf-no-watermark.html",
+      "title": "Compress PDF No Watermark - Slay PDF",
+      "description": "Compress PDF files with no watermark in Slay PDF. Reduce file size locally in your browser and download a clean PDF.",
+      "h1": "Compress PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/compress-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/compress-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/rotate-pdf-no-watermark.html",
+      "path": "/rotate-pdf-no-watermark.html",
+      "title": "Rotate PDF No Watermark - Slay PDF",
+      "description": "Rotate PDF pages with no watermark in Slay PDF. Fix sideways pages locally in your browser and download a clean PDF.",
+      "h1": "Rotate PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/rotate-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/rotate-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/crop-pdf-no-watermark.html",
+      "path": "/crop-pdf-no-watermark.html",
+      "title": "Crop PDF No Watermark - Slay PDF",
+      "description": "Crop PDF pages with no watermark in Slay PDF. Trim margins locally in your browser and download a clean cropped PDF.",
+      "h1": "Crop PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/crop-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/crop-pdf-no-watermark.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/ocr-pdf-no-watermark.html",
+      "path": "/ocr-pdf-no-watermark.html",
+      "title": "OCR PDF No Watermark - Slay PDF",
+      "description": "OCR PDF files with no watermark in Slay PDF. Make English scans searchable locally in your browser and download a clean PDF.",
+      "h1": "OCR PDFs with no watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/ocr-pdf-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/ocr-pdf-no-watermark.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/open-source-pdf-editor.html",
       "path": "/open-source-pdf-editor.html",
       "title": "Open Source PDF Editor - Slay PDF",
