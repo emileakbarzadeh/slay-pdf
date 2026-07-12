@@ -417,6 +417,12 @@ assertRichEntitySchema({ html: rootHtml, file: 'index.html', url: `${site}/` })
 pageMetadata.set(`${site}/`, rootMetadata)
 assertSiteIdentitySchema(rootHtml, 'index.html')
 
+const noscriptNav = rootHtml.match(/<nav aria-label="PDF tools">([\s\S]*?)<\/nav>/)?.[1]
+assert(noscriptNav, 'homepage is missing noscript PDF tools navigation')
+const noscriptPaths = [...noscriptNav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1])
+const expectedNoscriptPaths = htmlUrls.map((url) => new URL(url).pathname)
+assert(JSON.stringify(noscriptPaths) === JSON.stringify(expectedNoscriptPaths), 'homepage noscript PDF tools navigation must match sitemap HTML URL order')
+
 const indexNow = JSON.parse(await readPublic('indexnow.json'))
 assert(indexNow.host === 'slaypdf.com', 'IndexNow host is wrong')
 assert(indexNow.keyLocation === `${site}/${indexNow.key}.txt`, 'IndexNow keyLocation does not match key')

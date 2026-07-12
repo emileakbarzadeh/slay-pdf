@@ -69,6 +69,7 @@
     "test:e2e": "playwright test",
     "seo:generate": "node scripts/generate-seo.mjs",
     "seo:html-sitemap": "node scripts/generate-html-sitemap.mjs",
+    "seo:noscript": "node scripts/sync-homepage-noscript-links.mjs",
     "seo:index": "node scripts/generate-page-index.mjs",
     "seo:indexnow": "node scripts/generate-indexnow.mjs",
     "seo:image-sitemap": "node scripts/generate-image-sitemap.mjs",

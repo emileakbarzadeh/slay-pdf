@@ -332,6 +332,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'pdf-editor-for-chromebook.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  const homepageHtml = await (await page.request.get('/')).text()
+  const noscriptNav = homepageHtml.match(/<nav aria-label="PDF tools">([\s\S]*?)<\/nav>/)?.[1] ?? ''
+  const noscriptPaths = [...noscriptNav.matchAll(/<a href="([^"]+)"/g)].map((match) => match[1])
+  expect(noscriptPaths).toEqual(htmlPaths.map((path) => `/${path}`))
   const imageSitemap = await (await page.request.get('/image-sitemap.xml')).text()
   expect(imageSitemap).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"')
   expect(imageSitemap).toContain('<image:loc>https://slaypdf.com/og-image.png</image:loc>')
