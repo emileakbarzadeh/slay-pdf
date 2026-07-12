@@ -7,378 +7,647 @@
       "path": "/",
       "title": "Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative",
       "description": "Slay PDF is a free local PDF editor and Adobe Acrobat alternative for splitting, merging, signing, posterising, resizing and editing PDFs entirely in your browser.",
-      "h1": "Slay PDF"
+      "h1": "Slay PDF",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 1,
+      "webpageId": "https://slaypdf.com/#webpage"
     },
     {
       "url": "https://slaypdf.com/free-pdf-editor.html",
       "path": "/free-pdf-editor.html",
       "title": "Free Local PDF Editor - Slay PDF",
       "description": "Use Slay PDF as a free local PDF editor for merging, splitting, signing, resizing, posterising and editing PDFs without uploading documents.",
-      "h1": "Edit PDFs locally in your browser."
+      "h1": "Edit PDFs locally in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.9,
+      "webpageId": "https://slaypdf.com/free-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/free-pdf-editor.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/tools.html",
       "path": "/tools.html",
       "title": "PDF Tools - Slay PDF",
       "description": "Browse Slay PDF tools: merge, split, sign, rotate, crop, resize, redact, compress, OCR, extract text, export images, fill forms and password protect PDFs locally.",
-      "h1": "Every Slay PDF tool in one place."
+      "h1": "Every Slay PDF tool in one place.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.9,
+      "webpageId": "https://slaypdf.com/tools.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/tools.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/faq.html",
       "path": "/faq.html",
       "title": "Slay PDF FAQ - Local PDF Editor",
       "description": "Answers about Slay PDF, the free local PDF editor for merging, splitting, signing, posterising, resizing, OCR, redaction and private PDF work in the browser.",
-      "h1": "Answers for local PDF editing."
+      "h1": "Answers for local PDF editing.",
+      "lastmod": "2026-07-13",
+      "changefreq": "monthly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/faq.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/faq.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/privacy.html",
       "path": "/privacy.html",
       "title": "Privacy - Slay PDF",
       "description": "Slay PDF privacy details: PDFs and edits stay in the browser, active workspaces use local browser storage, and export passwords are never saved.",
-      "h1": "Your PDFs stay in this browser."
+      "h1": "Your PDFs stay in this browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "monthly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/privacy.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/privacy.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/online-pdf-editor.html",
       "path": "/online-pdf-editor.html",
       "title": "Online PDF Editor - Slay PDF",
       "description": "Use Slay PDF as a free online PDF editor that runs locally in your browser. Merge, split, sign, organize, redact and export PDFs without app-server uploads.",
-      "h1": "Edit PDFs online, but keep the work local."
+      "h1": "Edit PDFs online, but keep the work local.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.9,
+      "webpageId": "https://slaypdf.com/online-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/online-pdf-editor.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/edit-pdf-without-uploading.html",
       "path": "/edit-pdf-without-uploading.html",
       "title": "Edit PDF Without Uploading - Slay PDF",
       "description": "Edit PDFs without uploading them to a random website. Slay PDF keeps PDF documents and edits in your browser for private local PDF work.",
-      "h1": "Edit PDFs without uploading your documents."
+      "h1": "Edit PDFs without uploading your documents.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/edit-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/edit-pdf-without-uploading.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/organize-pdf-pages.html",
       "path": "/organize-pdf-pages.html",
       "title": "Organize PDF Pages - Slay PDF",
       "description": "Organize PDF pages locally with Slay PDF. Reorder, delete, rotate, merge, split and export selected PDF pages from your browser.",
-      "h1": "Reorder, delete, rotate, merge and split PDF pages."
+      "h1": "Reorder, delete, rotate, merge and split PDF pages.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/organize-pdf-pages.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/organize-pdf-pages.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html",
       "path": "/adobe-acrobat-vs-slay-pdf.html",
       "title": "Adobe Acrobat vs Slay PDF",
       "description": "Compare Slay PDF with Adobe Acrobat for everyday PDF edits. Slay PDF is a free local browser editor for merge, split, sign, organize, redact and export jobs.",
-      "h1": "Adobe Acrobat vs Slay PDF for everyday PDF edits."
+      "h1": "Adobe Acrobat vs Slay PDF for everyday PDF edits.",
+      "lastmod": "2026-07-13",
+      "changefreq": "monthly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/combine-pdf-files.html",
       "path": "/combine-pdf-files.html",
       "title": "Combine PDF Files - Slay PDF",
       "description": "Combine PDF files locally with Slay PDF. Import multiple PDFs or images, reorder pages and export one clean PDF from your browser.",
-      "h1": "Combine PDF files into one local export."
+      "h1": "Combine PDF files into one local export.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/combine-pdf-files.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/combine-pdf-files.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/remove-pages-from-pdf.html",
       "path": "/remove-pages-from-pdf.html",
       "title": "Remove Pages from PDF - Slay PDF",
       "description": "Remove pages from a PDF locally with Slay PDF. Delete blank, duplicate or sensitive pages and export a clean PDF from your browser.",
-      "h1": "Remove unwanted pages from a PDF."
+      "h1": "Remove unwanted pages from a PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/remove-pages-from-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/remove-pages-from-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/extract-pages-from-pdf.html",
       "path": "/extract-pages-from-pdf.html",
       "title": "Extract Pages from PDF - Slay PDF",
       "description": "Extract pages from a PDF locally with Slay PDF. Select the pages you need and export them as a new PDF without uploading files.",
-      "h1": "Extract selected pages from a PDF."
+      "h1": "Extract selected pages from a PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/extract-pages-from-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/extract-pages-from-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/make-pdf-searchable.html",
       "path": "/make-pdf-searchable.html",
       "title": "Make PDF Searchable - Slay PDF",
       "description": "Make a PDF searchable locally with Slay PDF. Run English OCR in the browser and export a searchable PDF without app-server uploads.",
-      "h1": "Make scanned PDFs searchable with local OCR."
+      "h1": "Make scanned PDFs searchable with local OCR.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/make-pdf-searchable.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/make-pdf-searchable.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/add-signature-to-pdf.html",
       "path": "/add-signature-to-pdf.html",
       "title": "Add Signature to PDF - Slay PDF",
       "description": "Add a signature to a PDF locally with Slay PDF. Place a visual signature, text and marks on PDF pages in your browser.",
-      "h1": "Add a visual signature to a PDF."
+      "h1": "Add a visual signature to a PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/add-signature-to-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/add-signature-to-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-redaction-tool.html",
       "path": "/pdf-redaction-tool.html",
       "title": "PDF Redaction Tool - Slay PDF",
       "description": "Use Slay PDF as a local PDF redaction tool. Add redaction blocks and rasterize redacted pages before export in your browser.",
-      "h1": "Redact PDFs locally before sharing."
+      "h1": "Redact PDFs locally before sharing.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-redaction-tool.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-redaction-tool.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/images-to-pdf.html",
       "path": "/images-to-pdf.html",
       "title": "Images to PDF - Slay PDF",
       "description": "Convert images to PDF locally with Slay PDF. Import PNG, JPEG or WebP images, reorder pages and export one PDF from your browser.",
-      "h1": "Convert images into a local PDF."
+      "h1": "Convert images into a local PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/images-to-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/images-to-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/jpg-to-pdf.html",
       "path": "/jpg-to-pdf.html",
       "title": "JPG to PDF - Slay PDF",
       "description": "Convert JPG to PDF locally with Slay PDF. Import JPEG images, arrange pages and export a PDF directly from your browser.",
-      "h1": "Convert JPG images to PDF locally."
+      "h1": "Convert JPG images to PDF locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/jpg-to-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/jpg-to-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/png-to-pdf.html",
       "path": "/png-to-pdf.html",
       "title": "PNG to PDF - Slay PDF",
       "description": "Convert PNG to PDF locally with Slay PDF. Import PNG images, reorder pages and export a PDF from your browser.",
-      "h1": "Convert PNG images to PDF locally."
+      "h1": "Convert PNG images to PDF locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/png-to-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/png-to-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/edit-scanned-pdf.html",
       "path": "/edit-scanned-pdf.html",
       "title": "Edit Scanned PDF - Slay PDF",
       "description": "Edit scanned PDFs locally with Slay PDF. Rotate scans, crop margins, remove blank pages, run OCR and export clean PDFs from your browser.",
-      "h1": "Clean up scanned PDFs locally."
+      "h1": "Clean up scanned PDFs locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/edit-scanned-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/edit-scanned-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/flatten-pdf.html",
       "path": "/flatten-pdf.html",
       "title": "Flatten PDF - Slay PDF",
       "description": "Flatten PDF form fields locally with Slay PDF. Fill supported forms, optionally flatten fields and export a clean PDF from your browser.",
-      "h1": "Fill and flatten supported PDF forms."
+      "h1": "Fill and flatten supported PDF forms.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/flatten-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/flatten-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/printable-poster-pdf.html",
       "path": "/printable-poster-pdf.html",
       "title": "Printable Poster PDF - Slay PDF",
       "description": "Make a printable poster PDF locally with Slay PDF. Posterise one PDF page across multiple printable pages without stretching content.",
-      "h1": "Make a printable poster from one PDF page."
+      "h1": "Make a printable poster from one PDF page.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/printable-poster-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/printable-poster-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-acrobat-alternative.html",
       "path": "/adobe-acrobat-alternative.html",
       "title": "Adobe Acrobat Alternative - Slay PDF",
       "description": "Slay PDF is a free Adobe Acrobat alternative for local PDF edits: merge, split, sign, resize, posterise, annotate and export PDFs in the browser.",
-      "h1": "A local PDF editor for jobs that should not need Acrobat."
+      "h1": "A local PDF editor for jobs that should not need Acrobat.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/adobe-acrobat-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-acrobat-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/merge-pdf.html",
       "path": "/merge-pdf.html",
       "title": "Merge PDF Files Locally - Slay PDF",
       "description": "Merge PDF files locally with Slay PDF. Combine pages, reorder documents, rotate pages and export one PDF from your browser.",
-      "h1": "Merge PDFs without uploading them."
+      "h1": "Merge PDFs without uploading them.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/merge-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/merge-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/split-pdf.html",
       "path": "/split-pdf.html",
       "title": "Split PDF Files Locally - Slay PDF",
       "description": "Split PDF files locally with Slay PDF. Delete pages, export selected pages or add split markers to create separate PDFs from one document.",
-      "h1": "Split a PDF into exactly the pages you need."
+      "h1": "Split a PDF into exactly the pages you need.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/split-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/split-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/sign-pdf.html",
       "path": "/sign-pdf.html",
       "title": "Sign PDF Locally - Slay PDF",
       "description": "Sign PDFs locally with Slay PDF. Add a visual signature, text, highlights and page edits without uploading the document.",
-      "h1": "Add a signature to a PDF without sending it away."
+      "h1": "Add a signature to a PDF without sending it away.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/sign-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/sign-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/posterise-pdf.html",
       "path": "/posterise-pdf.html",
       "title": "Posterise PDF Pages - Slay PDF",
       "description": "Posterise PDF pages locally with Slay PDF. Split one page across multiple printable pages and resize PDFs without stretching content.",
-      "h1": "Turn a PDF page into printable poster tiles."
+      "h1": "Turn a PDF page into printable poster tiles.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/posterise-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/posterise-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/private-pdf-editor.html",
       "path": "/private-pdf-editor.html",
       "title": "Private Local PDF Editor - Slay PDF",
       "description": "Use Slay PDF as a private PDF editor that runs locally in your browser. Edit PDFs without uploading documents to random converter sites.",
-      "h1": "Edit PDFs without handing them to a random website."
+      "h1": "Edit PDFs without handing them to a random website.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/private-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/private-pdf-editor.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/delete-pdf-pages.html",
       "path": "/delete-pdf-pages.html",
       "title": "Delete PDF Pages Locally - Slay PDF",
       "description": "Delete PDF pages locally with Slay PDF. Remove blank, duplicate or unwanted pages and export a clean PDF without uploading files.",
-      "h1": "Remove pages from a PDF without uploading it."
+      "h1": "Remove pages from a PDF without uploading it.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/delete-pdf-pages.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/delete-pdf-pages.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/resize-pdf.html",
       "path": "/resize-pdf.html",
       "title": "Resize PDF Pages Locally - Slay PDF",
       "description": "Resize PDF pages locally with Slay PDF. Change paper size, switch orientation and preserve aspect ratio with white letterboxing.",
-      "h1": "Change PDF page size without stretching the page."
+      "h1": "Change PDF page size without stretching the page.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/resize-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/resize-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/crop-pdf.html",
       "path": "/crop-pdf.html",
       "title": "Crop PDF Pages Locally - Slay PDF",
       "description": "Crop PDF pages locally with Slay PDF. Trim margins, clean scans and export cropped PDFs without uploading documents.",
-      "h1": "Crop PDF pages and trim margins locally."
+      "h1": "Crop PDF pages and trim margins locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/crop-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/crop-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/redact-pdf.html",
       "path": "/redact-pdf.html",
       "title": "Redact PDF Locally - Slay PDF",
       "description": "Redact PDFs locally with Slay PDF. Place secure redaction blocks and rasterize redacted pages before export.",
-      "h1": "Cover sensitive PDF content locally."
+      "h1": "Cover sensitive PDF content locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/redact-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/redact-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/compress-pdf.html",
       "path": "/compress-pdf.html",
       "title": "Compress PDF Locally - Slay PDF",
       "description": "Compress PDFs locally with Slay PDF. Choose compression presets and export smaller PDFs from your browser.",
-      "h1": "Compress PDF exports from your browser."
+      "h1": "Compress PDF exports from your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/compress-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/compress-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/ocr-pdf.html",
       "path": "/ocr-pdf.html",
       "title": "OCR PDF Locally - Slay PDF",
       "description": "Run English OCR on PDFs locally with Slay PDF and export searchable PDFs from your browser.",
-      "h1": "Create searchable OCR PDFs in the browser."
+      "h1": "Create searchable OCR PDFs in the browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/ocr-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/ocr-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-to-images.html",
       "path": "/pdf-to-images.html",
       "title": "PDF to Images Locally - Slay PDF",
       "description": "Convert PDF pages to images locally with Slay PDF. Export selected pages as page images from your browser.",
-      "h1": "Export PDF pages as images locally."
+      "h1": "Export PDF pages as images locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.65,
+      "webpageId": "https://slaypdf.com/pdf-to-images.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-to-images.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/extract-pdf-text.html",
       "path": "/extract-pdf-text.html",
       "title": "Extract PDF Text Locally - Slay PDF",
       "description": "Extract text from PDFs locally with Slay PDF. Export plain text from selected PDF pages in your browser.",
-      "h1": "Export text from PDF pages in your browser."
+      "h1": "Export text from PDF pages in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.65,
+      "webpageId": "https://slaypdf.com/extract-pdf-text.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/extract-pdf-text.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/rotate-pdf.html",
       "path": "/rotate-pdf.html",
       "title": "Rotate PDF Pages Locally - Slay PDF",
       "description": "Rotate PDF pages locally with Slay PDF. Turn selected pages left or right and export the corrected PDF from your browser.",
-      "h1": "Rotate sideways PDF pages locally."
+      "h1": "Rotate sideways PDF pages locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/rotate-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/rotate-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/annotate-pdf.html",
       "path": "/annotate-pdf.html",
       "title": "Annotate PDF Locally - Slay PDF",
       "description": "Annotate PDFs locally with Slay PDF. Add text, highlights, rectangles, ink drawings, signatures and redactions in your browser.",
-      "h1": "Add PDF annotations in your browser."
+      "h1": "Add PDF annotations in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/annotate-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/annotate-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/watermark-pdf.html",
       "path": "/watermark-pdf.html",
       "title": "Watermark PDF Locally - Slay PDF",
       "description": "Add a watermark to PDFs locally with Slay PDF. Apply draft, confidential or review watermarks before exporting.",
-      "h1": "Add a watermark before exporting your PDF."
+      "h1": "Add a watermark before exporting your PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.65,
+      "webpageId": "https://slaypdf.com/watermark-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/watermark-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/add-page-numbers-to-pdf.html",
       "path": "/add-page-numbers-to-pdf.html",
       "title": "Add Page Numbers to PDF - Slay PDF",
       "description": "Add page numbers to PDFs locally with Slay PDF. Number exported pages after merging, splitting or reordering.",
-      "h1": "Add page numbers after organizing a PDF."
+      "h1": "Add page numbers after organizing a PDF.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.65,
+      "webpageId": "https://slaypdf.com/add-page-numbers-to-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/add-page-numbers-to-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/fill-pdf-forms.html",
       "path": "/fill-pdf-forms.html",
       "title": "Fill PDF Forms Locally - Slay PDF",
       "description": "Fill PDF forms locally with Slay PDF. Edit supported AcroForm text, checkbox, dropdown and radio fields in your browser.",
-      "h1": "Fill supported PDF form fields locally."
+      "h1": "Fill supported PDF form fields locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/fill-pdf-forms.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/fill-pdf-forms.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/password-protect-pdf.html",
       "path": "/password-protect-pdf.html",
       "title": "Password Protect PDF Locally - Slay PDF",
       "description": "Password protect PDF exports locally with Slay PDF. Encrypt exported PDFs with AES-256 from your browser.",
-      "h1": "Encrypt PDF exports with a password."
+      "h1": "Encrypt PDF exports with a password.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/password-protect-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/password-protect-pdf.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/free-adobe-pdf-editor-alternative.html",
       "path": "/free-adobe-pdf-editor-alternative.html",
       "title": "Free Adobe PDF Editor Alternative - Slay PDF",
       "description": "Use Slay PDF as a free Adobe PDF editor alternative for everyday local edits: merge, split, sign, organize, resize and export PDFs.",
-      "h1": "A free Adobe PDF editor alternative for quick local jobs."
+      "h1": "A free Adobe PDF editor alternative for quick local jobs.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/free-adobe-pdf-editor-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/free-adobe-pdf-editor-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/acrobat-online-alternative.html",
       "path": "/acrobat-online-alternative.html",
       "title": "Acrobat Online Alternative - Slay PDF",
       "description": "Slay PDF is an Acrobat Online alternative for local browser PDF edits like merge, split, sign, compress, OCR and page organization.",
-      "h1": "Use a local browser PDF editor instead."
+      "h1": "Use a local browser PDF editor instead.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/acrobat-online-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/acrobat-online-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-pdf-merge-alternative.html",
       "path": "/adobe-pdf-merge-alternative.html",
       "title": "Adobe PDF Merge Alternative - Slay PDF",
       "description": "Use Slay PDF as an Adobe PDF merge alternative. Combine PDFs and images locally, reorder pages and export one PDF from your browser.",
-      "h1": "Merge PDFs locally without Acrobat."
+      "h1": "Merge PDFs locally without Acrobat.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/adobe-pdf-merge-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-pdf-merge-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-compress-pdf-alternative.html",
       "path": "/adobe-compress-pdf-alternative.html",
       "title": "Adobe Compress PDF Alternative - Slay PDF",
       "description": "Use Slay PDF as an Adobe compress PDF alternative. Choose compression presets and export smaller PDFs locally from your browser.",
-      "h1": "Compress PDF exports locally."
+      "h1": "Compress PDF exports locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/adobe-compress-pdf-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-compress-pdf-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-fill-and-sign-alternative.html",
       "path": "/adobe-fill-and-sign-alternative.html",
       "title": "Adobe Fill and Sign Alternative - Slay PDF",
       "description": "Use Slay PDF as an Adobe Fill and Sign alternative for local visual signatures, supported form fields and quick PDF annotations.",
-      "h1": "Fill and sign simple PDFs locally."
+      "h1": "Fill and sign simple PDFs locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/adobe-fill-and-sign-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-fill-and-sign-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/adobe-pdf-organizer-alternative.html",
       "path": "/adobe-pdf-organizer-alternative.html",
       "title": "Adobe PDF Organizer Alternative - Slay PDF",
       "description": "Use Slay PDF as an Adobe PDF organizer alternative. Reorder, delete, rotate, split, merge and export PDF pages locally.",
-      "h1": "Organize PDF pages locally without Acrobat."
+      "h1": "Organize PDF pages locally without Acrobat.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/adobe-pdf-organizer-alternative.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/adobe-pdf-organizer-alternative.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "path": "/free-pdf-editor-no-signup.html",
       "title": "Free PDF Editor No Signup - Slay PDF",
       "description": "Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.",
-      "h1": "Edit PDFs without creating an account."
+      "h1": "Edit PDFs without creating an account.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/free-pdf-editor-no-signup.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/free-pdf-editor-no-signup.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-editor-no-watermark.html",
       "path": "/pdf-editor-no-watermark.html",
       "title": "PDF Editor No Watermark - Slay PDF",
       "description": "Use Slay PDF as a PDF editor with no watermark added by the app. Edit, organize, sign and export PDFs locally in your browser.",
-      "h1": "Edit PDFs without an app-added watermark."
+      "h1": "Edit PDFs without an app-added watermark.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/pdf-editor-no-watermark.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-no-watermark.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/secure-pdf-editor.html",
       "path": "/secure-pdf-editor.html",
       "title": "Secure Local PDF Editor - Slay PDF",
       "description": "Use Slay PDF as a secure local PDF editor for private documents. PDFs and edits stay in your browser, and passwords are never saved.",
-      "h1": "Edit private PDFs in your browser."
+      "h1": "Edit private PDFs in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/secure-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/secure-pdf-editor.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/browser-pdf-editor.html",
       "path": "/browser-pdf-editor.html",
       "title": "Browser PDF Editor - Slay PDF",
       "description": "Use Slay PDF as a browser PDF editor for local merge, split, sign, annotate, OCR, resize and export workflows.",
-      "h1": "Edit PDFs directly in your browser."
+      "h1": "Edit PDFs directly in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/browser-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/browser-pdf-editor.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-editor-for-mac.html",
       "path": "/pdf-editor-for-mac.html",
       "title": "PDF Editor for Mac - Slay PDF",
       "description": "Use Slay PDF as a local PDF editor for Mac in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
-      "h1": "Edit PDFs on Mac in the browser."
+      "h1": "Edit PDFs on Mac in the browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-mac.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-mac.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-editor-for-windows.html",
       "path": "/pdf-editor-for-windows.html",
       "title": "PDF Editor for Windows - Slay PDF",
       "description": "Use Slay PDF as a local PDF editor for Windows in a modern browser. Merge, split, sign, organize and export PDFs without uploads.",
-      "h1": "Edit PDFs on Windows in the browser."
+      "h1": "Edit PDFs on Windows in the browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-windows.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-windows.html#breadcrumb"
     },
     {
       "url": "https://slaypdf.com/pdf-editor-for-chromebook.html",
       "path": "/pdf-editor-for-chromebook.html",
       "title": "PDF Editor for Chromebook - Slay PDF",
       "description": "Use Slay PDF as a PDF editor for Chromebook in Chrome. Merge, split, sign, organize and export PDFs locally in your browser.",
-      "h1": "Edit PDFs on Chromebook in Chrome."
+      "h1": "Edit PDFs on Chromebook in Chrome.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.75,
+      "webpageId": "https://slaypdf.com/pdf-editor-for-chromebook.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor-for-chromebook.html#breadcrumb"
     }
   ]
 }

@@ -77,7 +77,7 @@ Run SEO file consistency checks only:
 nix develop --command npm run seo:check
 ```
 
-Regenerate the plain and structured page indexes from the sitemap:
+Regenerate the plain and structured page indexes from the sitemap and page schema:
 
 ```sh
 nix develop --command npm run seo:index

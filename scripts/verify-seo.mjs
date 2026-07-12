@@ -152,6 +152,16 @@ for (const [index, page] of pagesJson.pages.entries()) {
   assert(page.path === new URL(expectedUrl).pathname, `pages.json path mismatch for ${expectedUrl}`)
   assert(page.title === expected?.title, `pages.json title mismatch for ${expectedUrl}`)
   assert(page.description === expected?.description, `pages.json description mismatch for ${expectedUrl}`)
+  assert(page.h1 === expected?.h1, `pages.json h1 mismatch for ${expectedUrl}`)
+  assert(page.lastmod === sitemapMetadata.get(expectedUrl)?.lastmod, `pages.json lastmod mismatch for ${expectedUrl}`)
+  assert(page.changefreq === sitemapMetadata.get(expectedUrl)?.changefreq, `pages.json changefreq mismatch for ${expectedUrl}`)
+  assert(page.priority === sitemapMetadata.get(expectedUrl)?.priority, `pages.json priority mismatch for ${expectedUrl}`)
+  assert(page.webpageId === `${expectedUrl}#webpage`, `pages.json webpageId mismatch for ${expectedUrl}`)
+  if (expectedUrl.endsWith('.html')) {
+    assert(page.breadcrumbId === `${expectedUrl}#breadcrumb`, `pages.json breadcrumbId mismatch for ${expectedUrl}`)
+  } else {
+    assert(!page.breadcrumbId, `pages.json root page should not include a breadcrumbId`)
+  }
 }
 
 const toolsHtml = await readPublic('tools.html')

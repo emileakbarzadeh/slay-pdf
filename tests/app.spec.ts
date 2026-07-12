@@ -325,11 +325,40 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
 
   const pagesTxt = await (await page.request.get('/pages.txt')).text()
   expect(pagesTxt.trim().split(/\n+/)).toEqual(['https://slaypdf.com/', ...htmlPaths.map((path) => `https://slaypdf.com/${path}`)])
-  const pagesJson = await (await page.request.get('/pages.json')).json() as { site: string; generatedFrom: string; pages: { url: string; path: string; title: string; description: string }[] }
+  const pagesJson = await (await page.request.get('/pages.json')).json() as {
+    site: string
+    generatedFrom: string
+    pages: {
+      url: string
+      path: string
+      title: string
+      description: string
+      h1: string
+      lastmod: string
+      changefreq: string
+      priority: number
+      webpageId: string
+      breadcrumbId?: string
+    }[]
+  }
   expect(pagesJson.site).toBe('https://slaypdf.com')
   expect(pagesJson.generatedFrom).toBe('https://slaypdf.com/sitemap.xml')
   expect(pagesJson.pages.map((entry) => entry.url)).toEqual(['https://slaypdf.com/', ...htmlPaths.map((path) => `https://slaypdf.com/${path}`)])
-  expect(pagesJson.pages.find((entry) => entry.path === '/online-pdf-editor.html')?.title).toBe('Online PDF Editor - Slay PDF')
+  for (const entry of pagesJson.pages) {
+    const sitemapEntry = sitemapByUrl.get(entry.url)
+    expect(entry.lastmod).toBe(sitemapEntry?.lastmod)
+    expect(entry.changefreq).toBe(sitemapEntry?.changefreq)
+    expect(entry.priority).toBe(sitemapEntry?.priority)
+    expect(entry.webpageId).toBe(`${entry.url}#webpage`)
+    if (entry.path.endsWith('.html')) {
+      expect(entry.breadcrumbId).toBe(`${entry.url}#breadcrumb`)
+    } else {
+      expect(entry.breadcrumbId).toBeUndefined()
+    }
+  }
+  const onlineEditor = pagesJson.pages.find((entry) => entry.path === '/online-pdf-editor.html')
+  expect(onlineEditor?.title).toBe('Online PDF Editor - Slay PDF')
+  expect(onlineEditor?.h1).toBe('Edit PDFs online, but keep the work local.')
   expect(llms).toContain('https://slaypdf.com/pages.txt')
   expect(llms).toContain('https://slaypdf.com/pages.json')
 })
