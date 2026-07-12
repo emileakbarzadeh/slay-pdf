@@ -69,7 +69,7 @@ Content:
 - PDF editor alternatives
 - Alternative pages for common PDF utility searches where a local browser workflow is enough for the job.
 - Local PDF task pages
-- High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
+- High-intent local PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages for people avoiding remote document uploads.
 - Free online PDF task pages
 - Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.
 - Secure PDF task pages
@@ -191,6 +191,14 @@ Related links:
 - Local PDF splitter: https://slaypdf.com/local-pdf-splitter.html
 - Local PDF signer: https://slaypdf.com/local-pdf-signer.html
 - Local PDF redactor: https://slaypdf.com/local-pdf-redactor.html
+- Local PDF compressor: https://slaypdf.com/local-pdf-compressor.html
+- Local PDF rotator: https://slaypdf.com/local-pdf-rotator.html
+- Local PDF cropper: https://slaypdf.com/local-pdf-cropper.html
+- Local PDF OCR: https://slaypdf.com/local-pdf-ocr.html
+- Local PDF page remover: https://slaypdf.com/local-pdf-page-remover.html
+- Local PDF resizer: https://slaypdf.com/local-pdf-resizer.html
+- Local PDF annotator: https://slaypdf.com/local-pdf-annotator.html
+- Local PDF page numbering: https://slaypdf.com/local-pdf-page-numbering.html
 - Free online PDF merger: https://slaypdf.com/free-online-pdf-merger.html
 - Free online PDF splitter: https://slaypdf.com/free-online-pdf-splitter.html
 - Free online PDF signer: https://slaypdf.com/free-online-pdf-signer.html
@@ -369,7 +377,7 @@ Content:
 - PDF editor alternatives
 - Local browser alternatives for common PDF utility searches, with no signup and no Slay PDF app-server document uploads.
 - Local PDF task pages
-- High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.
+- High-intent local PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages for people avoiding remote document uploads.
 - Free online PDF task pages
 - Free online PDF merger, splitter, signer and redactor pages that explain the local browser workflow behind the web app.
 - Secure PDF task pages
@@ -494,6 +502,14 @@ Related links:
 - Local PDF Splitter: https://slaypdf.com/local-pdf-splitter.html
 - Local PDF Signer: https://slaypdf.com/local-pdf-signer.html
 - Local PDF Redactor: https://slaypdf.com/local-pdf-redactor.html
+- Local PDF Compressor: https://slaypdf.com/local-pdf-compressor.html
+- Local PDF Rotator: https://slaypdf.com/local-pdf-rotator.html
+- Local PDF Cropper: https://slaypdf.com/local-pdf-cropper.html
+- Local PDF OCR: https://slaypdf.com/local-pdf-ocr.html
+- Local PDF Page Remover: https://slaypdf.com/local-pdf-page-remover.html
+- Local PDF Resizer: https://slaypdf.com/local-pdf-resizer.html
+- Local PDF Annotator: https://slaypdf.com/local-pdf-annotator.html
+- Local PDF Page Numbering: https://slaypdf.com/local-pdf-page-numbering.html
 - Free Online PDF Merger: https://slaypdf.com/free-online-pdf-merger.html
 - Free Online PDF Splitter: https://slaypdf.com/free-online-pdf-splitter.html
 - Free Online PDF Signer: https://slaypdf.com/free-online-pdf-signer.html
@@ -3198,6 +3214,246 @@ Content:
 - Yes. Slay PDF lets you add redaction blocks and export the result from the browser.
 - Use a flattened export and review the final PDF before sharing it so covered content is not left as an editable overlay.
 - Yes. The editor supports zoom controls for placing edits more precisely.
+
+## Local PDF Compressor - Slay PDF
+URL: https://slaypdf.com/local-pdf-compressor.html
+Last modified: 2026-07-13
+Summary: Compress PDF files locally in your browser with Slay PDF. Reduce file size without uploading documents to an app server.
+H1: Compress PDF files locally.
+
+Content:
+- Local PDF compressor
+- Compress PDF files locally.
+- Reduce oversized scanned PDFs, forms and document packets in the browser while keeping the working file on your device.
+- Local compression export
+- Use compression options from the export flow without sending the source PDF to a Slay PDF app server.
+- Clean pages first
+- Delete blanks, rotate scans or export only selected pages before reducing the final file size.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- A local way to shrink PDFs.
+- Large scanned PDFs can be awkward to email, upload into portals or keep alongside other paperwork.
+- Slay PDF lets you inspect the pages, remove unnecessary content and export a compressed copy from the browser.
+- Local PDF compressor FAQ
+- Yes. Import the PDF, choose export options and save a compressed copy from the browser.
+- Yes. Delete unwanted pages or export only selected pages before creating the compressed PDF.
+- No. The compression workflow runs locally in the browser.
+
+Related links:
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- Compress without uploading: https://slaypdf.com/compress-pdf-without-uploading.html
+- Delete pages: https://slaypdf.com/delete-pdf-pages.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+
+## Local PDF Rotator - Slay PDF
+URL: https://slaypdf.com/local-pdf-rotator.html
+Last modified: 2026-07-13
+Summary: Rotate PDF pages locally in your browser with Slay PDF. Fix sideways scans without uploading documents to an app server.
+H1: Rotate PDF pages locally.
+
+Content:
+- Local PDF rotator
+- Rotate PDF pages locally.
+- Fix sideways scans and mixed-orientation pages in your browser before exporting a clean PDF.
+- Rotate selected pages
+- Select one page, a range or the whole document and rotate pages into the right orientation.
+- Review before export
+- Check the page order and orientation visually before downloading the finished PDF.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Fix scan orientation locally.
+- Scanned paperwork often arrives with one or two pages turned the wrong way.
+- Slay PDF gives you a local PDF rotation workflow so you can correct pages and export the repaired file without a remote upload step.
+- Local PDF rotator FAQ
+- Yes. Select the pages you want to rotate, apply the rotation and export the result.
+- Yes. Rotation happens in the browser so source files are not sent to a Slay PDF app server.
+- Yes. You can drag pages into a better order before exporting.
+
+Related links:
+- Rotate PDF: https://slaypdf.com/rotate-pdf.html
+- Rotate without uploading: https://slaypdf.com/rotate-pdf-without-uploading.html
+- Rotate no watermark: https://slaypdf.com/rotate-pdf-no-watermark.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+
+## Local PDF Cropper - Slay PDF
+URL: https://slaypdf.com/local-pdf-cropper.html
+Last modified: 2026-07-13
+Summary: Crop PDF pages locally in your browser with Slay PDF. Trim margins and clean scanned pages without uploading documents.
+H1: Crop PDF pages locally.
+
+Content:
+- Local PDF cropper
+- Crop PDF pages locally.
+- Trim margins, clean scans and resize the visible page area in your browser before exporting the PDF.
+- Crop selected pages
+- Apply crop settings to the pages that need cleanup instead of rebuilding the whole document.
+- Preserve page content
+- Scale content into the chosen page size with clean white space instead of stretching the PDF.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Clean up page edges locally.
+- Messy scan borders, oversized margins and inconsistent page sizes can make a PDF feel unfinished.
+- Slay PDF lets you crop or resize pages locally, review the preview and export the cleaned document from the browser.
+- Local PDF cropper FAQ
+- Yes. Use Slay PDF in the browser to crop pages and export the updated PDF.
+- No. The working PDF stays in the browser during editing and export.
+- Yes. Select the pages you want to adjust before applying crop or resize settings.
+
+Related links:
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Crop without uploading: https://slaypdf.com/crop-pdf-without-uploading.html
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Resize no watermark: https://slaypdf.com/resize-pdf-no-watermark.html
+
+## Local PDF OCR - Slay PDF
+URL: https://slaypdf.com/local-pdf-ocr.html
+Last modified: 2026-07-13
+Summary: Run OCR on PDF pages locally in your browser with Slay PDF. Make scanned PDFs searchable without uploading documents.
+H1: OCR PDF pages locally.
+
+Content:
+- Local PDF OCR
+- OCR PDF pages locally.
+- Turn scanned pages into searchable PDF text in the browser without sending private documents to an app server.
+- Searchable scan output
+- Run OCR on scanned pages so the exported PDF can be searched and copied more easily.
+- Review pages first
+- Delete blanks, rotate scans or split the document before running OCR on the pages that matter.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Make scans searchable locally.
+- OCR is useful for scanned forms, receipts, statements and paperwork that arrived as flat images.
+- Slay PDF gives you a local OCR path for private documents when an upload-based converter is not appropriate.
+- Local PDF OCR FAQ
+- Yes. Slay PDF can run OCR from the browser and export a searchable PDF.
+- Yes. Correcting sideways pages first usually gives OCR a better page image to read.
+- No. Passwords are never saved.
+
+Related links:
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+- Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
+- OCR without uploading: https://slaypdf.com/ocr-pdf-without-uploading.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+
+## Local PDF Page Remover - Slay PDF
+URL: https://slaypdf.com/local-pdf-page-remover.html
+Last modified: 2026-07-13
+Summary: Remove PDF pages locally in your browser with Slay PDF. Delete unwanted pages without uploading documents to an app server.
+H1: Remove PDF pages locally.
+
+Content:
+- Local PDF page remover
+- Remove PDF pages locally.
+- Delete blank, duplicate or unwanted pages in your browser and export only the pages you still need.
+- Delete unwanted pages
+- Select pages visually and remove blanks, duplicates or pages that do not belong in the final PDF.
+- Export selected pages
+- Keep a clean subset of the document without rebuilding the PDF elsewhere.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Clean a PDF page-by-page locally.
+- A PDF often needs a quick cleanup before filing, emailing or attaching to a form.
+- Slay PDF lets you remove pages locally, reorder what remains and export a clean copy from the browser.
+- Local PDF page remover FAQ
+- Yes. Import the PDF, select unwanted pages and remove them in the browser.
+- Yes. Select the pages you want to keep and export selected pages.
+- No. The working document stays in the browser.
+
+Related links:
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Remove pages from PDF: https://slaypdf.com/remove-pages-from-pdf.html
+- Delete pages without uploading: https://slaypdf.com/delete-pdf-pages-without-uploading.html
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+
+## Local PDF Resizer - Slay PDF
+URL: https://slaypdf.com/local-pdf-resizer.html
+Last modified: 2026-07-13
+Summary: Resize PDF pages locally in your browser with Slay PDF. Change page size with white letterboxing instead of stretching content.
+H1: Resize PDF pages locally.
+
+Content:
+- Local PDF resizer
+- Resize PDF pages locally.
+- Change PDF page size in your browser while scaling content cleanly into the new page shape.
+- Custom page size
+- Resize selected pages to common or custom dimensions before exporting the finished PDF.
+- No stretched content
+- When orientation changes, content scales into the page with clean white space instead of distortion.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Change page size locally.
+- PDFs are often built from mixed sources with inconsistent paper sizes or scan dimensions.
+- Slay PDF gives you a local resize workflow for standardising pages before sharing, printing or archiving the result.
+- Local PDF resizer FAQ
+- Yes. Choose resize settings in Slay PDF and export the resized PDF from the browser.
+- No. Content is scaled into the new page size with white letterboxing where needed.
+- Yes. Select the pages you want before applying resize settings.
+
+Related links:
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Resize without uploading: https://slaypdf.com/resize-pdf-without-uploading.html
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+- Local PDF cropper: https://slaypdf.com/local-pdf-cropper.html
+
+## Local PDF Annotator - Slay PDF
+URL: https://slaypdf.com/local-pdf-annotator.html
+Last modified: 2026-07-13
+Summary: Annotate PDF pages locally in your browser with Slay PDF. Add text, marks and signatures without uploading documents.
+H1: Annotate PDF pages locally.
+
+Content:
+- Local PDF annotator
+- Annotate PDF pages locally.
+- Add text, marks and signatures to a PDF in your browser, then export a clean edited copy.
+- Add visible edits
+- Place text, marks and signatures on the page and adjust them before export.
+- Move and resize edits
+- Select annotations, reposition them and scale them until the page looks right.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Mark up PDFs locally.
+- Annotation is useful for quick reviews, approvals, corrections and signing jobs that should not pass through random upload tools.
+- Slay PDF keeps the editing workspace in the browser so you can mark up the document and export only the finished PDF.
+- Local PDF annotator FAQ
+- Yes. Open the PDF in Slay PDF, add page edits and export the finished document from the browser.
+- Yes. Select edits on the page to reposition, resize or delete them.
+- Yes. Use the local signing and edit tools to place a signature before exporting.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Annotate without uploading: https://slaypdf.com/annotate-pdf-without-uploading.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Local PDF signer: https://slaypdf.com/local-pdf-signer.html
+
+## Local PDF Page Numbering - Slay PDF
+URL: https://slaypdf.com/local-pdf-page-numbering.html
+Last modified: 2026-07-13
+Summary: Add page numbers to PDFs locally in your browser with Slay PDF. Number selected pages without uploading documents.
+H1: Add PDF page numbers locally.
+
+Content:
+- Local PDF page numbering
+- Add PDF page numbers locally.
+- Number selected PDF pages in your browser and export a cleaner document for printing, review or filing.
+- Number selected pages
+- Add visible page numbers to the part of the PDF that needs them.
+- Organize before numbering
+- Reorder, delete or split pages first so numbering matches the final document.
+- Private by design
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Number PDFs locally after organizing pages.
+- Page numbers are most useful once the final page order is locked.
+- Slay PDF lets you organize pages locally, add numbering and export the finished document without sending source files to an app server.
+- Local PDF page numbering FAQ
+- Yes. Add page numbers in Slay PDF and export the numbered PDF from the browser.
+- Yes. Put pages in their final order before adding page numbers.
+- Yes. Select the pages you want to number before applying the tool.
+
+Related links:
+- Add page numbers: https://slaypdf.com/add-page-numbers-to-pdf.html
+- Add page numbers without uploading: https://slaypdf.com/add-page-numbers-without-uploading.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+- Local PDF page remover: https://slaypdf.com/local-pdf-page-remover.html
 
 ## Free Online PDF Merger - Slay PDF
 URL: https://slaypdf.com/free-online-pdf-merger.html

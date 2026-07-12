@@ -320,6 +320,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Local PDF Redactor - Slay PDF: https://slaypdf.com/local-pdf-redactor.html
   Summary: Redact PDF files locally in your browser with Slay PDF. Cover sensitive details and export a flattened PDF without uploading documents.
   Last modified: 2026-07-13
+- Local PDF Compressor - Slay PDF: https://slaypdf.com/local-pdf-compressor.html
+  Summary: Compress PDF files locally in your browser with Slay PDF. Reduce file size without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Local PDF Rotator - Slay PDF: https://slaypdf.com/local-pdf-rotator.html
+  Summary: Rotate PDF pages locally in your browser with Slay PDF. Fix sideways scans without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Local PDF Cropper - Slay PDF: https://slaypdf.com/local-pdf-cropper.html
+  Summary: Crop PDF pages locally in your browser with Slay PDF. Trim margins and clean scanned pages without uploading documents.
+  Last modified: 2026-07-13
+- Local PDF OCR - Slay PDF: https://slaypdf.com/local-pdf-ocr.html
+  Summary: Run OCR on PDF pages locally in your browser with Slay PDF. Make scanned PDFs searchable without uploading documents.
+  Last modified: 2026-07-13
+- Local PDF Page Remover - Slay PDF: https://slaypdf.com/local-pdf-page-remover.html
+  Summary: Remove PDF pages locally in your browser with Slay PDF. Delete unwanted pages without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Local PDF Resizer - Slay PDF: https://slaypdf.com/local-pdf-resizer.html
+  Summary: Resize PDF pages locally in your browser with Slay PDF. Change page size with white letterboxing instead of stretching content.
+  Last modified: 2026-07-13
+- Local PDF Annotator - Slay PDF: https://slaypdf.com/local-pdf-annotator.html
+  Summary: Annotate PDF pages locally in your browser with Slay PDF. Add text, marks and signatures without uploading documents.
+  Last modified: 2026-07-13
+- Local PDF Page Numbering - Slay PDF: https://slaypdf.com/local-pdf-page-numbering.html
+  Summary: Add page numbers to PDFs locally in your browser with Slay PDF. Number selected pages without uploading documents.
+  Last modified: 2026-07-13
 - Free Online PDF Merger - Slay PDF: https://slaypdf.com/free-online-pdf-merger.html
   Summary: Use a free online PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.
   Last modified: 2026-07-13

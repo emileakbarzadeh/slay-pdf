@@ -833,6 +833,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/local-pdf-compressor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Compressor - Slay PDF</image:title>
+      <image:caption>Compress PDF files locally in your browser with Slay PDF. Reduce file size without uploading documents to an app server.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-rotator.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Rotator - Slay PDF</image:title>
+      <image:caption>Rotate PDF pages locally in your browser with Slay PDF. Fix sideways scans without uploading documents to an app server.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-cropper.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Cropper - Slay PDF</image:title>
+      <image:caption>Crop PDF pages locally in your browser with Slay PDF. Trim margins and clean scanned pages without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-ocr.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF OCR - Slay PDF</image:title>
+      <image:caption>Run OCR on PDF pages locally in your browser with Slay PDF. Make scanned PDFs searchable without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-page-remover.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Page Remover - Slay PDF</image:title>
+      <image:caption>Remove PDF pages locally in your browser with Slay PDF. Delete unwanted pages without uploading documents to an app server.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-resizer.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Resizer - Slay PDF</image:title>
+      <image:caption>Resize PDF pages locally in your browser with Slay PDF. Change page size with white letterboxing instead of stretching content.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-annotator.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Annotator - Slay PDF</image:title>
+      <image:caption>Annotate PDF pages locally in your browser with Slay PDF. Add text, marks and signatures without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-page-numbering.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Page Numbering - Slay PDF</image:title>
+      <image:caption>Add page numbers to PDFs locally in your browser with Slay PDF. Number selected pages without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-online-pdf-merger.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

@@ -50,8 +50,8 @@ const sections = [
   },
   {
     title: 'Local PDF task pages',
-    description: 'High-intent local PDF merger, splitter, signer and redactor pages for people avoiding remote document uploads.',
-    paths: ['/local-pdf-merger.html', '/local-pdf-splitter.html', '/local-pdf-signer.html', '/local-pdf-redactor.html'],
+    description: 'High-intent local PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages for people avoiding remote document uploads.',
+    paths: ['/local-pdf-merger.html', '/local-pdf-splitter.html', '/local-pdf-signer.html', '/local-pdf-redactor.html', '/local-pdf-compressor.html', '/local-pdf-rotator.html', '/local-pdf-cropper.html', '/local-pdf-ocr.html', '/local-pdf-page-remover.html', '/local-pdf-resizer.html', '/local-pdf-annotator.html', '/local-pdf-page-numbering.html'],
   },
   {
     title: 'Free online PDF task pages',
