@@ -385,6 +385,30 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(previewImage.ok()).toBe(true)
   expect(previewImage.headers()['content-type']).toContain('image/png')
 
+  const manifest = await (await page.request.get('/manifest.webmanifest')).json() as {
+    name?: string
+    short_name?: string
+    shortcuts?: { name?: string; short_name?: string; url?: string; description?: string; icons?: { src?: string; type?: string }[] }[]
+  }
+  expect(manifest.name).toBe('Slay PDF')
+  expect(manifest.short_name).toBe('Slay PDF')
+  const shortcutByUrl = new Map((manifest.shortcuts ?? []).map((shortcut) => [shortcut.url, shortcut]))
+  for (const [url, name] of [
+    ['/merge-pdf.html', 'Merge PDF files'],
+    ['/split-pdf.html', 'Split PDF files'],
+    ['/sign-pdf.html', 'Sign a PDF'],
+    ['/organize-pdf-pages.html', 'Organize PDF pages'],
+    ['/compress-pdf.html', 'Compress a PDF'],
+    ['/redact-pdf.html', 'Redact a PDF'],
+    ['/ocr-pdf.html', 'Run OCR on a PDF'],
+    ['/private-pdf-editor.html', 'Private PDF editor'],
+  ] as const) {
+    const shortcut = shortcutByUrl.get(url)
+    expect(shortcut?.name).toBe(name)
+    expect(shortcut?.description?.length).toBeGreaterThan(30)
+    expect(shortcut?.icons?.[0]).toMatchObject({ src: 'favicon.svg', type: 'image/svg+xml' })
+  }
+
   const llms = await (await page.request.get('/llms.txt')).text()
   expect(llms).toContain('Free local PDF editor and Adobe Acrobat alternative')
   expect(llms).toContain('https://slaypdf.com/tools.html')

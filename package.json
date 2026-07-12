@@ -78,7 +78,8 @@
     "seo:entities": "node scripts/sync-static-entity-schema.mjs",
     "seo:check": "node scripts/verify-seo.mjs",
     "seo:check:live": "node scripts/verify-seo.mjs --live",
-    "check": "npm run seo:check && npm run test && npm run build",
+    "pwa:check": "node scripts/verify-pwa.mjs",
+    "check": "npm run seo:check && npm run test && npm run build && npm run pwa:check",
     "indexnow:submit": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
