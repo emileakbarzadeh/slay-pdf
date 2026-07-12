@@ -3,6 +3,7 @@ import { spawn } from 'node:child_process'
 const steps = [
   'seo:html-sitemap',
   'seo:noscript',
+  'seo:app-head',
   'seo:discovery',
   'seo:breadcrumbs',
   'seo:social',

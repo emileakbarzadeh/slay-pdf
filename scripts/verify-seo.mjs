@@ -398,6 +398,17 @@ const requiredDiscoveryLinks = [
   ['text/plain', 'Slay PDF compact LLM index', `${site}/llms.txt`],
   ['text/plain', 'Slay PDF full text LLM index', `${site}/llms-full.txt`],
 ]
+const requiredAppHead = [
+  '<meta name="theme-color" content="#f7f7f4" />',
+  '<meta name="application-name" content="Slay PDF" />',
+  '<meta name="apple-mobile-web-app-title" content="Slay PDF" />',
+  '<meta name="mobile-web-app-capable" content="yes" />',
+  '<meta name="apple-mobile-web-app-capable" content="yes" />',
+]
+const requiredStaticAppHead = [
+  ...requiredAppHead,
+  '<link rel="manifest" href="/manifest.webmanifest" />',
+]
 const requiredSocialTags = [
   ['property', 'og:type', 'website'],
   ['property', 'og:locale', 'en_US'],
@@ -424,6 +435,9 @@ for (const url of htmlUrls) {
   assert(html.includes(`rel="alternate" hreflang="x-default" href="${url}"`), `${file} is missing x-default hreflang alternate`)
   for (const [type, title, href] of requiredDiscoveryLinks) {
     assert(html.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `${file} is missing ${title} discovery link`)
+  }
+  for (const tag of requiredStaticAppHead) {
+    assert(html.includes(tag), `${file} is missing app head metadata: ${tag}`)
   }
   assert(html.includes('name="robots" content="index, follow, max-image-preview:large"'), `${file} is missing indexable robots meta`)
   assert(html.includes(`property="og:url" content="${url}"`), `${file} Open Graph URL does not match sitemap URL`)
@@ -452,6 +466,9 @@ for (const url of htmlUrls) {
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 for (const [type, title, href] of requiredDiscoveryLinks) {
   assert(rootHtml.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
+}
+for (const tag of requiredAppHead) {
+  assert(rootHtml.includes(tag), `homepage is missing app head metadata: ${tag}`)
 }
 assert(rootHtml.includes(`rel="alternate" hreflang="en" href="${site}/"`), 'homepage is missing English hreflang alternate')
 assert(rootHtml.includes(`rel="alternate" hreflang="x-default" href="${site}/"`), 'homepage is missing x-default hreflang alternate')
