@@ -641,6 +641,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/merge-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Merge PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Merge PDF files without uploading them to a Slay PDF app server. Combine, reorder, rotate and export PDFs locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/split-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Split PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Split PDF files without uploading them to a Slay PDF app server. Export selected pages, remove pages or add split markers locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/sign-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Sign PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Sign PDF files without uploading them to a Slay PDF app server. Add visual signatures, initials, dates and text locally in the browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/redact-pdf-without-uploading.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Redact PDF Without Uploading - Slay PDF</image:title>
+      <image:caption>Redact PDF files without uploading them to a Slay PDF app server. Cover visible details and export flattened redacted pages locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

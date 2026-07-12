@@ -64,6 +64,11 @@ const sections = [
     paths: ['/invoice-pdf-editor.html', '/receipt-pdf-organizer.html', '/tax-document-pdf-editor.html', '/resume-pdf-editor.html'],
   },
   {
+    title: 'No-upload tool workflows',
+    description: 'Direct pages for common private PDF jobs where local browser editing matters more than app-server upload workflows.',
+    paths: ['/merge-pdf-without-uploading.html', '/split-pdf-without-uploading.html', '/sign-pdf-without-uploading.html', '/redact-pdf-without-uploading.html'],
+  },
+  {
     title: 'No-account and platform pages',
     description: 'Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.',
     paths: ['/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html', '/pdf-editor-for-linux.html', '/pdf-editor-for-iphone-ipad.html', '/android-pdf-editor.html'],

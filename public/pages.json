@@ -962,6 +962,54 @@
       "breadcrumbId": "https://slaypdf.com/resume-pdf-editor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/merge-pdf-without-uploading.html",
+      "path": "/merge-pdf-without-uploading.html",
+      "title": "Merge PDF Without Uploading - Slay PDF",
+      "description": "Merge PDF files without uploading them to a Slay PDF app server. Combine, reorder, rotate and export PDFs locally in your browser.",
+      "h1": "Merge PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/merge-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/merge-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/split-pdf-without-uploading.html",
+      "path": "/split-pdf-without-uploading.html",
+      "title": "Split PDF Without Uploading - Slay PDF",
+      "description": "Split PDF files without uploading them to a Slay PDF app server. Export selected pages, remove pages or add split markers locally.",
+      "h1": "Split PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/split-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/split-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/sign-pdf-without-uploading.html",
+      "path": "/sign-pdf-without-uploading.html",
+      "title": "Sign PDF Without Uploading - Slay PDF",
+      "description": "Sign PDF files without uploading them to a Slay PDF app server. Add visual signatures, initials, dates and text locally in the browser.",
+      "h1": "Sign PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/sign-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/sign-pdf-without-uploading.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/redact-pdf-without-uploading.html",
+      "path": "/redact-pdf-without-uploading.html",
+      "title": "Redact PDF Without Uploading - Slay PDF",
+      "description": "Redact PDF files without uploading them to a Slay PDF app server. Cover visible details and export flattened redacted pages locally.",
+      "h1": "Redact PDF without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.85,
+      "webpageId": "https://slaypdf.com/redact-pdf-without-uploading.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/redact-pdf-without-uploading.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/free-pdf-editor-no-signup.html",
       "path": "/free-pdf-editor-no-signup.html",
       "title": "Free PDF Editor No Signup - Slay PDF",

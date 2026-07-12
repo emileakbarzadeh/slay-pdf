@@ -443,6 +443,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'receipt-pdf-organizer.html',
     'tax-document-pdf-editor.html',
     'resume-pdf-editor.html',
+    'merge-pdf-without-uploading.html',
+    'split-pdf-without-uploading.html',
+    'sign-pdf-without-uploading.html',
+    'redact-pdf-without-uploading.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -705,7 +709,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(83)
+  expect(toolAppPageCount).toBe(87)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -797,6 +801,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/receipt-pdf-organizer.html')
   expect(llms).toContain('https://slaypdf.com/tax-document-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/resume-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/merge-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/split-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/sign-pdf-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/redact-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -933,6 +941,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/receipt-pdf-organizer.html')
   expect(tools).toContain('/tax-document-pdf-editor.html')
   expect(tools).toContain('/resume-pdf-editor.html')
+  expect(tools).toContain('/merge-pdf-without-uploading.html')
+  expect(tools).toContain('/split-pdf-without-uploading.html')
+  expect(tools).toContain('/sign-pdf-without-uploading.html')
+  expect(tools).toContain('/redact-pdf-without-uploading.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')
