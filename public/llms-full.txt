@@ -181,6 +181,88 @@ Related links:
 - Password protect PDF: https://slaypdf.com/password-protect-pdf.html
 - All PDF tools: https://slaypdf.com/tools.html
 
+## HTML Sitemap - Slay PDF
+URL: https://slaypdf.com/sitemap.html
+Last modified: 2026-07-13
+Summary: Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.
+H1: Slay PDF sitemap
+
+Content:
+- Sitemap
+- Slay PDF sitemap
+- Every canonical Slay PDF app, tool and guide page in one crawlable HTML index.
+- Core pages
+- Start with the app, complete tool index, HTML sitemap, privacy details and help pages.
+- Guides
+- Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.
+- PDF workflows
+- Step-by-step local workflows for combining, removing, extracting, searching, signing and redacting PDF content.
+- Image, scan and print workflows
+- Convert images, clean scans, flatten forms and build printable poster PDFs without uploading documents.
+- Tools
+- Direct links to each local PDF tool for editing, exporting, protecting and reorganizing documents in the browser.
+- Adobe alternatives
+- Acrobat-style workflows for people who want merge, compress, fill, sign and organize jobs handled locally.
+- No-account and platform pages
+- Browser-first pages for no-signup, no-watermark, secure local editing and common Mac, Windows and Chromebook searches.
+
+Related links:
+- Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative: https://slaypdf.com/
+- Free Local PDF Editor: https://slaypdf.com/free-pdf-editor.html
+- PDF Tools: https://slaypdf.com/tools.html
+- HTML Sitemap: https://slaypdf.com/sitemap.html
+- Slay PDF FAQ - Local PDF Editor: https://slaypdf.com/faq.html
+- Privacy: https://slaypdf.com/privacy.html
+- Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
+- Edit PDF Without Uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+- Organize PDF Pages: https://slaypdf.com/organize-pdf-pages.html
+- Adobe Acrobat vs Slay PDF: https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html
+- Combine PDF Files: https://slaypdf.com/combine-pdf-files.html
+- Remove Pages from PDF: https://slaypdf.com/remove-pages-from-pdf.html
+- Extract Pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+- Make PDF Searchable: https://slaypdf.com/make-pdf-searchable.html
+- Add Signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
+- PDF Redaction Tool: https://slaypdf.com/pdf-redaction-tool.html
+- Images to PDF: https://slaypdf.com/images-to-pdf.html
+- JPG to PDF: https://slaypdf.com/jpg-to-pdf.html
+- PNG to PDF: https://slaypdf.com/png-to-pdf.html
+- Edit Scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+- Flatten PDF: https://slaypdf.com/flatten-pdf.html
+- Printable Poster PDF: https://slaypdf.com/printable-poster-pdf.html
+- Merge PDF Files Locally: https://slaypdf.com/merge-pdf.html
+- Split PDF Files Locally: https://slaypdf.com/split-pdf.html
+- Sign PDF Locally: https://slaypdf.com/sign-pdf.html
+- Posterise PDF Pages: https://slaypdf.com/posterise-pdf.html
+- Private Local PDF Editor: https://slaypdf.com/private-pdf-editor.html
+- Delete PDF Pages Locally: https://slaypdf.com/delete-pdf-pages.html
+- Resize PDF Pages Locally: https://slaypdf.com/resize-pdf.html
+- Crop PDF Pages Locally: https://slaypdf.com/crop-pdf.html
+- Redact PDF Locally: https://slaypdf.com/redact-pdf.html
+- Compress PDF Locally: https://slaypdf.com/compress-pdf.html
+- OCR PDF Locally: https://slaypdf.com/ocr-pdf.html
+- PDF to Images Locally: https://slaypdf.com/pdf-to-images.html
+- Extract PDF Text Locally: https://slaypdf.com/extract-pdf-text.html
+- Rotate PDF Pages Locally: https://slaypdf.com/rotate-pdf.html
+- Annotate PDF Locally: https://slaypdf.com/annotate-pdf.html
+- Watermark PDF Locally: https://slaypdf.com/watermark-pdf.html
+- Add Page Numbers to PDF: https://slaypdf.com/add-page-numbers-to-pdf.html
+- Fill PDF Forms Locally: https://slaypdf.com/fill-pdf-forms.html
+- Password Protect PDF Locally: https://slaypdf.com/password-protect-pdf.html
+- Adobe Acrobat Alternative: https://slaypdf.com/adobe-acrobat-alternative.html
+- Free Adobe PDF Editor Alternative: https://slaypdf.com/free-adobe-pdf-editor-alternative.html
+- Acrobat Online Alternative: https://slaypdf.com/acrobat-online-alternative.html
+- Adobe PDF Merge Alternative: https://slaypdf.com/adobe-pdf-merge-alternative.html
+- Adobe Compress PDF Alternative: https://slaypdf.com/adobe-compress-pdf-alternative.html
+- Adobe Fill and Sign Alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
+- Adobe PDF Organizer Alternative: https://slaypdf.com/adobe-pdf-organizer-alternative.html
+- Free PDF Editor No Signup: https://slaypdf.com/free-pdf-editor-no-signup.html
+- PDF Editor No Watermark: https://slaypdf.com/pdf-editor-no-watermark.html
+- Secure Local PDF Editor: https://slaypdf.com/secure-pdf-editor.html
+- Browser PDF Editor: https://slaypdf.com/browser-pdf-editor.html
+- PDF Editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
+- PDF Editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
+- PDF Editor for Chromebook: https://slaypdf.com/pdf-editor-for-chromebook.html
+
 ## Online PDF Editor - Slay PDF
 URL: https://slaypdf.com/online-pdf-editor.html
 Last modified: 2026-07-13

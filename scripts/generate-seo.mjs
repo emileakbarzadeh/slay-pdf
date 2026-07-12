@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process'
 
 const steps = [
+  'seo:html-sitemap',
   'seo:discovery',
   'seo:breadcrumbs',
   'seo:social',
@@ -9,6 +10,7 @@ const steps = [
   'seo:howto',
   'seo:entities',
   'seo:index',
+  'seo:indexnow',
   'seo:image-sitemap',
   'seo:sitemap-index',
   'seo:sitegraph',

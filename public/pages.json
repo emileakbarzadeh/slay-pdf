@@ -62,6 +62,18 @@
       "breadcrumbId": "https://slaypdf.com/privacy.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/sitemap.html",
+      "path": "/sitemap.html",
+      "title": "HTML Sitemap - Slay PDF",
+      "description": "Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.",
+      "h1": "Slay PDF sitemap",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/sitemap.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/sitemap.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/online-pdf-editor.html",
       "path": "/online-pdf-editor.html",
       "title": "Online PDF Editor - Slay PDF",

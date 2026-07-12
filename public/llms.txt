@@ -23,6 +23,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Privacy - Slay PDF: https://slaypdf.com/privacy.html
   Summary: Slay PDF privacy details: PDFs and edits stay in the browser, active workspaces use local browser storage, and export passwords are never saved.
   Last modified: 2026-07-13
+- HTML Sitemap - Slay PDF: https://slaypdf.com/sitemap.html
+  Summary: Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.
+  Last modified: 2026-07-13
 - Online PDF Editor - Slay PDF: https://slaypdf.com/online-pdf-editor.html
   Summary: Use Slay PDF as a free online PDF editor that runs locally in your browser. Merge, split, sign, organize, redact and export PDFs without app-server uploads.
   Last modified: 2026-07-13

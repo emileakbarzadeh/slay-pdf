@@ -280,6 +280,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'tools.html',
     'faq.html',
     'privacy.html',
+    'sitemap.html',
     'online-pdf-editor.html',
     'edit-pdf-without-uploading.html',
     'organize-pdf-pages.html',
@@ -613,11 +614,16 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const toolItemList = toolStructuredData.find((block) => block['@type'] === 'ItemList') as { itemListElement: { url: string }[] } | undefined
   expect(toolItemList).toBeTruthy()
   const toolItemUrls = toolItemList?.itemListElement.map((item) => item.url) ?? []
-  expect(toolItemUrls).toHaveLength(htmlPaths.length - 1)
-  for (const path of htmlPaths.filter((path) => path !== 'tools.html')) {
+  const expectedToolItemPaths = htmlPaths.filter((path) => !['tools.html', 'sitemap.html'].includes(path))
+  expect(toolItemUrls).toHaveLength(expectedToolItemPaths.length)
+  for (const path of expectedToolItemPaths) {
     expect(toolItemUrls).toContain(`https://slaypdf.com/${path}`)
     expect(tools).toContain(`href="/${path}"`)
   }
+  const htmlSitemap = await (await page.request.get('/sitemap.html')).text()
+  expect(htmlSitemap).toContain('HTML Sitemap - Slay PDF')
+  expect(htmlSitemap).toContain('href="/"')
+  for (const path of htmlPaths) expect(htmlSitemap).toContain(`href="/${path}"`)
   expect(tools).toContain('/password-protect-pdf.html')
   expect(tools).toContain('/faq.html')
   expect(tools).toContain('/privacy.html')

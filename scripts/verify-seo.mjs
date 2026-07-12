@@ -536,12 +536,16 @@ const toolsStructuredData = structuredDataBlocks(toolsHtml, 'tools.html')
 const itemList = toolsStructuredData.find((block) => block['@type'] === 'ItemList')
 assert(itemList, 'tools.html is missing ItemList JSON-LD')
 const itemListUrls = itemList.itemListElement?.map((item) => item.url) ?? []
-const toolsChildUrls = htmlUrls.filter((url) => url !== `${site}/tools.html`)
+const toolsChildUrls = htmlUrls.filter((url) => ![`${site}/tools.html`, `${site}/sitemap.html`].includes(url))
 assert(itemListUrls.length === toolsChildUrls.length, 'tools.html ItemList count must match linked sitemap pages')
 for (const [index, url] of toolsChildUrls.entries()) {
   assert(itemListUrls[index] === url, `tools.html ItemList URL mismatch at position ${index + 1}`)
   assert(toolsHtml.includes(`href="${new URL(url).pathname}"`), `tools.html is missing visible link to ${url}`)
 }
+
+const htmlSitemap = await readPublic('sitemap.html')
+assert(htmlSitemap.includes('HTML Sitemap - Slay PDF'), 'sitemap.html is missing page title')
+for (const url of urls) assert(htmlSitemap.includes(`href="${new URL(url).pathname}"`), `sitemap.html is missing visible link to ${url}`)
 
 const llms = await readPublic('llms.txt')
 assert(llms.includes('## Canonical Pages'), 'llms.txt is missing canonical pages section')

@@ -1,0 +1,156 @@
+import { readFile, writeFile } from 'node:fs/promises'
+import { basename } from 'node:path'
+
+const site = 'https://slaypdf.com'
+const rootDir = new URL('../', import.meta.url)
+const publicDir = new URL('../public/', import.meta.url)
+
+const sitemapPage = {
+  url: `${site}/sitemap.html`,
+  title: 'HTML Sitemap - Slay PDF',
+  description: 'Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.',
+  h1: 'Slay PDF sitemap',
+}
+
+const sections = [
+  {
+    title: 'Core pages',
+    description: 'Start with the app, complete tool index, HTML sitemap, privacy details and help pages.',
+    paths: ['/', '/free-pdf-editor.html', '/tools.html', '/sitemap.html', '/faq.html', '/privacy.html'],
+  },
+  {
+    title: 'Guides',
+    description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
+    paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],
+  },
+  {
+    title: 'PDF workflows',
+    description: 'Step-by-step local workflows for combining, removing, extracting, searching, signing and redacting PDF content.',
+    paths: ['/combine-pdf-files.html', '/remove-pages-from-pdf.html', '/extract-pages-from-pdf.html', '/make-pdf-searchable.html', '/add-signature-to-pdf.html', '/pdf-redaction-tool.html'],
+  },
+  {
+    title: 'Image, scan and print workflows',
+    description: 'Convert images, clean scans, flatten forms and build printable poster PDFs without uploading documents.',
+    paths: ['/images-to-pdf.html', '/jpg-to-pdf.html', '/png-to-pdf.html', '/edit-scanned-pdf.html', '/flatten-pdf.html', '/printable-poster-pdf.html'],
+  },
+  {
+    title: 'Tools',
+    description: 'Direct links to each local PDF tool for editing, exporting, protecting and reorganizing documents in the browser.',
+    paths: ['/merge-pdf.html', '/split-pdf.html', '/sign-pdf.html', '/posterise-pdf.html', '/private-pdf-editor.html', '/delete-pdf-pages.html', '/resize-pdf.html', '/crop-pdf.html', '/redact-pdf.html', '/compress-pdf.html', '/ocr-pdf.html', '/pdf-to-images.html', '/extract-pdf-text.html', '/rotate-pdf.html', '/annotate-pdf.html', '/watermark-pdf.html', '/add-page-numbers-to-pdf.html', '/fill-pdf-forms.html', '/password-protect-pdf.html'],
+  },
+  {
+    title: 'Adobe alternatives',
+    description: 'Acrobat-style workflows for people who want merge, compress, fill, sign and organize jobs handled locally.',
+    paths: ['/adobe-acrobat-alternative.html', '/free-adobe-pdf-editor-alternative.html', '/acrobat-online-alternative.html', '/adobe-pdf-merge-alternative.html', '/adobe-compress-pdf-alternative.html', '/adobe-fill-and-sign-alternative.html', '/adobe-pdf-organizer-alternative.html'],
+  },
+  {
+    title: 'No-account and platform pages',
+    description: 'Browser-first pages for no-signup, no-watermark, secure local editing and common Mac, Windows and Chromebook searches.',
+    paths: ['/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html'],
+  },
+]
+
+function escapeHtml(value) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+}
+
+function pathFor(url) {
+  return new URL(url).pathname
+}
+
+async function htmlForPath(path) {
+  if (path === '/') return readFile(new URL('index.html', rootDir), 'utf8')
+  if (path === '/sitemap.html') return undefined
+  return readFile(new URL(basename(path), publicDir), 'utf8')
+}
+
+async function pageForUrl(url) {
+  const path = pathFor(url)
+  if (path === '/sitemap.html') return { ...sitemapPage, path }
+
+  const html = await htmlForPath(path)
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
+  const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim()
+  const h1 = html.match(/<h1>([^<]+)<\/h1>/)?.[1]?.trim()
+
+  if (!title || !description || !h1) throw new Error(`Missing sitemap page metadata for ${url}`)
+  return { url, path, title, description, h1 }
+}
+
+const sitemap = await readFile(new URL('sitemap.xml', publicDir), 'utf8')
+const urls = [...sitemap.matchAll(/<url>\s*<loc>(.*?)<\/loc>/g)].map((match) => match[1])
+const pages = new Map()
+
+for (const url of urls) {
+  const page = await pageForUrl(url)
+  pages.set(page.path, page)
+}
+
+for (const section of sections) {
+  for (const path of section.paths) {
+    if (!pages.has(path)) throw new Error(`HTML sitemap section references missing sitemap path: ${path}`)
+  }
+}
+
+const sectionPaths = new Set(sections.flatMap((section) => section.paths))
+const uncategorized = [...pages.keys()].filter((path) => !sectionPaths.has(path))
+if (uncategorized.length > 0) throw new Error(`HTML sitemap is missing categories for: ${uncategorized.join(', ')}`)
+
+const sectionHtml = sections.map((section) => `      <section class="content">
+        <h2>${escapeHtml(section.title)}</h2>
+        <p>${escapeHtml(section.description)}</p>
+      </section>
+      <div class="links" aria-label="${escapeHtml(section.title)}">
+${section.paths.map((path) => {
+    const page = pages.get(path)
+    return `        <a href="${escapeHtml(path)}">${escapeHtml(page.title.replace(/ - Slay PDF$/, ''))}</a>`
+  }).join('\n')}
+      </div>`).join('\n')
+
+const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="${escapeHtml(sitemapPage.description)}" />
+    <link rel="canonical" href="${sitemapPage.url}" />
+    <link rel="stylesheet" href="/seo.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://slaypdf.com/#website",
+        "name": "Slay PDF",
+        "url": "https://slaypdf.com/"
+      }
+    </script>
+    <title>${sitemapPage.title}</title>
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav" aria-label="Slay PDF">
+        <a class="brand" href="/"><span class="mark">S</span><span>Slay PDF</span></a>
+        <a class="button" href="/">Open editor</a>
+      </nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><a href="/tools.html">PDF tools</a><span>HTML Sitemap</span></nav>
+      <section class="hero">
+        <p class="kicker">Sitemap</p>
+        <h1>${sitemapPage.h1}</h1>
+        <p class="lead">Every canonical Slay PDF app, tool and guide page in one crawlable HTML index.</p>
+      </section>
+${sectionHtml}
+      <footer>Open Slay PDF to edit PDFs locally, or use this sitemap to jump to a specific tool or guide.</footer>
+    </main>
+  </body>
+</html>
+`
+
+await writeFile(new URL('sitemap.html', publicDir), html)
+
+console.log(`Generated HTML sitemap for ${pages.size} URLs.`)

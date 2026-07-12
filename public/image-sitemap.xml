@@ -41,6 +41,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/sitemap.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>HTML Sitemap - Slay PDF</image:title>
+      <image:caption>Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/online-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>
