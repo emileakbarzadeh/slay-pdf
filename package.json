@@ -73,6 +73,7 @@
     "seo:feed:json": "node scripts/generate-json-feed.mjs",
     "seo:llms": "node scripts/generate-llms.mjs",
     "seo:llms:full": "node scripts/generate-llms-full.mjs",
+    "seo:discovery": "node scripts/sync-static-discovery-links.mjs",
     "seo:social": "node scripts/sync-static-social-meta.mjs",
     "seo:schema": "node scripts/sync-static-webpage-schema.mjs",
     "seo:howto": "node scripts/sync-static-howto-schema.mjs",

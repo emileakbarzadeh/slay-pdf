@@ -258,6 +258,13 @@ const pageMetadata = new Map()
 const htmlUrls = urls.filter((url) => url.endsWith('.html'))
 const titles = new Map()
 const descriptions = new Map()
+const requiredDiscoveryLinks = [
+  ['application/rss+xml', 'Slay PDF discovery feed', `${site}/feed.xml`],
+  ['application/feed+json', 'Slay PDF JSON discovery feed', `${site}/feed.json`],
+  ['application/json', 'Slay PDF structured page index', `${site}/pages.json`],
+  ['text/plain', 'Slay PDF compact LLM index', `${site}/llms.txt`],
+  ['text/plain', 'Slay PDF full text LLM index', `${site}/llms-full.txt`],
+]
 const requiredSocialTags = [
   ['property', 'og:type', 'website'],
   ['property', 'og:site_name', 'Slay PDF'],
@@ -278,6 +285,9 @@ for (const url of htmlUrls) {
   assert(description && description.length >= 80 && description.length <= 180, `${file} description should be 80-180 characters`)
   assert(h1, `${file} is missing a visible h1`)
   assert(html.includes(`rel="canonical" href="${url}"`), `${file} canonical does not match sitemap URL`)
+  for (const [type, title, href] of requiredDiscoveryLinks) {
+    assert(html.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `${file} is missing ${title} discovery link`)
+  }
   assert(html.includes('name="robots" content="index, follow, max-image-preview:large"'), `${file} is missing indexable robots meta`)
   assert(html.includes(`property="og:url" content="${url}"`), `${file} Open Graph URL does not match sitemap URL`)
   assert(html.includes('property="og:title" content="'), `${file} is missing Open Graph title`)
@@ -301,8 +311,9 @@ for (const url of htmlUrls) {
 }
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
-assert(rootHtml.includes('rel="alternate" type="application/rss+xml" title="Slay PDF discovery feed" href="https://slaypdf.com/feed.xml"'), 'homepage is missing RSS alternate link')
-assert(rootHtml.includes('rel="alternate" type="application/feed+json" title="Slay PDF JSON discovery feed" href="https://slaypdf.com/feed.json"'), 'homepage is missing JSON feed alternate link')
+for (const [type, title, href] of requiredDiscoveryLinks) {
+  assert(rootHtml.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
+}
 const rootMetadata = {
   title: rootHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim(),
   description: rootHtml.match(/<meta name="description" content="([^"]+)"/)?.[1]?.trim(),

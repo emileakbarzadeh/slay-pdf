@@ -132,8 +132,16 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Adobe Acrobat alternative/i)
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow, max-image-preview:large')
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://slaypdf.com/')
-  await expect(page.locator('link[rel="alternate"][type="application/rss+xml"]')).toHaveAttribute('href', 'https://slaypdf.com/feed.xml')
-  await expect(page.locator('link[rel="alternate"][type="application/feed+json"]')).toHaveAttribute('href', 'https://slaypdf.com/feed.json')
+  const discoveryLinks = [
+    ['application/rss+xml', 'Slay PDF discovery feed', 'https://slaypdf.com/feed.xml'],
+    ['application/feed+json', 'Slay PDF JSON discovery feed', 'https://slaypdf.com/feed.json'],
+    ['application/json', 'Slay PDF structured page index', 'https://slaypdf.com/pages.json'],
+    ['text/plain', 'Slay PDF compact LLM index', 'https://slaypdf.com/llms.txt'],
+    ['text/plain', 'Slay PDF full text LLM index', 'https://slaypdf.com/llms-full.txt'],
+  ] as const
+  for (const [type, title, href] of discoveryLinks) {
+    await expect(page.locator(`link[rel="alternate"][type="${type}"][title="${title}"]`)).toHaveAttribute('href', href)
+  }
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Slay PDF - Free Local PDF Editor')
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', 'https://slaypdf.com/og-image.png')
   await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute('content', '1200')
@@ -288,6 +296,9 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(response.ok()).toBe(true)
     const html = await response.text()
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
+    for (const [type, title, href] of discoveryLinks) {
+      expect(html).toContain(`rel="alternate" type="${type}" title="${title}" href="${href}"`)
+    }
     expect(html).toContain(`property="og:url" content="https://slaypdf.com/${path}"`)
     expect(html).toContain('meta property="og:type" content="website"')
     expect(html).toContain('meta property="og:site_name" content="Slay PDF"')
