@@ -737,6 +737,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/merge-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Merge PDF No Signup - Slay PDF</image:title>
+      <image:caption>Merge PDF files with no signup. Combine, reorder, rotate and export PDFs locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/split-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Split PDF No Signup - Slay PDF</image:title>
+      <image:caption>Split PDF files with no signup. Export selected pages, delete pages or add split markers locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/sign-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Sign PDF No Signup - Slay PDF</image:title>
+      <image:caption>Sign PDF files with no signup. Add visual signatures, initials, dates and text locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/redact-pdf-no-signup.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Redact PDF No Signup - Slay PDF</image:title>
+      <image:caption>Redact PDF files with no signup. Cover visible details, export flattened redacted pages and work locally in your browser with Slay PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/free-pdf-editor-no-signup.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

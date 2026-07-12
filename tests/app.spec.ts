@@ -455,6 +455,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'extract-pdf-text-without-uploading.html',
     'ocr-pdf-without-uploading.html',
     'fill-pdf-forms-without-uploading.html',
+    'merge-pdf-no-signup.html',
+    'split-pdf-no-signup.html',
+    'sign-pdf-no-signup.html',
+    'redact-pdf-no-signup.html',
     'free-pdf-editor-no-signup.html',
     'pdf-editor-no-watermark.html',
     'secure-pdf-editor.html',
@@ -717,7 +721,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(95)
+  expect(toolAppPageCount).toBe(99)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -821,6 +825,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/extract-pdf-text-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/ocr-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-uploading.html')
+  expect(llms).toContain('https://slaypdf.com/merge-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/split-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/sign-pdf-no-signup.html')
+  expect(llms).toContain('https://slaypdf.com/redact-pdf-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/free-pdf-editor-no-signup.html')
   expect(llms).toContain('https://slaypdf.com/pdf-editor-no-watermark.html')
   expect(llms).toContain('https://slaypdf.com/secure-pdf-editor.html')
@@ -969,6 +977,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/extract-pdf-text-without-uploading.html')
   expect(tools).toContain('/ocr-pdf-without-uploading.html')
   expect(tools).toContain('/fill-pdf-forms-without-uploading.html')
+  expect(tools).toContain('/merge-pdf-no-signup.html')
+  expect(tools).toContain('/split-pdf-no-signup.html')
+  expect(tools).toContain('/sign-pdf-no-signup.html')
+  expect(tools).toContain('/redact-pdf-no-signup.html')
   expect(tools).toContain('/free-pdf-editor-no-signup.html')
   expect(tools).toContain('/pdf-editor-no-watermark.html')
   expect(tools).toContain('/secure-pdf-editor.html')

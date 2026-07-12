@@ -284,6 +284,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Fill PDF Forms Without Uploading - Slay PDF: https://slaypdf.com/fill-pdf-forms-without-uploading.html
   Summary: Fill PDF forms without uploading them to a Slay PDF app server. Edit supported AcroForm fields, add text and export locally in your browser.
   Last modified: 2026-07-13
+- Merge PDF No Signup - Slay PDF: https://slaypdf.com/merge-pdf-no-signup.html
+  Summary: Merge PDF files with no signup. Combine, reorder, rotate and export PDFs locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Split PDF No Signup - Slay PDF: https://slaypdf.com/split-pdf-no-signup.html
+  Summary: Split PDF files with no signup. Export selected pages, delete pages or add split markers locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Sign PDF No Signup - Slay PDF: https://slaypdf.com/sign-pdf-no-signup.html
+  Summary: Sign PDF files with no signup. Add visual signatures, initials, dates and text locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
+- Redact PDF No Signup - Slay PDF: https://slaypdf.com/redact-pdf-no-signup.html
+  Summary: Redact PDF files with no signup. Cover visible details, export flattened redacted pages and work locally in your browser with Slay PDF.
+  Last modified: 2026-07-13
 - Free PDF Editor No Signup - Slay PDF: https://slaypdf.com/free-pdf-editor-no-signup.html
   Summary: Use Slay PDF as a free PDF editor with no signup. Merge, split, sign, organize and export PDFs locally in your browser.
   Last modified: 2026-07-13
