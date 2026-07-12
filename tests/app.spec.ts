@@ -435,6 +435,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'merge-pdf-without-acrobat.html',
     'sign-pdf-without-acrobat.html',
     'compress-pdf-without-acrobat.html',
+    'redact-pdf-without-adobe.html',
+    'password-protect-pdf-without-adobe.html',
+    'fill-pdf-forms-without-adobe.html',
+    'rotate-pdf-without-adobe.html',
     'smallpdf-alternative.html',
     'ilovepdf-alternative.html',
     'sejda-alternative.html',
@@ -733,7 +737,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(32)
-  expect(toolAppPageCount).toBe(111)
+  expect(toolAppPageCount).toBe(115)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -817,6 +821,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/merge-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/sign-pdf-without-acrobat.html')
   expect(llms).toContain('https://slaypdf.com/compress-pdf-without-acrobat.html')
+  expect(llms).toContain('https://slaypdf.com/redact-pdf-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/password-protect-pdf-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/fill-pdf-forms-without-adobe.html')
+  expect(llms).toContain('https://slaypdf.com/rotate-pdf-without-adobe.html')
   expect(llms).toContain('https://slaypdf.com/smallpdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/ilovepdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/sejda-alternative.html')
@@ -981,6 +989,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/merge-pdf-without-acrobat.html')
   expect(tools).toContain('/sign-pdf-without-acrobat.html')
   expect(tools).toContain('/compress-pdf-without-acrobat.html')
+  expect(tools).toContain('/redact-pdf-without-adobe.html')
+  expect(tools).toContain('/password-protect-pdf-without-adobe.html')
+  expect(tools).toContain('/fill-pdf-forms-without-adobe.html')
+  expect(tools).toContain('/rotate-pdf-without-adobe.html')
   expect(tools).toContain('/smallpdf-alternative.html')
   expect(tools).toContain('/ilovepdf-alternative.html')
   expect(tools).toContain('/sejda-alternative.html')
