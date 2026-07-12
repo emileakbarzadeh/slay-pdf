@@ -16,7 +16,7 @@ const sections = [
   {
     title: 'Core pages',
     description: 'Start with the app, search page, complete tool index, HTML sitemap, privacy details and help pages.',
-    paths: ['/', '/free-pdf-editor.html', '/tools.html', '/search.html', '/sitemap.html', '/faq.html', '/privacy.html'],
+    paths: ['/', '/free-pdf-editor.html', '/tools.html', '/search.html', '/sitemap.html', '/link-to-slay-pdf.html', '/faq.html', '/privacy.html'],
   },
   {
     title: 'Guides',

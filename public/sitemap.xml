@@ -57,6 +57,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://slaypdf.com/link-to-slay-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/link-to-slay-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/link-to-slay-pdf.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://slaypdf.com/online-pdf-editor.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/online-pdf-editor.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/online-pdf-editor.html" />

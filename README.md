@@ -7,6 +7,8 @@ Slay PDF is a free local PDF editor and Adobe Acrobat alternative for everyday P
 
 Live app: https://slaypdf.com/
 
+Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
+
 ## What It Does
 
 - Import PDFs plus PNG, JPEG, and WebP images.
@@ -22,6 +24,24 @@ Live app: https://slaypdf.com/
 Slay PDF is designed to run as a static site. PDF contents are processed in the browser and are not uploaded to an application server.
 
 The practical limits are still the user's browser, memory, CPU, and storage quota. Imports are capped at 200 MB per file, and OCR currently bundles English language data only.
+
+## Link To Slay PDF
+
+Use the backlink kit when adding Slay PDF to open-source lists, privacy tool roundups, PDF utility directories, student resource pages, or Adobe Acrobat alternative comparisons:
+
+Outreach checklist: [docs/backlink-outreach.md](docs/backlink-outreach.md)
+
+```md
+[Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.
+```
+
+```html
+<a href="https://slaypdf.com/">Slay PDF - free local PDF editor</a>
+```
+
+Short directory description:
+
+> Slay PDF is a free local PDF editor and Adobe Acrobat alternative that runs in the browser, so documents stay on your device.
 
 ## Development Shell
 

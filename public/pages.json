@@ -86,6 +86,18 @@
       "breadcrumbId": "https://slaypdf.com/sitemap.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/link-to-slay-pdf.html",
+      "path": "/link-to-slay-pdf.html",
+      "title": "Link to Slay PDF - Press Kit & Backlink Assets",
+      "description": "Link to Slay PDF with ready-to-use descriptions, Markdown snippets, HTML embeds and directory listing copy for the local browser PDF editor.",
+      "h1": "Link to a local PDF editor people can actually use.",
+      "lastmod": "2026-07-13",
+      "changefreq": "monthly",
+      "priority": 0.7,
+      "webpageId": "https://slaypdf.com/link-to-slay-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/link-to-slay-pdf.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/online-pdf-editor.html",
       "path": "/online-pdf-editor.html",
       "title": "Online PDF Editor - Slay PDF",

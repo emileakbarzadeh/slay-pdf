@@ -9,10 +9,6 @@ const appHeadLines = [
   '    <meta name="apple-mobile-web-app-title" content="Slay PDF" />',
   '    <meta name="mobile-web-app-capable" content="yes" />',
   '    <meta name="apple-mobile-web-app-capable" content="yes" />',
-]
-
-const staticPageHeadLines = [
-  ...appHeadLines,
   '    <link rel="manifest" href="/manifest.webmanifest" />',
 ]
 
@@ -43,7 +39,7 @@ for (const { file, url } of files) {
     throw new Error(`${file} is missing indexable robots meta`)
   }
 
-  const appHeadBlock = (file === 'index.html' ? appHeadLines : staticPageHeadLines).join('\n')
+  const appHeadBlock = appHeadLines.join('\n')
   const updated = withoutAppHeadMeta.replace(
     /(\s*<meta name="robots" content="index, follow, max-image-preview:large"\s*\/>)/,
     `$1\n${appHeadBlock}`,

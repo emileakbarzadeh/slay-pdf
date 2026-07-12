@@ -472,10 +472,10 @@ const requiredAppHead = [
   '<meta name="apple-mobile-web-app-title" content="Slay PDF" />',
   '<meta name="mobile-web-app-capable" content="yes" />',
   '<meta name="apple-mobile-web-app-capable" content="yes" />',
+  '<link rel="manifest" href="/manifest.webmanifest" />',
 ]
 const requiredStaticAppHead = [
   ...requiredAppHead,
-  '<link rel="manifest" href="/manifest.webmanifest" />',
 ]
 const requiredSocialTags = [
   ['property', 'og:type', 'website'],

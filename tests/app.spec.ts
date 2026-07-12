@@ -386,6 +386,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'faq.html',
     'privacy.html',
     'sitemap.html',
+    'link-to-slay-pdf.html',
     'online-pdf-editor.html',
     'edit-pdf-without-uploading.html',
     'organize-pdf-pages.html',

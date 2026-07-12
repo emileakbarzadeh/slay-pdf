@@ -419,6 +419,7 @@ Related links:
 - PDF Tools: https://slaypdf.com/tools.html
 - PDF Tool Search: https://slaypdf.com/search.html
 - HTML Sitemap: https://slaypdf.com/sitemap.html
+- Link to Slay PDF - Press Kit & Backlink Assets: https://slaypdf.com/link-to-slay-pdf.html
 - Slay PDF FAQ - Local PDF Editor: https://slaypdf.com/faq.html
 - Privacy: https://slaypdf.com/privacy.html
 - Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
@@ -616,6 +617,42 @@ Related links:
 - PDF Editor for Linux: https://slaypdf.com/pdf-editor-for-linux.html
 - PDF Editor for iPhone and iPad: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
 - Android PDF Editor: https://slaypdf.com/android-pdf-editor.html
+
+## Link to Slay PDF - Press Kit & Backlink Assets
+URL: https://slaypdf.com/link-to-slay-pdf.html
+Last modified: 2026-07-13
+Summary: Link to Slay PDF with ready-to-use descriptions, Markdown snippets, HTML embeds and directory listing copy for the local browser PDF editor.
+H1: Link to a local PDF editor people can actually use.
+
+Content:
+- Backlink kit
+- Link to a local PDF editor people can actually use.
+- Use this page when adding Slay PDF to software directories, open-source lists, privacy tool roundups, student resource pages or Adobe Acrobat alternative comparisons.
+- Canonical URL
+- https://slaypdf.com/
+- Short description
+- Free local PDF editor for splitting, merging, signing, resizing and editing PDFs in the browser.
+- Best category
+- Productivity, privacy tools, PDF utilities, open-source web apps or Adobe Acrobat alternatives.
+- Ready-to-use link copy
+- One line: Slay PDF is a free local PDF editor and Adobe Acrobat alternative that runs in the browser so documents stay on your device.
+- Directory copy: Slay PDF helps people split, merge, sign, resize, posterise, redact, OCR and edit PDFs locally in a modern browser. It is a static web app, so there is no app-server PDF upload for everyday edits.
+- Markdown: [Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.
+- HTML: <a href="https://slaypdf.com/">Slay PDF - free local PDF editor</a>
+- Useful facts for reviewers and list maintainers
+- Slay PDF is client-side software published from an open-source GitHub repository. The app can import PDFs plus common image formats, organize pages, add edits, export selected pages, create separate PDFs, extract text and run English OCR locally.
+- The strongest fit is any page that recommends tools for private documents, no-upload PDF work, open-source utilities, school PDF workflows, contract cleanup, forms, receipts or Adobe Acrobat alternatives.
+- Linking FAQ
+- Use https://slaypdf.com/ for the main app. Use https://slaypdf.com/free-pdf-editor.html for a crawlable overview page, or https://slaypdf.com/adobe-acrobat-alternative.html for Acrobat alternative lists.
+- Use natural anchor text such as Slay PDF, free local PDF editor, browser PDF editor, open-source PDF editor or Adobe Acrobat alternative.
+- Yes. The source repository is https://github.com/emileakbarzadeh/slay-pdf and the live app is https://slaypdf.com/.
+
+Related links:
+- Open Slay PDF: https://slaypdf.com/
+- Free PDF editor: https://slaypdf.com/free-pdf-editor.html
+- Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
+- Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Privacy model: https://slaypdf.com/privacy.html
 
 ## Online PDF Editor - Slay PDF
 URL: https://slaypdf.com/online-pdf-editor.html

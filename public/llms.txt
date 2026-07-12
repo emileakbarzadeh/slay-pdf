@@ -29,6 +29,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - HTML Sitemap - Slay PDF: https://slaypdf.com/sitemap.html
   Summary: Browse every canonical Slay PDF page for local PDF editing, PDF tools, private browser workflows and Adobe Acrobat alternative guides.
   Last modified: 2026-07-13
+- Link to Slay PDF - Press Kit & Backlink Assets: https://slaypdf.com/link-to-slay-pdf.html
+  Summary: Link to Slay PDF with ready-to-use descriptions, Markdown snippets, HTML embeds and directory listing copy for the local browser PDF editor.
+  Last modified: 2026-07-13
 - Online PDF Editor - Slay PDF: https://slaypdf.com/online-pdf-editor.html
   Summary: Use Slay PDF as a free online PDF editor that runs locally in your browser. Merge, split, sign, organize, redact and export PDFs without app-server uploads.
   Last modified: 2026-07-13
