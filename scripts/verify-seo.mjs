@@ -556,6 +556,11 @@ for (const url of htmlUrls) {
 }
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
+const rootHead = rootHtml.match(/<head>([\s\S]*?)<\/head>/)?.[1] ?? ''
+const rootBody = rootHtml.match(/<body>([\s\S]*?)<\/body>/)?.[1] ?? ''
+assert(!rootHead.includes('type="application/ld+json"'), 'homepage JSON-LD should not delay head parsing')
+assert(rootBody.includes('type="application/ld+json" data-managed="webpage"'), 'homepage WebPage JSON-LD should be in the body')
+assert(rootBody.indexOf('id="root"') < rootBody.indexOf('type="application/ld+json"'), 'homepage JSON-LD should be placed after the initial app shell')
 for (const [rel, type, title, href] of requiredDiscoveryLinks) {
   assert(rootHtml.includes(`rel="${rel}" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
 }

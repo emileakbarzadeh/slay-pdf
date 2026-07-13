@@ -19,6 +19,7 @@ const steps = [
   'seo:image-sitemap',
   'seo:sitemap-index',
   'seo:sitegraph',
+  'seo:homepage-structured-data',
   'seo:feed',
   'seo:feed:json',
   'seo:llms',

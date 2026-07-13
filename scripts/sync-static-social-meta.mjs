@@ -96,16 +96,22 @@ const files = [
 ]
 let changed = 0
 
+function insertSocialMeta(html, block) {
+  const headEnd = html.indexOf('</head>')
+  const firstJsonLd = html.search(/\s*<script type="application\/ld\+json"(?: [^>]*)?>/)
+  if (headEnd >= 0 && firstJsonLd >= 0 && firstJsonLd < headEnd) {
+    return html.replace(
+      /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
+      `\n${block}$1`,
+    )
+  }
+  return html.replace(/(\s*<title>)/, `\n${block}$1`)
+}
+
 for (const { file, url } of files) {
   const html = await readFile(url, 'utf8')
   const withoutSocialMeta = stripManagedSocialMeta(html)
-  const withSocialMeta = withoutSocialMeta.replace(
-    /(\s*<script type="application\/ld\+json"(?: [^>]*)?>)/,
-    `\n${socialBlockFor(html, file)}$1`,
-  )
-  const updated = withSocialMeta === withoutSocialMeta
-    ? withoutSocialMeta.replace(/(\s*<title>)/, `\n${socialBlockFor(html, file)}$1`)
-    : withSocialMeta
+  const updated = insertSocialMeta(withoutSocialMeta, socialBlockFor(html, file))
   if (updated !== html) {
     await writeFile(url, updated)
     changed += 1
