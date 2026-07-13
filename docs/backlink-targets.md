@@ -18,6 +18,11 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | hwlsniper/awesome-pdf-tools | Privacy-first, client-side PDF tools | Pull request opened: https://github.com/hwlsniper/awesome-pdf-tools/pull/2 | Watch for maintainer feedback and keep the client-side/no-upload claim scoped to supported workflows. |
 | johamane01-collab/awesome-pdf-tools | Free online PDF tools | Pull request opened: https://github.com/johamane01-collab/awesome-pdf-tools/pull/5 | Watch for maintainer feedback and keep the entry concise. |
 | diegoleme/awesome-open-source-alternatives | Open-source alternatives to famous apps | Pull request opened: https://github.com/diegoleme/awesome-open-source-alternatives/pull/30 | Watch for maintainer feedback on the new Adobe Acrobat section. |
+| OneOffTech/awesome-pdf | Curated PDF libraries, services, and resources | Pull request opened: https://github.com/OneOffTech/awesome-pdf/pull/41 | Watch for maintainer preference between PRs and issue-based entry suggestions. |
+| karllhughes/awesome-pdf | PDF tools and resources | Pull request opened: https://github.com/karllhughes/awesome-pdf/pull/23 | Watch for maintainer feedback; this list already includes browser PDF utilities. |
+| 0o0kuki0o0/adobe-alternatives | Adobe Acrobat editor alternatives | Pull request opened: https://github.com/0o0kuki0o0/adobe-alternatives/pull/1 | Watch for maintainer feedback; upstream is less active than KenneyNL/Adobe-Alternatives. |
+| freedomappsprivacy/Freedom-apps-privacy | FOSS and privacy-respecting PDF tools | Pull request opened: https://github.com/freedomappsprivacy/Freedom-apps-privacy/pull/1 | Watch for maintainer feedback and be ready to add source/license detail if requested. |
+| Axorax/awesome-free-apps | Free PDF tools | Pull request opened: https://github.com/Axorax/awesome-free-apps/pull/193 | Watch for maintainer feedback about browser-only app fit in a desktop-oriented list. |
 
 ## High-Fit Candidates
 
@@ -30,6 +35,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | The Alt Stack | https://github.com/altstackHQ/altstack-data | https://github.com/emileakbarzadeh/slay-pdf | Open-source Acrobat-style PDF editor alternative | Data lives in `data/tools.json`; verify taxonomy and schema before submitting. |
 | Product Hunt | https://www.producthunt.com/ | https://slaypdf.com/ | Free local PDF editor launch | Needs launch copy, screenshots, and a maker account. |
 | AlternativeTo | https://alternativeto.net/ | https://slaypdf.com/adobe-acrobat-alternative.html | Adobe Acrobat alternative | Add only with accurate feature tags and source link. |
+| Furthir/awesome-useful-projects | https://github.com/Furthir/awesome-useful-projects | https://github.com/emileakbarzadeh/slay-pdf | Open-source everyday productivity PDF editor | Contribution note asks for issue suggestions; open an issue before a PR. |
 
 ## Deferred Until More Maturity
 
