@@ -682,6 +682,7 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - IndexNow URL list: https://slaypdf.com/indexnow-urls.txt
 - Plain page index: https://slaypdf.com/pages.txt
 - Structured page index: https://slaypdf.com/pages.json
+- Press kit and backlink metadata: https://slaypdf.com/press-kit.json
 - RSS discovery feed: https://slaypdf.com/feed.xml
 - JSON discovery feed: https://slaypdf.com/feed.json
 - Full text LLM index: https://slaypdf.com/llms-full.txt

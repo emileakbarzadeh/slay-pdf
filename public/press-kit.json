@@ -1,0 +1,63 @@
+{
+  "name": "Slay PDF",
+  "url": "https://slaypdf.com/",
+  "tagline": "Free local PDF editor and Adobe Acrobat alternative.",
+  "shortDescription": "Slay PDF is a free local PDF editor for splitting, merging, signing, resizing and editing PDFs in the browser.",
+  "directoryDescription": "Slay PDF helps people split, merge, sign, resize, posterise, redact, OCR and edit PDFs locally in a modern browser. It is a static web app, so there is no app-server PDF upload for everyday edits.",
+  "repository": "https://github.com/emileakbarzadeh/slay-pdf",
+  "license": "AGPL-3.0-only",
+  "categories": [
+    "PDF editor",
+    "Productivity",
+    "Privacy tools",
+    "Open-source web apps",
+    "Adobe Acrobat alternatives"
+  ],
+  "keywords": [
+    "local PDF editor",
+    "free PDF editor",
+    "browser PDF editor",
+    "private PDF editor",
+    "no-upload PDF editor",
+    "Adobe Acrobat alternative"
+  ],
+  "recommendedLinks": [
+    {
+      "context": "App directory",
+      "url": "https://slaypdf.com/",
+      "anchor": "Slay PDF"
+    },
+    {
+      "context": "Privacy resource list",
+      "url": "https://slaypdf.com/pdf-privacy-checklist.html",
+      "anchor": "PDF privacy checklist"
+    },
+    {
+      "context": "Open-source software list",
+      "url": "https://github.com/emileakbarzadeh/slay-pdf",
+      "anchor": "open-source PDF editor"
+    },
+    {
+      "context": "Adobe comparison",
+      "url": "https://slaypdf.com/adobe-acrobat-alternative.html",
+      "anchor": "Adobe Acrobat alternative"
+    },
+    {
+      "context": "No-upload tool roundup",
+      "url": "https://slaypdf.com/edit-pdf-without-uploading.html",
+      "anchor": "edit PDF without uploading"
+    }
+  ],
+  "assets": {
+    "logo": "https://slaypdf.com/favicon.svg",
+    "socialImage": "https://slaypdf.com/og-image.png",
+    "lightBadge": "https://slaypdf.com/slay-pdf-badge.svg",
+    "darkBadge": "https://slaypdf.com/slay-pdf-badge-dark.svg"
+  },
+  "snippets": {
+    "markdown": "[Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.",
+    "html": "<a href=\"https://slaypdf.com/\">Slay PDF - free local PDF editor</a>",
+    "markdownBadge": "[![Slay PDF - local PDF editor](https://slaypdf.com/slay-pdf-badge.svg)](https://slaypdf.com/)",
+    "htmlBadge": "<a href=\"https://slaypdf.com/\"><img alt=\"Slay PDF - local PDF editor\" src=\"https://slaypdf.com/slay-pdf-badge.svg\" width=\"260\" height=\"64\"></a>"
+  }
+}

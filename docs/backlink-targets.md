@@ -9,6 +9,9 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 - Latest release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
 - Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 - Self-hosting page: https://slaypdf.com/self-hosted-pdf-editor.html
+- Press kit JSON: https://slaypdf.com/press-kit.json
+- Light badge: https://slaypdf.com/slay-pdf-badge.svg
+- Dark badge: https://slaypdf.com/slay-pdf-badge-dark.svg
 
 ## Submitted
 

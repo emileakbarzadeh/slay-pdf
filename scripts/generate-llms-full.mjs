@@ -80,6 +80,7 @@ const lines = [
   `Image sitemap: ${site}/image-sitemap.xml`,
   `OpenSearch description: ${site}/opensearch.xml`,
   `Source index: ${site}/pages.json`,
+  `Press kit: ${site}/press-kit.json`,
   `Compact index: ${site}/llms.txt`,
   '',
 ]

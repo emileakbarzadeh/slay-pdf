@@ -18,6 +18,7 @@
     <link rel="alternate" type="application/rss+xml" title="Slay PDF discovery feed" href="https://slaypdf.com/feed.xml" />
     <link rel="alternate" type="application/feed+json" title="Slay PDF JSON discovery feed" href="https://slaypdf.com/feed.json" />
     <link rel="alternate" type="application/json" title="Slay PDF structured page index" href="https://slaypdf.com/pages.json" />
+    <link rel="alternate" type="application/json" title="Slay PDF press kit" href="https://slaypdf.com/press-kit.json" />
     <link rel="alternate" type="text/plain" title="Slay PDF compact LLM index" href="https://slaypdf.com/llms.txt" />
     <link rel="alternate" type="text/plain" title="Slay PDF full text LLM index" href="https://slaypdf.com/llms-full.txt" />
     <link rel="stylesheet" href="/seo.css" />
@@ -182,19 +183,33 @@
       </section>
       <section class="content">
         <h2>Badges and embeds</h2>
-        <p>Use these when a README, resource page or internal tools page wants a small visual link.</p>
+        <p>Use these when a README, resource page or internal tools page wants a small visual link. These badge images are hosted by Slay PDF, so they do not depend on a third-party badge service.</p>
+        <div class="badge-preview" aria-label="Slay PDF badge previews">
+          <img src="/slay-pdf-badge.svg" width="260" height="64" alt="Slay PDF - free local PDF editor badge" />
+          <img src="/slay-pdf-badge-dark.svg" width="260" height="64" alt="Slay PDF - free local PDF editor dark badge" />
+        </div>
         <div class="snippet-list">
           <article class="snippet">
             <h3>Markdown badge</h3>
-            <pre><code>[![Slay PDF - local PDF editor](https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f)](https://slaypdf.com/)</code></pre>
-          </article>
-          <article class="snippet">
-            <h3>Source badge</h3>
-            <pre><code>[![Source: AGPL-3.0](https://img.shields.io/badge/source-AGPL--3.0-24181d)](https://github.com/emileakbarzadeh/slay-pdf)</code></pre>
+            <pre><code>[![Slay PDF - local PDF editor](https://slaypdf.com/slay-pdf-badge.svg)](https://slaypdf.com/)</code></pre>
           </article>
           <article class="snippet">
             <h3>HTML badge</h3>
-            <pre><code>&lt;a href="https://slaypdf.com/"&gt;&lt;img alt="Slay PDF - local PDF editor" src="https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f"&gt;&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="https://slaypdf.com/"&gt;&lt;img alt="Slay PDF - local PDF editor" src="https://slaypdf.com/slay-pdf-badge.svg" width="260" height="64"&gt;&lt;/a&gt;</code></pre>
+          </article>
+          <article class="snippet">
+            <h3>Dark background badge</h3>
+            <pre><code>[![Slay PDF - local PDF editor](https://slaypdf.com/slay-pdf-badge-dark.svg)](https://slaypdf.com/)</code></pre>
+          </article>
+        </div>
+      </section>
+      <section class="content">
+        <h2>Machine-readable listing data</h2>
+        <p>Directory maintainers can pull the current name, category, descriptions, repository, license, recommended links and badge URLs from https://slaypdf.com/press-kit.json.</p>
+        <div class="snippet-list">
+          <article class="snippet">
+            <h3>Press kit JSON</h3>
+            <pre><code>https://slaypdf.com/press-kit.json</code></pre>
           </article>
         </div>
       </section>

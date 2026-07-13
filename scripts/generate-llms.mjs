@@ -43,6 +43,7 @@ lines.push(
   `- IndexNow URL list: ${site}/indexnow-urls.txt`,
   `- Plain page index: ${site}/pages.txt`,
   `- Structured page index: ${site}/pages.json`,
+  `- Press kit and backlink metadata: ${site}/press-kit.json`,
   `- RSS discovery feed: ${site}/feed.xml`,
   `- JSON discovery feed: ${site}/feed.json`,
   `- Full text LLM index: ${site}/llms-full.txt`,

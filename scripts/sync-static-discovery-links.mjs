@@ -31,6 +31,12 @@ const discoveryLinks = [
   },
   {
     rel: 'alternate',
+    type: 'application/json',
+    title: 'Slay PDF press kit',
+    href: `${site}/press-kit.json`,
+  },
+  {
+    rel: 'alternate',
     type: 'text/plain',
     title: 'Slay PDF compact LLM index',
     href: `${site}/llms.txt`,

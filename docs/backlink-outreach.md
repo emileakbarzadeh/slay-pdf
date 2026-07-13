@@ -10,6 +10,9 @@ Use this checklist when submitting Slay PDF to directories, roundups, newsletter
 - PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
 - Security model: https://slaypdf.com/pdf-privacy-security.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
+- Press kit JSON: https://slaypdf.com/press-kit.json
+- Light badge: https://slaypdf.com/slay-pdf-badge.svg
+- Dark badge: https://slaypdf.com/slay-pdf-badge-dark.svg
 - Source: https://github.com/emileakbarzadeh/slay-pdf
 - Release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
 - Target tracker: docs/backlink-targets.md
@@ -45,13 +48,19 @@ HTML:
 Markdown badge:
 
 ```md
-[![Slay PDF - local PDF editor](https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f)](https://slaypdf.com/)
+[![Slay PDF - local PDF editor](https://slaypdf.com/slay-pdf-badge.svg)](https://slaypdf.com/)
 ```
 
-Source badge:
+Dark background badge:
 
 ```md
-[![Source: AGPL-3.0](https://img.shields.io/badge/source-AGPL--3.0-24181d)](https://github.com/emileakbarzadeh/slay-pdf)
+[![Slay PDF - local PDF editor](https://slaypdf.com/slay-pdf-badge-dark.svg)](https://slaypdf.com/)
+```
+
+HTML badge:
+
+```html
+<a href="https://slaypdf.com/"><img alt="Slay PDF - local PDF editor" src="https://slaypdf.com/slay-pdf-badge.svg" width="260" height="64"></a>
 ```
 
 ## Good-Fit Targets
@@ -74,4 +83,5 @@ Source badge:
 - Mention that the app is client-side and static, but avoid implying documents are protected from browser extensions, malware, or the user's own device.
 - Include the GitHub repo where open-source proof helps the listing.
 - Include the latest release link where directories ask for a stable version or proof that the project is more than a source snapshot.
+- Point directory maintainers at `https://slaypdf.com/press-kit.json` when they prefer structured listing metadata.
 - Track submitted URLs, account used, date submitted, and status in a separate private sheet if credentials or private contact details are involved.

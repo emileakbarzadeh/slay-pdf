@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="64" viewBox="0 0 260 64" role="img" aria-labelledby="title desc">
+  <title id="title">Slay PDF local PDF editor dark badge</title>
+  <desc id="desc">A dark badge linking to Slay PDF, a free local PDF editor.</desc>
+  <rect width="260" height="64" rx="8" fill="#24181d"/>
+  <rect x="0.5" y="0.5" width="259" height="63" rx="7.5" fill="none" stroke="#5c5054"/>
+  <rect x="14" y="14" width="34" height="38" fill="#fffafb" stroke="#cf9ba9"/>
+  <path d="M38 14h10v10z" fill="#ead6dc"/>
+  <text x="31" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#ef476f">S</text>
+  <text x="62" y="29" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#fffafb">Slay PDF</text>
+  <text x="62" y="46" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#f2c6d0">free local PDF editor</text>
+</svg>

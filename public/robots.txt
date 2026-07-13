@@ -4,4 +4,4 @@ Allow: /
 Sitemap: https://slaypdf.com/sitemap-index.xml
 Sitemap: https://slaypdf.com/sitemap.xml
 Sitemap: https://slaypdf.com/image-sitemap.xml
-# Discovery indexes: https://slaypdf.com/opensearch.xml, https://slaypdf.com/pages.txt, https://slaypdf.com/pages.json, https://slaypdf.com/feed.xml, https://slaypdf.com/feed.json, https://slaypdf.com/llms.txt and https://slaypdf.com/llms-full.txt
+# Discovery indexes: https://slaypdf.com/opensearch.xml, https://slaypdf.com/pages.txt, https://slaypdf.com/pages.json, https://slaypdf.com/press-kit.json, https://slaypdf.com/feed.xml, https://slaypdf.com/feed.json, https://slaypdf.com/llms.txt and https://slaypdf.com/llms-full.txt

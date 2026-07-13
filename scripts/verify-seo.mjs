@@ -480,6 +480,7 @@ const requiredDiscoveryLinks = [
   ['alternate', 'application/rss+xml', 'Slay PDF discovery feed', `${site}/feed.xml`],
   ['alternate', 'application/feed+json', 'Slay PDF JSON discovery feed', `${site}/feed.json`],
   ['alternate', 'application/json', 'Slay PDF structured page index', `${site}/pages.json`],
+  ['alternate', 'application/json', 'Slay PDF press kit', `${site}/press-kit.json`],
   ['alternate', 'text/plain', 'Slay PDF compact LLM index', `${site}/llms.txt`],
   ['alternate', 'text/plain', 'Slay PDF full text LLM index', `${site}/llms-full.txt`],
 ]
@@ -761,6 +762,7 @@ assert(llms.includes(`${site}/image-sitemap.xml`), 'llms.txt is missing image-si
 assert(llms.includes(`${site}/opensearch.xml`), 'llms.txt is missing opensearch.xml')
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
+assert(llms.includes(`${site}/press-kit.json`), 'llms.txt is missing press-kit.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
 assert(llms.includes(`${site}/feed.json`), 'llms.txt is missing feed.json')
 assert(llms.includes(`${site}/llms-full.txt`), 'llms.txt is missing llms-full.txt')
@@ -773,6 +775,7 @@ assert(llmsFull.includes(`Canonical sitemap: ${site}/sitemap.xml`), 'llms-full.t
 assert(llmsFull.includes(`Image sitemap: ${site}/image-sitemap.xml`), 'llms-full.txt is missing image-sitemap.xml reference')
 assert(llmsFull.includes(`OpenSearch description: ${site}/opensearch.xml`), 'llms-full.txt is missing opensearch.xml reference')
 assert(llmsFull.includes(`Source index: ${site}/pages.json`), 'llms-full.txt is missing pages.json reference')
+assert(llmsFull.includes(`Press kit: ${site}/press-kit.json`), 'llms-full.txt is missing press-kit.json reference')
 assert(llmsFull.includes(`Compact index: ${site}/llms.txt`), 'llms-full.txt is missing llms.txt reference')
 for (const page of pagesJson.pages) {
   assert(llmsFull.includes(`## ${page.title}`), `llms-full.txt is missing page heading for ${page.url}`)
@@ -791,6 +794,7 @@ assert(robots.includes(`Sitemap: ${site}/image-sitemap.xml`), 'robots.txt is mis
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
 assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is missing feed.json')
 assert(robots.includes(`${site}/opensearch.xml`), 'robots.txt discovery comment is missing opensearch.xml')
+assert(robots.includes(`${site}/press-kit.json`), 'robots.txt discovery comment is missing press-kit.json')
 assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
 assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
 
@@ -809,7 +813,25 @@ assert(securityTxt.includes('Policy: https://github.com/emileakbarzadeh/slay-pdf
 assert(securityTxt.includes('Preferred-Languages: en'), 'security.txt preferred language is wrong')
 assert(/Expires: \d{4}-\d{2}-\d{2}T00:00:00Z/.test(securityTxt), 'security.txt expires value is wrong')
 
-for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'opensearch.xml', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
+const pressKit = JSON.parse(await readPublic('press-kit.json'))
+assert(pressKit.name === 'Slay PDF', 'press-kit.json name is wrong')
+assert(pressKit.url === `${site}/`, 'press-kit.json URL is wrong')
+assert(pressKit.repository === 'https://github.com/emileakbarzadeh/slay-pdf', 'press-kit.json repository is wrong')
+assert(pressKit.license === 'AGPL-3.0-only', 'press-kit.json license is wrong')
+assert(pressKit.assets?.lightBadge === `${site}/slay-pdf-badge.svg`, 'press-kit.json light badge URL is wrong')
+assert(pressKit.assets?.darkBadge === `${site}/slay-pdf-badge-dark.svg`, 'press-kit.json dark badge URL is wrong')
+assert(pressKit.assets?.socialImage === `${site}/og-image.png`, 'press-kit.json social image URL is wrong')
+assert(pressKit.snippets?.markdownBadge?.includes(`${site}/slay-pdf-badge.svg`), 'press-kit.json Markdown badge snippet is wrong')
+assert(pressKit.snippets?.htmlBadge?.includes(`${site}/slay-pdf-badge.svg`), 'press-kit.json HTML badge snippet is wrong')
+assert(Array.isArray(pressKit.recommendedLinks) && pressKit.recommendedLinks.some((link) => link.url === `${site}/adobe-acrobat-alternative.html`), 'press-kit.json is missing Adobe alternative link guidance')
+
+const backlinkKit = await readPublic('link-to-slay-pdf.html')
+assert(backlinkKit.includes(`${site}/press-kit.json`), 'backlink kit is missing press-kit.json link')
+assert(backlinkKit.includes(`${site}/slay-pdf-badge.svg`), 'backlink kit is missing light badge snippet')
+assert(backlinkKit.includes(`${site}/slay-pdf-badge-dark.svg`), 'backlink kit is missing dark badge snippet')
+assert(!backlinkKit.includes('img.shields.io'), 'backlink kit should use first-party badge assets')
+
+for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'opensearch.xml', 'pages.txt', 'pages.json', 'press-kit.json', 'slay-pdf-badge.svg', 'slay-pdf-badge-dark.svg', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -833,6 +855,12 @@ if (live) {
   const llmsFullResponse = await fetch(`${site}/llms-full.txt`)
   assert(llmsFullResponse.ok, `live llms-full.txt failed ${llmsFullResponse.status}`)
   assert((await llmsFullResponse.text()).includes('# Slay PDF full text index'), 'live llms-full.txt content mismatch')
+  const pressKitResponse = await fetch(`${site}/press-kit.json`)
+  assert(pressKitResponse.ok, `live press-kit.json failed ${pressKitResponse.status}`)
+  assert((await pressKitResponse.json()).assets?.lightBadge === `${site}/slay-pdf-badge.svg`, 'live press-kit.json content mismatch')
+  const badgeResponse = await fetch(`${site}/slay-pdf-badge.svg`)
+  assert(badgeResponse.ok, `live Slay PDF badge failed ${badgeResponse.status}`)
+  assert((await badgeResponse.text()).includes('Slay PDF'), 'live Slay PDF badge content mismatch')
   const imageSitemapResponse = await fetch(`${site}/image-sitemap.xml`)
   assert(imageSitemapResponse.ok, `live image sitemap failed ${imageSitemapResponse.status}`)
   assert((await imageSitemapResponse.text()).includes(`${site}/og-image.png`), 'live image sitemap content mismatch')
