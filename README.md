@@ -163,7 +163,7 @@ nix fmt
 
 ## Deployment
 
-The app builds to static files in `dist/` and is designed for GitHub Pages. The workflow in `.github/workflows/deploy.yml` installs Nix, runs `npm ci` inside the dev shell, builds with `npm run build`, and uploads the static bundle.
+The app builds to static files in `dist/` and is designed for GitHub Pages. The workflow in `.github/workflows/deploy.yml` installs Nix, runs `npm ci` inside the dev shell, builds with `npm run build`, uploads the static bundle, deploys it, and submits the live `indexnow.json` URL list to IndexNow.
 
 ## Self-Hosting
 

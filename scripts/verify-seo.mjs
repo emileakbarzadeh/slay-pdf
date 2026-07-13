@@ -594,6 +594,12 @@ assert(indexNow.keyLocation === `${site}/${indexNow.key}.txt`, 'IndexNow keyLoca
 assert((await readPublic(`${indexNow.key}.txt`)).trim() === indexNow.key, 'IndexNow key file content does not match payload key')
 assert(indexNow.urlList.length === urls.length, 'IndexNow URL count differs from sitemap URL count')
 for (const url of indexNow.urlList) assert(urls.includes(url), `IndexNow URL is missing from sitemap: ${url}`)
+const indexNowSubmitter = await readFile(new URL('submit-indexnow.mjs', import.meta.url), 'utf8')
+assert(indexNowSubmitter.includes("process.argv.includes('--live')"), 'IndexNow submitter must support live deployment payloads')
+assert(indexNowSubmitter.includes('https://slaypdf.com/indexnow.json'), 'IndexNow submitter must fetch the live payload URL')
+const deployWorkflow = await readFile(new URL('../.github/workflows/deploy.yml', import.meta.url), 'utf8')
+assert(deployWorkflow.includes('actions/deploy-pages@v4'), 'deploy workflow must publish GitHub Pages')
+assert(deployWorkflow.includes('node scripts/submit-indexnow.mjs --live'), 'deploy workflow must submit live URLs to IndexNow after deployment')
 
 const pagesTxt = (await readPublic('pages.txt')).trim().split(/\n+/)
 assert(JSON.stringify(pagesTxt) === JSON.stringify(urls), 'pages.txt must match sitemap URL order exactly')
