@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises'
 
 const manifest = JSON.parse(await readFile(new URL('../dist/manifest.webmanifest', import.meta.url), 'utf8'))
+const serviceWorker = await readFile(new URL('../dist/sw.js', import.meta.url), 'utf8')
 
 function assert(condition, message) {
   if (!condition) throw new Error(message)
@@ -65,6 +66,11 @@ assert(Array.isArray(manifest.screenshots) && manifest.screenshots.length >= 1, 
 assert(manifest.screenshots.some((screenshot) => screenshot.src === 'og-image.png' && screenshot.sizes === '1200x630' && screenshot.type === 'image/png' && screenshot.form_factor === 'wide'), 'manifest is missing wide screenshot')
 assert(Array.isArray(manifest.shortcuts), 'manifest shortcuts must be an array')
 assert(manifest.shortcuts.length === expectedShortcuts.length, 'manifest shortcut count is wrong')
+
+assert(serviceWorker.includes('NavigationRoute'), 'service worker must include an explicit navigation route')
+assert(serviceWorker.includes('allowlist:[/^\\/(?:\\?.*)?$/]'), 'service worker navigation fallback must only allow the app root route')
+assert(serviceWorker.includes('denylist:[/^\\/.*\\.(?:html|xml|json|txt|png|svg|webmanifest)(?:\\?.*)?$/]'), 'service worker navigation fallback must deny static SEO and metadata files')
+assert(serviceWorker.includes('skipWaiting') && serviceWorker.includes('clientsClaim'), 'service worker must auto-activate updates')
 
 for (const expected of expectedShortcuts) {
   const shortcut = manifest.shortcuts.find((item) => item.url === expected.url)

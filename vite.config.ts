@@ -59,7 +59,7 @@ export default defineConfig({
     react(),
     tesseractAssets(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: false,
       workbox: {
@@ -78,6 +78,10 @@ export default defineConfig({
         ],
         maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
         navigateFallback: 'index.html',
+        navigateFallbackAllowlist: [/^\/(?:\?.*)?$/],
+        navigateFallbackDenylist: [/^\/.*\.(?:html|xml|json|txt|png|svg|webmanifest)(?:\?.*)?$/],
+        skipWaiting: true,
+        clientsClaim: true,
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {

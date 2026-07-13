@@ -3,11 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import App from './App'
 
-const registerServiceWorker = () => registerSW({
-  onNeedRefresh() {
-    if (window.confirm('An update is ready. Reload Slay PDF now?')) window.location.reload()
-  }
-})
+const registerServiceWorker = () => registerSW({ immediate: true })
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>)
 
