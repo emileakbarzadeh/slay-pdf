@@ -27,6 +27,8 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | hemanth/awesome-pwa | Progressive web app tools and utilities | Pull request opened: https://github.com/hemanth/awesome-pwa/pull/440 | Watch for maintainer feedback; upstream checker verified Slay PDF but currently reports unrelated unreachable entries. |
 | mcuking/Awesome-WebAssembly-Applications | Browser WebAssembly productive tools | Pull request opened: https://github.com/mcuking/Awesome-WebAssembly-Applications/pull/21 | Watch for maintainer feedback and keep the Wasm wording scoped to PDF workflows. |
 | auctors/free-lunch | Free PDF editor list | Pull request opened: https://github.com/auctors/free-lunch/pull/42 | Watch for maintainer feedback; entry includes homepage, source repo, and open-source badge. |
+| abhi18av/awesome-pdf | Online PDF tools | Pull request opened: https://github.com/abhi18av/awesome-pdf/pull/44 | Watch for maintainer feedback; entry keeps the no-account/no-server-upload wording scoped to everyday edits. |
+| aviaryan/awesome-no-login-web-apps | No-login document editor web apps | Pull request opened: https://github.com/aviaryan/awesome-no-login-web-apps/pull/505 | Watch for maintainer feedback; upstream checker includes Slay PDF but fails on unrelated pre-existing broken links. |
 
 ## High-Fit Candidates
 
