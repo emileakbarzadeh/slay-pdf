@@ -74,6 +74,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Combine PDF Files - Slay PDF: https://slaypdf.com/combine-pdf-files.html
   Summary: Combine PDF files locally with Slay PDF. Import multiple PDFs or images, reorder pages and export one clean PDF from your browser.
   Last modified: 2026-07-13
+- Combine PDF - Slay PDF: https://slaypdf.com/combine-pdf.html
+  Summary: Combine PDF files with Slay PDF. Merge PDFs and images locally in your browser, reorder pages and export a clean PDF without app-server uploads.
+  Last modified: 2026-07-13
+- Add Watermark to PDF - Slay PDF: https://slaypdf.com/add-watermark-to-pdf.html
+  Summary: Add a watermark to PDF files with Slay PDF. Apply draft, confidential or review marks locally in your browser and export a clean PDF.
+  Last modified: 2026-07-13
+- Posterize PDF - Slay PDF: https://slaypdf.com/posterize-pdf.html
+  Summary: Posterize PDF pages with Slay PDF. Split one PDF page into printable tiles, choose paper size and export locally from your browser.
+  Last modified: 2026-07-13
+- PDF Page Organizer - Slay PDF: https://slaypdf.com/pdf-page-organizer.html
+  Summary: Organize PDF pages with Slay PDF. Reorder, delete, rotate, split, merge and export PDF pages locally in your browser.
+  Last modified: 2026-07-13
+- PDF Form Filler - Slay PDF: https://slaypdf.com/pdf-form-filler.html
+  Summary: Fill PDF forms with Slay PDF. Edit supported form fields, add text or signatures and export PDFs locally without app-server uploads.
+  Last modified: 2026-07-13
+- PDF Signature - Slay PDF: https://slaypdf.com/pdf-signature.html
+  Summary: Add a PDF signature with Slay PDF. Place visual signatures, initials and approval marks in your browser and export the signed PDF locally.
+  Last modified: 2026-07-13
+- Separate PDF Pages - Slay PDF: https://slaypdf.com/separate-pdf-pages.html
+  Summary: Separate PDF pages with Slay PDF. Add split markers, select pages and download separate PDFs locally from your browser.
+  Last modified: 2026-07-13
+- Extract Pages from PDF Online - Slay PDF: https://slaypdf.com/extract-pages-from-pdf-online.html
+  Summary: Extract pages from PDF online with Slay PDF. Select pages in your browser and export a new PDF without app-server document uploads.
+  Last modified: 2026-07-13
 - Remove Pages from PDF - Slay PDF: https://slaypdf.com/remove-pages-from-pdf.html
   Summary: Remove pages from a PDF locally with Slay PDF. Delete blank, duplicate or sensitive pages and export a clean PDF from your browser.
   Last modified: 2026-07-13

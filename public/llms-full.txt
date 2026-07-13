@@ -98,6 +98,8 @@ Content:
 - Exact-match free online PDF editor and edit-PDF-online pages that explain Slay PDF local browser workflows.
 - Popular workflows
 - Common PDF jobs with step-by-step local workflows for combining, extracting, signing, redacting and making scanned documents searchable.
+- Feature alias pages
+- Alternate names for the same local PDF workflows, including combine, watermark, posterize, organize, fill, sign, separate and extract pages.
 - Image, scan and print workflows
 - Convert images to PDF, clean scanned documents, flatten form fields and posterise one page into printable tiles.
 - Image conversion pages
@@ -134,8 +136,11 @@ Related links:
 - Edit PDF: Reorder, delete, sign, annotate, resize, crop and export PDFs locally.: https://slaypdf.com/edit-pdf.html
 - Adobe Acrobat alternative: Common Acrobat-style jobs without account walls.: https://slaypdf.com/adobe-acrobat-alternative.html
 - Merge PDF: Combine PDFs and images into one document.: https://slaypdf.com/merge-pdf.html
+- Combine PDF: Merge PDFs, images and selected pages locally.: https://slaypdf.com/combine-pdf.html
 - Split PDF: Export selected pages or separate PDFs with split markers.: https://slaypdf.com/split-pdf.html
+- Separate PDF pages: Use split markers to download multiple PDFs.: https://slaypdf.com/separate-pdf-pages.html
 - Sign PDF: Add visual signatures and quick approval marks.: https://slaypdf.com/sign-pdf.html
+- PDF signature: Place a visual signature before export.: https://slaypdf.com/pdf-signature.html
 - Delete PDF pages: Remove blank, duplicate or unwanted pages.: https://slaypdf.com/delete-pdf-pages.html
 - Rotate PDF: Fix sideways scans and mixed-orientation pages.: https://slaypdf.com/rotate-pdf.html
 - Annotate PDF: Add text, highlights, shapes, ink and signatures.: https://slaypdf.com/annotate-pdf.html
@@ -147,9 +152,12 @@ Related links:
 - PDF to images: Export selected PDF pages as images.: https://slaypdf.com/pdf-to-images.html
 - Extract PDF text: Download plain text from selected pages.: https://slaypdf.com/extract-pdf-text.html
 - Posterise PDF: Split one page into printable poster tiles.: https://slaypdf.com/posterise-pdf.html
+- Posterize PDF: US-spelled poster tile workflow.: https://slaypdf.com/posterize-pdf.html
 - Watermark PDF: Add draft, confidential or review watermarks.: https://slaypdf.com/watermark-pdf.html
+- Add watermark to PDF: Apply visible marks locally before export.: https://slaypdf.com/add-watermark-to-pdf.html
 - Add page numbers: Number the final exported PDF sequence.: https://slaypdf.com/add-page-numbers-to-pdf.html
 - Fill PDF forms: Edit supported AcroForm fields locally.: https://slaypdf.com/fill-pdf-forms.html
+- PDF form filler: Fill supported fields or add visual form text.: https://slaypdf.com/pdf-form-filler.html
 - Password protect PDF: Encrypt exported PDFs with a password.: https://slaypdf.com/password-protect-pdf.html
 - Private PDF editor: Keep PDFs in the browser instead of uploading them.: https://slaypdf.com/private-pdf-editor.html
 - FAQ: https://slaypdf.com/faq.html
@@ -168,9 +176,11 @@ Related links:
 - Combine PDF files: https://slaypdf.com/combine-pdf-files.html
 - Remove pages: https://slaypdf.com/remove-pages-from-pdf.html
 - Extract pages: https://slaypdf.com/extract-pages-from-pdf.html
+- Extract pages online: https://slaypdf.com/extract-pages-from-pdf-online.html
 - Make searchable: https://slaypdf.com/make-pdf-searchable.html
 - Add signature: https://slaypdf.com/add-signature-to-pdf.html
 - Redaction tool: https://slaypdf.com/pdf-redaction-tool.html
+- PDF page organizer: https://slaypdf.com/pdf-page-organizer.html
 - Images to PDF: https://slaypdf.com/images-to-pdf.html
 - JPG to PDF: https://slaypdf.com/jpg-to-pdf.html
 - PNG to PDF: https://slaypdf.com/png-to-pdf.html
@@ -384,7 +394,7 @@ Content:
 - Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
 - Find a local PDF workflow
 - All searchable pages
-- Showing 247 indexed Slay PDF pages.
+- Showing 255 indexed Slay PDF pages.
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -468,6 +478,8 @@ Content:
 - Exact-match free online PDF editor and edit-PDF-online pages that explain Slay PDF local browser workflows.
 - PDF workflows
 - Step-by-step local workflows for combining, removing, extracting, searching, signing and redacting PDF content.
+- Feature alias pages
+- Exact-match pages for alternate names people use for the same local PDF workflows: combine, watermark, posterize, organize, fill, sign, separate and extract.
 - Image, scan and print workflows
 - Convert images, clean scans, flatten forms and build printable poster PDFs without uploading documents.
 - Image conversion pages
@@ -531,6 +543,14 @@ Related links:
 - Make PDF Searchable: https://slaypdf.com/make-pdf-searchable.html
 - Add Signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
 - PDF Redaction Tool: https://slaypdf.com/pdf-redaction-tool.html
+- Combine PDF: https://slaypdf.com/combine-pdf.html
+- Add Watermark to PDF: https://slaypdf.com/add-watermark-to-pdf.html
+- Posterize PDF: https://slaypdf.com/posterize-pdf.html
+- PDF Page Organizer: https://slaypdf.com/pdf-page-organizer.html
+- PDF Form Filler: https://slaypdf.com/pdf-form-filler.html
+- PDF Signature: https://slaypdf.com/pdf-signature.html
+- Separate PDF Pages: https://slaypdf.com/separate-pdf-pages.html
+- Extract Pages from PDF Online: https://slaypdf.com/extract-pages-from-pdf-online.html
 - Images to PDF: https://slaypdf.com/images-to-pdf.html
 - JPG to PDF: https://slaypdf.com/jpg-to-pdf.html
 - PNG to PDF: https://slaypdf.com/png-to-pdf.html
@@ -1191,6 +1211,246 @@ Related links:
 - Organize pages: https://slaypdf.com/organize-pdf-pages.html
 - Add page numbers: https://slaypdf.com/add-page-numbers-to-pdf.html
 - Online PDF editor: https://slaypdf.com/online-pdf-editor.html
+
+## Combine PDF - Slay PDF
+URL: https://slaypdf.com/combine-pdf.html
+Last modified: 2026-07-13
+Summary: Combine PDF files with Slay PDF. Merge PDFs and images locally in your browser, reorder pages and export a clean PDF without app-server uploads.
+H1: Combine PDFs locally in your browser.
+
+Content:
+- Combine PDF
+- Combine PDFs locally in your browser.
+- Use Slay PDF when you need to combine PDFs, image scans or selected pages into one local browser workspace.
+- Multiple inputs
+- Import PDF files and common image formats into the same workspace.
+- Page control
+- Reorder, rotate, delete or split pages before export.
+- Local export
+- Download one combined PDF from the browser without a Slay PDF app-server upload.
+- A combine-PDF workflow for private documents.
+- Combining PDFs often means receipts, contracts, scans or client files. Slay PDF keeps the everyday merge workflow in the browser so those files do not need to enter another upload queue.
+- After importing, you can remove extra pages, rotate scans, add annotations or export only the selected pages.
+- Combine PDF FAQ
+- Yes. Import multiple PDFs, reorder the pages and export the combined result.
+- Yes. Slay PDF can import common image formats and include them in the exported PDF.
+- No. Common combine and export workflows run locally in this browser.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Combine PDF files: https://slaypdf.com/combine-pdf-files.html
+- Merge PDF online: https://slaypdf.com/merge-pdf-online.html
+- Merge PDF without uploading: https://slaypdf.com/merge-pdf-without-uploading.html
+
+## Add Watermark to PDF - Slay PDF
+URL: https://slaypdf.com/add-watermark-to-pdf.html
+Last modified: 2026-07-13
+Summary: Add a watermark to PDF files with Slay PDF. Apply draft, confidential or review marks locally in your browser and export a clean PDF.
+H1: Add a watermark to a PDF locally.
+
+Content:
+- Add watermark to PDF
+- Add a watermark to a PDF locally.
+- Use Slay PDF to add visible watermark text or marks before exporting a PDF from the local browser workspace.
+- Visual marks
+- Add text, shapes or signature-style marks to the page editor.
+- Common labels
+- Create draft, confidential, review or internal-use markings.
+- Local output
+- Export the edited PDF from the browser without an app-server document upload.
+- Watermark private PDFs without sending them away.
+- Watermarks are often added to drafts, contracts, proof copies and internal documents. Slay PDF keeps that work in the same local editor used for annotation and export.
+- For stronger privacy workflows, combine watermarking with redaction, password-protected export or selected-page export.
+- Add watermark to PDF FAQ
+- Yes. Add text in the page editor and position it on the PDF before exporting.
+- Yes. Edit the pages that need a mark, then export all pages or only selected pages.
+- No. Slay PDF is a PDF editor with no app-added watermark on exports.
+
+Related links:
+- Watermark PDF: https://slaypdf.com/watermark-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- PDF editor no watermark: https://slaypdf.com/pdf-editor-no-watermark.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+
+## Posterize PDF - Slay PDF
+URL: https://slaypdf.com/posterize-pdf.html
+Last modified: 2026-07-13
+Summary: Posterize PDF pages with Slay PDF. Split one PDF page into printable tiles, choose paper size and export locally from your browser.
+H1: Posterize a PDF into printable tiles.
+
+Content:
+- Posterize PDF
+- Posterize a PDF into printable tiles.
+- Posterize is the common US spelling for the same posterise workflow: turn one PDF page into multiple printable pages.
+- Tile layout
+- Choose rows and columns for the printable output.
+- Paper size
+- Use common page sizes or custom dimensions for tiled exports.
+- No stretching
+- Preserve page aspect ratio and use white letterboxing where needed.
+- Print a large PDF using normal paper.
+- Slay PDF can split a source page across multiple output pages for signs, posters, notices or classroom materials.
+- The posterize workflow sits inside the same page editor, so you can crop, rotate or resize before exporting printable tiles.
+- Posterize PDF FAQ
+- For this tool, yes. Slay PDF uses both spellings for the printable tile workflow.
+- Yes. Choose common paper sizes or custom dimensions before export.
+- No. Slay PDF preserves the content aspect ratio and adds white letterboxing where needed.
+
+Related links:
+- Posterise PDF: https://slaypdf.com/posterise-pdf.html
+- Printable poster PDF: https://slaypdf.com/printable-poster-pdf.html
+- Resize PDF: https://slaypdf.com/resize-pdf.html
+- Crop PDF: https://slaypdf.com/crop-pdf.html
+
+## PDF Page Organizer - Slay PDF
+URL: https://slaypdf.com/pdf-page-organizer.html
+Last modified: 2026-07-13
+Summary: Organize PDF pages with Slay PDF. Reorder, delete, rotate, split, merge and export PDF pages locally in your browser.
+H1: Organize PDF pages without uploading files.
+
+Content:
+- PDF page organizer
+- Organize PDF pages without uploading files.
+- Slay PDF gives you a visual page organizer for everyday cleanup: reorder pages, delete blanks, fix rotation and export the exact result.
+- Reorder pages
+- Drag pages into the order you need.
+- Clean up scans
+- Delete blanks, rotate sideways pages and crop margins.
+- Export choices
+- Download all pages, selected pages or separate PDFs using split markers.
+- A local workspace for page cleanup.
+- PDF page organization is often the whole job: remove the wrong page, put attachments in order or split a packet into separate files.
+- Slay PDF focuses on that practical workflow and keeps common page operations in the browser.
+- PDF page organizer FAQ
+- Yes. Drag pages in the workspace to change the final export order.
+- Yes. Add split markers and export separate PDFs from the workspace.
+- Yes. Select pages and use the selected-pages export.
+
+Related links:
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Rotate PDF: https://slaypdf.com/rotate-pdf.html
+
+## PDF Form Filler - Slay PDF
+URL: https://slaypdf.com/pdf-form-filler.html
+Last modified: 2026-07-13
+Summary: Fill PDF forms with Slay PDF. Edit supported form fields, add text or signatures and export PDFs locally without app-server uploads.
+H1: Fill PDF forms locally in your browser.
+
+Content:
+- PDF form filler
+- Fill PDF forms locally in your browser.
+- Use Slay PDF for practical form work: supported AcroForm fields, visual text, signatures and export from the browser.
+- Supported fields
+- Edit supported PDF form fields when the document exposes them.
+- Visual edits
+- Add text, signatures, check marks or annotations when a form is flattened.
+- Private workflow
+- Documents and edits stay in this browser for common form-filling work.
+- Form filling without another document upload.
+- Some PDFs contain editable fields. Others are scans or flattened forms that need visual text and signatures. Slay PDF supports both practical paths inside one local workspace.
+- After filling, you can export the full document, selected pages or a password-protected PDF.
+- PDF form filler FAQ
+- Yes for supported AcroForm fields, and it can also add visual text and signatures to flattened forms.
+- Yes. Add a visual signature or approval mark before export.
+- No. Common editing work stays in this browser, and passwords are never saved.
+
+Related links:
+- Fill PDF forms: https://slaypdf.com/fill-pdf-forms.html
+- Fill PDF forms without uploading: https://slaypdf.com/fill-pdf-forms-without-uploading.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+
+## PDF Signature - Slay PDF
+URL: https://slaypdf.com/pdf-signature.html
+Last modified: 2026-07-13
+Summary: Add a PDF signature with Slay PDF. Place visual signatures, initials and approval marks in your browser and export the signed PDF locally.
+H1: Add a signature to a PDF locally.
+
+Content:
+- PDF signature
+- Add a signature to a PDF locally.
+- Slay PDF handles everyday visual signing workflows for forms, approvals and quick document packets.
+- Visual signatures
+- Place a drawn or imported signature-style mark on the page.
+- Position controls
+- Move, scale and align signature marks in the page editor.
+- Clean export
+- Download the signed PDF without a Slay PDF app-added watermark.
+- A fast local signing workflow for everyday PDFs.
+- Slay PDF is designed for visual signatures and quick approval marks, not organization-controlled certificate signing.
+- That makes it useful for common forms, receipts, school documents, internal approvals and other PDFs that need a visible signature before export.
+- PDF signature FAQ
+- Yes. Add a visual signature mark and place it on the page before export.
+- No. Use a dedicated certificate-signing workflow for regulated or organization-controlled signatures.
+- Yes. Select the pages you need and export selected pages.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Add signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
+- Sign PDF online: https://slaypdf.com/sign-pdf-online.html
+- Sign PDF without uploading: https://slaypdf.com/sign-pdf-without-uploading.html
+
+## Separate PDF Pages - Slay PDF
+URL: https://slaypdf.com/separate-pdf-pages.html
+Last modified: 2026-07-13
+Summary: Separate PDF pages with Slay PDF. Add split markers, select pages and download separate PDFs locally from your browser.
+H1: Separate PDF pages into new files.
+
+Content:
+- Separate PDF pages
+- Separate PDF pages into new files.
+- Use split markers when one imported PDF needs to become multiple downloaded PDFs from the same local workspace.
+- Split markers
+- Place markers between pages to define separate output PDFs.
+- Selected exports
+- Export selected pages when you only need part of the document.
+- Local downloads
+- Download separate PDFs from the browser without app-server uploads.
+- Split one workspace into multiple PDFs.
+- Separating pages is useful for statements, receipts, forms, packets and scanned batches that need to become individual files.
+- Slay PDF keeps split markers visible in the workspace so the export boundaries are clear before download.
+- Separate PDF pages FAQ
+- Yes. Add split markers and use the separate-pages export to download multiple PDFs.
+- Yes. Use page selection when only part of the workspace should be exported.
+- No. Common split and export workflows run locally in this browser.
+
+Related links:
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Split PDF online: https://slaypdf.com/split-pdf-online.html
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+
+## Extract Pages from PDF Online - Slay PDF
+URL: https://slaypdf.com/extract-pages-from-pdf-online.html
+Last modified: 2026-07-13
+Summary: Extract pages from PDF online with Slay PDF. Select pages in your browser and export a new PDF without app-server document uploads.
+H1: Extract pages from a PDF online, locally.
+
+Content:
+- Extract PDF pages online
+- Extract pages from a PDF online, locally.
+- Slay PDF opens from the web like an online PDF tool, then lets you extract pages locally in the browser.
+- Page selection
+- Select the exact pages you want to keep.
+- New PDF export
+- Download a PDF containing only the selected pages.
+- No upload queue
+- Common extract workflows run on your device in this browser.
+- Online access with local page extraction.
+- Extracting pages is a common reason people open an online PDF tool. Slay PDF keeps the convenient web access while avoiding a Slay PDF app-server upload for common edits.
+- Use it to pull invoices, signed pages, exhibits, forms or receipt pages from a larger document.
+- Extract pages from PDF online FAQ
+- Yes. Select pages and export a new PDF containing only those pages.
+- Yes. Delete unwanted pages or export only the pages you selected.
+- No. Slay PDF does not require an account for common local PDF workflows.
+
+Related links:
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+- Extract PDF pages without uploading: https://slaypdf.com/extract-pdf-pages-without-uploading.html
+- Delete PDF pages online: https://slaypdf.com/delete-pages-pdf-online.html
+- Split PDF online: https://slaypdf.com/split-pdf-online.html
 
 ## Remove Pages from PDF - Slay PDF
 URL: https://slaypdf.com/remove-pages-from-pdf.html

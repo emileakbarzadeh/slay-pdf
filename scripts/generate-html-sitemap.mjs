@@ -34,6 +34,11 @@ const sections = [
     paths: ['/combine-pdf-files.html', '/remove-pages-from-pdf.html', '/extract-pages-from-pdf.html', '/make-pdf-searchable.html', '/add-signature-to-pdf.html', '/pdf-redaction-tool.html'],
   },
   {
+    title: 'Feature alias pages',
+    description: 'Exact-match pages for alternate names people use for the same local PDF workflows: combine, watermark, posterize, organize, fill, sign, separate and extract.',
+    paths: ['/combine-pdf.html', '/add-watermark-to-pdf.html', '/posterize-pdf.html', '/pdf-page-organizer.html', '/pdf-form-filler.html', '/pdf-signature.html', '/separate-pdf-pages.html', '/extract-pages-from-pdf-online.html'],
+  },
+  {
     title: 'Image, scan and print workflows',
     description: 'Convert images, clean scans, flatten forms and build printable poster PDFs without uploading documents.',
     paths: ['/images-to-pdf.html', '/jpg-to-pdf.html', '/png-to-pdf.html', '/edit-scanned-pdf.html', '/flatten-pdf.html', '/printable-poster-pdf.html'],

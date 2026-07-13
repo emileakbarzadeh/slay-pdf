@@ -177,6 +177,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/combine-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Combine PDF - Slay PDF</image:title>
+      <image:caption>Combine PDF files with Slay PDF. Merge PDFs and images locally in your browser, reorder pages and export a clean PDF without app-server uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/add-watermark-to-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Add Watermark to PDF - Slay PDF</image:title>
+      <image:caption>Add a watermark to PDF files with Slay PDF. Apply draft, confidential or review marks locally in your browser and export a clean PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/posterize-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Posterize PDF - Slay PDF</image:title>
+      <image:caption>Posterize PDF pages with Slay PDF. Split one PDF page into printable tiles, choose paper size and export locally from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-page-organizer.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Page Organizer - Slay PDF</image:title>
+      <image:caption>Organize PDF pages with Slay PDF. Reorder, delete, rotate, split, merge and export PDF pages locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-form-filler.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Form Filler - Slay PDF</image:title>
+      <image:caption>Fill PDF forms with Slay PDF. Edit supported form fields, add text or signatures and export PDFs locally without app-server uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-signature.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Signature - Slay PDF</image:title>
+      <image:caption>Add a PDF signature with Slay PDF. Place visual signatures, initials and approval marks in your browser and export the signed PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/separate-pdf-pages.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Separate PDF Pages - Slay PDF</image:title>
+      <image:caption>Separate PDF pages with Slay PDF. Add split markers, select pages and download separate PDFs locally from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/extract-pages-from-pdf-online.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Extract Pages from PDF Online - Slay PDF</image:title>
+      <image:caption>Extract pages from PDF online with Slay PDF. Select pages in your browser and export a new PDF without app-server document uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/remove-pages-from-pdf.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>
