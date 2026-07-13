@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process'
 
 const steps = [
+  'seo:editor-intent-pages',
   'seo:online-task-pages',
   'seo:image-conversion-pages',
   'seo:sitemap-hreflang',

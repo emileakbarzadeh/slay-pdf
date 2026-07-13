@@ -24,6 +24,11 @@ const sections = [
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],
   },
   {
+    title: 'Online editor intent pages',
+    description: 'Exact-match free online PDF editor and edit-PDF-online pages that explain Slay PDF local browser workflows.',
+    paths: ['/free-online-pdf-editor.html', '/edit-pdf-online.html', '/edit-pdf-online-free.html', '/free-pdf-editor-online.html', '/pdf-editor-online.html', '/pdf-editor-online-free.html'],
+  },
+  {
     title: 'PDF workflows',
     description: 'Step-by-step local workflows for combining, removing, extracting, searching, signing and redacting PDF content.',
     paths: ['/combine-pdf-files.html', '/remove-pages-from-pdf.html', '/extract-pages-from-pdf.html', '/make-pdf-searchable.html', '/add-signature-to-pdf.html', '/pdf-redaction-tool.html'],
