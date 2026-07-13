@@ -15,6 +15,7 @@ const steps = [
   'seo:howto',
   'seo:entities',
   'seo:index',
+  'seo:search-index',
   'seo:indexnow',
   'seo:image-sitemap',
   'seo:sitemap-index',

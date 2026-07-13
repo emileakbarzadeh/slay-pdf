@@ -227,6 +227,7 @@
     "seo:sitemap-hreflang": "node scripts/sync-sitemap-hreflang.mjs",
     "seo:noscript": "node scripts/sync-homepage-noscript-links.mjs",
     "seo:index": "node scripts/generate-page-index.mjs",
+    "seo:search-index": "node scripts/sync-static-search-index.mjs",
     "seo:indexnow": "node scripts/generate-indexnow.mjs",
     "seo:image-sitemap": "node scripts/generate-image-sitemap.mjs",
     "seo:sitemap-index": "node scripts/generate-sitemap-index.mjs",

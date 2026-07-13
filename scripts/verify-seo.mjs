@@ -634,6 +634,28 @@ for (const [index, page] of pagesJson.pages.entries()) {
   }
 }
 
+const searchHtml = await readPublic('search.html')
+const expectedSearchPages = pagesJson.pages.filter((page) => page.path !== '/')
+const searchLinks = [...searchHtml.matchAll(/<a href="([^"]+)" data-search-text="([^"]+)"><strong>([\s\S]*?)<\/strong><span>([\s\S]*?)<\/span><\/a>/g)]
+  .map((match) => ({
+    href: decodeHtml(match[1]),
+    searchText: decodeHtml(match[2]),
+    title: textFromInlineHtml(match[3]),
+    description: textFromInlineHtml(match[4]),
+  }))
+assert(searchHtml.includes(`Showing ${expectedSearchPages.length} indexed Slay PDF pages.`), 'search.html static summary must match page index count')
+assert(searchLinks.length === expectedSearchPages.length, 'search.html must include every searchable page as static HTML')
+assert(!searchHtml.includes("fetch('/pages.json')"), 'search.html should not need a pages.json fetch for the default searchable index')
+assert(!searchHtml.includes('results.innerHTML'), 'search.html should filter existing static links instead of rebuilding HTML')
+for (const [index, page] of expectedSearchPages.entries()) {
+  const link = searchLinks[index]
+  assert(link.href === page.path, `search.html link order mismatch at ${index}`)
+  assert(link.title === page.title.replace(/ - Slay PDF$/, ''), `search.html link title mismatch for ${page.url}`)
+  assert(link.description === page.description, `search.html link description mismatch for ${page.url}`)
+  assert(link.searchText.includes(page.path), `search.html search text is missing path for ${page.url}`)
+  assert(link.searchText.includes(page.title.toLowerCase().replace(/&/g, '&')), `search.html search text is missing title for ${page.url}`)
+}
+
 const imageSitemap = await readPublic('image-sitemap.xml')
 assert(imageSitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'image-sitemap.xml is missing XML declaration')
 assert(imageSitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), 'image-sitemap.xml is missing image namespace')
