@@ -771,7 +771,7 @@ assert(securityTxt.includes('Policy: https://github.com/emileakbarzadeh/slay-pdf
 assert(securityTxt.includes('Preferred-Languages: en'), 'security.txt preferred language is wrong')
 assert(/Expires: \d{4}-\d{2}-\d{2}T00:00:00Z/.test(securityTxt), 'security.txt expires value is wrong')
 
-for (const asset of ['CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
+for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
