@@ -17,6 +17,46 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor and Tools - Slay PDF</image:title>
+      <image:caption>Open Slay PDF for local PDF editing tools: merge, split, sign, organize, redact, resize, OCR, annotate and export PDFs in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a PDF editor for local browser workflows. Merge, split, sign, annotate, redact, resize, OCR and export PDFs without uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Local PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a local PDF editor. Edit, merge, split, sign, redact, OCR and export PDFs in your browser without app-server uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/searchable-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Searchable PDF - Slay PDF</image:title>
+      <image:caption>Create searchable PDFs with Slay PDF. Run local English OCR on scanned pages and export searchable PDF files from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/no-upload-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>No Upload PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a no-upload PDF editor. Merge, split, sign, redact, annotate, resize and export PDFs locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/edit-pdf.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

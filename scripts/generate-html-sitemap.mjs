@@ -16,7 +16,7 @@ const sections = [
   {
     title: 'Core pages',
     description: 'Start with the app, search page, complete tool index, HTML sitemap, privacy details and help pages.',
-    paths: ['/', '/free-pdf-editor.html', '/edit-pdf.html', '/tools.html', '/search.html', '/sitemap.html', '/link-to-slay-pdf.html', '/faq.html', '/privacy.html', '/pdf-privacy-security.html', '/pdf-privacy-checklist.html'],
+    paths: ['/', '/pdf.html', '/pdf-editor.html', '/local-pdf-editor.html', '/free-pdf-editor.html', '/edit-pdf.html', '/no-upload-pdf-editor.html', '/searchable-pdf.html', '/tools.html', '/search.html', '/sitemap.html', '/link-to-slay-pdf.html', '/faq.html', '/privacy.html', '/pdf-privacy-security.html', '/pdf-privacy-checklist.html'],
   },
   {
     title: 'Guides',

@@ -26,6 +26,66 @@
       "breadcrumbId": "https://slaypdf.com/free-pdf-editor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/pdf.html",
+      "path": "/pdf.html",
+      "title": "PDF Editor and Tools - Slay PDF",
+      "description": "Open Slay PDF for local PDF editing tools: merge, split, sign, organize, redact, resize, OCR, annotate and export PDFs in your browser.",
+      "h1": "Open a local PDF workspace.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.88,
+      "webpageId": "https://slaypdf.com/pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-editor.html",
+      "path": "/pdf-editor.html",
+      "title": "PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a PDF editor for local browser workflows. Merge, split, sign, annotate, redact, resize, OCR and export PDFs without uploads.",
+      "h1": "Edit PDFs locally in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.88,
+      "webpageId": "https://slaypdf.com/pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-editor.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/local-pdf-editor.html",
+      "path": "/local-pdf-editor.html",
+      "title": "Local PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a local PDF editor. Edit, merge, split, sign, redact, OCR and export PDFs in your browser without app-server uploads.",
+      "h1": "Use a local PDF editor in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.88,
+      "webpageId": "https://slaypdf.com/local-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/local-pdf-editor.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/searchable-pdf.html",
+      "path": "/searchable-pdf.html",
+      "title": "Searchable PDF - Slay PDF",
+      "description": "Create searchable PDFs with Slay PDF. Run local English OCR on scanned pages and export searchable PDF files from your browser.",
+      "h1": "Create searchable PDFs locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.88,
+      "webpageId": "https://slaypdf.com/searchable-pdf.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/searchable-pdf.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/no-upload-pdf-editor.html",
+      "path": "/no-upload-pdf-editor.html",
+      "title": "No Upload PDF Editor - Slay PDF",
+      "description": "Use Slay PDF as a no-upload PDF editor. Merge, split, sign, redact, annotate, resize and export PDFs locally in your browser.",
+      "h1": "Edit PDFs without uploading them.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.88,
+      "webpageId": "https://slaypdf.com/no-upload-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/no-upload-pdf-editor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/edit-pdf.html",
       "path": "/edit-pdf.html",
       "title": "Edit PDF Locally - Slay PDF",

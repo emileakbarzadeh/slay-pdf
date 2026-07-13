@@ -17,6 +17,46 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/pdf-editor.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/local-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/local-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/local-pdf-editor.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/searchable-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/searchable-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/searchable-pdf.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/no-upload-pdf-editor.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/no-upload-pdf-editor.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/no-upload-pdf-editor.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
     <loc>https://slaypdf.com/edit-pdf.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/edit-pdf.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/edit-pdf.html" />
