@@ -767,6 +767,36 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Tax Document PDF Editor - Slay PDF: https://slaypdf.com/tax-document-pdf-editor.html
   Summary: Edit tax document PDFs locally with Slay PDF. Merge statements, remove pages, redact visible details, password protect and export PDF packets.
   Last modified: 2026-07-13
+- Insurance Claim PDF Editor - Slay PDF: https://slaypdf.com/insurance-claim-pdf-editor.html
+  Summary: Use Slay PDF as an insurance claim PDF editor for local page cleanup, signing, redaction, OCR, text export and PDF packet exports.
+  Last modified: 2026-07-13
+- Rental Lease PDF Editor - Slay PDF: https://slaypdf.com/rental-lease-pdf-editor.html
+  Summary: Use Slay PDF as a rental lease PDF editor to sign, fill supported fields, reorder pages, redact visible details and export locally.
+  Last modified: 2026-07-13
+- Mortgage Document PDF Editor - Slay PDF: https://slaypdf.com/mortgage-document-pdf-editor.html
+  Summary: Use Slay PDF as a mortgage document PDF editor for local packet cleanup, selected-page export, redaction, OCR and PDF compression.
+  Last modified: 2026-07-13
+- Pay Stub PDF Editor - Slay PDF: https://slaypdf.com/pay-stub-pdf-editor.html
+  Summary: Use Slay PDF as a pay stub PDF editor for local redaction, page cleanup, splitting, OCR, text export and selected-page PDF exports.
+  Last modified: 2026-07-13
+- Utility Bill PDF Editor - Slay PDF: https://slaypdf.com/utility-bill-pdf-editor.html
+  Summary: Use Slay PDF as a utility bill PDF editor for local page cleanup, redaction, selected-page export, OCR and PDF compression.
+  Last modified: 2026-07-13
+- Passport Application PDF Editor - Slay PDF: https://slaypdf.com/passport-application-pdf-editor.html
+  Summary: Use Slay PDF as a passport application PDF editor for local form filling, signing, page cleanup, OCR and PDF export workflows.
+  Last modified: 2026-07-13
+- Visa Application PDF Editor - Slay PDF: https://slaypdf.com/visa-application-pdf-editor.html
+  Summary: Use Slay PDF as a visa application PDF editor for local form filling, signing, page cleanup, OCR, selected-page export and PDF compression.
+  Last modified: 2026-07-13
+- Government Form PDF Editor - Slay PDF: https://slaypdf.com/government-form-pdf-editor.html
+  Summary: Use Slay PDF as a government form PDF editor for supported form fields, text overlays, signatures, page cleanup, OCR and export.
+  Last modified: 2026-07-13
+- NDA PDF Editor - Slay PDF: https://slaypdf.com/nda-pdf-editor.html
+  Summary: Use Slay PDF as an NDA PDF editor for local signing, text overlays, page cleanup, redaction, page numbering and PDF export.
+  Last modified: 2026-07-13
+- W-9 PDF Editor - Slay PDF: https://slaypdf.com/w9-pdf-editor.html
+  Summary: Use Slay PDF as a W-9 PDF editor for supported form fields, text overlays, visual signatures, redaction, local export and PDF compression.
+  Last modified: 2026-07-13
 - Resume PDF Editor - Slay PDF: https://slaypdf.com/resume-pdf-editor.html
   Summary: Edit resume PDFs locally with Slay PDF. Combine resume pages, remove extras, compress files, annotate drafts and export clean PDFs in the browser.
   Last modified: 2026-07-13

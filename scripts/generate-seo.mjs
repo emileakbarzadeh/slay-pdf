@@ -7,6 +7,7 @@ const steps = [
   'seo:comparison-intent-pages',
   'seo:platform-document-intent-pages',
   'seo:workflow-alias-intent-pages',
+  'seo:sensitive-document-workflow-pages',
   'seo:editor-intent-pages',
   'seo:online-task-pages',
   'seo:image-conversion-pages',
