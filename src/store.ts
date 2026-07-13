@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { clearWorkspace, loadWorkspace, saveWorkspace } from './lib/database'
-import { importFile, uid } from './lib/pdf'
+import { uid } from './lib/id'
 import type { ExportSettings, JobState, PageOverlay, SourceDocument, WorkspaceItem, WorkspacePage } from './types'
 import { defaultExportSettings, isWorkspacePage } from './types'
 
@@ -89,6 +89,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
   importFiles: async (files) => {
     set({ job: { label: 'Importing files', progress: 0 }, error: null })
     try {
+      const { importFile } = await import('./lib/pdf')
       const imported = []
       for (let index = 0; index < files.length; index += 1) {
         imported.push(await importFile(files[index]))

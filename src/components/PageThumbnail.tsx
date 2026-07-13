@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { GripVertical, Maximize2, MessageSquareText, PencilLine, RotateCw } from 'lucide-react'
-import { renderWorkspacePage } from '../lib/pdf'
 import { isWorkspacePageResized, type SourceDocument, type WorkspacePage } from '../types'
 
 type Props = {
@@ -36,7 +35,10 @@ export function PageThumbnail({ page, source, number, selected, onSelect, onOpen
   useEffect(() => {
     let active = true
     if (visible && source && !preview) {
-      void renderWorkspacePage(page, source, THUMBNAIL_RENDER_SCALE, THUMBNAIL_RENDER_QUALITY).then((value) => active && setPreview(value)).catch(() => undefined)
+      void import('../lib/pdf')
+        .then(({ renderWorkspacePage }) => renderWorkspacePage(page, source, THUMBNAIL_RENDER_SCALE, THUMBNAIL_RENDER_QUALITY))
+        .then((value) => active && setPreview(value))
+        .catch(() => undefined)
     }
     return () => { active = false }
   }, [page, preview, source, visible])

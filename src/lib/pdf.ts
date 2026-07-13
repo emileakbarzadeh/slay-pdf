@@ -2,6 +2,7 @@ import { PDFCheckBox, PDFDocument, PDFDropdown, PDFOptionList, PDFRadioGroup, PD
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs'
 import workerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url'
 import type { CropBox, FormField, SourceDocument, WorkspacePage } from '../types'
+import { uid } from './id'
 import { decryptPdf } from './processing'
 
 pdfjs.GlobalWorkerOptions.workerSrc = import.meta.env.MODE === 'test'
@@ -11,10 +12,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = import.meta.env.MODE === 'test'
 const MAX_FILE_SIZE = 200 * 1024 * 1024
 
 export type ImportedDocument = { source: SourceDocument; pages: WorkspacePage[] }
-
-export function uid(prefix = 'id') {
-  return `${prefix}-${crypto.randomUUID()}`
-}
 
 async function inspectForms(blob: Blob): Promise<FormField[]> {
   try {

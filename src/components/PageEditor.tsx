@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Highlighter, Maximize2, MousePointer2, PenLine, RectangleHorizontal, Redo2, Save, Signature, Square, Trash2, Type, Undo2, X, ZoomIn, ZoomOut } from 'lucide-react'
-import { renderWorkspacePage, uid } from '../lib/pdf'
+import { uid } from '../lib/id'
 import { useWorkspace } from '../store'
 import { isWorkspacePage, isWorkspacePageResized, originalPageSize, type PageOverlay, type Point, type SourceDocument, type WorkspacePage } from '../types'
 
@@ -124,11 +124,14 @@ export function PageEditor({ page, source, onClose }: Props) {
   useEffect(() => {
     let active = true
     setRendering(true)
-    void renderWorkspacePage(currentPage, source, renderScale, EDITOR_RENDER_QUALITY).then((value) => {
-      if (active) setPreview(value)
-    }).finally(() => {
-      if (active) setRendering(false)
-    })
+    void import('../lib/pdf')
+      .then(({ renderWorkspacePage }) => renderWorkspacePage(currentPage, source, renderScale, EDITOR_RENDER_QUALITY))
+      .then((value) => {
+        if (active) setPreview(value)
+      })
+      .finally(() => {
+        if (active) setRendering(false)
+      })
     return () => { active = false }
   }, [currentPage, renderScale, source])
   useEffect(() => {
