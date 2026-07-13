@@ -317,6 +317,24 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF2Go Alternative - Slay PDF: https://slaypdf.com/pdf2go-alternative.html
   Summary: Use Slay PDF as a PDF2Go alternative for local browser PDF tools. Edit, merge, split, compress, OCR and export PDFs without uploading documents to an app server.
   Last modified: 2026-07-13
+- pdfFiller Alternative - Slay PDF: https://slaypdf.com/pdffiller-alternative.html
+  Summary: Use Slay PDF as a pdfFiller alternative for local browser PDF editing. Fill forms, sign, merge, split, redact and export PDFs without a Slay PDF app-server upload.
+  Last modified: 2026-07-13
+- Kami Alternative - Slay PDF: https://slaypdf.com/kami-alternative.html
+  Summary: Use Slay PDF as a Kami alternative for local PDF annotation, signing, highlighting, page cleanup and export when you do not need classroom collaboration.
+  Last modified: 2026-07-13
+- PDF Expert Alternative - Slay PDF: https://slaypdf.com/pdf-expert-alternative.html
+  Summary: Use Slay PDF as a PDF Expert alternative for browser-local PDF editing on quick jobs: sign, annotate, merge, split, redact, resize and export PDFs.
+  Last modified: 2026-07-13
+- PDF-XChange Editor Alternative - Slay PDF: https://slaypdf.com/pdf-xchange-editor-alternative.html
+  Summary: Use Slay PDF as a PDF-XChange Editor alternative for local browser PDF edits: annotate, OCR, sign, merge, split, redact, compress and export.
+  Last modified: 2026-07-13
+- Master PDF Editor Alternative - Slay PDF: https://slaypdf.com/master-pdf-editor-alternative.html
+  Summary: Use Slay PDF as a Master PDF Editor alternative for local browser PDF tasks on Linux, Mac, Windows and Chromebooks: edit, sign, merge, split and export.
+  Last modified: 2026-07-13
+- Mac Preview PDF Editor Alternative - Slay PDF: https://slaypdf.com/mac-preview-pdf-editor-alternative.html
+  Summary: Use Slay PDF as a Mac Preview PDF editor alternative when you need browser-local merge, split, signing, redaction, resizing, OCR and export tools.
+  Last modified: 2026-07-13
 - Local PDF Merger - Slay PDF: https://slaypdf.com/local-pdf-merger.html
   Summary: Merge PDF files locally in your browser with Slay PDF. Combine pages without uploading documents to an app server.
   Last modified: 2026-07-13

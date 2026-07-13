@@ -7,6 +7,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | Target | Fit | Status | Follow-up |
 | --- | --- | --- | --- |
 | pluja/awesome-privacy | Privacy-respecting Office tools | Pull request opened: https://github.com/pluja/awesome-privacy/pull/931 | Watch for maintainer feedback and keep the entry factual. |
+| KenneyNL/Adobe-Alternatives | Acrobat editor alternatives | Pull request opened: https://github.com/KenneyNL/Adobe-Alternatives/pull/246 | Watch for maintainer feedback and keep the entry in the Acrobat section. |
 
 ## High-Fit Candidates
 

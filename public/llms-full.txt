@@ -188,6 +188,12 @@ Related links:
 - Soda PDF alternative: https://slaypdf.com/soda-pdf-alternative.html
 - Nitro PDF alternative: https://slaypdf.com/nitro-pdf-alternative.html
 - PDF2Go alternative: https://slaypdf.com/pdf2go-alternative.html
+- pdfFiller alternative: https://slaypdf.com/pdffiller-alternative.html
+- Kami alternative: https://slaypdf.com/kami-alternative.html
+- PDF Expert alternative: https://slaypdf.com/pdf-expert-alternative.html
+- PDF-XChange Editor alternative: https://slaypdf.com/pdf-xchange-editor-alternative.html
+- Master PDF Editor alternative: https://slaypdf.com/master-pdf-editor-alternative.html
+- Mac Preview PDF editor alternative: https://slaypdf.com/mac-preview-pdf-editor-alternative.html
 - Local PDF merger: https://slaypdf.com/local-pdf-merger.html
 - Local PDF splitter: https://slaypdf.com/local-pdf-splitter.html
 - Local PDF signer: https://slaypdf.com/local-pdf-signer.html
@@ -518,6 +524,12 @@ Related links:
 - Soda PDF Alternative: https://slaypdf.com/soda-pdf-alternative.html
 - Nitro PDF Alternative: https://slaypdf.com/nitro-pdf-alternative.html
 - PDF2Go Alternative: https://slaypdf.com/pdf2go-alternative.html
+- pdfFiller Alternative: https://slaypdf.com/pdffiller-alternative.html
+- Kami Alternative: https://slaypdf.com/kami-alternative.html
+- PDF Expert Alternative: https://slaypdf.com/pdf-expert-alternative.html
+- PDF-XChange Editor Alternative: https://slaypdf.com/pdf-xchange-editor-alternative.html
+- Master PDF Editor Alternative: https://slaypdf.com/master-pdf-editor-alternative.html
+- Mac Preview PDF Editor Alternative: https://slaypdf.com/mac-preview-pdf-editor-alternative.html
 - Local PDF Merger: https://slaypdf.com/local-pdf-merger.html
 - Local PDF Splitter: https://slaypdf.com/local-pdf-splitter.html
 - Local PDF Signer: https://slaypdf.com/local-pdf-signer.html
@@ -3280,6 +3292,186 @@ Content:
 - No. Slay PDF is an independent local PDF editor focused on browser-side PDF editing and export workflows.
 - No. Your documents and edits stay in this browser. Passwords are never saved.
 - No. Slay PDF exports clean PDFs without adding a Slay PDF watermark.
+
+## pdfFiller Alternative - Slay PDF
+URL: https://slaypdf.com/pdffiller-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a pdfFiller alternative for local browser PDF editing. Fill forms, sign, merge, split, redact and export PDFs without a Slay PDF app-server upload.
+H1: A local pdfFiller alternative for quick PDF edits.
+
+Content:
+- Alternative
+- A local pdfFiller alternative for quick PDF edits.
+- Fill forms, add visual signatures, organize pages and export finished PDFs in a browser workspace that keeps everyday document edits local.
+- Form and signature tools
+- Fill PDF form fields, add text, place visual signatures and flatten the final export when needed.
+- Local page cleanup
+- Merge, split, delete, reorder, rotate, redact and resize pages before downloading the finished PDF.
+- No app-server upload
+- Your documents and edits stay in this browser. Passwords are never saved.
+- Why use Slay PDF instead?
+- Slay PDF is strongest when you need practical PDF edits without turning a document into a managed workflow. It is built for local form cleanup, signing, page organization, redaction and export.
+- Use it for receipts, forms, packets, contracts and approval copies where a quick local browser edit is enough.
+- pdfFiller alternative FAQ
+- No. Slay PDF is an independent local browser PDF editor for common document workflows.
+- Yes. Slay PDF can fill imported form fields, add text, place visual signatures and export the result from the browser.
+- No. Documents and edits stay in this browser, and passwords are never saved.
+
+Related links:
+- Fill PDF forms: https://slaypdf.com/fill-pdf-forms.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Edit PDF without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+- Adobe Fill & Sign alternative: https://slaypdf.com/adobe-fill-and-sign-alternative.html
+
+## Kami Alternative - Slay PDF
+URL: https://slaypdf.com/kami-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a Kami alternative for local PDF annotation, signing, highlighting, page cleanup and export when you do not need classroom collaboration.
+H1: A local Kami alternative for PDF markup and cleanup.
+
+Content:
+- Alternative
+- A local Kami alternative for PDF markup and cleanup.
+- Annotate, highlight, sign, reorder and export PDFs locally when the job is a personal document edit rather than a shared classroom workflow.
+- Annotation tools
+- Add text, highlights, rectangles, ink, notes and visual signatures before exporting a clean PDF.
+- Page organization
+- Delete, duplicate, rotate, split, merge and reorder pages in the same local workspace.
+- Student-friendly privacy
+- Documents stay in this browser, which is useful for worksheets, forms, readings and assignment packets.
+- Why use Slay PDF instead?
+- Slay PDF is not a learning management or classroom collaboration platform. It is a fast local editor for PDF markup, signatures, cleanup and export.
+- Use it when a student, teacher or parent just needs to mark up a file and download the result without creating another hosted document workflow.
+- Kami alternative FAQ
+- No. Slay PDF is an independent local PDF editor and does not try to replace classroom collaboration features.
+- Yes. Add text, highlights, shapes, ink and signatures, then export the edited PDF locally.
+- No. Open the editor in a modern browser, import the PDF and download the finished file.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- PDF editor for students: https://slaypdf.com/pdf-editor-for-students.html
+- PDF editor for teachers: https://slaypdf.com/pdf-editor-for-teachers.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+
+## PDF Expert Alternative - Slay PDF
+URL: https://slaypdf.com/pdf-expert-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a PDF Expert alternative for browser-local PDF editing on quick jobs: sign, annotate, merge, split, redact, resize and export PDFs.
+H1: A browser-local PDF Expert alternative for quick edits.
+
+Content:
+- Alternative
+- A browser-local PDF Expert alternative for quick edits.
+- Use Slay PDF when you need fast PDF signing, annotation, page cleanup and export in a modern browser instead of a dedicated desktop app.
+- Everyday edits
+- Sign, annotate, fill forms, watermark, add page numbers, redact visible content and export selected pages.
+- Page control
+- Merge, split, delete, reorder, rotate, crop, resize and posterise pages before downloading the result.
+- Works in the browser
+- No desktop install is required for the common jobs Slay PDF handles locally.
+- Why use Slay PDF instead?
+- Slay PDF is a good fit when you only need the practical parts of a PDF editor: organize pages, mark up a copy, sign a file, redact details or export a cleaned PDF.
+- It is not a full replacement for every native app workflow, but it avoids a lot of friction for everyday documents.
+- PDF Expert alternative FAQ
+- No. Slay PDF is an independent browser-based PDF editor for common local editing workflows.
+- Yes. Use a current browser on macOS for local PDF editing, export and OCR workflows.
+- No. Your documents and edits stay in this browser. Passwords are never saved.
+
+Related links:
+- PDF editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+
+## PDF-XChange Editor Alternative - Slay PDF
+URL: https://slaypdf.com/pdf-xchange-editor-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a PDF-XChange Editor alternative for local browser PDF edits: annotate, OCR, sign, merge, split, redact, compress and export.
+H1: A local PDF-XChange Editor alternative in the browser.
+
+Content:
+- Alternative
+- A local PDF-XChange Editor alternative in the browser.
+- Annotate, OCR, sign, compress, redact and reorganize PDFs locally when you want a browser workflow instead of a Windows desktop editor.
+- Annotation and OCR
+- Add markup, extract text, run English OCR and export searchable PDFs from the browser.
+- Document cleanup
+- Crop, rotate, resize, redact, compress and remove pages before sharing the finished PDF.
+- Cross-platform browser use
+- Use Slay PDF on current desktop browsers without tying the workflow to one operating system.
+- Why use Slay PDF instead?
+- Slay PDF is for quick, local, browser-based PDF jobs. It covers common annotation, page organization, OCR and export tasks without installing a desktop suite.
+- Use it when the document needs cleanup now and a local browser workspace is enough for the job.
+- PDF-XChange Editor alternative FAQ
+- No. Slay PDF is an independent local browser PDF editor for common PDF editing and export tasks.
+- Yes. Slay PDF can run English OCR in the browser and export searchable PDFs.
+- Yes. Slay PDF runs in current browsers on common desktop and mobile platforms.
+
+Related links:
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- PDF editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+
+## Master PDF Editor Alternative - Slay PDF
+URL: https://slaypdf.com/master-pdf-editor-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a Master PDF Editor alternative for local browser PDF tasks on Linux, Mac, Windows and Chromebooks: edit, sign, merge, split and export.
+H1: A browser-based Master PDF Editor alternative.
+
+Content:
+- Alternative
+- A browser-based Master PDF Editor alternative.
+- Use Slay PDF for local page editing, signing, annotation, redaction and export when a browser tool is enough for the document.
+- Local editing workspace
+- Add text, signatures, annotations, redactions, watermarks and page numbers before exporting.
+- Page and file tools
+- Merge, split, delete, reorder, rotate, crop, resize and compress PDFs in the browser.
+- Linux-friendly browser path
+- Use a current browser on Linux, Windows, macOS or ChromeOS without a separate PDF editor install.
+- Why use Slay PDF instead?
+- Slay PDF is designed for common PDF work that does not need a heavyweight desktop editor: cleanup, page selection, visual edits, signatures and local export.
+- It gives Linux and Chromebook users a practical browser route for everyday PDF edits.
+- Master PDF Editor alternative FAQ
+- No. Slay PDF is an independent browser-based editor for common local PDF workflows.
+- Yes. Use a current browser on Linux for local PDF editing, page cleanup and export.
+- No. Slay PDF focuses on practical browser edits such as annotations, page changes, signatures, redaction and export.
+
+Related links:
+- PDF editor for Linux: https://slaypdf.com/pdf-editor-for-linux.html
+- PDF editor for Chromebook: https://slaypdf.com/pdf-editor-for-chromebook.html
+- Open-source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
+
+## Mac Preview PDF Editor Alternative - Slay PDF
+URL: https://slaypdf.com/mac-preview-pdf-editor-alternative.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a Mac Preview PDF editor alternative when you need browser-local merge, split, signing, redaction, resizing, OCR and export tools.
+H1: A Mac Preview PDF editor alternative for bigger cleanup jobs.
+
+Content:
+- Alternative
+- A Mac Preview PDF editor alternative for bigger cleanup jobs.
+- Use Slay PDF when Preview is not enough and you need browser-local merge, split, redaction, resizing, OCR, image export or page organization.
+- More page tools
+- Merge, split, delete, duplicate, reorder, rotate, crop, resize and export selected PDF pages.
+- Visual edit tools
+- Add text, signatures, highlights, annotations, watermarks, page numbers and visible redactions.
+- Browser-local workflow
+- Open Slay PDF on macOS in a current browser and download the finished file locally.
+- Why use Slay PDF instead?
+- Preview is useful for simple viewing and markup. Slay PDF gives you a broader local workspace for PDF page organization, redaction, OCR, compression and export.
+- Use it when a file needs cleanup before sending, filing or printing and you want the work to stay in the browser.
+- Mac Preview PDF editor alternative FAQ
+- No. Slay PDF is a separate browser-based PDF editor for jobs that need more page and export tools.
+- Yes. Import PDFs, reorder pages, add split markers and export merged or separated PDFs locally.
+- Yes. Documents and edits stay in this browser, and passwords are never saved.
+
+Related links:
+- PDF editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
 
 ## Local PDF Merger - Slay PDF
 URL: https://slaypdf.com/local-pdf-merger.html

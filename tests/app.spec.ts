@@ -517,6 +517,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'soda-pdf-alternative.html',
     'nitro-pdf-alternative.html',
     'pdf2go-alternative.html',
+    'pdffiller-alternative.html',
+    'kami-alternative.html',
+    'pdf-expert-alternative.html',
+    'pdf-xchange-editor-alternative.html',
+    'master-pdf-editor-alternative.html',
+    'mac-preview-pdf-editor-alternative.html',
     'local-pdf-merger.html',
     'local-pdf-splitter.html',
     'local-pdf-signer.html',
@@ -872,7 +878,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(195)
+  expect(toolAppPageCount).toBe(201)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -984,6 +990,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/soda-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/nitro-pdf-alternative.html')
   expect(llms).toContain('https://slaypdf.com/pdf2go-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdffiller-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/kami-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-expert-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/pdf-xchange-editor-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/master-pdf-editor-alternative.html')
+  expect(llms).toContain('https://slaypdf.com/mac-preview-pdf-editor-alternative.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-merger.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-splitter.html')
   expect(llms).toContain('https://slaypdf.com/local-pdf-signer.html')
@@ -1233,6 +1245,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/soda-pdf-alternative.html')
   expect(tools).toContain('/nitro-pdf-alternative.html')
   expect(tools).toContain('/pdf2go-alternative.html')
+  expect(tools).toContain('/pdffiller-alternative.html')
+  expect(tools).toContain('/kami-alternative.html')
+  expect(tools).toContain('/pdf-expert-alternative.html')
+  expect(tools).toContain('/pdf-xchange-editor-alternative.html')
+  expect(tools).toContain('/master-pdf-editor-alternative.html')
+  expect(tools).toContain('/mac-preview-pdf-editor-alternative.html')
   expect(tools).toContain('/local-pdf-merger.html')
   expect(tools).toContain('/local-pdf-splitter.html')
   expect(tools).toContain('/local-pdf-signer.html')
