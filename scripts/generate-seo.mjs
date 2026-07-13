@@ -4,6 +4,7 @@ const steps = [
   'seo:editor-intent-pages',
   'seo:online-task-pages',
   'seo:image-conversion-pages',
+  'seo:adobe-intent-pages',
   'seo:sitemap-hreflang',
   'seo:html-sitemap',
   'seo:noscript',
