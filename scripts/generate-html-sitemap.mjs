@@ -29,6 +29,11 @@ const sections = [
     paths: ['/best-private-pdf-editor.html', '/best-no-upload-pdf-editor.html', '/no-upload-pdf-tools.html', '/private-pdf-software.html', '/secure-pdf-app.html', '/client-side-pdf-tool.html', '/offline-capable-pdf-editor.html', '/pdf-editor-for-sensitive-documents.html'],
   },
   {
+    title: 'Comparison intent pages',
+    description: 'Pages for PDF editor comparison searches, including Slay PDF versus Acrobat, common PDF utilities, browser editors and desktop editors.',
+    paths: ['/slay-pdf-vs-adobe-acrobat.html', '/slay-pdf-vs-smallpdf.html', '/slay-pdf-vs-ilovepdf.html', '/slay-pdf-vs-sejda.html', '/local-pdf-editor-vs-online-pdf-editor.html', '/pdf-editor-comparison.html', '/free-pdf-editor-comparison.html', '/browser-pdf-editor-vs-desktop-pdf-editor.html'],
+  },
+  {
     title: 'Guides',
     description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],

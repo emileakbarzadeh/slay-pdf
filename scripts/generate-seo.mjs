@@ -4,6 +4,7 @@ const steps = [
   'seo:core-intent-pages',
   'seo:discovery-intent-pages',
   'seo:privacy-intent-pages',
+  'seo:comparison-intent-pages',
   'seo:editor-intent-pages',
   'seo:online-task-pages',
   'seo:image-conversion-pages',

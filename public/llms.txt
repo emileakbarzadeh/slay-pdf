@@ -134,6 +134,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Adobe Acrobat vs Slay PDF: https://slaypdf.com/adobe-acrobat-vs-slay-pdf.html
   Summary: Compare Slay PDF with Adobe Acrobat for everyday PDF edits. Slay PDF is a free local browser editor for merge, split, sign, organize, redact and export jobs.
   Last modified: 2026-07-13
+- Slay PDF vs Adobe Acrobat - Local PDF Editing Comparison: https://slaypdf.com/slay-pdf-vs-adobe-acrobat.html
+  Summary: Compare Slay PDF vs Adobe Acrobat for common PDF edits. Slay PDF is built for local browser merge, split, sign, redact, OCR and export workflows.
+  Last modified: 2026-07-13
+- Slay PDF vs Smallpdf - Local PDF Workflow Comparison: https://slaypdf.com/slay-pdf-vs-smallpdf.html
+  Summary: Compare Slay PDF vs Smallpdf for everyday PDF tasks. Slay PDF focuses on local browser editing, no signup flow and common PDF exports.
+  Last modified: 2026-07-13
+- Slay PDF vs iLovePDF - Local PDF Workflow Comparison: https://slaypdf.com/slay-pdf-vs-ilovepdf.html
+  Summary: Compare Slay PDF vs iLovePDF for common PDF jobs. Slay PDF focuses on local browser editing, privacy-first workflows and clean exports.
+  Last modified: 2026-07-13
+- Slay PDF vs Sejda - Local PDF Workflow Comparison: https://slaypdf.com/slay-pdf-vs-sejda.html
+  Summary: Compare Slay PDF vs Sejda for common PDF edits. Slay PDF is a local browser PDF editor for merge, split, sign, redact and export workflows.
+  Last modified: 2026-07-13
+- Local PDF Editor vs Online PDF Editor - Slay PDF: https://slaypdf.com/local-pdf-editor-vs-online-pdf-editor.html
+  Summary: Compare local PDF editors and online PDF editors. Slay PDF opens from the web but keeps common PDF edits local in your browser.
+  Last modified: 2026-07-13
+- PDF Editor Comparison - Slay PDF: https://slaypdf.com/pdf-editor-comparison.html
+  Summary: Use this PDF editor comparison to decide when Slay PDF fits: local browser editing, no-upload workflows, signing, redaction, OCR and export.
+  Last modified: 2026-07-13
+- Free PDF Editor Comparison - Slay PDF: https://slaypdf.com/free-pdf-editor-comparison.html
+  Summary: Use this free PDF editor comparison to decide when Slay PDF fits: local browser edits, no signup flow, no app watermark and common PDF exports.
+  Last modified: 2026-07-13
+- Browser PDF Editor vs Desktop PDF Editor - Slay PDF: https://slaypdf.com/browser-pdf-editor-vs-desktop-pdf-editor.html
+  Summary: Compare browser PDF editors and desktop PDF editors. Slay PDF is a browser PDF editor for common local merge, split, sign, OCR and export workflows.
+  Last modified: 2026-07-13
 - Combine PDF Files - Slay PDF: https://slaypdf.com/combine-pdf-files.html
   Summary: Combine PDF files locally with Slay PDF. Import multiple PDFs or images, reorder pages and export one clean PDF from your browser.
   Last modified: 2026-07-13
