@@ -29,6 +29,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | auctors/free-lunch | Free PDF editor list | Pull request opened: https://github.com/auctors/free-lunch/pull/42 | Watch for maintainer feedback; entry includes homepage, source repo, and open-source badge. |
 | abhi18av/awesome-pdf | Online PDF tools | Pull request opened: https://github.com/abhi18av/awesome-pdf/pull/44 | Watch for maintainer feedback; entry keeps the no-account/no-server-upload wording scoped to everyday edits. |
 | aviaryan/awesome-no-login-web-apps | No-login document editor web apps | Pull request opened: https://github.com/aviaryan/awesome-no-login-web-apps/pull/505 | Watch for maintainer feedback; upstream checker includes Slay PDF but fails on unrelated pre-existing broken links. |
+| nologin-tools/awesome-nologin-tools | No-login productivity tools directory | Pull request opened: https://github.com/nologin-tools/awesome-nologin-tools/pull/1 | Watch for maintainer feedback; entry includes the app URL, source repo, and tools.json dataset row. |
 
 ## High-Fit Candidates
 
