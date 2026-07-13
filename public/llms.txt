@@ -89,6 +89,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Reorder PDF Pages - Slay PDF: https://slaypdf.com/reorder-pdf-pages.html
   Summary: Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.
   Last modified: 2026-07-13
+- OCR Scanned PDF - Slay PDF: https://slaypdf.com/ocr-scanned-pdf.html
+  Summary: OCR scanned PDFs with Slay PDF. Add an English searchable text layer to scanned pages and export the finished PDF locally in your browser.
+  Last modified: 2026-07-13
+- Make Scanned PDF Searchable - Slay PDF: https://slaypdf.com/make-scanned-pdf-searchable.html
+  Summary: Make scanned PDFs searchable with Slay PDF. Run local browser OCR, add a text layer and export a searchable PDF without a signup flow.
+  Last modified: 2026-07-13
+- Extract Text From Scanned PDF - Slay PDF: https://slaypdf.com/extract-text-from-scanned-pdf.html
+  Summary: Extract text from scanned PDFs with Slay PDF by running local OCR, then exporting text or a searchable PDF from the browser.
+  Last modified: 2026-07-13
+- Copy Text From PDF - Slay PDF: https://slaypdf.com/copy-text-from-pdf.html
+  Summary: Copy text from PDFs with Slay PDF by exporting plain text from the composed document. Use OCR first when the PDF is scanned.
+  Last modified: 2026-07-13
+- Remove Blank Pages From PDF - Slay PDF: https://slaypdf.com/remove-blank-pages-from-pdf.html
+  Summary: Remove blank pages from PDFs with Slay PDF by reviewing thumbnails, deleting unwanted pages and exporting the cleaned PDF from your browser.
+  Last modified: 2026-07-13
+- Highlight PDF - Slay PDF: https://slaypdf.com/highlight-pdf.html
+  Summary: Highlight PDFs with Slay PDF. Add highlight blocks, text, drawings, rectangles, signatures and redactions before exporting locally.
+  Last modified: 2026-07-13
+- Draw On PDF - Slay PDF: https://slaypdf.com/draw-on-pdf.html
+  Summary: Draw on PDFs with Slay PDF. Add ink marks, text, highlights, rectangles, signatures and redactions, then export the edited PDF locally.
+  Last modified: 2026-07-13
+- Reduce PDF Size for Email - Slay PDF: https://slaypdf.com/reduce-pdf-size-for-email.html
+  Summary: Reduce PDF size for email with Slay PDF. Delete unnecessary pages, choose compression presets and export a smaller PDF locally.
+  Last modified: 2026-07-13
 - Legal PDF Editor for Local Workflows - Slay PDF: https://slaypdf.com/legal-pdf-editor.html
   Summary: Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.
   Last modified: 2026-07-13

@@ -217,6 +217,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/ocr-scanned-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>OCR Scanned PDF - Slay PDF</image:title>
+      <image:caption>OCR scanned PDFs with Slay PDF. Add an English searchable text layer to scanned pages and export the finished PDF locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/make-scanned-pdf-searchable.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Make Scanned PDF Searchable - Slay PDF</image:title>
+      <image:caption>Make scanned PDFs searchable with Slay PDF. Run local browser OCR, add a text layer and export a searchable PDF without a signup flow.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/extract-text-from-scanned-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Extract Text From Scanned PDF - Slay PDF</image:title>
+      <image:caption>Extract text from scanned PDFs with Slay PDF by running local OCR, then exporting text or a searchable PDF from the browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/copy-text-from-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Copy Text From PDF - Slay PDF</image:title>
+      <image:caption>Copy text from PDFs with Slay PDF by exporting plain text from the composed document. Use OCR first when the PDF is scanned.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/remove-blank-pages-from-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Remove Blank Pages From PDF - Slay PDF</image:title>
+      <image:caption>Remove blank pages from PDFs with Slay PDF by reviewing thumbnails, deleting unwanted pages and exporting the cleaned PDF from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/highlight-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Highlight PDF - Slay PDF</image:title>
+      <image:caption>Highlight PDFs with Slay PDF. Add highlight blocks, text, drawings, rectangles, signatures and redactions before exporting locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/draw-on-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Draw On PDF - Slay PDF</image:title>
+      <image:caption>Draw on PDFs with Slay PDF. Add ink marks, text, highlights, rectangles, signatures and redactions, then export the edited PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/reduce-pdf-size-for-email.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Reduce PDF Size for Email - Slay PDF</image:title>
+      <image:caption>Reduce PDF size for email with Slay PDF. Delete unnecessary pages, choose compression presets and export a smaller PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/legal-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

@@ -39,6 +39,11 @@ const sections = [
     paths: ['/pdf-editor-for-firefox.html', '/pdf-editor-for-safari.html', '/pdf-editor-for-edge.html', '/reorder-pdf-pages.html', '/legal-pdf-editor.html', '/bank-statement-pdf-editor.html', '/medical-pdf-editor.html', '/school-pdf-editor.html'],
   },
   {
+    title: 'Workflow alias intent pages',
+    description: 'Exact-match OCR, text extraction, blank-page cleanup, annotation and compression alias pages for local PDF workflows.',
+    paths: ['/ocr-scanned-pdf.html', '/make-scanned-pdf-searchable.html', '/extract-text-from-scanned-pdf.html', '/copy-text-from-pdf.html', '/remove-blank-pages-from-pdf.html', '/highlight-pdf.html', '/draw-on-pdf.html', '/reduce-pdf-size-for-email.html'],
+  },
+  {
     title: 'Guides',
     description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],

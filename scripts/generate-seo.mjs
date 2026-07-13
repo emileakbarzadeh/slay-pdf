@@ -6,6 +6,7 @@ const steps = [
   'seo:privacy-intent-pages',
   'seo:comparison-intent-pages',
   'seo:platform-document-intent-pages',
+  'seo:workflow-alias-intent-pages',
   'seo:editor-intent-pages',
   'seo:online-task-pages',
   'seo:image-conversion-pages',

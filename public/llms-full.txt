@@ -798,6 +798,246 @@ Related links:
 - Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
 - Split PDF: https://slaypdf.com/split-pdf.html
 
+## OCR Scanned PDF - Slay PDF
+URL: https://slaypdf.com/ocr-scanned-pdf.html
+Last modified: 2026-07-13
+Summary: OCR scanned PDFs with Slay PDF. Add an English searchable text layer to scanned pages and export the finished PDF locally in your browser.
+H1: OCR scanned PDFs locally in your browser.
+
+Content:
+- OCR scanned PDF
+- OCR scanned PDFs locally in your browser.
+- Use Slay PDF when a scanned PDF needs searchable text but the document should not be sent to an upload-first converter.
+- English OCR
+- Run OCR on selected PDF pages and add a searchable text layer.
+- Clean first
+- Rotate, crop, delete or reorder pages before OCR export.
+- Local export
+- Download the searchable PDF from this browser.
+- Make scans easier to search.
+- Scanned PDFs are often just page images. OCR adds recognized text so the exported PDF is easier to search, copy from and archive.
+- OCR quality depends on scan quality, language, contrast and page orientation, so review the exported file before relying on it.
+- OCR scanned PDF FAQ
+- Yes. Slay PDF can run English OCR and add a searchable text layer during export.
+- No. Common OCR and export workflows run locally in this browser.
+- No. OCR accuracy depends on the scan, so always review the output.
+
+Related links:
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+- Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
+- Local PDF OCR: https://slaypdf.com/local-pdf-ocr.html
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+
+## Make Scanned PDF Searchable - Slay PDF
+URL: https://slaypdf.com/make-scanned-pdf-searchable.html
+Last modified: 2026-07-13
+Summary: Make scanned PDFs searchable with Slay PDF. Run local browser OCR, add a text layer and export a searchable PDF without a signup flow.
+H1: Make a scanned PDF searchable without uploading.
+
+Content:
+- Make scanned PDF searchable
+- Make a scanned PDF searchable without uploading.
+- A searchable scanned PDF is easier to find, quote and archive. Slay PDF handles that workflow in the browser for common documents.
+- OCR text layer
+- Add recognized English text to scanned PDF pages.
+- Page cleanup
+- Delete extras, rotate pages and crop scans before exporting.
+- No account wall
+- Create a searchable export without a Slay PDF account.
+- Turn a scan into a searchable PDF.
+- Use this workflow for scanned forms, receipts, notes, packets and document archives where search matters.
+- Because OCR can misread poor scans, check the output before sending or storing it as the final copy.
+- Make scanned PDF searchable FAQ
+- Import the PDF, clean up pages if needed, choose searchable OCR PDF export and download the result.
+- Yes. Slay PDF runs common OCR and export workflows locally in the browser.
+- Use selected-page workflows when only part of the document needs export.
+
+Related links:
+- Searchable PDF: https://slaypdf.com/searchable-pdf.html
+- Make PDF searchable: https://slaypdf.com/make-pdf-searchable.html
+- OCR PDF without uploading: https://slaypdf.com/ocr-pdf-without-uploading.html
+- Edit scanned PDF: https://slaypdf.com/edit-scanned-pdf.html
+
+## Extract Text From Scanned PDF - Slay PDF
+URL: https://slaypdf.com/extract-text-from-scanned-pdf.html
+Last modified: 2026-07-13
+Summary: Extract text from scanned PDFs with Slay PDF by running local OCR, then exporting text or a searchable PDF from the browser.
+H1: Extract text from scanned PDFs locally.
+
+Content:
+- Extract text from scanned PDF
+- Extract text from scanned PDFs locally.
+- For scanned documents, text extraction usually starts with OCR. Slay PDF keeps that workflow in the browser for common files.
+- OCR first
+- Recognize English text from scanned page images.
+- Text export
+- Download plain text from the composed document.
+- Searchable PDF
+- Export a PDF with an OCR text layer when a PDF output is needed.
+- Get usable text out of scanned pages.
+- Extracted text is useful for notes, records, receipts, research packets and archives.
+- OCR accuracy depends on the original scan. Review names, numbers and important details before using the extracted text.
+- Extract text from scanned PDF FAQ
+- Yes. Run OCR for scanned pages, then export plain text or a searchable PDF.
+- OCR is designed for image-based scanned pages, with accuracy depending on quality.
+- No. Common OCR and export workflows run locally in this browser.
+
+Related links:
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+- Extract PDF text without uploading: https://slaypdf.com/extract-pdf-text-without-uploading.html
+- OCR scanned PDF: https://slaypdf.com/ocr-scanned-pdf.html
+- PDF to images: https://slaypdf.com/pdf-to-images.html
+
+## Copy Text From PDF - Slay PDF
+URL: https://slaypdf.com/copy-text-from-pdf.html
+Last modified: 2026-07-13
+Summary: Copy text from PDFs with Slay PDF by exporting plain text from the composed document. Use OCR first when the PDF is scanned.
+H1: Copy text from a PDF with local text export.
+
+Content:
+- Copy text from PDF
+- Copy text from a PDF with local text export.
+- When you need the words inside a PDF, Slay PDF can export text from the edited document and can add OCR for scanned pages.
+- Plain text export
+- Download extracted text from the PDF workflow.
+- OCR support
+- Use OCR when the PDF is a scan instead of real text.
+- Edit first
+- Remove unneeded pages before exporting text from the document.
+- Export text before pasting it where you need it.
+- Text export is useful for notes, summaries, search, records and moving PDF content into another document.
+- Some PDFs contain images of text rather than selectable text. For those, run OCR first and review the result.
+- Copy text from PDF FAQ
+- Yes. Use Slay PDF text export for PDFs with text, or OCR first for scanned PDFs.
+- Yes. Select the pages you need before using text export.
+- No. Plain text export focuses on text content rather than preserving layout.
+
+Related links:
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+- Extract PDF text without uploading: https://slaypdf.com/extract-pdf-text-without-uploading.html
+- Searchable PDF: https://slaypdf.com/searchable-pdf.html
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+
+## Remove Blank Pages From PDF - Slay PDF
+URL: https://slaypdf.com/remove-blank-pages-from-pdf.html
+Last modified: 2026-07-13
+Summary: Remove blank pages from PDFs with Slay PDF by reviewing thumbnails, deleting unwanted pages and exporting the cleaned PDF from your browser.
+H1: Remove blank pages from a PDF manually and locally.
+
+Content:
+- Remove blank PDF pages
+- Remove blank pages from a PDF manually and locally.
+- Scanned packets often include blank separator pages. Slay PDF lets you review pages visually and delete the ones you do not want.
+- Visual review
+- Use page thumbnails to find blank or unwanted pages.
+- Manual deletion
+- Delete selected pages intentionally before export.
+- Clean export
+- Download the cleaned PDF locally from the browser.
+- Clean scanned packets without an upload queue.
+- Blank pages appear in contracts, school packets, tax paperwork, bank statements and medical forms after scanning.
+- Slay PDF keeps the cleanup simple: review the pages, delete blank pages, reorder if needed and export the final PDF.
+- Remove blank pages from PDF FAQ
+- No. Review the pages visually and delete the blank pages you choose.
+- Use the current workspace controls while editing, and verify the export before sharing.
+- No. Common page editing and export workflows run locally in this browser.
+
+Related links:
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Remove pages from PDF: https://slaypdf.com/remove-pages-from-pdf.html
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+- Reorder PDF pages: https://slaypdf.com/reorder-pdf-pages.html
+
+## Highlight PDF - Slay PDF
+URL: https://slaypdf.com/highlight-pdf.html
+Last modified: 2026-07-13
+Summary: Highlight PDFs with Slay PDF. Add highlight blocks, text, drawings, rectangles, signatures and redactions before exporting locally.
+H1: Highlight a PDF locally in your browser.
+
+Content:
+- Highlight PDF
+- Highlight a PDF locally in your browser.
+- Use Slay PDF when a PDF needs quick visual markup and the document should stay in the browser.
+- Highlight blocks
+- Mark important areas with adjustable highlight overlays.
+- More markup
+- Add text, drawings, rectangles, signatures and redaction blocks.
+- Flattened export
+- Download the marked-up PDF from the browser.
+- Mark up PDFs without leaving the browser.
+- Highlighting is useful for review packets, class notes, contracts, forms and scanned documents.
+- Slay PDF keeps highlight and annotation work in the same workspace as page cleanup and export.
+- Highlight PDF FAQ
+- Yes. Open a page in the editor and add highlight overlays before exporting.
+- Yes. Add text overlays, rectangles and ink drawings where needed.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Annotate PDF online: https://slaypdf.com/annotate-pdf-online.html
+- Draw on PDF: https://slaypdf.com/draw-on-pdf.html
+- PDF editor: https://slaypdf.com/pdf-editor.html
+
+## Draw On PDF - Slay PDF
+URL: https://slaypdf.com/draw-on-pdf.html
+Last modified: 2026-07-13
+Summary: Draw on PDFs with Slay PDF. Add ink marks, text, highlights, rectangles, signatures and redactions, then export the edited PDF locally.
+H1: Draw on a PDF in the browser.
+
+Content:
+- Draw on PDF
+- Draw on a PDF in the browser.
+- Drawing on a PDF is useful for quick markup, corrections, notes, signatures and visual review.
+- Ink tool
+- Draw freehand marks directly on the page editor.
+- Edit controls
+- Move, resize and tune overlays before exporting.
+- Local download
+- Export the edited PDF from this browser.
+- Add freehand PDF markup without a desktop suite.
+- Use Slay PDF to draw attention to areas of a PDF, mark a scan, add a simple note or combine drawing with highlights and text.
+- For precise certified review workflows, use the document system required by your organization.
+- Draw on PDF FAQ
+- Yes. Use the ink tool in the page editor to add freehand marks.
+- Yes. Select overlays in the editor to move or scale them before export.
+- No. Common local PDF workflows do not require a Slay PDF account.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Highlight PDF: https://slaypdf.com/highlight-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Edit PDF: https://slaypdf.com/edit-pdf.html
+
+## Reduce PDF Size for Email - Slay PDF
+URL: https://slaypdf.com/reduce-pdf-size-for-email.html
+Last modified: 2026-07-13
+Summary: Reduce PDF size for email with Slay PDF. Delete unnecessary pages, choose compression presets and export a smaller PDF locally.
+H1: Reduce PDF size for email in your browser.
+
+Content:
+- Reduce PDF size for email
+- Reduce PDF size for email in your browser.
+- Email attachment limits make oversized PDFs annoying. Slay PDF helps reduce size with page cleanup and compression presets.
+- Remove extras
+- Delete unneeded pages before export to reduce the file.
+- Compression presets
+- Choose screen, ebook or printer compression depending on the use case.
+- Local export
+- Download the compressed PDF from the browser.
+- Shrink the file before attaching it.
+- The best compression result depends on document content. Removing pages and compressing image-heavy PDFs usually helps most.
+- After export, check the file size and visual quality before sending it by email.
+- Reduce PDF size for email FAQ
+- Yes. Clean up pages and use compression presets before exporting the PDF.
+- No. Results depend on the original PDF content and existing compression.
+- No. Common export and compression workflows run locally in this browser.
+
+Related links:
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- Compress PDF online: https://slaypdf.com/compress-pdf-online.html
+- Compress PDF without uploading: https://slaypdf.com/compress-pdf-without-uploading.html
+- Local PDF compressor: https://slaypdf.com/local-pdf-compressor.html
+
 ## Legal PDF Editor for Local Workflows - Slay PDF
 URL: https://slaypdf.com/legal-pdf-editor.html
 Last modified: 2026-07-13
@@ -1024,6 +1264,14 @@ Related links:
 - Bank statement PDF editor: Redact, split and export financial PDFs locally.: https://slaypdf.com/bank-statement-pdf-editor.html
 - Medical PDF editor: Careful local workflows for health documents.: https://slaypdf.com/medical-pdf-editor.html
 - School PDF editor: Merge, sign, OCR and export school PDFs.: https://slaypdf.com/school-pdf-editor.html
+- OCR scanned PDF: Add searchable text to scanned pages.: https://slaypdf.com/ocr-scanned-pdf.html
+- Make scanned PDF searchable: Use local OCR for scanned documents.: https://slaypdf.com/make-scanned-pdf-searchable.html
+- Extract text from scanned PDF: Run OCR, then export plain text.: https://slaypdf.com/extract-text-from-scanned-pdf.html
+- Copy text from PDF: Export text from selected PDF pages.: https://slaypdf.com/copy-text-from-pdf.html
+- Remove blank pages from PDF: Review thumbnails and delete blank pages.: https://slaypdf.com/remove-blank-pages-from-pdf.html
+- Highlight PDF: Add highlight overlays before export.: https://slaypdf.com/highlight-pdf.html
+- Draw on PDF: Use ink markup in the page editor.: https://slaypdf.com/draw-on-pdf.html
+- Reduce PDF size for email: Clean pages and use compression presets.: https://slaypdf.com/reduce-pdf-size-for-email.html
 - PDF editor app: Use Slay PDF like an installable browser app.: https://slaypdf.com/pdf-editor-app.html
 - PDF editor software: Open-source software delivered as a web app.: https://slaypdf.com/pdf-editor-software.html
 - Free PDF software: Free software for common local PDF edits.: https://slaypdf.com/free-pdf-software.html
@@ -1301,7 +1549,7 @@ Content:
 - Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
 - Find a local PDF workflow
 - All searchable pages
-- Showing 292 indexed Slay PDF pages.
+- Showing 300 indexed Slay PDF pages.
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -1387,6 +1635,8 @@ Content:
 - Pages for PDF editor comparison searches, including Slay PDF versus Acrobat, common PDF utilities, browser editors and desktop editors.
 - Platform and document intent pages
 - Browser-specific, page-reordering and sensitive-document workflow pages for people editing PDFs locally.
+- Workflow alias intent pages
+- Exact-match OCR, text extraction, blank-page cleanup, annotation and compression alias pages for local PDF workflows.
 - Guides
 - Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.
 - Online editor intent pages
@@ -1479,6 +1729,14 @@ Related links:
 - Bank Statement PDF Editor: https://slaypdf.com/bank-statement-pdf-editor.html
 - Medical PDF Editor for Local Workflows: https://slaypdf.com/medical-pdf-editor.html
 - School PDF Editor: https://slaypdf.com/school-pdf-editor.html
+- OCR Scanned PDF: https://slaypdf.com/ocr-scanned-pdf.html
+- Make Scanned PDF Searchable: https://slaypdf.com/make-scanned-pdf-searchable.html
+- Extract Text From Scanned PDF: https://slaypdf.com/extract-text-from-scanned-pdf.html
+- Copy Text From PDF: https://slaypdf.com/copy-text-from-pdf.html
+- Remove Blank Pages From PDF: https://slaypdf.com/remove-blank-pages-from-pdf.html
+- Highlight PDF: https://slaypdf.com/highlight-pdf.html
+- Draw On PDF: https://slaypdf.com/draw-on-pdf.html
+- Reduce PDF Size for Email: https://slaypdf.com/reduce-pdf-size-for-email.html
 - Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
 - Edit PDF Without Uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize PDF Pages: https://slaypdf.com/organize-pdf-pages.html
