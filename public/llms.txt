@@ -410,6 +410,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Free Online PDF Page Numbering - Slay PDF: https://slaypdf.com/free-online-pdf-page-numbering.html
   Summary: Use free online PDF page numbering that works locally in your browser. Add page numbers without uploading documents.
   Last modified: 2026-07-13
+- Merge PDF Online - Slay PDF: https://slaypdf.com/merge-pdf-online.html
+  Summary: Merge PDF online with Slay PDF. Combine, reorder and delete pages in your browser, then export one PDF without uploading documents to an app server.
+  Last modified: 2026-07-13
+- Split PDF Online - Slay PDF: https://slaypdf.com/split-pdf-online.html
+  Summary: Split PDF online with Slay PDF. Delete, extract or separate pages in your browser and download clean PDFs without uploading documents.
+  Last modified: 2026-07-13
+- Sign PDF Online - Slay PDF: https://slaypdf.com/sign-pdf-online.html
+  Summary: Sign PDF online with Slay PDF. Add a visual signature, text and marks in your browser, then export the signed PDF without uploading documents.
+  Last modified: 2026-07-13
+- Compress PDF Online - Slay PDF: https://slaypdf.com/compress-pdf-online.html
+  Summary: Compress PDF online with Slay PDF. Use browser export presets to reduce PDF size and download the result without uploading documents.
+  Last modified: 2026-07-13
+- Rotate PDF Online - Slay PDF: https://slaypdf.com/rotate-pdf-online.html
+  Summary: Rotate PDF online with Slay PDF. Fix sideways pages in your browser and export the corrected PDF without uploading documents.
+  Last modified: 2026-07-13
+- Crop PDF Online - Slay PDF: https://slaypdf.com/crop-pdf-online.html
+  Summary: Crop PDF online with Slay PDF. Trim margins and clean scanned pages in your browser, then export cropped PDFs without uploading documents.
+  Last modified: 2026-07-13
+- Delete PDF Pages Online - Slay PDF: https://slaypdf.com/delete-pages-pdf-online.html
+  Summary: Delete PDF pages online with Slay PDF. Remove blank, duplicate or unwanted pages in your browser and export a clean PDF without uploads.
+  Last modified: 2026-07-13
+- Annotate PDF Online - Slay PDF: https://slaypdf.com/annotate-pdf-online.html
+  Summary: Annotate PDF online with Slay PDF. Add text, highlights, shapes, ink, signatures and redactions in your browser without uploading documents.
+  Last modified: 2026-07-13
 - Secure PDF Merger - Slay PDF: https://slaypdf.com/secure-pdf-merger.html
   Summary: Use a secure PDF merger that works locally in your browser. Combine PDFs with Slay PDF without uploading documents to an app server.
   Last modified: 2026-07-13

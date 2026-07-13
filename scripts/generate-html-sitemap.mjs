@@ -59,6 +59,11 @@ const sections = [
     paths: ['/free-online-pdf-merger.html', '/free-online-pdf-splitter.html', '/free-online-pdf-signer.html', '/free-online-pdf-redactor.html', '/free-online-pdf-compressor.html', '/free-online-pdf-rotator.html', '/free-online-pdf-cropper.html', '/free-online-pdf-ocr.html', '/free-online-pdf-page-remover.html', '/free-online-pdf-resizer.html', '/free-online-pdf-annotator.html', '/free-online-pdf-page-numbering.html'],
   },
   {
+    title: 'Online PDF task pages',
+    description: 'Exact-match online PDF merge, split, sign, compress, rotate, crop, page removal and annotation pages that point users to local browser workflows.',
+    paths: ['/merge-pdf-online.html', '/split-pdf-online.html', '/sign-pdf-online.html', '/compress-pdf-online.html', '/rotate-pdf-online.html', '/crop-pdf-online.html', '/delete-pages-pdf-online.html', '/annotate-pdf-online.html'],
+  },
+  {
     title: 'Secure PDF task pages',
     description: 'Secure PDF merger, splitter, signer, redactor, compression, rotation, crop, OCR and page-editing pages for local browser workflows on private documents.',
     paths: ['/secure-pdf-merger.html', '/secure-pdf-splitter.html', '/secure-pdf-signer.html', '/secure-pdf-redactor.html', '/secure-pdf-compressor.html', '/secure-pdf-rotator.html', '/secure-pdf-cropper.html', '/secure-pdf-ocr.html', '/secure-pdf-page-remover.html', '/secure-pdf-resizer.html', '/secure-pdf-annotator.html', '/secure-pdf-page-numbering.html'],
