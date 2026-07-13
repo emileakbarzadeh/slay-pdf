@@ -22,7 +22,7 @@ const initialChunk = path.join(dist, 'assets', scriptMatch[1])
 assert(fs.existsSync(initialChunk), `Initial app chunk is missing: ${scriptMatch[1]}`)
 
 const initialSize = fs.statSync(initialChunk).size
-const maxInitialChunkBytes = 375 * 1024
+const maxInitialChunkBytes = 350 * 1024
 assert(
   initialSize <= maxInitialChunkBytes,
   `Initial app chunk is ${(initialSize / 1024).toFixed(1)} KiB; expected <= ${maxInitialChunkBytes / 1024} KiB. Keep PDF parsing/rendering lazy.`
@@ -40,7 +40,7 @@ const assetNames = fs.readdirSync(path.join(dist, 'assets'))
 const lazyPdfChunk = assetNames.find((name) => /^pdf-[\w-]+\.js$/.test(name))
 assert(lazyPdfChunk, 'Expected a lazy pdf-*.js chunk for PDF parsing/rendering.')
 
-for (const lazyChunkPrefix of ['WorkspacePageGrid-', 'Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
+for (const lazyChunkPrefix of ['AboutModal-', 'RecentModal-', 'PageToolModal-', 'WorkspacePageGrid-', 'Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
   assert(assetNames.some((name) => name.startsWith(lazyChunkPrefix) && name.endsWith('.js')), `Expected a lazy ${lazyChunkPrefix}*.js chunk.`)
 }
 
