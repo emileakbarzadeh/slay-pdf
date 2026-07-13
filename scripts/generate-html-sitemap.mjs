@@ -34,6 +34,11 @@ const sections = [
     paths: ['/slay-pdf-vs-adobe-acrobat.html', '/slay-pdf-vs-smallpdf.html', '/slay-pdf-vs-ilovepdf.html', '/slay-pdf-vs-sejda.html', '/local-pdf-editor-vs-online-pdf-editor.html', '/pdf-editor-comparison.html', '/free-pdf-editor-comparison.html', '/browser-pdf-editor-vs-desktop-pdf-editor.html'],
   },
   {
+    title: 'Platform and document intent pages',
+    description: 'Browser-specific, page-reordering and sensitive-document workflow pages for people editing PDFs locally.',
+    paths: ['/pdf-editor-for-firefox.html', '/pdf-editor-for-safari.html', '/pdf-editor-for-edge.html', '/reorder-pdf-pages.html', '/legal-pdf-editor.html', '/bank-statement-pdf-editor.html', '/medical-pdf-editor.html', '/school-pdf-editor.html'],
+  },
+  {
     title: 'Guides',
     description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],

@@ -185,6 +185,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf-editor-for-firefox.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor for Firefox - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a PDF editor for Firefox. Merge, split, sign, redact, OCR, reorder and export PDFs locally from a modern Firefox browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor-for-safari.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor for Safari - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a PDF editor for Safari. Edit, organize, sign, redact, OCR and export PDFs locally from a modern Safari browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-editor-for-edge.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF Editor for Microsoft Edge - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a PDF editor for Microsoft Edge. Merge, split, reorder, sign, redact, OCR and export PDFs locally in the browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/reorder-pdf-pages.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Reorder PDF Pages - Slay PDF</image:title>
+      <image:caption>Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/legal-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Legal PDF Editor for Local Workflows - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/bank-statement-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Bank Statement PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a bank statement PDF editor for local page cleanup, redaction, OCR, text extraction, splitting and export workflows.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/medical-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Medical PDF Editor for Local Workflows - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a medical PDF editor for local page cleanup, signing, redaction, OCR, page extraction and export workflows.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/school-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>School PDF Editor - Slay PDF</image:title>
+      <image:caption>Use Slay PDF as a school PDF editor for assignments, forms, scans, notes and packets. Merge, split, sign, reorder, OCR and export locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/edit-pdf.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

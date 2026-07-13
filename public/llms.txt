@@ -77,6 +77,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF Editor for Sensitive Documents - Slay PDF: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
   Summary: Use Slay PDF as a PDF editor for sensitive documents. Merge, split, sign, redact, annotate, OCR and export PDFs locally in your browser.
   Last modified: 2026-07-13
+- PDF Editor for Firefox - Slay PDF: https://slaypdf.com/pdf-editor-for-firefox.html
+  Summary: Use Slay PDF as a PDF editor for Firefox. Merge, split, sign, redact, OCR, reorder and export PDFs locally from a modern Firefox browser.
+  Last modified: 2026-07-13
+- PDF Editor for Safari - Slay PDF: https://slaypdf.com/pdf-editor-for-safari.html
+  Summary: Use Slay PDF as a PDF editor for Safari. Edit, organize, sign, redact, OCR and export PDFs locally from a modern Safari browser.
+  Last modified: 2026-07-13
+- PDF Editor for Microsoft Edge - Slay PDF: https://slaypdf.com/pdf-editor-for-edge.html
+  Summary: Use Slay PDF as a PDF editor for Microsoft Edge. Merge, split, reorder, sign, redact, OCR and export PDFs locally in the browser.
+  Last modified: 2026-07-13
+- Reorder PDF Pages - Slay PDF: https://slaypdf.com/reorder-pdf-pages.html
+  Summary: Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.
+  Last modified: 2026-07-13
+- Legal PDF Editor for Local Workflows - Slay PDF: https://slaypdf.com/legal-pdf-editor.html
+  Summary: Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.
+  Last modified: 2026-07-13
+- Bank Statement PDF Editor - Slay PDF: https://slaypdf.com/bank-statement-pdf-editor.html
+  Summary: Use Slay PDF as a bank statement PDF editor for local page cleanup, redaction, OCR, text extraction, splitting and export workflows.
+  Last modified: 2026-07-13
+- Medical PDF Editor for Local Workflows - Slay PDF: https://slaypdf.com/medical-pdf-editor.html
+  Summary: Use Slay PDF as a medical PDF editor for local page cleanup, signing, redaction, OCR, page extraction and export workflows.
+  Last modified: 2026-07-13
+- School PDF Editor - Slay PDF: https://slaypdf.com/school-pdf-editor.html
+  Summary: Use Slay PDF as a school PDF editor for assignments, forms, scans, notes and packets. Merge, split, sign, reorder, OCR and export locally.
+  Last modified: 2026-07-13
 - Edit PDF Locally - Slay PDF: https://slaypdf.com/edit-pdf.html
   Summary: Edit PDF files locally with Slay PDF. Reorder pages, delete pages, sign, annotate, resize, crop, redact and export PDFs in your browser without uploads.
   Last modified: 2026-07-13

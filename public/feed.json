@@ -191,6 +191,70 @@
       "date_modified": "2026-07-13T00:00:00.000Z"
     },
     {
+      "id": "https://slaypdf.com/pdf-editor-for-firefox.html",
+      "url": "https://slaypdf.com/pdf-editor-for-firefox.html",
+      "title": "PDF Editor for Firefox - Slay PDF",
+      "summary": "Use Slay PDF as a PDF editor for Firefox. Merge, split, sign, redact, OCR, reorder and export PDFs locally from a modern Firefox browser.",
+      "content_text": "Use Slay PDF as a PDF editor for Firefox. Merge, split, sign, redact, OCR, reorder and export PDFs locally from a modern Firefox browser.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/pdf-editor-for-safari.html",
+      "url": "https://slaypdf.com/pdf-editor-for-safari.html",
+      "title": "PDF Editor for Safari - Slay PDF",
+      "summary": "Use Slay PDF as a PDF editor for Safari. Edit, organize, sign, redact, OCR and export PDFs locally from a modern Safari browser.",
+      "content_text": "Use Slay PDF as a PDF editor for Safari. Edit, organize, sign, redact, OCR and export PDFs locally from a modern Safari browser.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/pdf-editor-for-edge.html",
+      "url": "https://slaypdf.com/pdf-editor-for-edge.html",
+      "title": "PDF Editor for Microsoft Edge - Slay PDF",
+      "summary": "Use Slay PDF as a PDF editor for Microsoft Edge. Merge, split, reorder, sign, redact, OCR and export PDFs locally in the browser.",
+      "content_text": "Use Slay PDF as a PDF editor for Microsoft Edge. Merge, split, reorder, sign, redact, OCR and export PDFs locally in the browser.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/reorder-pdf-pages.html",
+      "url": "https://slaypdf.com/reorder-pdf-pages.html",
+      "title": "Reorder PDF Pages - Slay PDF",
+      "summary": "Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.",
+      "content_text": "Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/legal-pdf-editor.html",
+      "url": "https://slaypdf.com/legal-pdf-editor.html",
+      "title": "Legal PDF Editor for Local Workflows - Slay PDF",
+      "summary": "Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.",
+      "content_text": "Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/bank-statement-pdf-editor.html",
+      "url": "https://slaypdf.com/bank-statement-pdf-editor.html",
+      "title": "Bank Statement PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as a bank statement PDF editor for local page cleanup, redaction, OCR, text extraction, splitting and export workflows.",
+      "content_text": "Use Slay PDF as a bank statement PDF editor for local page cleanup, redaction, OCR, text extraction, splitting and export workflows.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/medical-pdf-editor.html",
+      "url": "https://slaypdf.com/medical-pdf-editor.html",
+      "title": "Medical PDF Editor for Local Workflows - Slay PDF",
+      "summary": "Use Slay PDF as a medical PDF editor for local page cleanup, signing, redaction, OCR, page extraction and export workflows.",
+      "content_text": "Use Slay PDF as a medical PDF editor for local page cleanup, signing, redaction, OCR, page extraction and export workflows.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "id": "https://slaypdf.com/school-pdf-editor.html",
+      "url": "https://slaypdf.com/school-pdf-editor.html",
+      "title": "School PDF Editor - Slay PDF",
+      "summary": "Use Slay PDF as a school PDF editor for assignments, forms, scans, notes and packets. Merge, split, sign, reorder, OCR and export locally.",
+      "content_text": "Use Slay PDF as a school PDF editor for assignments, forms, scans, notes and packets. Merge, split, sign, reorder, OCR and export locally.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
       "id": "https://slaypdf.com/edit-pdf.html",
       "url": "https://slaypdf.com/edit-pdf.html",
       "title": "Edit PDF Locally - Slay PDF",

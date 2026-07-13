@@ -678,6 +678,246 @@ Related links:
 - PDF privacy and security: https://slaypdf.com/pdf-privacy-security.html
 - PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
 
+## PDF Editor for Firefox - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-firefox.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a PDF editor for Firefox. Merge, split, sign, redact, OCR, reorder and export PDFs locally from a modern Firefox browser.
+H1: Edit PDFs in Firefox with local browser workflows.
+
+Content:
+- Firefox PDF editor
+- Edit PDFs in Firefox with local browser workflows.
+- Slay PDF runs from the web and keeps common PDF edits in the browser, which makes it useful when Firefox is your everyday workspace.
+- No desktop suite
+- Open Slay PDF in Firefox instead of installing a heavy PDF editor for common jobs.
+- Local workflow
+- Common edits and exports run in this browser without a Slay PDF app-server upload.
+- Practical tools
+- Merge, split, reorder, sign, redact, OCR, resize and export PDFs.
+- A Firefox-friendly workflow for everyday PDF cleanup.
+- Firefox users often need a quick PDF editor for page cleanup, visual signing, redaction, form work, OCR or selected-page export.
+- Slay PDF is built for those practical jobs. Use a managed enterprise tool when policy, certificate signing or compliance controls require one.
+- Firefox PDF editor FAQ
+- Use a modern Firefox browser with WebAssembly and IndexedDB support for the full Slay PDF app experience.
+- No. Common editing and export workflows run locally in this browser.
+- Slay PDF can be installed as a PWA where your browser and device support it.
+
+Related links:
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- Browser-based PDF editor: https://slaypdf.com/browser-based-pdf-editor.html
+- Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
+- Free PDF editor no install: https://slaypdf.com/free-pdf-editor-no-install.html
+
+## PDF Editor for Safari - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-safari.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a PDF editor for Safari. Edit, organize, sign, redact, OCR and export PDFs locally from a modern Safari browser.
+H1: Edit PDFs in Safari without upload-first workflows.
+
+Content:
+- Safari PDF editor
+- Edit PDFs in Safari without upload-first workflows.
+- Slay PDF gives Safari users a browser PDF workspace for common edits that should stay close to the document.
+- Web app access
+- Open Slay PDF from Safari on supported Apple devices.
+- Local editing
+- Common PDF work runs in this browser rather than a Slay PDF processing server.
+- Export control
+- Download all pages, selected pages, separate PDFs, images or text.
+- A local PDF editor path for Safari.
+- Safari can be enough for common PDF cleanup when the editor is built as a browser app.
+- Use Slay PDF to organize pages, add a visual signature, redact visible content, OCR scans and export clean files without creating an account.
+- Safari PDF editor FAQ
+- Use a modern Safari browser with WebAssembly and IndexedDB support for the full app experience.
+- It can replace common browser-based PDF editing tasks, but not every Apple Preview or desktop workflow.
+- No. Export passwords are never saved by Slay PDF.
+
+Related links:
+- PDF editor for Mac: https://slaypdf.com/pdf-editor-for-mac.html
+- PDF editor for iPhone and iPad: https://slaypdf.com/pdf-editor-for-iphone-ipad.html
+- Mac Preview PDF editor alternative: https://slaypdf.com/mac-preview-pdf-editor-alternative.html
+- Offline-capable PDF editor: https://slaypdf.com/offline-capable-pdf-editor.html
+
+## PDF Editor for Microsoft Edge - Slay PDF
+URL: https://slaypdf.com/pdf-editor-for-edge.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a PDF editor for Microsoft Edge. Merge, split, reorder, sign, redact, OCR and export PDFs locally in the browser.
+H1: Edit PDFs in Microsoft Edge with Slay PDF.
+
+Content:
+- Edge PDF editor
+- Edit PDFs in Microsoft Edge with Slay PDF.
+- Slay PDF works as a browser PDF editor for common document jobs when Microsoft Edge is the browser already open.
+- Browser-first
+- Open Slay PDF in Edge without a desktop PDF suite for common edits.
+- Local processing
+- Common edits run on your device in this browser.
+- No account wall
+- Start common PDF workflows without creating a Slay PDF account.
+- Use Edge for quick local PDF work.
+- Edge users can use Slay PDF for practical edits such as deleting blank pages, combining files, adding signatures, redacting visible content and exporting selected pages.
+- For managed enterprise documents, use the PDF workflow required by your organization.
+- Microsoft Edge PDF editor FAQ
+- Use a modern Edge browser with WebAssembly and IndexedDB support for the full app experience.
+- Yes. Slay PDF supports page organization workflows including reordering, deleting, rotating and splitting.
+- No. Slay PDF does not require a Microsoft account for common local workflows.
+
+Related links:
+- PDF editor for Windows: https://slaypdf.com/pdf-editor-for-windows.html
+- Browser PDF editor: https://slaypdf.com/browser-pdf-editor.html
+- Free PDF editor no download: https://slaypdf.com/free-pdf-editor-no-download.html
+- PDF editor without email: https://slaypdf.com/pdf-editor-without-email.html
+
+## Reorder PDF Pages - Slay PDF
+URL: https://slaypdf.com/reorder-pdf-pages.html
+Last modified: 2026-07-13
+Summary: Reorder PDF pages with Slay PDF. Drag pages, delete extras, rotate scans, split sections and export the finished PDF from your browser.
+H1: Reorder PDF pages locally in your browser.
+
+Content:
+- Reorder PDF pages
+- Reorder PDF pages locally in your browser.
+- When a PDF packet is out of order, Slay PDF gives you a local browser workspace for dragging pages into the right sequence.
+- Drag pages
+- Move pages around the workspace and keep related sections together.
+- Clean the packet
+- Delete blank pages, rotate sideways scans and add split markers where needed.
+- Export locally
+- Download all pages, selected pages or separate PDFs from the browser.
+- Fix page order without sending the PDF away.
+- Reordering PDF pages is one of the most common document cleanup jobs: scanned forms, contracts, invoices, school packets and signed paperwork often arrive in the wrong order.
+- Slay PDF keeps that page organization workflow local so the edited file can be exported directly from the browser.
+- Reorder PDF pages FAQ
+- Yes. Use the page workspace to move pages, delete extras and export the new PDF.
+- Yes. Add split markers to create separate PDFs from one workspace.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Organize PDF pages: https://slaypdf.com/organize-pdf-pages.html
+- PDF page organizer: https://slaypdf.com/pdf-page-organizer.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+- Split PDF: https://slaypdf.com/split-pdf.html
+
+## Legal PDF Editor for Local Workflows - Slay PDF
+URL: https://slaypdf.com/legal-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a legal PDF editor for local browser workflows: merge packets, reorder pages, sign visually, redact visible content and export.
+H1: Edit legal PDFs without unnecessary uploads.
+
+Content:
+- Legal PDF editor
+- Edit legal PDFs without unnecessary uploads.
+- Legal documents often contain names, addresses, signatures and case details. Slay PDF is built for common edits where local handling is the safer default.
+- Packet cleanup
+- Merge, split, reorder, rotate and delete pages in the browser.
+- Visual edits
+- Add signatures, text, highlights, page numbers, watermarks and redaction blocks.
+- Clear limits
+- Use counsel-approved or court-required systems when compliance or certificate signing requires them.
+- A practical editor for legal document cleanup.
+- Use Slay PDF for everyday legal PDF preparation such as organizing exhibits, removing blank pages, adding a visible signature or flattening redactions for common workflows.
+- It is not a substitute for legal advice, certified e-signature platforms or organization-controlled document systems.
+- Legal PDF editor FAQ
+- Use it when local browser editing is appropriate for the document and your policy. It is not legal advice or a compliance certification.
+- Slay PDF supports visible redaction blocks and flattened exports for common redaction workflows.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Contract PDF editor: https://slaypdf.com/contract-pdf-editor.html
+- PDF editor for sensitive documents: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+
+## Bank Statement PDF Editor - Slay PDF
+URL: https://slaypdf.com/bank-statement-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a bank statement PDF editor for local page cleanup, redaction, OCR, text extraction, splitting and export workflows.
+H1: Edit bank statement PDFs locally in your browser.
+
+Content:
+- Bank statement PDF editor
+- Edit bank statement PDFs locally in your browser.
+- Bank statements are sensitive documents. Slay PDF helps with common cleanup tasks without turning the file into an app-server upload.
+- Local handling
+- Common edits run in this browser for a better privacy baseline.
+- Statement cleanup
+- Delete pages, rotate scans, redact visible content, OCR and export selected pages.
+- Separate files
+- Split one statement packet into separate PDFs where needed.
+- Keep financial PDFs close while cleaning them up.
+- Financial PDFs can include account numbers, addresses, transaction details and signatures. A local browser workflow reduces unnecessary document movement for common edits.
+- Use Slay PDF to prepare a clean export, then share only what the receiving party actually needs.
+- Bank statement PDF editor FAQ
+- It can handle common PDF workflows such as page cleanup, redaction blocks, OCR, text extraction and export.
+- Common workflows run locally in the browser, and Slay PDF does not save export passwords.
+- Redact only according to your own requirements and verify the exported PDF before sharing it.
+
+Related links:
+- PDF editor for sensitive documents: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Extract PDF text: https://slaypdf.com/extract-pdf-text.html
+- Separate PDF pages: https://slaypdf.com/separate-pdf-pages.html
+
+## Medical PDF Editor for Local Workflows - Slay PDF
+URL: https://slaypdf.com/medical-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a medical PDF editor for local page cleanup, signing, redaction, OCR, page extraction and export workflows.
+H1: Edit medical PDFs with a local browser workflow.
+
+Content:
+- Medical PDF editor
+- Edit medical PDFs with a local browser workflow.
+- Medical PDFs can include private health details. Slay PDF is useful for common edits where unnecessary uploads are the wrong tradeoff.
+- Local workflow
+- Common edits and exports run in this browser.
+- Careful cleanup
+- Reorder pages, delete extras, sign, redact visible content, OCR scans and export selected pages.
+- Policy limits
+- Use healthcare-approved systems when compliance or patient-record policy requires them.
+- A careful PDF workflow for health documents.
+- Use Slay PDF for common health-document tasks such as organizing a packet, signing a form, extracting pages or redacting visible details before sharing.
+- It does not provide healthcare compliance certification. Follow the requirements that apply to your document and organization.
+- Medical PDF editor FAQ
+- Use it only when local browser editing is appropriate for your document, policy and risk level.
+- No. Common editing and export workflows run locally in this browser.
+- Yes. You can export selected pages or separate PDFs from the workspace.
+
+Related links:
+- PDF editor for sensitive documents: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
+- Private PDF editor: https://slaypdf.com/private-pdf-editor.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Extract pages from PDF: https://slaypdf.com/extract-pages-from-pdf.html
+
+## School PDF Editor - Slay PDF
+URL: https://slaypdf.com/school-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Use Slay PDF as a school PDF editor for assignments, forms, scans, notes and packets. Merge, split, sign, reorder, OCR and export locally.
+H1: Edit school PDFs quickly in the browser.
+
+Content:
+- School PDF editor
+- Edit school PDFs quickly in the browser.
+- School PDFs are often practical jobs: clean a scan, sign a form, combine notes, extract pages or submit a smaller packet.
+- No account wall
+- Start common PDF edits without creating a Slay PDF account.
+- Useful for packets
+- Merge files, reorder pages, delete extras, add page numbers and export.
+- Local work
+- Common edits run in this browser rather than a Slay PDF app-server upload.
+- A fast PDF workflow for students and teachers.
+- Use Slay PDF for everyday school document work: signed forms, class notes, scanned homework, research packets and selected-page exports.
+- It is designed to be quick and practical rather than a heavy document platform.
+- School PDF editor FAQ
+- Yes. It is useful for common tasks such as merging, splitting, signing, OCR, page reordering and export.
+- No. Slay PDF does not add its own watermark to exports.
+- No. Common workflows do not require a Slay PDF account.
+
+Related links:
+- PDF editor for students: https://slaypdf.com/pdf-editor-for-students.html
+- PDF editor for teachers: https://slaypdf.com/pdf-editor-for-teachers.html
+- Free PDF editor no signup: https://slaypdf.com/free-pdf-editor-no-signup.html
+- OCR PDF: https://slaypdf.com/ocr-pdf.html
+
 ## Edit PDF Locally - Slay PDF
 URL: https://slaypdf.com/edit-pdf.html
 Last modified: 2026-07-13
@@ -776,6 +1016,14 @@ Related links:
 - Slay PDF vs Sejda: Compare local PDF editing workflow fit.: https://slaypdf.com/slay-pdf-vs-sejda.html
 - Local vs online PDF editor: Web access with local browser processing.: https://slaypdf.com/local-pdf-editor-vs-online-pdf-editor.html
 - Browser vs desktop PDF editor: Choose by task depth and install needs.: https://slaypdf.com/browser-pdf-editor-vs-desktop-pdf-editor.html
+- PDF editor for Firefox: Local browser PDF workflows in Firefox.: https://slaypdf.com/pdf-editor-for-firefox.html
+- PDF editor for Safari: Edit PDFs from Safari with local processing.: https://slaypdf.com/pdf-editor-for-safari.html
+- PDF editor for Microsoft Edge: Use Edge for common local PDF edits.: https://slaypdf.com/pdf-editor-for-edge.html
+- Reorder PDF pages: Drag pages into the right order locally.: https://slaypdf.com/reorder-pdf-pages.html
+- Legal PDF editor: Clean up legal PDFs when local editing fits.: https://slaypdf.com/legal-pdf-editor.html
+- Bank statement PDF editor: Redact, split and export financial PDFs locally.: https://slaypdf.com/bank-statement-pdf-editor.html
+- Medical PDF editor: Careful local workflows for health documents.: https://slaypdf.com/medical-pdf-editor.html
+- School PDF editor: Merge, sign, OCR and export school PDFs.: https://slaypdf.com/school-pdf-editor.html
 - PDF editor app: Use Slay PDF like an installable browser app.: https://slaypdf.com/pdf-editor-app.html
 - PDF editor software: Open-source software delivered as a web app.: https://slaypdf.com/pdf-editor-software.html
 - Free PDF software: Free software for common local PDF edits.: https://slaypdf.com/free-pdf-software.html
@@ -1053,7 +1301,7 @@ Content:
 - Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
 - Find a local PDF workflow
 - All searchable pages
-- Showing 284 indexed Slay PDF pages.
+- Showing 292 indexed Slay PDF pages.
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -1137,6 +1385,8 @@ Content:
 - Pages for private, secure, no-upload, client-side and sensitive-document PDF editor searches with clear limits.
 - Comparison intent pages
 - Pages for PDF editor comparison searches, including Slay PDF versus Acrobat, common PDF utilities, browser editors and desktop editors.
+- Platform and document intent pages
+- Browser-specific, page-reordering and sensitive-document workflow pages for people editing PDFs locally.
 - Guides
 - Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.
 - Online editor intent pages
@@ -1221,6 +1471,14 @@ Related links:
 - PDF Editor Comparison: https://slaypdf.com/pdf-editor-comparison.html
 - Free PDF Editor Comparison: https://slaypdf.com/free-pdf-editor-comparison.html
 - Browser PDF Editor vs Desktop PDF Editor: https://slaypdf.com/browser-pdf-editor-vs-desktop-pdf-editor.html
+- PDF Editor for Firefox: https://slaypdf.com/pdf-editor-for-firefox.html
+- PDF Editor for Safari: https://slaypdf.com/pdf-editor-for-safari.html
+- PDF Editor for Microsoft Edge: https://slaypdf.com/pdf-editor-for-edge.html
+- Reorder PDF Pages: https://slaypdf.com/reorder-pdf-pages.html
+- Legal PDF Editor for Local Workflows: https://slaypdf.com/legal-pdf-editor.html
+- Bank Statement PDF Editor: https://slaypdf.com/bank-statement-pdf-editor.html
+- Medical PDF Editor for Local Workflows: https://slaypdf.com/medical-pdf-editor.html
+- School PDF Editor: https://slaypdf.com/school-pdf-editor.html
 - Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
 - Edit PDF Without Uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize PDF Pages: https://slaypdf.com/organize-pdf-pages.html
