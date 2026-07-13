@@ -24,6 +24,11 @@ const sections = [
     paths: ['/best-free-pdf-editor.html', '/best-adobe-acrobat-alternative.html', '/pdf-editor-app.html', '/pdf-editor-software.html', '/free-pdf-software.html', '/web-based-pdf-editor.html', '/browser-based-pdf-editor.html', '/pdf-tool.html'],
   },
   {
+    title: 'Privacy intent pages',
+    description: 'Pages for private, secure, no-upload, client-side and sensitive-document PDF editor searches with clear limits.',
+    paths: ['/best-private-pdf-editor.html', '/best-no-upload-pdf-editor.html', '/no-upload-pdf-tools.html', '/private-pdf-software.html', '/secure-pdf-app.html', '/client-side-pdf-tool.html', '/offline-capable-pdf-editor.html', '/pdf-editor-for-sensitive-documents.html'],
+  },
+  {
     title: 'Guides',
     description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],

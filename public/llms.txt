@@ -53,6 +53,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - No Upload PDF Editor - Slay PDF: https://slaypdf.com/no-upload-pdf-editor.html
   Summary: Use Slay PDF as a no-upload PDF editor. Merge, split, sign, redact, annotate, resize and export PDFs locally in your browser.
   Last modified: 2026-07-13
+- Best Private PDF Editor for Local Work - Slay PDF: https://slaypdf.com/best-private-pdf-editor.html
+  Summary: Use Slay PDF when the best private PDF editor is one that keeps common edits in your browser: merge, split, sign, redact, OCR and export.
+  Last modified: 2026-07-13
+- Best No Upload PDF Editor for Local Edits - Slay PDF: https://slaypdf.com/best-no-upload-pdf-editor.html
+  Summary: Use Slay PDF when the best no-upload PDF editor is a browser app for local merge, split, sign, redact, annotate, OCR and export workflows.
+  Last modified: 2026-07-13
+- No Upload PDF Tools - Slay PDF: https://slaypdf.com/no-upload-pdf-tools.html
+  Summary: Use Slay PDF as no-upload PDF tools for merge, split, sign, redact, rotate, crop, resize, OCR, extract text and export workflows.
+  Last modified: 2026-07-13
+- Private PDF Software - Slay PDF: https://slaypdf.com/private-pdf-software.html
+  Summary: Use Slay PDF as private PDF software for local browser workflows: merge, split, sign, redact, OCR, organize, resize and export PDFs.
+  Last modified: 2026-07-13
+- Secure PDF App for Local Workflows - Slay PDF: https://slaypdf.com/secure-pdf-app.html
+  Summary: Use Slay PDF as a secure PDF app for common local workflows. Edit, sign, redact, OCR and export PDFs in your browser without uploads.
+  Last modified: 2026-07-13
+- Client Side PDF Tool - Slay PDF: https://slaypdf.com/client-side-pdf-tool.html
+  Summary: Use Slay PDF as a client-side PDF tool for local merge, split, sign, redact, OCR, extract text, resize and export workflows.
+  Last modified: 2026-07-13
+- Offline Capable PDF Editor - Slay PDF: https://slaypdf.com/offline-capable-pdf-editor.html
+  Summary: Use Slay PDF as an offline-capable PDF editor. Install the PWA where supported and keep common PDF edits local in your browser.
+  Last modified: 2026-07-13
+- PDF Editor for Sensitive Documents - Slay PDF: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
+  Summary: Use Slay PDF as a PDF editor for sensitive documents. Merge, split, sign, redact, annotate, OCR and export PDFs locally in your browser.
+  Last modified: 2026-07-13
 - Edit PDF Locally - Slay PDF: https://slaypdf.com/edit-pdf.html
   Summary: Edit PDF files locally with Slay PDF. Reorder pages, delete pages, sign, annotate, resize, crop, redact and export PDFs in your browser without uploads.
   Last modified: 2026-07-13
