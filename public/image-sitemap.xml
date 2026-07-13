@@ -193,6 +193,54 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/pdf-to-png.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF to PNG - Slay PDF</image:title>
+      <image:caption>Convert PDF to PNG locally with Slay PDF. Export selected PDF pages as PNG images from your browser without uploading documents.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/pdf-to-png-online.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PDF to PNG Online - Slay PDF</image:title>
+      <image:caption>Convert PDF to PNG online with Slay PDF. Export selected pages as PNG images in your browser without uploading the source PDF.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/convert-pdf-to-png.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Convert PDF to PNG - Slay PDF</image:title>
+      <image:caption>Convert PDF to PNG with Slay PDF. Render selected pages as PNG image files locally in your browser without uploads or account walls.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/images-to-pdf-online.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Images to PDF Online - Slay PDF</image:title>
+      <image:caption>Convert images to PDF online with Slay PDF. Import PNG, JPEG or WebP images, arrange pages and export one PDF locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/jpg-to-pdf-online.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>JPG to PDF Online - Slay PDF</image:title>
+      <image:caption>Convert JPG to PDF online with Slay PDF. Arrange JPEG images as PDF pages and download one local PDF from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/png-to-pdf-online.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>PNG to PDF Online - Slay PDF</image:title>
+      <image:caption>Convert PNG to PDF online with Slay PDF. Arrange PNG images as PDF pages and export one PDF locally in your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/edit-scanned-pdf.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

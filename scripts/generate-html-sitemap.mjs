@@ -34,6 +34,11 @@ const sections = [
     paths: ['/images-to-pdf.html', '/jpg-to-pdf.html', '/png-to-pdf.html', '/edit-scanned-pdf.html', '/flatten-pdf.html', '/printable-poster-pdf.html'],
   },
   {
+    title: 'Image conversion pages',
+    description: 'Exact-match local browser pages for PDF-to-PNG and image-to-PDF conversion workflows without app-server uploads.',
+    paths: ['/pdf-to-png.html', '/pdf-to-png-online.html', '/convert-pdf-to-png.html', '/images-to-pdf-online.html', '/jpg-to-pdf-online.html', '/png-to-pdf-online.html'],
+  },
+  {
     title: 'Tools',
     description: 'Direct links to each local PDF tool for editing, exporting, protecting and reorganizing documents in the browser.',
     paths: ['/merge-pdf.html', '/split-pdf.html', '/sign-pdf.html', '/posterise-pdf.html', '/private-pdf-editor.html', '/delete-pdf-pages.html', '/resize-pdf.html', '/crop-pdf.html', '/redact-pdf.html', '/compress-pdf.html', '/ocr-pdf.html', '/pdf-to-images.html', '/extract-pdf-text.html', '/rotate-pdf.html', '/annotate-pdf.html', '/watermark-pdf.html', '/add-page-numbers-to-pdf.html', '/fill-pdf-forms.html', '/password-protect-pdf.html'],

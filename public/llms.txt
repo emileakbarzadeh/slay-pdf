@@ -80,6 +80,24 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PNG to PDF - Slay PDF: https://slaypdf.com/png-to-pdf.html
   Summary: Convert PNG to PDF locally with Slay PDF. Import PNG images, reorder pages and export a PDF from your browser.
   Last modified: 2026-07-13
+- PDF to PNG - Slay PDF: https://slaypdf.com/pdf-to-png.html
+  Summary: Convert PDF to PNG locally with Slay PDF. Export selected PDF pages as PNG images from your browser without uploading documents.
+  Last modified: 2026-07-13
+- PDF to PNG Online - Slay PDF: https://slaypdf.com/pdf-to-png-online.html
+  Summary: Convert PDF to PNG online with Slay PDF. Export selected pages as PNG images in your browser without uploading the source PDF.
+  Last modified: 2026-07-13
+- Convert PDF to PNG - Slay PDF: https://slaypdf.com/convert-pdf-to-png.html
+  Summary: Convert PDF to PNG with Slay PDF. Render selected pages as PNG image files locally in your browser without uploads or account walls.
+  Last modified: 2026-07-13
+- Images to PDF Online - Slay PDF: https://slaypdf.com/images-to-pdf-online.html
+  Summary: Convert images to PDF online with Slay PDF. Import PNG, JPEG or WebP images, arrange pages and export one PDF locally in your browser.
+  Last modified: 2026-07-13
+- JPG to PDF Online - Slay PDF: https://slaypdf.com/jpg-to-pdf-online.html
+  Summary: Convert JPG to PDF online with Slay PDF. Arrange JPEG images as PDF pages and download one local PDF from your browser.
+  Last modified: 2026-07-13
+- PNG to PDF Online - Slay PDF: https://slaypdf.com/png-to-pdf-online.html
+  Summary: Convert PNG to PDF online with Slay PDF. Arrange PNG images as PDF pages and export one PDF locally in your browser.
+  Last modified: 2026-07-13
 - Edit Scanned PDF - Slay PDF: https://slaypdf.com/edit-scanned-pdf.html
   Summary: Edit scanned PDFs locally with Slay PDF. Rotate scans, crop margins, remove blank pages, run OCR and export clean PDFs from your browser.
   Last modified: 2026-07-13

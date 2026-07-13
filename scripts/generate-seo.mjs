@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process'
 
 const steps = [
   'seo:online-task-pages',
+  'seo:image-conversion-pages',
   'seo:sitemap-hreflang',
   'seo:html-sitemap',
   'seo:noscript',

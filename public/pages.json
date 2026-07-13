@@ -290,6 +290,78 @@
       "breadcrumbId": "https://slaypdf.com/png-to-pdf.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/pdf-to-png.html",
+      "path": "/pdf-to-png.html",
+      "title": "PDF to PNG - Slay PDF",
+      "description": "Convert PDF to PNG locally with Slay PDF. Export selected PDF pages as PNG images from your browser without uploading documents.",
+      "h1": "Convert PDF pages to PNG locally.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/pdf-to-png.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-to-png.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/pdf-to-png-online.html",
+      "path": "/pdf-to-png-online.html",
+      "title": "PDF to PNG Online - Slay PDF",
+      "description": "Convert PDF to PNG online with Slay PDF. Export selected pages as PNG images in your browser without uploading the source PDF.",
+      "h1": "Convert PDF to PNG online without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/pdf-to-png-online.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/pdf-to-png-online.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/convert-pdf-to-png.html",
+      "path": "/convert-pdf-to-png.html",
+      "title": "Convert PDF to PNG - Slay PDF",
+      "description": "Convert PDF to PNG with Slay PDF. Render selected pages as PNG image files locally in your browser without uploads or account walls.",
+      "h1": "Convert PDF to PNG in your browser.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/convert-pdf-to-png.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/convert-pdf-to-png.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/images-to-pdf-online.html",
+      "path": "/images-to-pdf-online.html",
+      "title": "Images to PDF Online - Slay PDF",
+      "description": "Convert images to PDF online with Slay PDF. Import PNG, JPEG or WebP images, arrange pages and export one PDF locally in your browser.",
+      "h1": "Convert images to PDF online without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/images-to-pdf-online.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/images-to-pdf-online.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/jpg-to-pdf-online.html",
+      "path": "/jpg-to-pdf-online.html",
+      "title": "JPG to PDF Online - Slay PDF",
+      "description": "Convert JPG to PDF online with Slay PDF. Arrange JPEG images as PDF pages and download one local PDF from your browser.",
+      "h1": "Convert JPG to PDF online without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/jpg-to-pdf-online.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/jpg-to-pdf-online.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/png-to-pdf-online.html",
+      "path": "/png-to-pdf-online.html",
+      "title": "PNG to PDF Online - Slay PDF",
+      "description": "Convert PNG to PDF online with Slay PDF. Arrange PNG images as PDF pages and export one PDF locally in your browser.",
+      "h1": "Convert PNG to PDF online without uploading.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.82,
+      "webpageId": "https://slaypdf.com/png-to-pdf-online.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/png-to-pdf-online.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/edit-scanned-pdf.html",
       "path": "/edit-scanned-pdf.html",
       "title": "Edit Scanned PDF - Slay PDF",
