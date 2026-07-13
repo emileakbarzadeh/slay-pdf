@@ -1311,6 +1311,14 @@
       "date_modified": "2026-07-13T00:00:00.000Z"
     },
     {
+      "id": "https://slaypdf.com/self-hosted-pdf-editor.html",
+      "url": "https://slaypdf.com/self-hosted-pdf-editor.html",
+      "title": "Self-Hosted PDF Editor - Slay PDF",
+      "summary": "Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.",
+      "content_text": "Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.",
+      "date_modified": "2026-07-13T00:00:00.000Z"
+    },
+    {
       "id": "https://slaypdf.com/offline-pdf-editor.html",
       "url": "https://slaypdf.com/offline-pdf-editor.html",
       "title": "Offline PDF Editor - Slay PDF",

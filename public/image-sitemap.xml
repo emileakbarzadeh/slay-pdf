@@ -1305,6 +1305,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/self-hosted-pdf-editor.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Self-Hosted PDF Editor - Slay PDF</image:title>
+      <image:caption>Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/offline-pdf-editor.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

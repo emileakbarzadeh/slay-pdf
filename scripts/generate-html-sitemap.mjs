@@ -76,7 +76,7 @@ const sections = [
   {
     title: 'Open source and local app pages',
     description: 'Pages for open source, client-side, offline-capable and transparent local PDF editor searches.',
-    paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],
+    paths: ['/open-source-pdf-editor.html', '/open-source-adobe-acrobat-alternative.html', '/self-hosted-pdf-editor.html', '/offline-pdf-editor.html', '/client-side-pdf-editor.html'],
   },
   {
     title: 'Role and document workflows',

@@ -497,6 +497,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Open Source Adobe Acrobat Alternative - Slay PDF: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
   Summary: Use Slay PDF as an open source Adobe Acrobat alternative for local PDF edits, page organization, signing, OCR, redaction and browser exports.
   Last modified: 2026-07-13
+- Self-Hosted PDF Editor - Slay PDF: https://slaypdf.com/self-hosted-pdf-editor.html
+  Summary: Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.
+  Last modified: 2026-07-13
 - Offline PDF Editor - Slay PDF: https://slaypdf.com/offline-pdf-editor.html
   Summary: Use Slay PDF as an offline-capable PDF editor. After the app is loaded and cached, common PDF edits can run locally in the browser.
   Last modified: 2026-07-13

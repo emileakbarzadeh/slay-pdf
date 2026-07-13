@@ -165,6 +165,21 @@ nix fmt
 
 The app builds to static files in `dist/` and is designed for GitHub Pages. The workflow in `.github/workflows/deploy.yml` installs Nix, runs `npm ci` inside the dev shell, builds with `npm run build`, and uploads the static bundle.
 
+## Self-Hosting
+
+Slay PDF can be self-hosted anywhere that serves static files. A self-hosted deployment serves the app bundle; PDF imports, edits and exports still run in the user's browser rather than through a document processing server.
+
+Build the static bundle:
+
+```sh
+nix develop --command npm ci
+nix develop --command npm run build
+```
+
+Then serve the contents of `dist/` from GitHub Pages, Cloudflare Pages, Netlify, nginx, Caddy, an S3-compatible bucket, or another static host.
+
+The crawlable self-hosting overview is available at https://slaypdf.com/self-hosted-pdf-editor.html
+
 ## License
 
 Slay PDF is licensed under AGPL-3.0-only.

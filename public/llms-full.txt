@@ -593,6 +593,7 @@ Related links:
 - Add Page Numbers No Watermark: https://slaypdf.com/add-page-numbers-no-watermark.html
 - Open Source PDF Editor: https://slaypdf.com/open-source-pdf-editor.html
 - Open Source Adobe Acrobat Alternative: https://slaypdf.com/open-source-adobe-acrobat-alternative.html
+- Self-Hosted PDF Editor: https://slaypdf.com/self-hosted-pdf-editor.html
 - Offline PDF Editor: https://slaypdf.com/offline-pdf-editor.html
 - Client-Side PDF Editor: https://slaypdf.com/client-side-pdf-editor.html
 - PDF Editor for Students: https://slaypdf.com/pdf-editor-for-students.html
@@ -4960,6 +4961,39 @@ Related links:
 - Acrobat Pro alternative: https://slaypdf.com/adobe-acrobat-pro-alternative.html
 - Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
 - Local Adobe alternative: https://slaypdf.com/adobe-local-pdf-editor-alternative.html
+
+## Self-Hosted PDF Editor - Slay PDF
+URL: https://slaypdf.com/self-hosted-pdf-editor.html
+Last modified: 2026-07-13
+Summary: Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.
+H1: Self-host a PDF editor without a document server.
+
+Content:
+- Self-hosted PDF editor
+- Self-host a PDF editor without a document server.
+- Slay PDF builds to static files, so teams can host the open-source editor on their own static hosting while PDF work still runs locally in each browser.
+- Static deployment
+- Build once and serve the generated files from GitHub Pages, Netlify, Cloudflare Pages, nginx, Caddy or any static file host.
+- No document backend
+- The hosted files load the browser app; everyday PDF imports, page edits, annotations and exports run on the user's device.
+- Open-source review
+- The AGPL source, Nix development shell and GitHub Pages workflow make the build and deployment path inspectable.
+- For teams that need control.
+- A self-hosted Slay PDF deployment is useful when a school, business, library or internal team wants a private PDF workflow without sending documents to a third-party conversion server.
+- The app still inherits the limits of the user's browser, device storage, extensions and local security posture. Self-hosting controls where the app files come from; it does not make the user's device invulnerable.
+- Static hosting workflow.
+- Clone the source repository, enter the Nix development shell, install dependencies, run the production build and serve the generated static bundle from the hosting platform you already trust.
+- The live Slay PDF site uses this model on GitHub Pages with no app-server PDF processing endpoint.
+- Self-hosted PDF editor FAQ
+- Yes. Slay PDF builds to static files, so it can be hosted anywhere that serves static HTML, CSS, JavaScript, WebAssembly and image assets.
+- No. The static host serves the app files. PDF imports and edits run in the user's browser for normal Slay PDF workflows.
+- The README includes Nix-based development, build and deployment commands for reproducing the static bundle.
+
+Related links:
+- Open source PDF editor: https://slaypdf.com/open-source-pdf-editor.html
+- Client-side PDF editor: https://slaypdf.com/client-side-pdf-editor.html
+- Offline PDF editor: https://slaypdf.com/offline-pdf-editor.html
+- Security model: https://slaypdf.com/pdf-privacy-security.html
 
 ## Offline PDF Editor - Slay PDF
 URL: https://slaypdf.com/offline-pdf-editor.html

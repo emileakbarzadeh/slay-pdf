@@ -8,6 +8,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 - Source: https://github.com/emileakbarzadeh/slay-pdf
 - Latest release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
 - Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
+- Self-hosting page: https://slaypdf.com/self-hosted-pdf-editor.html
 
 ## Submitted
 
@@ -25,7 +26,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | Axorax/awesome-free-apps | Free PDF tools | Pull request opened: https://github.com/Axorax/awesome-free-apps/pull/193 | Watch for maintainer feedback about browser-only app fit in a desktop-oriented list. |
 | Furthir/awesome-useful-projects | Open-source everyday productivity tools | Issue suggestion opened: https://github.com/Furthir/awesome-useful-projects/issues/17 | Watch for maintainer feedback; repo asks for issue suggestions before additions. |
 | hemanth/awesome-pwa | Progressive web app tools and utilities | Pull request opened: https://github.com/hemanth/awesome-pwa/pull/440 | Watch for maintainer feedback; upstream checker verified Slay PDF but currently reports unrelated unreachable entries. |
-| mcuking/Awesome-WebAssembly-Applications | Browser WebAssembly productive tools | Pull request opened: https://github.com/mcuking/Awesome-WebAssembly-Applications/pull/21 | Watch for maintainer feedback and keep the Wasm wording scoped to PDF workflows. |
+| mcuking/Awesome-WebAssembly-Applications | Browser WebAssembly productive tools | Merged: https://github.com/mcuking/Awesome-WebAssembly-Applications/pull/21 | Live backlink accepted; keep the Wasm wording scoped to PDF workflows if future edits are requested. |
 | auctors/free-lunch | Free PDF editor list | Pull request opened: https://github.com/auctors/free-lunch/pull/42 | Watch for maintainer feedback; entry includes homepage, source repo, and open-source badge. |
 | abhi18av/awesome-pdf | Online PDF tools | Pull request opened: https://github.com/abhi18av/awesome-pdf/pull/44 | Watch for maintainer feedback; entry keeps the no-account/no-server-upload wording scoped to everyday edits. |
 | aviaryan/awesome-no-login-web-apps | No-login document editor web apps | Pull request opened: https://github.com/aviaryan/awesome-no-login-web-apps/pull/505 | Watch for maintainer feedback; upstream checker includes Slay PDF but fails on unrelated pre-existing broken links. |
@@ -52,7 +53,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | Target | Reason to wait | Evidence to gather first |
 | --- | --- | --- |
 | Lissy93/awesome-privacy | Requires mature projects; Slay PDF's public GitHub repo was created on 2026-07-12. | Public usage, issue/PR activity, a few releases, and enough age to satisfy the maturity guideline. |
-| altstackHQ/altstack-data | Requires traction, release tags, and self-hostability evidence; the repo now has a release, but not yet visible traction. | Stars, external mentions, release history, and a clear category fit. |
+| altstackHQ/altstack-data | Requires traction and self-hostability evidence; the repo now has a release and self-hosting docs, but not yet visible traction. | Stars, external mentions, release history, and a clear category fit. |
 | RepoRanker | Submission appears to require interactive site flow and review/account fields outside this repo. | Submit manually with the GitHub repo URL, tagline, type, and topics if using a browser session. |
 | toolimi/free-pdf-tools | First-party directory for Toolimi's own PDF tools, not a neutral third-party list. | Skip unless they explicitly invite external tools. |
 

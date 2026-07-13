@@ -1958,6 +1958,18 @@
       "breadcrumbId": "https://slaypdf.com/open-source-adobe-acrobat-alternative.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/self-hosted-pdf-editor.html",
+      "path": "/self-hosted-pdf-editor.html",
+      "title": "Self-Hosted PDF Editor - Slay PDF",
+      "description": "Self-host Slay PDF as a static open-source PDF editor for local browser PDF workflows without running a document upload server.",
+      "h1": "Self-host a PDF editor without a document server.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/self-hosted-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/self-hosted-pdf-editor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/offline-pdf-editor.html",
       "path": "/offline-pdf-editor.html",
       "title": "Offline PDF Editor - Slay PDF",
