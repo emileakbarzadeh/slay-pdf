@@ -22,10 +22,10 @@ const initialChunk = path.join(dist, 'assets', scriptMatch[1])
 assert(fs.existsSync(initialChunk), `Initial app chunk is missing: ${scriptMatch[1]}`)
 
 const initialSize = fs.statSync(initialChunk).size
-const maxInitialChunkBytes = 350 * 1024
+const maxInitialChunkBytes = 250 * 1024
 assert(
   initialSize <= maxInitialChunkBytes,
-  `Initial app chunk is ${(initialSize / 1024).toFixed(1)} KiB; expected <= ${maxInitialChunkBytes / 1024} KiB. Keep PDF parsing/rendering lazy.`
+  `Initial app chunk is ${(initialSize / 1024).toFixed(1)} KiB; expected <= ${maxInitialChunkBytes / 1024} KiB. Keep PDF parsing/rendering and persistence lazy.`
 )
 
 const initialSource = fs.readFileSync(initialChunk, 'utf8')
@@ -35,12 +35,15 @@ for (const eagerPdfToken of ['pdf.worker.min', 'GlobalWorkerOptions', 'getDocume
 for (const eagerDndToken of ['DndContext', 'PointerSensor', 'sortableKeyboardCoordinates', 'useSortable']) {
   assert(!initialSource.includes(eagerDndToken), `Initial app chunk includes drag-and-drop token "${eagerDndToken}".`)
 }
+for (const eagerDatabaseToken of ['Dexie', 'indexedDB', 'IDBKeyRange']) {
+  assert(!initialSource.includes(eagerDatabaseToken), `Initial app chunk includes persistence token "${eagerDatabaseToken}".`)
+}
 
 const assetNames = fs.readdirSync(path.join(dist, 'assets'))
 const lazyPdfChunk = assetNames.find((name) => /^pdf-[\w-]+\.js$/.test(name))
 assert(lazyPdfChunk, 'Expected a lazy pdf-*.js chunk for PDF parsing/rendering.')
 
-for (const lazyChunkPrefix of ['AboutModal-', 'RecentModal-', 'PageToolModal-', 'WorkspacePageGrid-', 'Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
+for (const lazyChunkPrefix of ['AboutModal-', 'RecentModal-', 'PageToolModal-', 'database-', 'WorkspacePageGrid-', 'Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
   assert(assetNames.some((name) => name.startsWith(lazyChunkPrefix) && name.endsWith('.js')), `Expected a lazy ${lazyChunkPrefix}*.js chunk.`)
 }
 

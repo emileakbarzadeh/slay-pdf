@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { clearWorkspace, loadWorkspace, saveWorkspace } from './lib/database'
 import { uid } from './lib/id'
 import type { ExportSettings, JobState, PageOverlay, SourceDocument, WorkspaceItem, WorkspacePage } from './types'
 import { defaultExportSettings, isWorkspacePage } from './types'
@@ -53,15 +52,24 @@ function titleFromFilename(name: string) {
   return name.replace(/\.[^.]+$/, '')
 }
 
+type DatabaseModule = typeof import('./lib/database')
+let databasePromise: Promise<DatabaseModule> | undefined
+function database() {
+  databasePromise ??= import('./lib/database')
+  return databasePromise
+}
+
 let saveTimer: number | undefined
 function scheduleSave() {
   window.clearTimeout(saveTimer)
   saveTimer = window.setTimeout(() => {
     const { sources, pages, settings, hydrated } = useWorkspace.getState()
     if (hydrated && (sources.length || pages.length)) {
-      void saveWorkspace({ id: 'active', sources, pages, settings, savedAt: Date.now() }).catch(() => {
-        useWorkspace.setState({ error: 'Autosave is unavailable. Your current work remains open in this tab.' })
-      })
+      void database()
+        .then(({ saveWorkspace }) => saveWorkspace({ id: 'active', sources, pages, settings, savedAt: Date.now() }))
+        .catch(() => {
+          useWorkspace.setState({ error: 'Autosave is unavailable. Your current work remains open in this tab.' })
+        })
     }
   }, 450)
 }
@@ -79,6 +87,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
 
   hydrate: async () => {
     try {
+      const { loadWorkspace } = await database()
       const saved = await loadWorkspace()
       set(saved ? { sources: saved.sources, pages: saved.pages, settings: { ...defaultExportSettings, ...saved.settings }, hydrated: true } : { hydrated: true })
     } catch {
@@ -290,6 +299,7 @@ export const useWorkspace = create<WorkspaceState>((set, get) => ({
   },
 
   reset: async () => {
+    const { clearWorkspace } = await database()
     await clearWorkspace()
     set({ sources: [], pages: [], selected: [], settings: defaultExportSettings, history: [], future: [], error: null })
   },
