@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://slaypdf.com/edit-pdf.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/edit-pdf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/edit-pdf.html" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://slaypdf.com/tools.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaypdf.com/tools.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://slaypdf.com/tools.html" />

@@ -17,6 +17,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/edit-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Edit PDF Locally - Slay PDF</image:title>
+      <image:caption>Edit PDF files locally with Slay PDF. Reorder pages, delete pages, sign, annotate, resize, crop, redact and export PDFs in your browser without uploads.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/tools.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

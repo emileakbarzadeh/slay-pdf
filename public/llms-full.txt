@@ -48,6 +48,38 @@ Related links:
 - Sign PDFs: https://slaypdf.com/sign-pdf.html
 - Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 
+## Edit PDF Locally - Slay PDF
+URL: https://slaypdf.com/edit-pdf.html
+Last modified: 2026-07-13
+Summary: Edit PDF files locally with Slay PDF. Reorder pages, delete pages, sign, annotate, resize, crop, redact and export PDFs in your browser without uploads.
+H1: Edit PDF files locally in your browser.
+
+Content:
+- Edit PDF
+- Edit PDF files locally in your browser.
+- Open a PDF in Slay PDF to reorder pages, delete pages, sign, annotate, crop, resize, redact and export a finished document without sending it to an app server.
+- Import PDFs
+- Drop in one PDF or combine multiple files and images into the workspace.
+- Edit pages and marks
+- Reorder, delete, rotate, crop, resize, sign, annotate and redact pages before export.
+- Export locally
+- Download every page, selected pages, split documents, page images or extracted text from the browser.
+- A practical PDF editor for everyday fixes.
+- Slay PDF is built for the small PDF jobs that should not require a subscription, account or file upload. Use it for forms, receipts, contracts, scans, client files, study notes and other documents that only need quick edits.
+- The app runs as a static client-side web app. Your documents and edits stay in this browser, and passwords are never saved.
+- Edit PDF FAQ
+- Yes. Slay PDF runs PDF editing work in the browser so the document is not uploaded to a Slay PDF application server.
+- You can reorder pages, delete pages, rotate, crop, resize, sign, annotate, redact, split, merge, export selected pages, export images and extract text.
+- No. It focuses on fast local browser workflows for common edits rather than every enterprise Acrobat feature.
+
+Related links:
+- Free PDF editor: https://slaypdf.com/free-pdf-editor.html
+- Online PDF editor: https://slaypdf.com/online-pdf-editor.html
+- Edit without uploading: https://slaypdf.com/edit-pdf-without-uploading.html
+- Annotate PDFs: https://slaypdf.com/annotate-pdf.html
+- Sign PDFs: https://slaypdf.com/sign-pdf.html
+- Delete PDF pages: https://slaypdf.com/delete-pdf-pages.html
+
 ## PDF Tools - Slay PDF
 URL: https://slaypdf.com/tools.html
 Last modified: 2026-07-13
@@ -93,6 +125,7 @@ Content:
 
 Related links:
 - Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html
+- Edit PDF: Reorder, delete, sign, annotate, resize, crop and export PDFs locally.: https://slaypdf.com/edit-pdf.html
 - Adobe Acrobat alternative: Common Acrobat-style jobs without account walls.: https://slaypdf.com/adobe-acrobat-alternative.html
 - Merge PDF: Combine PDFs and images into one document.: https://slaypdf.com/merge-pdf.html
 - Split PDF: Export selected pages or separate PDFs with split markers.: https://slaypdf.com/split-pdf.html
@@ -319,7 +352,7 @@ Content:
 - Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
 - Find a local PDF workflow
 - All searchable pages
-- Showing 220 indexed Slay PDF pages.
+- Showing 221 indexed Slay PDF pages.
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -433,6 +466,7 @@ Content:
 Related links:
 - Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative: https://slaypdf.com/
 - Free Local PDF Editor: https://slaypdf.com/free-pdf-editor.html
+- Edit PDF Locally: https://slaypdf.com/edit-pdf.html
 - PDF Tools: https://slaypdf.com/tools.html
 - PDF Tool Search: https://slaypdf.com/search.html
 - HTML Sitemap: https://slaypdf.com/sitemap.html
