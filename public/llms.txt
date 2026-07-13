@@ -20,6 +20,30 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF Editor - Slay PDF: https://slaypdf.com/pdf-editor.html
   Summary: Use Slay PDF as a PDF editor for local browser workflows. Merge, split, sign, annotate, redact, resize, OCR and export PDFs without uploads.
   Last modified: 2026-07-13
+- Best Free PDF Editor for Local Work - Slay PDF: https://slaypdf.com/best-free-pdf-editor.html
+  Summary: Use Slay PDF when the best free PDF editor is one that runs locally in your browser for merge, split, sign, redact, OCR and export workflows.
+  Last modified: 2026-07-13
+- Best Adobe Acrobat Alternative for Local Edits - Slay PDF: https://slaypdf.com/best-adobe-acrobat-alternative.html
+  Summary: Use Slay PDF as an Adobe Acrobat alternative for common local PDF edits: merge, split, sign, organize, redact, resize, OCR and export.
+  Last modified: 2026-07-13
+- PDF Editor App - Slay PDF: https://slaypdf.com/pdf-editor-app.html
+  Summary: Use Slay PDF as a PDF editor app for browser-local workflows. Edit, sign, merge, split, redact, OCR and export PDFs without app-server uploads.
+  Last modified: 2026-07-13
+- PDF Editor Software - Slay PDF: https://slaypdf.com/pdf-editor-software.html
+  Summary: Use Slay PDF as PDF editor software for local browser workflows: merge, split, sign, annotate, redact, resize, OCR and export PDFs.
+  Last modified: 2026-07-13
+- Free PDF Software - Slay PDF: https://slaypdf.com/free-pdf-software.html
+  Summary: Use Slay PDF as free PDF software for local browser workflows. Merge, split, sign, organize, redact, resize, OCR and export PDFs.
+  Last modified: 2026-07-13
+- Web Based PDF Editor - Slay PDF: https://slaypdf.com/web-based-pdf-editor.html
+  Summary: Use Slay PDF as a web-based PDF editor for merge, split, sign, redact, annotate, OCR and export workflows that run locally in your browser.
+  Last modified: 2026-07-13
+- Browser Based PDF Editor - Slay PDF: https://slaypdf.com/browser-based-pdf-editor.html
+  Summary: Use Slay PDF as a browser-based PDF editor. Edit, organize, sign, redact, OCR and export PDFs locally from a modern browser.
+  Last modified: 2026-07-13
+- PDF Tool - Slay PDF: https://slaypdf.com/pdf-tool.html
+  Summary: Use Slay PDF as a PDF tool for common local workflows: merge, split, sign, rotate, crop, redact, OCR, extract text and export PDFs.
+  Last modified: 2026-07-13
 - Local PDF Editor - Slay PDF: https://slaypdf.com/local-pdf-editor.html
   Summary: Use Slay PDF as a local PDF editor. Edit, merge, split, sign, redact, OCR and export PDFs in your browser without app-server uploads.
   Last modified: 2026-07-13
