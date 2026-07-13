@@ -96,7 +96,7 @@ const sections = [
   {
     title: 'No-account and platform pages',
     description: 'Browser-first pages for no-signup, no-watermark, secure local editing and common desktop, mobile and Chromebook searches.',
-    paths: ['/merge-pdf-no-signup.html', '/split-pdf-no-signup.html', '/sign-pdf-no-signup.html', '/redact-pdf-no-signup.html', '/compress-pdf-no-signup.html', '/rotate-pdf-no-signup.html', '/crop-pdf-no-signup.html', '/ocr-pdf-no-signup.html', '/delete-pdf-pages-no-signup.html', '/resize-pdf-no-signup.html', '/annotate-pdf-no-signup.html', '/add-page-numbers-no-signup.html', '/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html', '/pdf-editor-for-linux.html', '/pdf-editor-for-iphone-ipad.html', '/android-pdf-editor.html'],
+    paths: ['/free-pdf-editor-no-download.html', '/free-pdf-editor-no-install.html', '/pdf-editor-no-account.html', '/pdf-editor-without-email.html', '/free-pdf-editor-no-trial.html', '/merge-pdf-no-signup.html', '/split-pdf-no-signup.html', '/sign-pdf-no-signup.html', '/redact-pdf-no-signup.html', '/compress-pdf-no-signup.html', '/rotate-pdf-no-signup.html', '/crop-pdf-no-signup.html', '/ocr-pdf-no-signup.html', '/delete-pdf-pages-no-signup.html', '/resize-pdf-no-signup.html', '/annotate-pdf-no-signup.html', '/add-page-numbers-no-signup.html', '/free-pdf-editor-no-signup.html', '/pdf-editor-no-watermark.html', '/secure-pdf-editor.html', '/browser-pdf-editor.html', '/pdf-editor-for-mac.html', '/pdf-editor-for-windows.html', '/pdf-editor-for-chromebook.html', '/pdf-editor-for-linux.html', '/pdf-editor-for-iphone-ipad.html', '/android-pdf-editor.html'],
   },
 ]
 
