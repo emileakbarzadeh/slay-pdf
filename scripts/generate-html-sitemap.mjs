@@ -49,6 +49,11 @@ const sections = [
     paths: ['/insurance-claim-pdf-editor.html', '/rental-lease-pdf-editor.html', '/mortgage-document-pdf-editor.html', '/pay-stub-pdf-editor.html', '/utility-bill-pdf-editor.html', '/passport-application-pdf-editor.html', '/visa-application-pdf-editor.html', '/government-form-pdf-editor.html', '/nda-pdf-editor.html', '/w9-pdf-editor.html'],
   },
   {
+    title: 'Signing and markup intent pages',
+    description: 'Exact-match pages for visible initials, dates, stamps, watermarks, approvals, review markup and sign-and-date PDF workflows.',
+    paths: ['/add-initials-to-pdf.html', '/add-date-to-pdf.html', '/stamp-pdf.html', '/confidential-watermark-pdf.html', '/draft-watermark-pdf.html', '/approval-stamp-pdf.html', '/review-pdf.html', '/sign-and-date-pdf.html'],
+  },
+  {
     title: 'Guides',
     description: 'Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.',
     paths: ['/online-pdf-editor.html', '/edit-pdf-without-uploading.html', '/organize-pdf-pages.html', '/adobe-acrobat-vs-slay-pdf.html'],

@@ -633,6 +633,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://slaypdf.com/add-initials-to-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Add Initials to PDF - Slay PDF</image:title>
+      <image:caption>Add initials to PDFs with Slay PDF. Place visible initials, signatures, dates or text overlays and export the finished PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/add-date-to-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Add Date to PDF - Slay PDF</image:title>
+      <image:caption>Add dates to PDFs with Slay PDF. Place visible date text, signatures, notes, highlights or stamps and export locally from your browser.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/stamp-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Stamp PDF - Slay PDF</image:title>
+      <image:caption>Stamp PDFs with Slay PDF by adding visible text, watermark text, approval marks, review notes or rectangles before local export.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/confidential-watermark-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Confidential Watermark PDF - Slay PDF</image:title>
+      <image:caption>Add a confidential watermark to PDFs with Slay PDF. Apply visible export-time watermark text and download the marked PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/draft-watermark-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Draft Watermark PDF - Slay PDF</image:title>
+      <image:caption>Add a DRAFT watermark to PDFs with Slay PDF. Use export-time watermark text, adjust opacity and download the marked PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/approval-stamp-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Approval Stamp PDF - Slay PDF</image:title>
+      <image:caption>Add approval stamps to PDFs with Slay PDF using visible text overlays, signatures, dates, highlights or watermark text before local export.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/review-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Review PDF - Slay PDF</image:title>
+      <image:caption>Review PDFs with Slay PDF. Add highlights, text, drawings, rectangles, signatures, redactions and watermarks before exporting locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://slaypdf.com/sign-and-date-pdf.html</loc>
+    <image:image>
+      <image:loc>https://slaypdf.com/og-image.png</image:loc>
+      <image:title>Sign and Date PDF - Slay PDF</image:title>
+      <image:caption>Sign and date PDFs with Slay PDF. Add visible signatures, dates, initials or text overlays and export the finished PDF locally.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://slaypdf.com/pdf-redaction-tool.html</loc>
     <image:image>
       <image:loc>https://slaypdf.com/og-image.png</image:loc>

@@ -1306,6 +1306,9 @@ Related links:
 - Separate PDF pages: Use split markers to download multiple PDFs.: https://slaypdf.com/separate-pdf-pages.html
 - Sign PDF: Add visual signatures and quick approval marks.: https://slaypdf.com/sign-pdf.html
 - PDF signature: Place a visual signature before export.: https://slaypdf.com/pdf-signature.html
+- Sign and date PDF: Add a visible signature and date locally.: https://slaypdf.com/sign-and-date-pdf.html
+- Add initials to PDF: Place visible initials before export.: https://slaypdf.com/add-initials-to-pdf.html
+- Add date to PDF: Add visible date text to a PDF.: https://slaypdf.com/add-date-to-pdf.html
 - Delete PDF pages: Remove blank, duplicate or unwanted pages.: https://slaypdf.com/delete-pdf-pages.html
 - Rotate PDF: Fix sideways scans and mixed-orientation pages.: https://slaypdf.com/rotate-pdf.html
 - Annotate PDF: Add text, highlights, shapes, ink and signatures.: https://slaypdf.com/annotate-pdf.html
@@ -1320,6 +1323,11 @@ Related links:
 - Posterize PDF: US-spelled poster tile workflow.: https://slaypdf.com/posterize-pdf.html
 - Watermark PDF: Add draft, confidential or review watermarks.: https://slaypdf.com/watermark-pdf.html
 - Add watermark to PDF: Apply visible marks locally before export.: https://slaypdf.com/add-watermark-to-pdf.html
+- Stamp PDF: Add visible text or watermark stamps.: https://slaypdf.com/stamp-pdf.html
+- Confidential watermark PDF: Mark PDFs confidential before export.: https://slaypdf.com/confidential-watermark-pdf.html
+- Draft watermark PDF: Add DRAFT labels to review copies.: https://slaypdf.com/draft-watermark-pdf.html
+- Approval stamp PDF: Add visible approval marks locally.: https://slaypdf.com/approval-stamp-pdf.html
+- Review PDF: Highlight, draw and mark up PDFs locally.: https://slaypdf.com/review-pdf.html
 - Add page numbers: Number the final exported PDF sequence.: https://slaypdf.com/add-page-numbers-to-pdf.html
 - Fill PDF forms: Edit supported AcroForm fields locally.: https://slaypdf.com/fill-pdf-forms.html
 - PDF form filler: Fill supported fields or add visual form text.: https://slaypdf.com/pdf-form-filler.html
@@ -1559,7 +1567,7 @@ Content:
 - Find local PDF workflows for Acrobat alternatives, page edits, OCR, signing, conversion, redaction and private browser exports.
 - Find a local PDF workflow
 - All searchable pages
-- Showing 310 indexed Slay PDF pages.
+- Showing 318 indexed Slay PDF pages.
 
 ## Slay PDF FAQ - Local PDF Editor
 URL: https://slaypdf.com/faq.html
@@ -1649,6 +1657,8 @@ Content:
 - Exact-match OCR, text extraction, blank-page cleanup, annotation and compression alias pages for local PDF workflows.
 - Sensitive document workflow pages
 - Document-specific PDF pages for claims, leases, mortgage packets, pay stubs, utility bills, applications, government forms, NDAs and W-9s.
+- Signing and markup intent pages
+- Exact-match pages for visible initials, dates, stamps, watermarks, approvals, review markup and sign-and-date PDF workflows.
 - Guides
 - Use these pages to pick the right private local workflow for online editing, no-upload documents, page organization and Acrobat comparisons.
 - Online editor intent pages
@@ -1759,6 +1769,14 @@ Related links:
 - Government Form PDF Editor: https://slaypdf.com/government-form-pdf-editor.html
 - NDA PDF Editor: https://slaypdf.com/nda-pdf-editor.html
 - W-9 PDF Editor: https://slaypdf.com/w9-pdf-editor.html
+- Add Initials to PDF: https://slaypdf.com/add-initials-to-pdf.html
+- Add Date to PDF: https://slaypdf.com/add-date-to-pdf.html
+- Stamp PDF: https://slaypdf.com/stamp-pdf.html
+- Confidential Watermark PDF: https://slaypdf.com/confidential-watermark-pdf.html
+- Draft Watermark PDF: https://slaypdf.com/draft-watermark-pdf.html
+- Approval Stamp PDF: https://slaypdf.com/approval-stamp-pdf.html
+- Review PDF: https://slaypdf.com/review-pdf.html
+- Sign and Date PDF: https://slaypdf.com/sign-and-date-pdf.html
 - Online PDF Editor: https://slaypdf.com/online-pdf-editor.html
 - Edit PDF Without Uploading: https://slaypdf.com/edit-pdf-without-uploading.html
 - Organize PDF Pages: https://slaypdf.com/organize-pdf-pages.html
@@ -3027,6 +3045,246 @@ Related links:
 - Annotate PDF: https://slaypdf.com/annotate-pdf.html
 - Fill PDF forms: https://slaypdf.com/fill-pdf-forms.html
 - Online PDF editor: https://slaypdf.com/online-pdf-editor.html
+
+## Add Initials to PDF - Slay PDF
+URL: https://slaypdf.com/add-initials-to-pdf.html
+Last modified: 2026-07-13
+Summary: Add initials to PDFs with Slay PDF. Place visible initials, signatures, dates or text overlays and export the finished PDF locally.
+H1: Add initials to a PDF locally in your browser.
+
+Content:
+- Add initials to PDF
+- Add initials to a PDF locally in your browser.
+- Use Slay PDF when a PDF needs simple visual initials before sending, filing or reviewing.
+- Visual initials
+- Place initials with the text or signature tools in the page editor.
+- Move and scale
+- Select overlays to position and resize initials before export.
+- Local export
+- Download the initialed PDF from the browser.
+- Initial a PDF without a full signing platform.
+- Initials are useful for leases, NDAs, contracts, forms and approval packets where a visible mark is enough.
+- Use a managed signing platform when certificate signing, audit trails or organization policy require it.
+- Add initials to PDF FAQ
+- Yes. Add visible initials with text or signature overlays, then export the PDF.
+- Yes. Select overlays in the page editor to move or scale them before export.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Add signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
+- PDF signature: https://slaypdf.com/pdf-signature.html
+- Rental lease PDF editor: https://slaypdf.com/rental-lease-pdf-editor.html
+
+## Add Date to PDF - Slay PDF
+URL: https://slaypdf.com/add-date-to-pdf.html
+Last modified: 2026-07-13
+Summary: Add dates to PDFs with Slay PDF. Place visible date text, signatures, notes, highlights or stamps and export locally from your browser.
+H1: Add a date to a PDF before exporting.
+
+Content:
+- Add date to PDF
+- Add a date to a PDF before exporting.
+- Use Slay PDF when a form, contract, approval page or record needs a visible date added quickly.
+- Text dates
+- Use the text tool to place a visible date on the page.
+- Combine with signing
+- Add dates next to signatures, initials or approval notes.
+- Browser export
+- Download the dated PDF locally after reviewing placement.
+- Place dates where the document needs them.
+- Date overlays are useful for signed forms, review packets, approvals and records.
+- Slay PDF creates visible edits in the exported PDF. Use the official workflow required by the receiver if a certified date or audit trail is needed.
+- Add date to PDF FAQ
+- Yes. Use the text tool to place a visible date before exporting.
+- Yes. Add a signature overlay and a text date overlay on the same page.
+- No. It is a visible document edit, not a certified timestamp or signing audit trail.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Add initials to PDF: https://slaypdf.com/add-initials-to-pdf.html
+- Fill PDF forms: https://slaypdf.com/fill-pdf-forms.html
+- Government form PDF editor: https://slaypdf.com/government-form-pdf-editor.html
+
+## Stamp PDF - Slay PDF
+URL: https://slaypdf.com/stamp-pdf.html
+Last modified: 2026-07-13
+Summary: Stamp PDFs with Slay PDF by adding visible text, watermark text, approval marks, review notes or rectangles before local export.
+H1: Add a visible stamp to a PDF.
+
+Content:
+- Stamp PDF
+- Add a visible stamp to a PDF.
+- Use Slay PDF for simple visible stamps such as REVIEW, APPROVED, DRAFT or CONFIDENTIAL when a practical browser workflow is enough.
+- Text stamp
+- Place visible text overlays on individual pages.
+- Watermark stamp
+- Apply a diagonal text watermark at export time.
+- Markup tools
+- Combine text with highlights, rectangles, ink or signatures.
+- Create simple PDF stamps in the browser.
+- A visible PDF stamp can help mark draft copies, internal review packets, approvals or confidential material.
+- Slay PDF does not provide certificate stamping or audit trails. It creates visible edits in the exported PDF.
+- Stamp PDF FAQ
+- Yes. Add visible text overlays or export-time watermark text to create a simple stamp.
+- Use the watermark setting for export-time text across the PDF.
+- No. Slay PDF adds visible marks, not certificate-based stamps or audit trails.
+
+Related links:
+- Watermark PDF: https://slaypdf.com/watermark-pdf.html
+- Add watermark to PDF: https://slaypdf.com/add-watermark-to-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Approval stamp PDF: https://slaypdf.com/approval-stamp-pdf.html
+
+## Confidential Watermark PDF - Slay PDF
+URL: https://slaypdf.com/confidential-watermark-pdf.html
+Last modified: 2026-07-13
+Summary: Add a confidential watermark to PDFs with Slay PDF. Apply visible export-time watermark text and download the marked PDF locally.
+H1: Add a confidential watermark to a PDF.
+
+Content:
+- Confidential watermark PDF
+- Add a confidential watermark to a PDF.
+- Use Slay PDF when a document needs a visible CONFIDENTIAL watermark before sharing or review.
+- Watermark text
+- Set CONFIDENTIAL or custom watermark text before export.
+- Opacity control
+- Adjust watermark strength so it stays visible without overwhelming the page.
+- Local download
+- Export the marked PDF from this browser.
+- Mark confidential PDFs before export.
+- Confidential watermarks are useful for drafts, review copies, internal packets and sensitive documents.
+- A visible watermark is not access control. Use encryption or approved document systems when policy requires stronger protection.
+- Confidential watermark PDF FAQ
+- Yes. Use the watermark setting and enter CONFIDENTIAL or your preferred text.
+- Yes. Slay PDF includes watermark opacity control before export.
+- No. A visible watermark is a label, not access control or certification.
+
+Related links:
+- Watermark PDF: https://slaypdf.com/watermark-pdf.html
+- Add watermark to PDF: https://slaypdf.com/add-watermark-to-pdf.html
+- Password protect PDF: https://slaypdf.com/password-protect-pdf.html
+- PDF editor for sensitive documents: https://slaypdf.com/pdf-editor-for-sensitive-documents.html
+
+## Draft Watermark PDF - Slay PDF
+URL: https://slaypdf.com/draft-watermark-pdf.html
+Last modified: 2026-07-13
+Summary: Add a DRAFT watermark to PDFs with Slay PDF. Use export-time watermark text, adjust opacity and download the marked PDF locally.
+H1: Add a draft watermark to a PDF.
+
+Content:
+- Draft watermark PDF
+- Add a draft watermark to a PDF.
+- Use Slay PDF when a review copy needs a visible DRAFT label before it leaves your browser.
+- DRAFT label
+- Set the export watermark text to DRAFT or another review label.
+- Page cleanup first
+- Reorder, delete, rotate or annotate pages before watermark export.
+- Local workflow
+- Download the watermarked PDF from the browser.
+- Mark draft copies before sharing.
+- Draft watermarks help distinguish review copies from final documents.
+- Slay PDF applies the watermark during export so you can finish page cleanup and markup first.
+- Draft watermark PDF FAQ
+- Yes. Enter DRAFT in the watermark field before exporting.
+- Yes. Watermark export can be combined with page cleanup, annotations and page numbers.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Watermark PDF: https://slaypdf.com/watermark-pdf.html
+- Confidential watermark PDF: https://slaypdf.com/confidential-watermark-pdf.html
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Review PDF: https://slaypdf.com/review-pdf.html
+
+## Approval Stamp PDF - Slay PDF
+URL: https://slaypdf.com/approval-stamp-pdf.html
+Last modified: 2026-07-13
+Summary: Add approval stamps to PDFs with Slay PDF using visible text overlays, signatures, dates, highlights or watermark text before local export.
+H1: Add an approval stamp to a PDF.
+
+Content:
+- Approval stamp PDF
+- Add an approval stamp to a PDF.
+- Use Slay PDF for simple approval marks such as APPROVED, REVIEWED or signed/date annotations.
+- Approval text
+- Place visible APPROVED, REVIEWED or custom text on the page.
+- Date and signature
+- Combine approval text with dates, initials or signatures.
+- Local export
+- Download the marked PDF locally from the browser.
+- Mark approval copies visibly.
+- Approval marks are useful for internal review packets, school forms, business documents and lightweight workflows.
+- Use a managed approval system when you need audit trails, certificate signatures or organization controls.
+- Approval stamp PDF FAQ
+- Yes. Use visible text overlays, signatures, dates or watermark text before exporting.
+- Use the watermark setting for export-time text across the PDF.
+- No. Slay PDF creates visible marks, not an approval audit trail.
+
+Related links:
+- Stamp PDF: https://slaypdf.com/stamp-pdf.html
+- Add date to PDF: https://slaypdf.com/add-date-to-pdf.html
+- Add initials to PDF: https://slaypdf.com/add-initials-to-pdf.html
+- PDF editor for business: https://slaypdf.com/pdf-editor-for-business.html
+
+## Review PDF - Slay PDF
+URL: https://slaypdf.com/review-pdf.html
+Last modified: 2026-07-13
+Summary: Review PDFs with Slay PDF. Add highlights, text, drawings, rectangles, signatures, redactions and watermarks before exporting locally.
+H1: Review and mark up a PDF locally.
+
+Content:
+- Review PDF
+- Review and mark up a PDF locally.
+- Use Slay PDF for practical review markup when the PDF should stay in your browser.
+- Markup tools
+- Add text, highlights, rectangles, ink drawings and signatures.
+- Page organization
+- Delete extras, reorder pages, rotate scans and split sections.
+- Export options
+- Download a PDF, selected pages, separate PDFs, page images or text.
+- Review PDFs without sending them away.
+- PDF review often means highlighting important areas, adding notes, drawing attention to a section and exporting a clean copy.
+- Slay PDF keeps that workflow in the browser for common documents.
+- Review PDF FAQ
+- Yes. Use highlights, text, drawings, rectangles, signatures and page tools before export.
+- Yes. Select the pages you need or use split markers before export.
+- No. Common editing and export workflows run locally in this browser.
+
+Related links:
+- Annotate PDF: https://slaypdf.com/annotate-pdf.html
+- Highlight PDF: https://slaypdf.com/highlight-pdf.html
+- Draw on PDF: https://slaypdf.com/draw-on-pdf.html
+- Draft watermark PDF: https://slaypdf.com/draft-watermark-pdf.html
+
+## Sign and Date PDF - Slay PDF
+URL: https://slaypdf.com/sign-and-date-pdf.html
+Last modified: 2026-07-13
+Summary: Sign and date PDFs with Slay PDF. Add visible signatures, dates, initials or text overlays and export the finished PDF locally.
+H1: Sign and date a PDF in the browser.
+
+Content:
+- Sign and date PDF
+- Sign and date a PDF in the browser.
+- Use Slay PDF when a PDF needs a visible signature and date without uploading it to another site.
+- Visible signature
+- Place a visual signature overlay on the page.
+- Date text
+- Add a date with the text tool next to the signature.
+- Local download
+- Export the signed and dated PDF from this browser.
+- Add the common signing marks together.
+- Many everyday PDFs need a signature, date and sometimes initials. Slay PDF keeps those visible edits in one page editor.
+- For certificate signing, identity verification or audit trails, use the signing system required by the receiver.
+- Sign and date PDF FAQ
+- Yes. Add a visual signature overlay and a text date overlay before exporting.
+- Yes. Use text or signature overlays for initials.
+- No. Slay PDF creates visible signing marks, not certificate signatures or audit trails.
+
+Related links:
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Add signature to PDF: https://slaypdf.com/add-signature-to-pdf.html
+- Add date to PDF: https://slaypdf.com/add-date-to-pdf.html
+- Add initials to PDF: https://slaypdf.com/add-initials-to-pdf.html
 
 ## PDF Redaction Tool - Slay PDF
 URL: https://slaypdf.com/pdf-redaction-tool.html
