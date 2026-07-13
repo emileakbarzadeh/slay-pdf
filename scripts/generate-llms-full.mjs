@@ -78,6 +78,7 @@ const lines = [
   `Sitemap index: ${site}/sitemap-index.xml`,
   `Canonical sitemap: ${site}/sitemap.xml`,
   `Image sitemap: ${site}/image-sitemap.xml`,
+  `OpenSearch description: ${site}/opensearch.xml`,
   `Source index: ${site}/pages.json`,
   `Compact index: ${site}/llms.txt`,
   '',

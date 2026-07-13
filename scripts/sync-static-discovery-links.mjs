@@ -6,6 +6,12 @@ const publicDir = new URL('../public/', import.meta.url)
 
 const discoveryLinks = [
   {
+    rel: 'search',
+    type: 'application/opensearchdescription+xml',
+    title: 'Slay PDF tool search',
+    href: `${site}/opensearch.xml`,
+  },
+  {
     rel: 'alternate',
     type: 'application/rss+xml',
     title: 'Slay PDF discovery feed',
@@ -49,14 +55,15 @@ function languageLinksFor(canonical) {
 }
 
 function stripDiscoveryLinks(html) {
-  const hrefs = discoveryLinks.map((link) => link.href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-  const expression = new RegExp(
-    `^\\s*<link rel="alternate" type="[^"]+" title="[^"]+" href="(?:${hrefs.join('|')})"\\s*/>\\n`,
-    'gm',
-  )
-  return html
-    .replace(expression, '')
-    .replace(/^\s*<link rel="alternate" hreflang="(?:en|x-default)" href="[^"]+"\s*\/>\n/gm, '')
+  let updated = html
+  for (const link of discoveryLinks) {
+    const expression = new RegExp(
+      `^\\s*<link rel="${link.rel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}" type="${link.type.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}" title="${link.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}" href="${link.href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"\\s*/>\\n`,
+      'gm',
+    )
+    updated = updated.replace(expression, '')
+  }
+  return updated.replace(/^\s*<link rel="alternate" hreflang="(?:en|x-default)" href="[^"]+"\s*\/>\n/gm, '')
 }
 
 const files = [

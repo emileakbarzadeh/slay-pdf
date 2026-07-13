@@ -38,6 +38,7 @@ lines.push(
   `- Sitemap index: ${site}/sitemap-index.xml`,
   `- Sitemap: ${site}/sitemap.xml`,
   `- Image sitemap: ${site}/image-sitemap.xml`,
+  `- OpenSearch description: ${site}/opensearch.xml`,
   `- IndexNow payload: ${site}/indexnow.json`,
   `- IndexNow URL list: ${site}/indexnow-urls.txt`,
   `- Plain page index: ${site}/pages.txt`,

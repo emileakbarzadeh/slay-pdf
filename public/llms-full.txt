@@ -6,6 +6,7 @@ Site: https://slaypdf.com/
 Sitemap index: https://slaypdf.com/sitemap-index.xml
 Canonical sitemap: https://slaypdf.com/sitemap.xml
 Image sitemap: https://slaypdf.com/image-sitemap.xml
+OpenSearch description: https://slaypdf.com/opensearch.xml
 Source index: https://slaypdf.com/pages.json
 Compact index: https://slaypdf.com/llms.txt
 

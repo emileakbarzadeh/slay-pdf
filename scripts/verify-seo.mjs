@@ -475,11 +475,12 @@ const htmlUrls = urls.filter((url) => url.endsWith('.html'))
 const titles = new Map()
 const descriptions = new Map()
 const requiredDiscoveryLinks = [
-  ['application/rss+xml', 'Slay PDF discovery feed', `${site}/feed.xml`],
-  ['application/feed+json', 'Slay PDF JSON discovery feed', `${site}/feed.json`],
-  ['application/json', 'Slay PDF structured page index', `${site}/pages.json`],
-  ['text/plain', 'Slay PDF compact LLM index', `${site}/llms.txt`],
-  ['text/plain', 'Slay PDF full text LLM index', `${site}/llms-full.txt`],
+  ['search', 'application/opensearchdescription+xml', 'Slay PDF tool search', `${site}/opensearch.xml`],
+  ['alternate', 'application/rss+xml', 'Slay PDF discovery feed', `${site}/feed.xml`],
+  ['alternate', 'application/feed+json', 'Slay PDF JSON discovery feed', `${site}/feed.json`],
+  ['alternate', 'application/json', 'Slay PDF structured page index', `${site}/pages.json`],
+  ['alternate', 'text/plain', 'Slay PDF compact LLM index', `${site}/llms.txt`],
+  ['alternate', 'text/plain', 'Slay PDF full text LLM index', `${site}/llms-full.txt`],
 ]
 const requiredAppHead = [
   '<meta name="theme-color" content="#f7f7f4" />',
@@ -520,8 +521,8 @@ for (const url of htmlUrls) {
   assert(html.includes(`rel="canonical" href="${url}"`), `${file} canonical does not match sitemap URL`)
   assert(html.includes(`rel="alternate" hreflang="en" href="${url}"`), `${file} is missing English hreflang alternate`)
   assert(html.includes(`rel="alternate" hreflang="x-default" href="${url}"`), `${file} is missing x-default hreflang alternate`)
-  for (const [type, title, href] of requiredDiscoveryLinks) {
-    assert(html.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `${file} is missing ${title} discovery link`)
+  for (const [rel, type, title, href] of requiredDiscoveryLinks) {
+    assert(html.includes(`rel="${rel}" type="${type}" title="${title}" href="${href}"`), `${file} is missing ${title} discovery link`)
   }
   for (const tag of requiredStaticAppHead) {
     assert(html.includes(tag), `${file} is missing app head metadata: ${tag}`)
@@ -554,8 +555,8 @@ for (const url of htmlUrls) {
 }
 
 const rootHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8')
-for (const [type, title, href] of requiredDiscoveryLinks) {
-  assert(rootHtml.includes(`rel="alternate" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
+for (const [rel, type, title, href] of requiredDiscoveryLinks) {
+  assert(rootHtml.includes(`rel="${rel}" type="${type}" title="${title}" href="${href}"`), `homepage is missing ${title} discovery link`)
 }
 for (const tag of requiredAppHead) {
   assert(rootHtml.includes(tag), `homepage is missing app head metadata: ${tag}`)
@@ -745,6 +746,7 @@ for (const page of pagesJson.pages) {
 assert(llms.includes(`${site}/sitemap-index.xml`), 'llms.txt is missing sitemap-index.xml')
 assert(llms.includes(`${site}/sitemap.xml`), 'llms.txt is missing sitemap.xml')
 assert(llms.includes(`${site}/image-sitemap.xml`), 'llms.txt is missing image-sitemap.xml')
+assert(llms.includes(`${site}/opensearch.xml`), 'llms.txt is missing opensearch.xml')
 assert(llms.includes(`${site}/pages.txt`), 'llms.txt is missing pages.txt')
 assert(llms.includes(`${site}/pages.json`), 'llms.txt is missing pages.json')
 assert(llms.includes(`${site}/feed.xml`), 'llms.txt is missing feed.xml')
@@ -757,6 +759,7 @@ assert(llmsFull.includes(`Site: ${site}/`), 'llms-full.txt is missing site URL')
 assert(llmsFull.includes(`Sitemap index: ${site}/sitemap-index.xml`), 'llms-full.txt is missing sitemap-index.xml reference')
 assert(llmsFull.includes(`Canonical sitemap: ${site}/sitemap.xml`), 'llms-full.txt is missing sitemap.xml reference')
 assert(llmsFull.includes(`Image sitemap: ${site}/image-sitemap.xml`), 'llms-full.txt is missing image-sitemap.xml reference')
+assert(llmsFull.includes(`OpenSearch description: ${site}/opensearch.xml`), 'llms-full.txt is missing opensearch.xml reference')
 assert(llmsFull.includes(`Source index: ${site}/pages.json`), 'llms-full.txt is missing pages.json reference')
 assert(llmsFull.includes(`Compact index: ${site}/llms.txt`), 'llms-full.txt is missing llms.txt reference')
 for (const page of pagesJson.pages) {
@@ -775,8 +778,17 @@ assert(robots.includes(`Sitemap: ${site}/sitemap.xml`), 'robots.txt is missing s
 assert(robots.includes(`Sitemap: ${site}/image-sitemap.xml`), 'robots.txt is missing image-sitemap.xml')
 assert(robots.includes(`${site}/feed.xml`), 'robots.txt discovery comment is missing feed.xml')
 assert(robots.includes(`${site}/feed.json`), 'robots.txt discovery comment is missing feed.json')
+assert(robots.includes(`${site}/opensearch.xml`), 'robots.txt discovery comment is missing opensearch.xml')
 assert(robots.includes(`${site}/llms.txt`), 'robots.txt discovery comment is missing llms.txt')
 assert(robots.includes(`${site}/llms-full.txt`), 'robots.txt discovery comment is missing llms-full.txt')
+
+const opensearch = await readPublic('opensearch.xml')
+assert(opensearch.startsWith('<?xml version="1.0" encoding="UTF-8"?>'), 'opensearch.xml is missing XML declaration')
+assert(opensearch.includes('<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">'), 'opensearch.xml is missing OpenSearch namespace')
+assert(opensearch.includes('<ShortName>Slay PDF</ShortName>'), 'opensearch.xml short name is wrong')
+assert(opensearch.includes('<Description>Search Slay PDF tools and local PDF editing guides.</Description>'), 'opensearch.xml description is wrong')
+assert(opensearch.includes('<InputEncoding>UTF-8</InputEncoding>'), 'opensearch.xml input encoding is wrong')
+assert(opensearch.includes(`<Url type="text/html" method="get" template="${site}/search.html?q={searchTerms}" />`), 'opensearch.xml search URL is wrong')
 
 const securityTxt = await readPublic('.well-known/security.txt')
 assert(securityTxt.includes('Contact: https://github.com/emileakbarzadeh/slay-pdf/issues/new'), 'security.txt contact is wrong')
@@ -785,7 +797,7 @@ assert(securityTxt.includes('Policy: https://github.com/emileakbarzadeh/slay-pdf
 assert(securityTxt.includes('Preferred-Languages: en'), 'security.txt preferred language is wrong')
 assert(/Expires: \d{4}-\d{2}-\d{2}T00:00:00Z/.test(securityTxt), 'security.txt expires value is wrong')
 
-for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
+for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'opensearch.xml', 'pages.txt', 'pages.json', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))
 }
 
@@ -803,6 +815,9 @@ if (live) {
   const jsonFeedResponse = await fetch(`${site}/feed.json`)
   assert(jsonFeedResponse.ok, `live JSON feed failed ${jsonFeedResponse.status}`)
   assert((await jsonFeedResponse.json()).title === 'Slay PDF pages', 'live JSON feed content mismatch')
+  const opensearchResponse = await fetch(`${site}/opensearch.xml`)
+  assert(opensearchResponse.ok, `live OpenSearch failed ${opensearchResponse.status}`)
+  assert((await opensearchResponse.text()).includes(`<Url type="text/html" method="get" template="${site}/search.html?q={searchTerms}" />`), 'live OpenSearch content mismatch')
   const llmsFullResponse = await fetch(`${site}/llms-full.txt`)
   assert(llmsFullResponse.ok, `live llms-full.txt failed ${llmsFullResponse.status}`)
   assert((await llmsFullResponse.text()).includes('# Slay PDF full text index'), 'live llms-full.txt content mismatch')

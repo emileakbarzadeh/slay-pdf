@@ -201,14 +201,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveAttribute('href', 'https://slaypdf.com/')
   await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveAttribute('href', 'https://slaypdf.com/')
   const discoveryLinks = [
-    ['application/rss+xml', 'Slay PDF discovery feed', 'https://slaypdf.com/feed.xml'],
-    ['application/feed+json', 'Slay PDF JSON discovery feed', 'https://slaypdf.com/feed.json'],
-    ['application/json', 'Slay PDF structured page index', 'https://slaypdf.com/pages.json'],
-    ['text/plain', 'Slay PDF compact LLM index', 'https://slaypdf.com/llms.txt'],
-    ['text/plain', 'Slay PDF full text LLM index', 'https://slaypdf.com/llms-full.txt'],
+    ['search', 'application/opensearchdescription+xml', 'Slay PDF tool search', 'https://slaypdf.com/opensearch.xml'],
+    ['alternate', 'application/rss+xml', 'Slay PDF discovery feed', 'https://slaypdf.com/feed.xml'],
+    ['alternate', 'application/feed+json', 'Slay PDF JSON discovery feed', 'https://slaypdf.com/feed.json'],
+    ['alternate', 'application/json', 'Slay PDF structured page index', 'https://slaypdf.com/pages.json'],
+    ['alternate', 'text/plain', 'Slay PDF compact LLM index', 'https://slaypdf.com/llms.txt'],
+    ['alternate', 'text/plain', 'Slay PDF full text LLM index', 'https://slaypdf.com/llms-full.txt'],
   ] as const
-  for (const [type, title, href] of discoveryLinks) {
-    await expect(page.locator(`link[rel="alternate"][type="${type}"][title="${title}"]`)).toHaveAttribute('href', href)
+  for (const [rel, type, title, href] of discoveryLinks) {
+    await expect(page.locator(`link[rel="${rel}"][type="${type}"][title="${title}"]`)).toHaveAttribute('href', href)
   }
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', 'Slay PDF - Free Local PDF Editor')
   await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'en_US')
@@ -359,8 +360,15 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap-index.xml')
   expect(robots).toContain('Sitemap: https://slaypdf.com/sitemap.xml')
   expect(robots).toContain('Sitemap: https://slaypdf.com/image-sitemap.xml')
+  expect(robots).toContain('https://slaypdf.com/opensearch.xml')
   expect(robots).toContain('https://slaypdf.com/feed.xml')
   expect(robots).toContain('https://slaypdf.com/feed.json')
+
+  const opensearch = await (await page.request.get('/opensearch.xml')).text()
+  expect(opensearch).toContain('<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">')
+  expect(opensearch).toContain('<ShortName>Slay PDF</ShortName>')
+  expect(opensearch).toContain('<Description>Search Slay PDF tools and local PDF editing guides.</Description>')
+  expect(opensearch).toContain('<Url type="text/html" method="get" template="https://slaypdf.com/search.html?q={searchTerms}" />')
 
   const sitemap = await (await page.request.get('/sitemap.xml')).text()
   expect(sitemap).toContain('<loc>https://slaypdf.com/</loc>')
@@ -661,8 +669,8 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain(`href="https://slaypdf.com/${path}"`)
     expect(html).toContain(`rel="alternate" hreflang="en" href="https://slaypdf.com/${path}"`)
     expect(html).toContain(`rel="alternate" hreflang="x-default" href="https://slaypdf.com/${path}"`)
-    for (const [type, title, href] of discoveryLinks) {
-      expect(html).toContain(`rel="alternate" type="${type}" title="${title}" href="${href}"`)
+    for (const [rel, type, title, href] of discoveryLinks) {
+      expect(html).toContain(`rel="${rel}" type="${type}" title="${title}" href="${href}"`)
     }
     expect(html).toContain('<meta name="theme-color" content="#f7f7f4" />')
     expect(html).toContain('<meta name="application-name" content="Slay PDF" />')
@@ -1079,6 +1087,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llmsFull).toContain('Sitemap index: https://slaypdf.com/sitemap-index.xml')
   expect(llmsFull).toContain('Canonical sitemap: https://slaypdf.com/sitemap.xml')
   expect(llmsFull).toContain('Image sitemap: https://slaypdf.com/image-sitemap.xml')
+  expect(llmsFull).toContain('OpenSearch description: https://slaypdf.com/opensearch.xml')
   expect(llmsFull).toContain('Source index: https://slaypdf.com/pages.json')
   expect(llmsFull).toContain('Compact index: https://slaypdf.com/llms.txt')
   expect(llmsFull).toContain('## Slay PDF - Free Local PDF Editor & Adobe Acrobat Alternative')
@@ -1412,6 +1421,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/sitemap-index.xml')
   expect(llms).toContain('https://slaypdf.com/sitemap.xml')
   expect(llms).toContain('https://slaypdf.com/image-sitemap.xml')
+  expect(llms).toContain('https://slaypdf.com/opensearch.xml')
   expect(llms).toContain('https://slaypdf.com/feed.xml')
   expect(llms).toContain('https://slaypdf.com/feed.json')
 })
