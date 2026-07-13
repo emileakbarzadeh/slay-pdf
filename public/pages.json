@@ -2078,6 +2078,54 @@
       "breadcrumbId": "https://slaypdf.com/resume-pdf-editor.html#breadcrumb"
     },
     {
+      "url": "https://slaypdf.com/freelance-pdf-editor.html",
+      "path": "/freelance-pdf-editor.html",
+      "title": "Freelance PDF Editor - Slay PDF",
+      "description": "A free local PDF editor for freelancers. Merge contracts, sign agreements, organize invoices, redact client details and export PDFs without uploading files.",
+      "h1": "PDF editor for freelancers.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/freelance-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/freelance-pdf-editor.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/nonprofit-pdf-editor.html",
+      "path": "/nonprofit-pdf-editor.html",
+      "title": "Nonprofit PDF Editor - Slay PDF",
+      "description": "A free local PDF editor for nonprofits. Build grant packets, combine forms, remove pages, sign documents and export PDFs without uploading files.",
+      "h1": "PDF editor for nonprofits.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/nonprofit-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/nonprofit-pdf-editor.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/accountant-pdf-editor.html",
+      "path": "/accountant-pdf-editor.html",
+      "title": "Accountant PDF Editor - Slay PDF",
+      "description": "A free local PDF editor for accountants and bookkeepers. Organize statements, receipts, invoices and tax PDFs without uploading client documents.",
+      "h1": "PDF editor for accountants and bookkeepers.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/accountant-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/accountant-pdf-editor.html#breadcrumb"
+    },
+    {
+      "url": "https://slaypdf.com/real-estate-pdf-editor.html",
+      "path": "/real-estate-pdf-editor.html",
+      "title": "Real Estate PDF Editor - Slay PDF",
+      "description": "A free local PDF editor for real estate paperwork. Merge lease packets, sign forms, remove pages, redact details and export PDFs without uploading files.",
+      "h1": "PDF editor for real estate paperwork.",
+      "lastmod": "2026-07-13",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "webpageId": "https://slaypdf.com/real-estate-pdf-editor.html#webpage",
+      "breadcrumbId": "https://slaypdf.com/real-estate-pdf-editor.html#breadcrumb"
+    },
+    {
       "url": "https://slaypdf.com/merge-pdf-without-uploading.html",
       "path": "/merge-pdf-without-uploading.html",
       "title": "Merge PDF Without Uploading - Slay PDF",

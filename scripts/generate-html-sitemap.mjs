@@ -85,8 +85,8 @@ const sections = [
   },
   {
     title: 'Everyday document workflows',
-    description: 'Practical local PDF pages for invoices, receipts, tax paperwork and resumes that need quick cleanup before sharing or filing.',
-    paths: ['/invoice-pdf-editor.html', '/receipt-pdf-organizer.html', '/tax-document-pdf-editor.html', '/resume-pdf-editor.html'],
+    description: 'Practical local PDF pages for invoices, receipts, tax paperwork, resumes, freelance packets, nonprofit documents, accounting records and real estate paperwork.',
+    paths: ['/invoice-pdf-editor.html', '/receipt-pdf-organizer.html', '/tax-document-pdf-editor.html', '/resume-pdf-editor.html', '/freelance-pdf-editor.html', '/nonprofit-pdf-editor.html', '/accountant-pdf-editor.html', '/real-estate-pdf-editor.html'],
   },
   {
     title: 'No-upload tool workflows',

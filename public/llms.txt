@@ -527,6 +527,18 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - Resume PDF Editor - Slay PDF: https://slaypdf.com/resume-pdf-editor.html
   Summary: Edit resume PDFs locally with Slay PDF. Combine resume pages, remove extras, compress files, annotate drafts and export clean PDFs in the browser.
   Last modified: 2026-07-13
+- Freelance PDF Editor - Slay PDF: https://slaypdf.com/freelance-pdf-editor.html
+  Summary: A free local PDF editor for freelancers. Merge contracts, sign agreements, organize invoices, redact client details and export PDFs without uploading files.
+  Last modified: 2026-07-13
+- Nonprofit PDF Editor - Slay PDF: https://slaypdf.com/nonprofit-pdf-editor.html
+  Summary: A free local PDF editor for nonprofits. Build grant packets, combine forms, remove pages, sign documents and export PDFs without uploading files.
+  Last modified: 2026-07-13
+- Accountant PDF Editor - Slay PDF: https://slaypdf.com/accountant-pdf-editor.html
+  Summary: A free local PDF editor for accountants and bookkeepers. Organize statements, receipts, invoices and tax PDFs without uploading client documents.
+  Last modified: 2026-07-13
+- Real Estate PDF Editor - Slay PDF: https://slaypdf.com/real-estate-pdf-editor.html
+  Summary: A free local PDF editor for real estate paperwork. Merge lease packets, sign forms, remove pages, redact details and export PDFs without uploading files.
+  Last modified: 2026-07-13
 - Merge PDF Without Uploading - Slay PDF: https://slaypdf.com/merge-pdf-without-uploading.html
   Summary: Merge PDF files without uploading them to a Slay PDF app server. Combine, reorder, rotate and export PDFs locally in your browser.
   Last modified: 2026-07-13

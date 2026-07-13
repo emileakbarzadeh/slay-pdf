@@ -84,7 +84,7 @@ Content:
 - Role and document workflows
 - Pages for students, teachers, business documents and contract PDFs where local browser editing is enough for the job.
 - Everyday document workflows
-- Practical local PDF pages for invoices, receipts, tax paperwork and resumes that need fast cleanup before sharing or filing.
+- Practical local PDF pages for invoices, receipts, tax paperwork, resumes, freelance packets, nonprofit documents, accounting records and real estate paperwork.
 - No-upload tool workflows
 - Direct pages for common private jobs where the important point is doing the PDF work locally without a Slay PDF app-server upload.
 - No-account and platform workflows
@@ -258,6 +258,10 @@ Related links:
 - Receipt PDF organizer: https://slaypdf.com/receipt-pdf-organizer.html
 - Tax document PDF editor: https://slaypdf.com/tax-document-pdf-editor.html
 - Resume PDF editor: https://slaypdf.com/resume-pdf-editor.html
+- Freelance PDF editor: https://slaypdf.com/freelance-pdf-editor.html
+- Nonprofit PDF editor: https://slaypdf.com/nonprofit-pdf-editor.html
+- Accountant PDF editor: https://slaypdf.com/accountant-pdf-editor.html
+- Real estate PDF editor: https://slaypdf.com/real-estate-pdf-editor.html
 - Merge PDF without uploading: https://slaypdf.com/merge-pdf-without-uploading.html
 - Split PDF without uploading: https://slaypdf.com/split-pdf-without-uploading.html
 - Sign PDF without uploading: https://slaypdf.com/sign-pdf-without-uploading.html
@@ -419,7 +423,7 @@ Content:
 - Role and document workflows
 - Pages for students, teachers, business documents and contract PDFs where a local browser editor can handle the job.
 - Everyday document workflows
-- Practical local PDF pages for invoices, receipts, tax paperwork and resumes that need quick cleanup before sharing or filing.
+- Practical local PDF pages for invoices, receipts, tax paperwork, resumes, freelance packets, nonprofit documents, accounting records and real estate paperwork.
 - No-upload tool workflows
 - Direct pages for common private PDF jobs where local browser editing matters more than app-server upload workflows.
 - No-account and platform pages
@@ -599,6 +603,10 @@ Related links:
 - Receipt PDF Organizer: https://slaypdf.com/receipt-pdf-organizer.html
 - Tax Document PDF Editor: https://slaypdf.com/tax-document-pdf-editor.html
 - Resume PDF Editor: https://slaypdf.com/resume-pdf-editor.html
+- Freelance PDF Editor: https://slaypdf.com/freelance-pdf-editor.html
+- Nonprofit PDF Editor: https://slaypdf.com/nonprofit-pdf-editor.html
+- Accountant PDF Editor: https://slaypdf.com/accountant-pdf-editor.html
+- Real Estate PDF Editor: https://slaypdf.com/real-estate-pdf-editor.html
 - Merge PDF Without Uploading: https://slaypdf.com/merge-pdf-without-uploading.html
 - Split PDF Without Uploading: https://slaypdf.com/split-pdf-without-uploading.html
 - Sign PDF Without Uploading: https://slaypdf.com/sign-pdf-without-uploading.html
@@ -5242,6 +5250,122 @@ Related links:
 - Annotate PDF: https://slaypdf.com/annotate-pdf.html
 - Delete pages: https://slaypdf.com/delete-pdf-pages.html
 - Compress PDF: https://slaypdf.com/compress-pdf.html
+
+## Freelance PDF Editor - Slay PDF
+URL: https://slaypdf.com/freelance-pdf-editor.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for freelancers. Merge contracts, sign agreements, organize invoices, redact client details and export PDFs without uploading files.
+H1: PDF editor for freelancers.
+
+Content:
+- Freelancer PDF editor
+- PDF editor for freelancers.
+- Prepare contracts, invoices, proposals and client PDFs in a local browser workspace without sending documents to a Slay PDF app server.
+- Client packets
+- Merge proposals, quotes, contracts, invoices and supporting files into one ordered PDF.
+- Quick signing
+- Add visual signatures, names, dates and notes before sending a reviewed copy.
+- Private cleanup
+- Remove pages, redact visible details, compress exports and keep document work in the browser.
+- For the admin work between client jobs.
+- Freelance PDF work is usually small but time sensitive: sign an agreement, combine a scope with an invoice, remove a wrong page or export selected pages for a client.
+- Slay PDF keeps those edits local in the browser and avoids the usual account wall for common PDF cleanup.
+- Freelance PDF editor FAQ
+- Yes. You can add a visual signature, text and dates to a PDF. Use a dedicated signing platform when your contract requires identity verification or audit trails.
+- Yes. Import the PDFs, arrange the pages in the order you need and export the merged file locally from your browser.
+
+Related links:
+- Contract PDF editor: https://slaypdf.com/contract-pdf-editor.html
+- Invoice PDF editor: https://slaypdf.com/invoice-pdf-editor.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+
+## Nonprofit PDF Editor - Slay PDF
+URL: https://slaypdf.com/nonprofit-pdf-editor.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for nonprofits. Build grant packets, combine forms, remove pages, sign documents and export PDFs without uploading files.
+H1: PDF editor for nonprofits.
+
+Content:
+- Nonprofit PDF editor
+- PDF editor for nonprofits.
+- Combine forms, board packets, grant files and donor paperwork locally before exporting a clean PDF.
+- Grant packets
+- Merge application forms, budgets, letters and attachments into one ordered file.
+- Board documents
+- Remove blank pages, rotate scans, add notes and export selected pages for review.
+- Local handling
+- Keep donor, volunteer and internal documents in the browser while you prepare the final PDF.
+- Useful when the budget is small and the documents matter.
+- Nonprofit teams often need to clean up PDFs quickly: assemble grant submissions, split board packs, sign acknowledgements or compress files before uploading them to a required portal.
+- Slay PDF gives those everyday edits a free local workflow without requiring a new vendor account.
+- Nonprofit PDF editor FAQ
+- Yes. Import the source PDFs, arrange the pages, remove extras and export one merged PDF from your browser.
+- Yes. Slay PDF avoids an app-server upload for everyday edits, but your organization's document handling rules still apply.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Remove pages: https://slaypdf.com/remove-pages-from-pdf.html
+- Compress PDF: https://slaypdf.com/compress-pdf.html
+- PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
+
+## Accountant PDF Editor - Slay PDF
+URL: https://slaypdf.com/accountant-pdf-editor.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for accountants and bookkeepers. Organize statements, receipts, invoices and tax PDFs without uploading client documents.
+H1: PDF editor for accountants and bookkeepers.
+
+Content:
+- Accounting PDF editor
+- PDF editor for accountants and bookkeepers.
+- Sort statements, receipts, invoices and tax paperwork in a local browser PDF workspace before filing or sharing.
+- Client documents
+- Merge statements, receipts, invoices and supporting schedules into tidy PDF packets.
+- Page cleanup
+- Delete blanks, rotate scans, crop margins, add page numbers and export selected pages.
+- Local workflow
+- Work in the browser so everyday PDF prep avoids a Slay PDF app-server document upload.
+- For routine bookkeeping and tax-document cleanup.
+- Accounting PDF tasks are often about order and accuracy: remove the wrong attachment, combine several statements, split a client packet or make scans easier to review.
+- Slay PDF keeps these edits close to the device and exports a clean PDF when the packet is ready.
+- Accountant PDF editor FAQ
+- Yes. You can import receipts or statements, reorder pages, remove extras and export the organized PDF from your browser.
+- No. Use the document handling process required by your firm or client when regulated records are involved.
+
+Related links:
+- Tax document PDF editor: https://slaypdf.com/tax-document-pdf-editor.html
+- Receipt organizer: https://slaypdf.com/receipt-pdf-organizer.html
+- Invoice PDF editor: https://slaypdf.com/invoice-pdf-editor.html
+- Add page numbers: https://slaypdf.com/add-page-numbers-to-pdf.html
+
+## Real Estate PDF Editor - Slay PDF
+URL: https://slaypdf.com/real-estate-pdf-editor.html
+Last modified: 2026-07-13
+Summary: A free local PDF editor for real estate paperwork. Merge lease packets, sign forms, remove pages, redact details and export PDFs without uploading files.
+H1: PDF editor for real estate paperwork.
+
+Content:
+- Real estate PDF editor
+- PDF editor for real estate paperwork.
+- Prepare lease packets, disclosure forms, scanned IDs and property documents locally before sending or filing.
+- Lease packets
+- Merge applications, disclosures, IDs, inspection pages and supporting documents into one PDF.
+- Fast corrections
+- Remove pages, rotate scans, add notes, sign forms and export a corrected copy.
+- Private prep
+- Redact visible details and keep everyday edits in the browser before sharing the exported file.
+- For packets that need to be right before they are shared.
+- Real estate PDFs can include leases, applications, proof-of-income pages, IDs, disclosures and scanned forms. Small fixes should not require bouncing through several upload tools.
+- Slay PDF gives those edits a single local browser workspace for arranging, signing, redacting and exporting pages.
+- Real estate PDF editor FAQ
+- Yes. Import the documents, arrange the page order and export one PDF from the browser.
+- No. Use the required signing or transaction platform when identity verification, audit trails or compliance records are required.
+
+Related links:
+- Merge PDF: https://slaypdf.com/merge-pdf.html
+- Sign PDF: https://slaypdf.com/sign-pdf.html
+- Redact PDF: https://slaypdf.com/redact-pdf.html
+- Organize pages: https://slaypdf.com/organize-pdf-pages.html
 
 ## Merge PDF Without Uploading - Slay PDF
 URL: https://slaypdf.com/merge-pdf-without-uploading.html

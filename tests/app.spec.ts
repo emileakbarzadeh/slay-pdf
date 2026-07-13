@@ -587,6 +587,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'receipt-pdf-organizer.html',
     'tax-document-pdf-editor.html',
     'resume-pdf-editor.html',
+    'freelance-pdf-editor.html',
+    'nonprofit-pdf-editor.html',
+    'accountant-pdf-editor.html',
+    'real-estate-pdf-editor.html',
     'merge-pdf-without-uploading.html',
     'split-pdf-without-uploading.html',
     'sign-pdf-without-uploading.html',
@@ -883,7 +887,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     expect(html).toContain('Open editor')
   }
   expect(workflowPageCount).toBe(40)
-  expect(toolAppPageCount).toBe(206)
+  expect(toolAppPageCount).toBe(210)
 
   const previewImage = await page.request.get('/og-image.png')
   expect(previewImage.ok()).toBe(true)
@@ -1065,6 +1069,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(llms).toContain('https://slaypdf.com/receipt-pdf-organizer.html')
   expect(llms).toContain('https://slaypdf.com/tax-document-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/resume-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/freelance-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/nonprofit-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/accountant-pdf-editor.html')
+  expect(llms).toContain('https://slaypdf.com/real-estate-pdf-editor.html')
   expect(llms).toContain('https://slaypdf.com/merge-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/split-pdf-without-uploading.html')
   expect(llms).toContain('https://slaypdf.com/sign-pdf-without-uploading.html')
@@ -1325,6 +1333,10 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   expect(tools).toContain('/receipt-pdf-organizer.html')
   expect(tools).toContain('/tax-document-pdf-editor.html')
   expect(tools).toContain('/resume-pdf-editor.html')
+  expect(tools).toContain('/freelance-pdf-editor.html')
+  expect(tools).toContain('/nonprofit-pdf-editor.html')
+  expect(tools).toContain('/accountant-pdf-editor.html')
+  expect(tools).toContain('/real-estate-pdf-editor.html')
   expect(tools).toContain('/merge-pdf-without-uploading.html')
   expect(tools).toContain('/split-pdf-without-uploading.html')
   expect(tools).toContain('/sign-pdf-without-uploading.html')
