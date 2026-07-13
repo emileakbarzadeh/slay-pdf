@@ -39,6 +39,7 @@ const prominentPaths = [
   '/sitemap.html',
   '/privacy.html',
   '/pdf-privacy-security.html',
+  '/pdf-privacy-checklist.html',
   '/online-pdf-editor.html',
   '/adobe-acrobat-alternative.html',
   '/edit-pdf-without-uploading.html',

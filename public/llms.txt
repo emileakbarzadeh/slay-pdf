@@ -35,6 +35,9 @@ The app is static and client-side. PDF documents and edits stay in the user's br
 - PDF Privacy & Security Model - Slay PDF: https://slaypdf.com/pdf-privacy-security.html
   Summary: Slay PDF security model for local PDF editing: browser-only processing, local workspace storage, password handling, WebAssembly engines and practical privacy limits.
   Last modified: 2026-07-13
+- PDF Privacy Checklist - Slay PDF: https://slaypdf.com/pdf-privacy-checklist.html
+  Summary: A practical PDF privacy checklist for choosing local PDF tools, avoiding unnecessary uploads, reviewing redaction risks and handling sensitive documents safely.
+  Last modified: 2026-07-13
 - Online PDF Editor - Slay PDF: https://slaypdf.com/online-pdf-editor.html
   Summary: Use Slay PDF as a free online PDF editor that runs locally in your browser. Merge, split, sign, organize, redact and export PDFs without app-server uploads.
   Last modified: 2026-07-13

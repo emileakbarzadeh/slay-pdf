@@ -11,6 +11,8 @@ Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 
 Privacy and security model: https://slaypdf.com/pdf-privacy-security.html
 
+PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
+
 ## What It Does
 
 - Import PDFs plus PNG, JPEG, and WebP images.
@@ -29,11 +31,19 @@ The practical limits are still the user's browser, memory, CPU, and storage quot
 
 Security model details: https://slaypdf.com/pdf-privacy-security.html
 
+PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
+
 ## Link To Slay PDF
 
 Use the backlink kit when adding Slay PDF to open-source lists, privacy tool roundups, PDF utility directories, student resource pages, or Adobe Acrobat alternative comparisons:
 
 Outreach checklist: [docs/backlink-outreach.md](docs/backlink-outreach.md)
+
+Resource pages can also cite the PDF privacy checklist when they need neutral criteria rather than product copy:
+
+```md
+[PDF privacy checklist](https://slaypdf.com/pdf-privacy-checklist.html) - practical criteria for choosing no-upload and local PDF tools.
+```
 
 ```md
 [Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.

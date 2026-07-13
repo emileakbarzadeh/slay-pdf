@@ -7,6 +7,8 @@ Use this checklist when submitting Slay PDF to directories, roundups, newsletter
 - App: https://slaypdf.com/
 - Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 - Free PDF editor overview: https://slaypdf.com/free-pdf-editor.html
+- PDF privacy checklist: https://slaypdf.com/pdf-privacy-checklist.html
+- Security model: https://slaypdf.com/pdf-privacy-security.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Source: https://github.com/emileakbarzadeh/slay-pdf
 
@@ -26,6 +28,12 @@ Markdown:
 [Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.
 ```
 
+Resource-page citation:
+
+```md
+[PDF privacy checklist](https://slaypdf.com/pdf-privacy-checklist.html) - practical criteria for choosing no-upload and local PDF tools.
+```
+
 HTML:
 
 ```html
@@ -39,6 +47,7 @@ HTML:
 - PDF utility directories.
 - Adobe Acrobat alternative comparison pages.
 - Student, teacher, nonprofit, freelancer, and small-business resource pages.
+- Library, school, and internal team pages that explain how to choose safer document tools.
 - Browser-based productivity tool directories.
 - Developer launch posts that can link to both the app and the GitHub repo.
 
