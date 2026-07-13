@@ -30,6 +30,9 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | abhi18av/awesome-pdf | Online PDF tools | Pull request opened: https://github.com/abhi18av/awesome-pdf/pull/44 | Watch for maintainer feedback; entry keeps the no-account/no-server-upload wording scoped to everyday edits. |
 | aviaryan/awesome-no-login-web-apps | No-login document editor web apps | Pull request opened: https://github.com/aviaryan/awesome-no-login-web-apps/pull/505 | Watch for maintainer feedback; upstream checker includes Slay PDF but fails on unrelated pre-existing broken links. |
 | nologin-tools/awesome-nologin-tools | No-login productivity tools directory | Pull request opened: https://github.com/nologin-tools/awesome-nologin-tools/pull/1 | Watch for maintainer feedback; entry includes the app URL, source repo, and tools.json dataset row. |
+| flick9000/awesome-alternatives | Free/open-source Adobe Acrobat Pro alternatives | Pull request opened: https://github.com/flick9000/awesome-alternatives/pull/4 | Watch for maintainer feedback; entry is in the existing Acrobat Pro section. |
+| leemcd56/awesome-subscription-free | Subscription-free Adobe Acrobat Pro alternatives | Pull request opened: https://github.com/leemcd56/awesome-subscription-free/pull/2 | Watch for maintainer feedback; entry uses the list's existing price-only format. |
+| hardBSDk/awesome-alternatives | Open-source Adobe Acrobat alternatives | Pull request opened: https://github.com/hardBSDk/awesome-alternatives/pull/1 | Watch for maintainer feedback; entry is added to the existing Acrobat row in Office. |
 
 ## High-Fit Candidates
 
@@ -42,6 +45,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | The Alt Stack | https://github.com/altstackHQ/altstack-data | https://github.com/emileakbarzadeh/slay-pdf | Open-source Acrobat-style PDF editor alternative | Data lives in `data/tools.json`; verify taxonomy and schema before submitting. |
 | Product Hunt | https://www.producthunt.com/ | https://slaypdf.com/ | Free local PDF editor launch | Needs launch copy, screenshots, and a maker account. |
 | AlternativeTo | https://alternativeto.net/ | https://slaypdf.com/adobe-acrobat-alternative.html | Adobe Acrobat alternative | Add only with accurate feature tags and source link. |
+| hannahbellesheart/awesome-Adobe-Alternatives | https://github.com/hannahbellesheart/awesome-Adobe-Alternatives | https://slaypdf.com/ | Adobe Acrobat alternative | Very low activity and no visible stars; lower priority than maintained alternatives lists. |
 
 ## Deferred Until More Maturity
 
@@ -49,6 +53,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | --- | --- | --- |
 | Lissy93/awesome-privacy | Requires mature projects; Slay PDF's public GitHub repo was created on 2026-07-12. | Public usage, issue/PR activity, a few releases, and enough age to satisfy the maturity guideline. |
 | altstackHQ/altstack-data | Requires traction, release tags, and self-hostability evidence; the repo now has a release, but not yet visible traction. | Stars, external mentions, release history, and a clear category fit. |
+| RepoRanker | Submission appears to require interactive site flow and review/account fields outside this repo. | Submit manually with the GitHub repo URL, tagline, type, and topics if using a browser session. |
 | toolimi/free-pdf-tools | First-party directory for Toolimi's own PDF tools, not a neutral third-party list. | Skip unless they explicitly invite external tools. |
 
 ## Resource-Page Outreach
