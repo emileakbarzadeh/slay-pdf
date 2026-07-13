@@ -2,6 +2,9 @@ import { readFile, writeFile } from 'node:fs/promises'
 
 const rootDir = new URL('../', import.meta.url)
 const publicDir = new URL('../public/', import.meta.url)
+const site = 'https://slaypdf.com/'
+const sourceCodeUrl = 'https://github.com/emileakbarzadeh/slay-pdf'
+const licenseUrl = 'https://www.gnu.org/licenses/agpl-3.0.en.html'
 
 function structuredDataScripts(html, file) {
   return [...html.matchAll(/^[ \t]*<script type="application\/ld\+json"(?: [^>]*)?>([\s\S]*?)^[ \t]*<\/script>/gm)]
@@ -92,12 +95,36 @@ const searchAction = {
   'query-input': 'required name=search_term_string',
 }
 
+const sourceCode = {
+  '@type': 'SoftwareSourceCode',
+  '@id': `${site}#source-code`,
+  name: 'Slay PDF source code',
+  url: sourceCodeUrl,
+  codeRepository: sourceCodeUrl,
+  license: licenseUrl,
+  programmingLanguage: ['TypeScript', 'JavaScript', 'HTML', 'CSS'],
+  runtimePlatform: ['Web browser', 'WebAssembly'],
+  isPartOf: {
+    '@id': `${site}#app`,
+  },
+  publisher: {
+    '@id': `${site}#organization`,
+  },
+  targetProduct: {
+    '@id': `${site}#app`,
+  },
+}
+
 function isSiteNavigationList(node) {
   return node['@type'] === 'ItemList' && (
     node['@id'] === siteNavigation['@id'] ||
     node.name === siteNavigation.name ||
     node.itemListElement?.some((item) => item.item?.['@type'] === 'SiteNavigationElement')
   )
+}
+
+function isSourceCodeNode(node) {
+  return node['@type'] === 'SoftwareSourceCode' || node['@id'] === sourceCode['@id']
 }
 
 const url = new URL('index.html', rootDir)
@@ -115,7 +142,7 @@ for (const { fullMatch, attributes, data } of structuredDataScripts(html, 'index
     ...data,
     '@graph': [
       ...data['@graph']
-        .filter((node) => !isSiteNavigationList(node))
+        .filter((node) => !isSiteNavigationList(node) && !isSourceCodeNode(node))
         .map((node) => (
           node['@type'] === 'WebSite'
             ? {
@@ -125,6 +152,7 @@ for (const { fullMatch, attributes, data } of structuredDataScripts(html, 'index
             }
             : node
         )),
+      sourceCode,
       siteNavigation,
     ],
   }

@@ -250,6 +250,18 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     potentialAction?: unknown
     hasPart?: { '@type'?: string; '@id'?: string; url?: string; name?: string }[]
   } | undefined
+  const sourceCode = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'SoftwareSourceCode') as {
+    '@id'?: string
+    name?: string
+    url?: string
+    codeRepository?: string
+    license?: string
+    programmingLanguage?: string[]
+    runtimePlatform?: string[]
+    isPartOf?: { '@id'?: string }
+    publisher?: { '@id'?: string }
+    targetProduct?: { '@id'?: string }
+  } | undefined
   const siteNavigation = siteGraph.find((node: { '@type'?: string; '@id'?: string }) => node['@type'] === 'ItemList' && node['@id'] === 'https://slaypdf.com/#site-navigation') as {
     name?: string
     itemListElement?: {
@@ -276,6 +288,18 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
       urlTemplate: 'https://slaypdf.com/search.html?q={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
+  })
+  expect(sourceCode).toMatchObject({
+    '@id': 'https://slaypdf.com/#source-code',
+    name: 'Slay PDF source code',
+    url: 'https://github.com/emileakbarzadeh/slay-pdf',
+    codeRepository: 'https://github.com/emileakbarzadeh/slay-pdf',
+    license: 'https://www.gnu.org/licenses/agpl-3.0.en.html',
+    programmingLanguage: ['TypeScript', 'JavaScript', 'HTML', 'CSS'],
+    runtimePlatform: ['Web browser', 'WebAssembly'],
+    isPartOf: { '@id': 'https://slaypdf.com/#app' },
+    publisher: { '@id': 'https://slaypdf.com/#organization' },
+    targetProduct: { '@id': 'https://slaypdf.com/#app' },
   })
   expect(siteNavigation?.name).toBe('Slay PDF site navigation')
   const rootFaq = siteGraph.find((node: { '@type'?: string }) => node['@type'] === 'FAQPage') as {

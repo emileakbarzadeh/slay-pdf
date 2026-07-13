@@ -345,6 +345,7 @@ function assertSiteIdentitySchema(html, file) {
   const graph = blocks.find((block) => Array.isArray(block['@graph']))?.['@graph'] ?? []
   const organization = graph.find((node) => node['@type'] === 'Organization')
   const website = graph.find((node) => node['@type'] === 'WebSite')
+  const sourceCode = graph.find((node) => node['@type'] === 'SoftwareSourceCode')
   const siteNavigation = graph.find((node) => node['@type'] === 'ItemList' && node['@id'] === `${site}/#site-navigation`)
   const app = blocks.find((block) => block['@type'] === 'WebApplication')
 
@@ -377,6 +378,18 @@ function assertSiteIdentitySchema(html, file) {
     }
   })
   assert(JSON.stringify(website.hasPart) === JSON.stringify(expectedHasPart), `${file} WebSite hasPart entries must match prominent site pages`)
+
+  assert(sourceCode, `${file} is missing SoftwareSourceCode JSON-LD`)
+  assert(sourceCode['@id'] === `${site}/#source-code`, `${file} SoftwareSourceCode @id is wrong`)
+  assert(sourceCode.name === 'Slay PDF source code', `${file} SoftwareSourceCode name is wrong`)
+  assert(sourceCode.url === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} SoftwareSourceCode URL is wrong`)
+  assert(sourceCode.codeRepository === 'https://github.com/emileakbarzadeh/slay-pdf', `${file} SoftwareSourceCode repository is wrong`)
+  assert(sourceCode.license === 'https://www.gnu.org/licenses/agpl-3.0.en.html', `${file} SoftwareSourceCode license is wrong`)
+  assert(JSON.stringify(sourceCode.programmingLanguage) === JSON.stringify(['TypeScript', 'JavaScript', 'HTML', 'CSS']), `${file} SoftwareSourceCode programming languages are wrong`)
+  assert(JSON.stringify(sourceCode.runtimePlatform) === JSON.stringify(['Web browser', 'WebAssembly']), `${file} SoftwareSourceCode runtime platforms are wrong`)
+  assert(sourceCode.isPartOf?.['@id'] === `${site}/#app`, `${file} SoftwareSourceCode app reference is wrong`)
+  assert(sourceCode.publisher?.['@id'] === `${site}/#organization`, `${file} SoftwareSourceCode publisher is wrong`)
+  assert(sourceCode.targetProduct?.['@id'] === `${site}/#app`, `${file} SoftwareSourceCode target product is wrong`)
 
   assert(siteNavigation, `${file} is missing site navigation ItemList JSON-LD`)
   const expectedNavigation = prominentNavigationUrls.map((url, index) => {
