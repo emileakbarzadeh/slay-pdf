@@ -1,16 +1,13 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import type { DragEvent, MouseEvent } from 'react'
-import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, useSensors, type DragEndEvent } from '@dnd-kit/core'
-import { SortableContext, sortableKeyboardCoordinates } from '@dnd-kit/sortable'
-import { CheckSquare, ChevronDown, Copy, Download, FilePlus2, Grid2X2, Github, History, Import, Menu, MousePointer2, PanelRightClose, PanelRightOpen, PencilLine, Redo2, RotateCcw, RotateCw, Ruler, Scissors, ShieldCheck, Trash2, Undo2, Wrench, X } from 'lucide-react'
+import { CheckSquare, ChevronDown, Copy, Download, FilePlus2, Grid2X2, Github, History, Import, Menu, MousePointer2, PanelRightClose, PanelRightOpen, PencilLine, Redo2, RotateCcw, RotateCw, Ruler, ShieldCheck, Trash2, Undo2, Wrench, X } from 'lucide-react'
 import { useWorkspace } from './store'
 import { isWorkspacePage } from './types'
 import './styles.css'
 
 const Inspector = lazy(async () => ({ default: (await import('./components/Inspector')).Inspector }))
 const PageEditor = lazy(async () => ({ default: (await import('./components/PageEditor')).PageEditor }))
-const PageThumbnail = lazy(async () => ({ default: (await import('./components/PageThumbnail')).PageThumbnail }))
-const SplitMarkerTile = lazy(async () => ({ default: (await import('./components/SplitMarkerTile')).SplitMarkerTile }))
+const WorkspacePageGrid = lazy(async () => ({ default: (await import('./components/WorkspacePageGrid')).WorkspacePageGrid }))
 
 const shortcutRows = [
   { keys: 'Cmd A', action: 'Select all pages' },
@@ -91,10 +88,6 @@ export default function App() {
   const internalDrag = useRef(false)
   const selectionAnchor = useRef<string | undefined>(undefined)
   const state = useWorkspace()
-  const sensors = useSensors(
-    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
-    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
-  )
 
   useEffect(() => { void state.hydrate() }, []) // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -159,7 +152,6 @@ export default function App() {
     if (event.dataTransfer.types.includes('Files')) importFiles(event.dataTransfer.files)
   }
   const pageEntries = state.pages.filter(isWorkspacePage)
-  const pageNumbers = new Map(pageEntries.map((page, index) => [page.id, index + 1]))
   const activePage = pageEntries.find((page) => page.id === editorPage)
   const activeSource = activePage && state.sources.find((source) => source.id === activePage.sourceId)
   const selectedPages = pageEntries.filter((page) => state.selected.includes(page.id))
@@ -184,7 +176,6 @@ export default function App() {
     if (firstSelected) setPosterOrientation(firstSelected.width > firstSelected.height ? 'landscape' : 'portrait')
     setToolModal('posterise')
   }
-  const onDragEnd = ({ active, over }: DragEndEvent) => over && state.reorder(String(active.id), String(over.id))
   const clearSelection = () => {
     selectionAnchor.current = undefined
     state.selectNone()
@@ -462,37 +453,21 @@ export default function App() {
             <em><Import size={15} /> Choose files</em>
           </button>
           <div className="privacy-line"><ShieldCheck size={15} /> Processing and autosave stay on this device.</div>
-        </section> : <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={onDragEnd}>
-          <SortableContext items={state.pages.map((page) => page.id)}>
-            <section className="page-grid" aria-label="Document pages" onClick={(event) => { if (event.target === event.currentTarget) clearSelection() }}>
-              {state.pages.map((page) => isWorkspacePage(page)
-                ? <Suspense key={page.id} fallback={null}>
-                    <PageThumbnail
-                      page={page}
-                      source={state.sources.find((source) => source.id === page.sourceId)}
-                      number={pageNumbers.get(page.id) ?? 1}
-                      selected={state.selected.includes(page.id)}
-                      onSelect={(event) => selectPage(page.id, event)}
-                      onOpen={() => setEditorPage(page.id)}
-                      onContextMenu={(event) => openPageMenu(event, page.id, pageNumbers.get(page.id) ?? 1, state.selected.includes(page.id))}
-                    />
-                  </Suspense>
-                : <Suspense key={page.id} fallback={null}>
-                    <SplitMarkerTile id={page.id} onRemove={() => state.removeSplitMarker(page.id)} />
-                  </Suspense>)}
-              <div className="add-pages-tile">
-                <button type="button" className="add-pages-main" onClick={() => input.current?.click()}><FilePlus2 size={24} /><span>Add pages</span></button>
-                <div className="add-pages-actions">
-                  <button type="button" className="add-pages-toggle" aria-haspopup="menu"><span>Add…</span><ChevronDown size={15} /></button>
-                  <div className="add-pages-menu" role="menu">
-                    <button type="button" role="menuitem" onClick={() => input.current?.click()}><Import size={16} /> Add pages</button>
-                    <button type="button" role="menuitem" onClick={state.addSplitMarker}><Scissors size={16} /> Split PDF marker</button>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </SortableContext>
-        </DndContext>}
+        </section> : <Suspense fallback={null}>
+          <WorkspacePageGrid
+            pages={state.pages}
+            sources={state.sources}
+            selected={state.selected}
+            onClearSelection={clearSelection}
+            onSelectPage={selectPage}
+            onOpenPage={setEditorPage}
+            onOpenPageMenu={openPageMenu}
+            onReorder={state.reorder}
+            onRemoveSplitMarker={state.removeSplitMarker}
+            onAddPages={() => input.current?.click()}
+            onAddSplitMarker={state.addSplitMarker}
+          />
+        </Suspense>}
       </main>
       {inspectorOpen && pageEntries.length > 0 && <Suspense fallback={null}>
         <Inspector mobileExpanded={mobileInspectorExpanded} onToggleMobile={() => setMobileInspectorExpanded((value) => !value)} />

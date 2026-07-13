@@ -22,7 +22,7 @@ const initialChunk = path.join(dist, 'assets', scriptMatch[1])
 assert(fs.existsSync(initialChunk), `Initial app chunk is missing: ${scriptMatch[1]}`)
 
 const initialSize = fs.statSync(initialChunk).size
-const maxInitialChunkBytes = 425 * 1024
+const maxInitialChunkBytes = 375 * 1024
 assert(
   initialSize <= maxInitialChunkBytes,
   `Initial app chunk is ${(initialSize / 1024).toFixed(1)} KiB; expected <= ${maxInitialChunkBytes / 1024} KiB. Keep PDF parsing/rendering lazy.`
@@ -32,12 +32,15 @@ const initialSource = fs.readFileSync(initialChunk, 'utf8')
 for (const eagerPdfToken of ['pdf.worker.min', 'GlobalWorkerOptions', 'getDocument(']) {
   assert(!initialSource.includes(eagerPdfToken), `Initial app chunk includes PDF.js token "${eagerPdfToken}".`)
 }
+for (const eagerDndToken of ['DndContext', 'PointerSensor', 'sortableKeyboardCoordinates', 'useSortable']) {
+  assert(!initialSource.includes(eagerDndToken), `Initial app chunk includes drag-and-drop token "${eagerDndToken}".`)
+}
 
 const assetNames = fs.readdirSync(path.join(dist, 'assets'))
 const lazyPdfChunk = assetNames.find((name) => /^pdf-[\w-]+\.js$/.test(name))
 assert(lazyPdfChunk, 'Expected a lazy pdf-*.js chunk for PDF parsing/rendering.')
 
-for (const lazyChunkPrefix of ['Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
+for (const lazyChunkPrefix of ['WorkspacePageGrid-', 'Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
   assert(assetNames.some((name) => name.startsWith(lazyChunkPrefix) && name.endsWith('.js')), `Expected a lazy ${lazyChunkPrefix}*.js chunk.`)
 }
 
