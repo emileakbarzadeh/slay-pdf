@@ -2,6 +2,13 @@
 
 Use this as the working list for Slay PDF backlink outreach. Keep private credentials, contact emails, and account details out of this repo.
 
+## Submission Assets
+
+- App: https://slaypdf.com/
+- Source: https://github.com/emileakbarzadeh/slay-pdf
+- Latest release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
+- Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
+
 ## Submitted
 
 | Target | Fit | Status | Follow-up |
@@ -23,6 +30,14 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | The Alt Stack | https://github.com/altstackHQ/altstack-data | https://github.com/emileakbarzadeh/slay-pdf | Open-source Acrobat-style PDF editor alternative | Data lives in `data/tools.json`; verify taxonomy and schema before submitting. |
 | Product Hunt | https://www.producthunt.com/ | https://slaypdf.com/ | Free local PDF editor launch | Needs launch copy, screenshots, and a maker account. |
 | AlternativeTo | https://alternativeto.net/ | https://slaypdf.com/adobe-acrobat-alternative.html | Adobe Acrobat alternative | Add only with accurate feature tags and source link. |
+
+## Deferred Until More Maturity
+
+| Target | Reason to wait | Evidence to gather first |
+| --- | --- | --- |
+| Lissy93/awesome-privacy | Requires mature projects; Slay PDF's public GitHub repo was created on 2026-07-12. | Public usage, issue/PR activity, a few releases, and enough age to satisfy the maturity guideline. |
+| altstackHQ/altstack-data | Requires traction, release tags, and self-hostability evidence; the repo now has a release, but not yet visible traction. | Stars, external mentions, release history, and a clear category fit. |
+| toolimi/free-pdf-tools | First-party directory for Toolimi's own PDF tools, not a neutral third-party list. | Skip unless they explicitly invite external tools. |
 
 ## Resource-Page Outreach
 

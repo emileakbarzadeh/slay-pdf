@@ -7,6 +7,8 @@ Slay PDF is a free local PDF editor and Adobe Acrobat alternative for everyday P
 
 Live app: https://slaypdf.com/
 
+Latest release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
+
 Backlink kit: https://slaypdf.com/link-to-slay-pdf.html
 
 Privacy and security model: https://slaypdf.com/pdf-privacy-security.html

@@ -11,6 +11,7 @@ Use this checklist when submitting Slay PDF to directories, roundups, newsletter
 - Security model: https://slaypdf.com/pdf-privacy-security.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Source: https://github.com/emileakbarzadeh/slay-pdf
+- Release: https://github.com/emileakbarzadeh/slay-pdf/releases/tag/v0.1.0
 - Target tracker: docs/backlink-targets.md
 
 ## Copy
@@ -72,4 +73,5 @@ Source badge:
 - Link to the privacy checklist for resource pages that prefer neutral criteria over product copy.
 - Mention that the app is client-side and static, but avoid implying documents are protected from browser extensions, malware, or the user's own device.
 - Include the GitHub repo where open-source proof helps the listing.
+- Include the latest release link where directories ask for a stable version or proof that the project is more than a source snapshot.
 - Track submitted URLs, account used, date submitted, and status in a separate private sheet if credentials or private contact details are involved.
