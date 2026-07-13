@@ -8,6 +8,9 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | --- | --- | --- | --- |
 | pluja/awesome-privacy | Privacy-respecting Office tools | Pull request opened: https://github.com/pluja/awesome-privacy/pull/931 | Watch for maintainer feedback and keep the entry factual. |
 | KenneyNL/Adobe-Alternatives | Acrobat editor alternatives | Pull request opened: https://github.com/KenneyNL/Adobe-Alternatives/pull/246 | Watch for maintainer feedback and keep the entry in the Acrobat section. |
+| hwlsniper/awesome-pdf-tools | Privacy-first, client-side PDF tools | Pull request opened: https://github.com/hwlsniper/awesome-pdf-tools/pull/2 | Watch for maintainer feedback and keep the client-side/no-upload claim scoped to supported workflows. |
+| johamane01-collab/awesome-pdf-tools | Free online PDF tools | Pull request opened: https://github.com/johamane01-collab/awesome-pdf-tools/pull/5 | Watch for maintainer feedback and keep the entry concise. |
+| diegoleme/awesome-open-source-alternatives | Open-source alternatives to famous apps | Pull request opened: https://github.com/diegoleme/awesome-open-source-alternatives/pull/30 | Watch for maintainer feedback on the new Adobe Acrobat section. |
 
 ## High-Fit Candidates
 
@@ -17,6 +20,7 @@ Use this as the working list for Slay PDF backlink outreach. Keep private creden
 | OSS Software | https://osssoftware.org/ | https://github.com/emileakbarzadeh/slay-pdf | Open-source alternative to Acrobat-style PDF tools | Check submit flow and category before adding. |
 | RepoRanker | https://reporanker.com/ | https://github.com/emileakbarzadeh/slay-pdf | Active open-source repo with a live demo | Good fit for source-first discovery. |
 | PrivacyTools.io trending tools | https://privacytools.io/trending | https://github.com/emileakbarzadeh/slay-pdf | Open-source privacy utility | Verify whether submissions are open and whether PDF tools fit the directory taxonomy. |
+| The Alt Stack | https://github.com/altstackHQ/altstack-data | https://github.com/emileakbarzadeh/slay-pdf | Open-source Acrobat-style PDF editor alternative | Data lives in `data/tools.json`; verify taxonomy and schema before submitting. |
 | Product Hunt | https://www.producthunt.com/ | https://slaypdf.com/ | Free local PDF editor launch | Needs launch copy, screenshots, and a maker account. |
 | AlternativeTo | https://alternativeto.net/ | https://slaypdf.com/adobe-acrobat-alternative.html | Adobe Acrobat alternative | Add only with accurate feature tags and source link. |
 
