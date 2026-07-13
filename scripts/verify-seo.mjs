@@ -4,6 +4,8 @@ import { basename } from 'node:path'
 const site = 'https://slaypdf.com'
 const publicDir = new URL('../public/', import.meta.url)
 const live = process.argv.includes('--live')
+const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'))
+const softwareVersion = packageJson.version
 const appKeywords = [
   'local PDF editor',
   'free PDF editor',
@@ -282,6 +284,8 @@ function assertToolAppSchema({ html, file, url, title, description, h1 }) {
   assert(toolApp.alternateName === h1, `${file} tool WebApplication alternateName must match h1`)
   assert(toolApp.description === description, `${file} tool WebApplication description must match meta description`)
   assert(toolApp.url === url, `${file} tool WebApplication URL is wrong`)
+  assert(toolApp.dateModified === sitemapMetadata.get(url)?.lastmod, `${file} tool WebApplication dateModified must match sitemap lastmod`)
+  assert(toolApp.softwareVersion === softwareVersion, `${file} tool WebApplication softwareVersion is wrong`)
   assert(toolApp.applicationCategory === 'BusinessApplication', `${file} tool WebApplication category is wrong`)
   assert(toolApp.applicationSubCategory === 'PDF editor', `${file} tool WebApplication subcategory is wrong`)
   assert(toolApp.operatingSystem === 'Web', `${file} tool WebApplication operating system is wrong`)
@@ -412,6 +416,8 @@ function assertSiteIdentitySchema(html, file) {
   assert(app['@id'] === `${site}/#app`, `${file} WebApplication @id is wrong`)
   assert(app.name === 'Slay PDF', `${file} WebApplication name is wrong`)
   assert(app.url === `${site}/`, `${file} WebApplication URL is wrong`)
+  assert(app.dateModified === sitemapMetadata.get(`${site}/`)?.lastmod, `${file} WebApplication dateModified must match sitemap lastmod`)
+  assert(app.softwareVersion === softwareVersion, `${file} WebApplication softwareVersion is wrong`)
   assert(app.isPartOf?.['@id'] === `${site}/#website`, `${file} WebApplication isPartOf is wrong`)
   assert(app.publisher?.['@id'] === `${site}/#organization`, `${file} WebApplication publisher is wrong`)
   assert(app.offers?.price === '0', `${file} WebApplication price is wrong`)

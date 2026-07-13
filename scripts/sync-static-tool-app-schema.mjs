@@ -18,6 +18,8 @@ const actionPlatform = [
   'https://schema.org/DesktopWebPlatform',
   'https://schema.org/MobileWebPlatform',
 ]
+const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'))
+const softwareVersion = packageJson.version
 
 function titleFor(html) {
   return html.match(/<title>([^<]+)<\/title>/)?.[1]?.trim()
@@ -33,6 +35,12 @@ function tagContent(html, selector) {
 
 function linkHref(html, selector) {
   return html.match(new RegExp(`<link ${selector} href="([^"]+)"\\s*/>`))?.[1]
+}
+
+function dateModifiedFor(html, file) {
+  const updatedTime = tagContent(html, 'property="og:updated_time"')
+  if (!updatedTime) throw new Error(`${file} is missing Open Graph updated time`)
+  return updatedTime.split('T')[0]
 }
 
 function decodeHtml(value) {
@@ -80,6 +88,7 @@ function toolAppFor(html, file) {
   const title = titleFor(html)
   const headline = h1For(html)
   const description = tagContent(html, 'name="description"')
+  const dateModified = dateModifiedFor(html, file)
 
   if (!canonical) throw new Error(`${file} is missing a canonical URL`)
   if (!title) throw new Error(`${file} is missing a title`)
@@ -94,6 +103,8 @@ function toolAppFor(html, file) {
     alternateName: headline,
     description,
     url: canonical,
+    dateModified,
+    softwareVersion,
     applicationCategory: 'BusinessApplication',
     applicationSubCategory: 'PDF editor',
     operatingSystem: 'Web',
