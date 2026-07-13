@@ -49,6 +49,11 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(36px, 7vw, 72px); line-height
 .compare th, .compare td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 .compare th { color: var(--ink); background: #fff3f6; font-weight: 900; }
 .compare tr:last-child td { border-bottom: 0; }
+.snippet-list { display: grid; gap: 12px; }
+.snippet { display: grid; gap: 10px; padding: 15px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); }
+.snippet h3 { margin: 0; font-size: 16px; }
+.snippet pre { margin: 0; max-width: 100%; overflow-x: auto; padding: 12px; border: 1px solid #ead6dc; border-radius: 7px; background: #fff3f6; color: var(--ink); font-size: 13px; line-height: 1.45; }
+.snippet code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
 .search-form { display: grid; gap: 10px; }
 .search-form label { color: var(--ink); font-weight: 900; }
 .search-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; }

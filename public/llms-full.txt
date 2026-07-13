@@ -642,6 +642,10 @@ Content:
 - Directory copy: Slay PDF helps people split, merge, sign, resize, posterise, redact, OCR and edit PDFs locally in a modern browser. It is a static web app, so there is no app-server PDF upload for everyday edits.
 - Markdown: [Slay PDF](https://slaypdf.com/) - free local PDF editor for splitting, merging, signing and editing PDFs in the browser.
 - HTML: <a href="https://slaypdf.com/">Slay PDF - free local PDF editor</a>
+- Badges and embeds
+- Use these when a README, resource page or internal tools page wants a small visual link.
+- [![Slay PDF - local PDF editor](https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f)](https://slaypdf.com/) Source badge [![Source: AGPL-3.0](https://img.shields.io/badge/source-AGPL--3.0-24181d)](https://github.com/emileakbarzadeh/slay-pdf) HTML badge <a href="https://slaypdf.com/"><img alt="Slay PDF - local PDF editor" src="https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f"></a> Anchor text options Use natural anchor text that matches the page context: Slay PDF, local PDF editor, browser PDF editor, open-source PDF editor, private PDF editor, no-upload PDF editor, Adobe Acrobat alternative, PDF privacy checklist.
+- Best target pages
 - Useful facts for reviewers and list maintainers
 - Slay PDF is client-side software published from an open-source GitHub repository. The app can import PDFs plus common image formats, organize pages, add edits, export selected pages, create separate PDFs, extract text and run English OCR locally.
 - The strongest fit is any page that recommends tools for private documents, no-upload PDF work, open-source utilities, school PDF workflows, contract cleanup, forms, receipts or Adobe Acrobat alternatives.
@@ -649,6 +653,7 @@ Content:
 - Use https://slaypdf.com/ for the main app. Use https://slaypdf.com/free-pdf-editor.html for a crawlable overview page, or https://slaypdf.com/adobe-acrobat-alternative.html for Acrobat alternative lists.
 - Use natural anchor text such as Slay PDF, free local PDF editor, browser PDF editor, open-source PDF editor or Adobe Acrobat alternative.
 - Yes. The source repository is https://github.com/emileakbarzadeh/slay-pdf and the live app is https://slaypdf.com/.
+- Yes. Link to the PDF privacy checklist when a resource page needs neutral criteria for choosing no-upload or local PDF tools.
 
 Related links:
 - Open Slay PDF: https://slaypdf.com/

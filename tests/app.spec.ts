@@ -393,6 +393,7 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     '/tools.html',
     '/search.html',
     '/sitemap.html',
+    '/link-to-slay-pdf.html',
     '/privacy.html',
     '/pdf-privacy-security.html',
     '/pdf-privacy-checklist.html',
@@ -620,6 +621,12 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
     'android-pdf-editor.html'
   ]))
   expect(new Set(htmlPaths).size).toBe(htmlPaths.length)
+  const linkKit = await (await page.request.get('/link-to-slay-pdf.html')).text()
+  expect(linkKit).toContain('https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f')
+  expect(linkKit).toContain('https://img.shields.io/badge/source-AGPL--3.0-24181d')
+  expect(linkKit).toContain('<h2>Best target pages</h2>')
+  expect(linkKit).toContain('<td>Open-source software list</td><td>https://github.com/emileakbarzadeh/slay-pdf</td><td>open-source PDF editor</td>')
+  expect(linkKit).toContain('<summary>Can I cite Slay PDF without recommending a product?</summary>')
   const navigationEntries = prominentNavigationPaths.map((path, index) => {
     const url = new URL(path, 'https://slaypdf.com/').href
     return {

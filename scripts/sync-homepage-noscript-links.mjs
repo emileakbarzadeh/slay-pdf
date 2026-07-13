@@ -31,6 +31,7 @@ const prominentPaths = [
   '/tools.html',
   '/search.html',
   '/sitemap.html',
+  '/link-to-slay-pdf.html',
   '/privacy.html',
   '/pdf-privacy-security.html',
   '/pdf-privacy-checklist.html',

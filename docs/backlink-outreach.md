@@ -11,6 +11,7 @@ Use this checklist when submitting Slay PDF to directories, roundups, newsletter
 - Security model: https://slaypdf.com/pdf-privacy-security.html
 - Adobe Acrobat alternative: https://slaypdf.com/adobe-acrobat-alternative.html
 - Source: https://github.com/emileakbarzadeh/slay-pdf
+- Target tracker: docs/backlink-targets.md
 
 ## Copy
 
@@ -40,6 +41,18 @@ HTML:
 <a href="https://slaypdf.com/">Slay PDF - free local PDF editor</a>
 ```
 
+Markdown badge:
+
+```md
+[![Slay PDF - local PDF editor](https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f)](https://slaypdf.com/)
+```
+
+Source badge:
+
+```md
+[![Source: AGPL-3.0](https://img.shields.io/badge/source-AGPL--3.0-24181d)](https://github.com/emileakbarzadeh/slay-pdf)
+```
+
 ## Good-Fit Targets
 
 - Open-source app lists.
@@ -55,6 +68,8 @@ HTML:
 
 - Prefer natural anchor text: `Slay PDF`, `free local PDF editor`, `browser PDF editor`, `open-source PDF editor`, or `Adobe Acrobat alternative`.
 - Link to the homepage for app directories and the Acrobat alternative page for comparison lists.
+- Link to the GitHub repository for open-source lists that require source proof.
+- Link to the privacy checklist for resource pages that prefer neutral criteria over product copy.
 - Mention that the app is client-side and static, but avoid implying documents are protected from browser extensions, malware, or the user's own device.
 - Include the GitHub repo where open-source proof helps the listing.
 - Track submitted URLs, account used, date submitted, and status in a separate private sheet if credentials or private contact details are involved.

@@ -1,0 +1,32 @@
+name: Backlink or listing suggestion
+description: Suggest a directory, roundup, resource page, or comparison where Slay PDF should be listed.
+title: "Backlink suggestion: "
+labels: ["seo", "backlink"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Target URL
+      description: Link to the directory, list, roundup, comparison, or submission page.
+      placeholder: https://example.com/privacy-tools
+    validations:
+      required: true
+  - type: dropdown
+    id: fit
+    attributes:
+      label: Best fit
+      options:
+        - Open-source software list
+        - Privacy or no-upload tools
+        - PDF utility directory
+        - Adobe Acrobat alternative comparison
+        - Student, teacher, nonprofit, or business resource page
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Mention category, submission requirements, contact route, and whether source/license links are required.
+      placeholder: "They accept pull requests and have an Office tools section."

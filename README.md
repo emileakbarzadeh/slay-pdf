@@ -39,6 +39,8 @@ Use the backlink kit when adding Slay PDF to open-source lists, privacy tool rou
 
 Outreach checklist: [docs/backlink-outreach.md](docs/backlink-outreach.md)
 
+Backlink target tracker: [docs/backlink-targets.md](docs/backlink-targets.md)
+
 Resource pages can also cite the PDF privacy checklist when they need neutral criteria rather than product copy:
 
 ```md
@@ -51,6 +53,10 @@ Resource pages can also cite the PDF privacy checklist when they need neutral cr
 
 ```html
 <a href="https://slaypdf.com/">Slay PDF - free local PDF editor</a>
+```
+
+```md
+[![Slay PDF - local PDF editor](https://img.shields.io/badge/Slay%20PDF-local%20PDF%20editor-ef476f)](https://slaypdf.com/)
 ```
 
 Short directory description:
