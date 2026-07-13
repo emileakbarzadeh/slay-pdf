@@ -896,10 +896,33 @@ test('exposes crawlable SEO metadata and sitemap files', async ({ page }) => {
   const manifest = await (await page.request.get('/manifest.webmanifest')).json() as {
     name?: string
     short_name?: string
+    id?: string
+    start_url?: string
+    scope?: string
+    display_override?: string[]
+    icons?: { src?: string; sizes?: string; type?: string; purpose?: string }[]
+    screenshots?: { src?: string; sizes?: string; type?: string; form_factor?: string; label?: string }[]
     shortcuts?: { name?: string; short_name?: string; url?: string; description?: string; icons?: { src?: string; type?: string }[] }[]
   }
   expect(manifest.name).toBe('Slay PDF')
   expect(manifest.short_name).toBe('Slay PDF')
+  expect(manifest.id).toBe('/')
+  expect(manifest.start_url).toBe('/')
+  expect(manifest.scope).toBe('/')
+  expect(manifest.display_override).toEqual(['standalone', 'minimal-ui', 'browser'])
+  expect(manifest.icons).toEqual(expect.arrayContaining([
+    expect.objectContaining({ src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' }),
+    expect.objectContaining({ src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }),
+  ]))
+  expect(manifest.screenshots).toEqual(expect.arrayContaining([
+    expect.objectContaining({ src: 'og-image.png', sizes: '1200x630', type: 'image/png', form_factor: 'wide' }),
+  ]))
+  const icon192 = await page.request.get('/icon-192.png')
+  const icon512 = await page.request.get('/icon-512.png')
+  expect(icon192.ok()).toBe(true)
+  expect(icon512.ok()).toBe(true)
+  expect(icon192.headers()['content-type']).toContain('image/png')
+  expect(icon512.headers()['content-type']).toContain('image/png')
   const shortcutByUrl = new Map((manifest.shortcuts ?? []).map((shortcut) => [shortcut.url, shortcut]))
   for (const [url, name] of [
     ['/merge-pdf.html', 'Merge PDF files'],
