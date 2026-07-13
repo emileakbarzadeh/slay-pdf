@@ -22,7 +22,7 @@ const initialChunk = path.join(dist, 'assets', scriptMatch[1])
 assert(fs.existsSync(initialChunk), `Initial app chunk is missing: ${scriptMatch[1]}`)
 
 const initialSize = fs.statSync(initialChunk).size
-const maxInitialChunkBytes = 475 * 1024
+const maxInitialChunkBytes = 425 * 1024
 assert(
   initialSize <= maxInitialChunkBytes,
   `Initial app chunk is ${(initialSize / 1024).toFixed(1)} KiB; expected <= ${maxInitialChunkBytes / 1024} KiB. Keep PDF parsing/rendering lazy.`
@@ -36,6 +36,10 @@ for (const eagerPdfToken of ['pdf.worker.min', 'GlobalWorkerOptions', 'getDocume
 const assetNames = fs.readdirSync(path.join(dist, 'assets'))
 const lazyPdfChunk = assetNames.find((name) => /^pdf-[\w-]+\.js$/.test(name))
 assert(lazyPdfChunk, 'Expected a lazy pdf-*.js chunk for PDF parsing/rendering.')
+
+for (const lazyChunkPrefix of ['Inspector-', 'PageEditor-', 'PageThumbnail-', 'SplitMarkerTile-']) {
+  assert(assetNames.some((name) => name.startsWith(lazyChunkPrefix) && name.endsWith('.js')), `Expected a lazy ${lazyChunkPrefix}*.js chunk.`)
+}
 
 const lazyPdfSize = fs.statSync(path.join(dist, 'assets', lazyPdfChunk)).size
 assert(lazyPdfSize >= 500 * 1024, 'The PDF chunk is unexpectedly small; verify PDF.js/pdf-lib did not move elsewhere.')

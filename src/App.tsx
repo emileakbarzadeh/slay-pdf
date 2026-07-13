@@ -1,15 +1,16 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import type { DragEvent, MouseEvent } from 'react'
 import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, useSensors, type DragEndEvent } from '@dnd-kit/core'
 import { SortableContext, sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 import { CheckSquare, ChevronDown, Copy, Download, FilePlus2, Grid2X2, Github, History, Import, Menu, MousePointer2, PanelRightClose, PanelRightOpen, PencilLine, Redo2, RotateCcw, RotateCw, Ruler, Scissors, ShieldCheck, Trash2, Undo2, Wrench, X } from 'lucide-react'
-import { PageEditor } from './components/PageEditor'
-import { PageThumbnail } from './components/PageThumbnail'
-import { Inspector } from './components/Inspector'
-import { SplitMarkerTile } from './components/SplitMarkerTile'
 import { useWorkspace } from './store'
 import { isWorkspacePage } from './types'
 import './styles.css'
+
+const Inspector = lazy(async () => ({ default: (await import('./components/Inspector')).Inspector }))
+const PageEditor = lazy(async () => ({ default: (await import('./components/PageEditor')).PageEditor }))
+const PageThumbnail = lazy(async () => ({ default: (await import('./components/PageThumbnail')).PageThumbnail }))
+const SplitMarkerTile = lazy(async () => ({ default: (await import('./components/SplitMarkerTile')).SplitMarkerTile }))
 
 const shortcutRows = [
   { keys: 'Cmd A', action: 'Select all pages' },
@@ -444,7 +445,7 @@ export default function App() {
       </div>
     </div>}
 
-    <div className={`workspace${inspectorOpen ? '' : ' inspector-closed'}`}>
+    <div className={`workspace${inspectorOpen && pageEntries.length ? '' : ' inspector-closed'}`}>
       <main
         className="canvas-area"
         onDragOver={(event) => event.preventDefault()}
@@ -465,17 +466,20 @@ export default function App() {
           <SortableContext items={state.pages.map((page) => page.id)}>
             <section className="page-grid" aria-label="Document pages" onClick={(event) => { if (event.target === event.currentTarget) clearSelection() }}>
               {state.pages.map((page) => isWorkspacePage(page)
-                ? <PageThumbnail
-                    key={page.id}
-                    page={page}
-                    source={state.sources.find((source) => source.id === page.sourceId)}
-                    number={pageNumbers.get(page.id) ?? 1}
-                    selected={state.selected.includes(page.id)}
-                    onSelect={(event) => selectPage(page.id, event)}
-                    onOpen={() => setEditorPage(page.id)}
-                    onContextMenu={(event) => openPageMenu(event, page.id, pageNumbers.get(page.id) ?? 1, state.selected.includes(page.id))}
-                  />
-                : <SplitMarkerTile key={page.id} id={page.id} onRemove={() => state.removeSplitMarker(page.id)} />)}
+                ? <Suspense key={page.id} fallback={null}>
+                    <PageThumbnail
+                      page={page}
+                      source={state.sources.find((source) => source.id === page.sourceId)}
+                      number={pageNumbers.get(page.id) ?? 1}
+                      selected={state.selected.includes(page.id)}
+                      onSelect={(event) => selectPage(page.id, event)}
+                      onOpen={() => setEditorPage(page.id)}
+                      onContextMenu={(event) => openPageMenu(event, page.id, pageNumbers.get(page.id) ?? 1, state.selected.includes(page.id))}
+                    />
+                  </Suspense>
+                : <Suspense key={page.id} fallback={null}>
+                    <SplitMarkerTile id={page.id} onRemove={() => state.removeSplitMarker(page.id)} />
+                  </Suspense>)}
               <div className="add-pages-tile">
                 <button type="button" className="add-pages-main" onClick={() => input.current?.click()}><FilePlus2 size={24} /><span>Add pages</span></button>
                 <div className="add-pages-actions">
@@ -490,7 +494,9 @@ export default function App() {
           </SortableContext>
         </DndContext>}
       </main>
-      {inspectorOpen && <Inspector mobileExpanded={mobileInspectorExpanded} onToggleMobile={() => setMobileInspectorExpanded((value) => !value)} />}
+      {inspectorOpen && pageEntries.length > 0 && <Suspense fallback={null}>
+        <Inspector mobileExpanded={mobileInspectorExpanded} onToggleMobile={() => setMobileInspectorExpanded((value) => !value)} />
+      </Suspense>}
     </div>
 
     {pageMenu && <div className="context-menu-layer" onMouseDown={() => setPageMenu(undefined)} onContextMenu={(event) => event.preventDefault()}>
@@ -507,7 +513,9 @@ export default function App() {
       </div>
     </div>}
 
-    {activePage && activeSource && <PageEditor page={activePage} source={activeSource} onClose={() => setEditorPage(undefined)} />}
+    {activePage && activeSource && <Suspense fallback={null}>
+      <PageEditor page={activePage} source={activeSource} onClose={() => setEditorPage(undefined)} />
+    </Suspense>}
 
     {recentModal}
     {aboutModal}
