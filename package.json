@@ -328,6 +328,7 @@
     "seo:editor-intent-pages": "node scripts/generate-editor-intent-pages.mjs",
     "seo:adobe-intent-pages": "node scripts/generate-adobe-intent-pages.mjs",
     "seo:feature-alias-pages": "node scripts/generate-feature-alias-pages.mjs",
+    "seo:portals": "node scripts/consolidate-portals.mjs",
     "seo:html-sitemap": "node scripts/generate-html-sitemap.mjs",
     "seo:sitemap-hreflang": "node scripts/sync-sitemap-hreflang.mjs",
     "seo:noscript": "node scripts/sync-homepage-noscript-links.mjs",

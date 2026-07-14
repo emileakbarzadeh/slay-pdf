@@ -1,5 +1,6 @@
 import { readFile, stat } from 'node:fs/promises'
 import { basename } from 'node:path'
+import { portalPaths } from './portal-pages.mjs'
 
 const site = 'https://slaypdf.com'
 const publicDir = new URL('../public/', import.meta.url)
@@ -452,19 +453,18 @@ const prominentSitePaths = [
   '/tools.html',
   '/search.html',
   '/sitemap.html',
-  '/link-to-slay-pdf.html',
   '/privacy.html',
   '/pdf-privacy-security.html',
-  '/pdf-privacy-checklist.html',
-  '/online-pdf-editor.html',
   '/adobe-acrobat-alternative.html',
-  '/edit-pdf-without-uploading.html',
-  '/secure-pdf-editor.html',
-  '/browser-pdf-editor.html',
+  '/merge-pdf.html',
+  '/split-pdf.html',
+  '/sign-pdf.html',
+  '/redact-pdf.html',
 ]
 const prominentSiteUrls = prominentSitePaths.map((path) => new URL(path, `${site}/`).href)
 const prominentNavigationUrls = prominentSiteUrls.filter((url) => url !== `${site}/`)
 assert(urls.includes(`${site}/`), 'sitemap is missing homepage')
+assert(JSON.stringify(urls) === JSON.stringify(portalPaths.map((path) => `${site}${path}`)), 'sitemap must contain exactly the 30 curated portal URLs in canonical order')
 assert(sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'), 'sitemap is missing xhtml namespace for hreflang alternates')
 assert(new Set(urls).size === urls.length, 'sitemap contains duplicate URLs')
 assert(sitemapEntries.length === sitemapLocs.length, 'every sitemap URL must include lastmod, changefreq and priority')
@@ -813,7 +813,7 @@ for (const page of pagesJson.pages) {
   assert(llmsFull.includes(`H1: ${page.h1}`), `llms-full.txt is missing h1 for ${page.url}`)
 }
 assert(llmsFull.includes('Related links:'), 'llms-full.txt is missing related links')
-assert(llmsFull.includes('Free PDF editor: Merge, split, sign, resize and edit PDFs locally.: https://slaypdf.com/free-pdf-editor.html'), 'llms-full.txt is missing formatted tool-list link')
+assert(llmsFull.includes('Merge PDF: Bring several documents together and arrange the final page order.: https://slaypdf.com/merge-pdf.html'), 'llms-full.txt is missing formatted portal link')
 
 const robots = await readPublic('robots.txt')
 assert(robots.includes(`Sitemap: ${site}/sitemap-index.xml`), 'robots.txt is missing sitemap-index.xml')
@@ -852,12 +852,6 @@ assert(pressKit.assets?.socialImage === `${site}/og-image.png`, 'press-kit.json 
 assert(pressKit.snippets?.markdownBadge?.includes(`${site}/slay-pdf-badge.svg`), 'press-kit.json Markdown badge snippet is wrong')
 assert(pressKit.snippets?.htmlBadge?.includes(`${site}/slay-pdf-badge.svg`), 'press-kit.json HTML badge snippet is wrong')
 assert(Array.isArray(pressKit.recommendedLinks) && pressKit.recommendedLinks.some((link) => link.url === `${site}/adobe-acrobat-alternative.html`), 'press-kit.json is missing Adobe alternative link guidance')
-
-const backlinkKit = await readPublic('link-to-slay-pdf.html')
-assert(backlinkKit.includes(`${site}/press-kit.json`), 'backlink kit is missing press-kit.json link')
-assert(backlinkKit.includes(`${site}/slay-pdf-badge.svg`), 'backlink kit is missing light badge snippet')
-assert(backlinkKit.includes(`${site}/slay-pdf-badge-dark.svg`), 'backlink kit is missing dark badge snippet')
-assert(!backlinkKit.includes('img.shields.io'), 'backlink kit should use first-party badge assets')
 
 for (const asset of ['.nojekyll', 'CNAME', 'robots.txt', 'og-image.png', 'seo.css', 'opensearch.xml', 'pages.txt', 'pages.json', 'press-kit.json', 'slay-pdf-badge.svg', 'slay-pdf-badge-dark.svg', 'sitemap-index.xml', 'image-sitemap.xml', 'feed.xml', 'feed.json', 'llms.txt', 'llms-full.txt']) {
   await stat(new URL(asset, publicDir))

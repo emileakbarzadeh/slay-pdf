@@ -200,17 +200,15 @@ for (const url of urls) {
   pages.set(page.path, page)
 }
 
-for (const section of sections) {
-  for (const path of section.paths) {
-    if (!pages.has(path)) throw new Error(`HTML sitemap section references missing sitemap path: ${path}`)
-  }
-}
+const activeSections = sections
+  .map((section) => ({ ...section, paths: section.paths.filter((path) => pages.has(path)) }))
+  .filter((section) => section.paths.length > 0)
 
-const sectionPaths = new Set(sections.flatMap((section) => section.paths))
+const sectionPaths = new Set(activeSections.flatMap((section) => section.paths))
 const uncategorized = [...pages.keys()].filter((path) => !sectionPaths.has(path))
 if (uncategorized.length > 0) throw new Error(`HTML sitemap is missing categories for: ${uncategorized.join(', ')}`)
 
-const sectionHtml = sections.map((section) => `      <section class="content">
+const sectionHtml = activeSections.map((section) => `      <section class="content">
         <h2>${escapeHtml(section.title)}</h2>
         <p>${escapeHtml(section.description)}</p>
       </section>

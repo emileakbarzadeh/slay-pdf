@@ -14,6 +14,7 @@ const steps = [
   'seo:image-conversion-pages',
   'seo:adobe-intent-pages',
   'seo:feature-alias-pages',
+  'seo:portals',
   'seo:sitemap-hreflang',
   'seo:html-sitemap',
   'seo:noscript',

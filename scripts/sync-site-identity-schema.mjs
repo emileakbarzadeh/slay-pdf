@@ -40,15 +40,13 @@ const prominentPaths = [
   '/tools.html',
   '/search.html',
   '/sitemap.html',
-  '/link-to-slay-pdf.html',
   '/privacy.html',
   '/pdf-privacy-security.html',
-  '/pdf-privacy-checklist.html',
-  '/online-pdf-editor.html',
   '/adobe-acrobat-alternative.html',
-  '/edit-pdf-without-uploading.html',
-  '/secure-pdf-editor.html',
-  '/browser-pdf-editor.html',
+  '/merge-pdf.html',
+  '/split-pdf.html',
+  '/sign-pdf.html',
+  '/redact-pdf.html',
 ]
 
 const pageByPath = new Map(pagesJson.pages.map((page) => [page.path, page]))

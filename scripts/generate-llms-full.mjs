@@ -51,9 +51,10 @@ function relatedLinksFor(html) {
     for (const match of section[1].matchAll(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
       const href = new URL(match[1], site).href
       const strong = match[2].match(/<strong>([\s\S]*?)<\/strong>/)?.[1]
-      const span = match[2].match(/<span>([\s\S]*?)<\/span>/)?.[1]
-      const label = strong && span
-        ? `${textFromInlineHtml(strong)}: ${textFromInlineHtml(span)}`
+      const detail = match[2].match(/<small>([\s\S]*?)<\/small>/)?.[1]
+        ?? match[2].match(/<span>([\s\S]*?)<\/span>/)?.[1]
+      const label = strong && detail
+        ? `${textFromInlineHtml(strong)}: ${textFromInlineHtml(detail)}`
         : textFromInlineHtml(match[2])
       if (!label || seen.has(href)) continue
       links.push({ label, href })

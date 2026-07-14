@@ -8,15 +8,24 @@ async function localPayload() {
 }
 
 async function livePayload() {
+  const expected = await localPayload()
   let lastError
   for (let attempt = 1; attempt <= 5; attempt += 1) {
     try {
       const response = await fetch(`${livePayloadUrl}?indexnow=${Date.now()}-${attempt}`, { cache: 'no-store' })
       if (!response.ok) throw new Error(`Live IndexNow payload failed: ${response.status} ${response.statusText}`)
-      return await response.json()
+      const payload = await response.json()
+      if (JSON.stringify(payload.urlList) !== JSON.stringify(expected.urlList)) {
+        throw new Error('Live IndexNow payload does not match the deployed commit yet')
+      }
+      const keyResponse = await fetch(payload.keyLocation, { cache: 'no-store' })
+      if (!keyResponse.ok || (await keyResponse.text()).trim() !== payload.key) {
+        throw new Error('Live IndexNow key is unavailable or invalid')
+      }
+      return payload
     } catch (error) {
       lastError = error
-      await new Promise((resolve) => setTimeout(resolve, attempt * 1500))
+      await new Promise((resolve) => setTimeout(resolve, attempt * 3000))
     }
   }
   throw lastError

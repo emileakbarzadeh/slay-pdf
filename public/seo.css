@@ -44,6 +44,19 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(36px, 7vw, 72px); line-height
 .tool-list a:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgb(239 71 111 / 12%); }
 .tool-list strong { font-size: 16px; line-height: 1.25; }
 .tool-list span { color: var(--muted); font-size: 13px; line-height: 1.4; }
+.portal-hero { padding: 26px 0 44px; }
+.portal-hero p:not(.kicker) { max-width: 700px; margin: 0; color: var(--muted); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+.text-link { color: var(--ink); font-weight: 800; text-underline-offset: 4px; }
+.section { padding: 42px 0 12px; }
+.section-heading { display: grid; gap: 8px; max-width: 660px; }
+.section-heading h2 { margin: 0; font-size: 30px; }
+.section-heading > p:last-child { margin: 0; color: var(--muted); }
+.tool-list .tool-link { min-height: 142px; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: start; }
+.tool-link strong, .tool-link small { display: block; }
+.tool-link small { margin-top: 7px; color: var(--muted); font-size: 13px; font-weight: 500; }
+.tool-list .tool-number { color: var(--accent); font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+footer { display: flex; flex-wrap: wrap; gap: 16px; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); }
 .compare { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 14px; }
 .compare th, .compare td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
